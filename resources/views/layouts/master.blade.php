@@ -181,16 +181,16 @@
 
     .swiper-pagination .swiper-pagination-bullet {
         background-color: #000;
-        width: 20px;
-        height: 12px;
+        width: 30px;
+        height: 20px;
         border-radius: 10px;
     }
 
     .swiper-pagination .swiper-pagination-bullet-active {
-        width: 20px;
-        height: 12px;
+        width: 30px;
+        height: 20px;
         border-radius: 10px;
-        background-color: #000;
+        background-color: #5739f1;
     }
 
     .swiper {
@@ -233,7 +233,7 @@
 
     {{-- location --}}
     <div class="mt-10 px-4" id="find">
-        <h1 class="text-[#5796FF] text-[25px] font-light text-center">Find Us!</h1>
+        <h1 class="text-gradient text-[25px] md:text-[30px] font-[700] text-center">Find Us!</h1>
 
         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-10">
             <div class="flex flex-col gap-3">

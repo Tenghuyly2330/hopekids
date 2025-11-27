@@ -60,10 +60,10 @@
     </section>
 
     {{-- reading --}}
-    <section class="flex flex-col justify-center items-center text-center my-5 md:my-10 px-4" id="hopekid">
-        <h1 class="text-[16px] md:text-[30px] text-gradient font-[700]">About Us</h1>
+    <section class="flex flex-col justify-center items-center text-center py-5 md:py-10 px-4" id="hopekid">
+        <h1 class="text-[25px] md:text-[30px] text-gradient font-[700]">About Us</h1>
         <p class="text-[16px] md:text-[20px] font-medium text-gradient">HOPE KIDS Special Education School</p>
-        <p class="mt-3 text-[14px] md:text-[16px] text-center">
+        <p class="mt-3 text-[14px] md:text-[16px] text-center w-full md:w-[700px]">
             Hope Kids was founded in Cambodia to make quality special education accessible to every child regardless of
             financial or geographic limitations. We serve families from all backgrounds
             and provinces, ensuring every child has the opportunity to learn, grow, and thrive.
@@ -76,8 +76,8 @@
     </section>
 
     {{-- our program --}}
-    <section class="bg-[#F0F6FF] w-full px-2 max-w-7xl mx-auto py-10" id="program">
-        <h1 class="text-center text-[16px] md:text-[30px] text-gradient font-[700] mb-5">
+    <section class="w-full px-2 max-w-7xl mx-auto py-5 md:py-10" id="program">
+        <h1 class="text-center text-[25px] md:text-[30px] text-gradient font-[700] mb-5">
             Our Programs
         </h1>
 
@@ -357,7 +357,7 @@
     </section>
 
     {{-- school licen --}}
-    <div class="relative z-20 my-10 " id="facilites">
+    <div class="relative z-20 py-5 md:py-10" id="facilites">
         <img src="{{ asset('assets/bg_image.png') }}"
             class="absolute inset-0 bg-no-repeat bg-cover md:bg-cover h-[300px] md:h-[380px] md:w-full -z-10"
             alt="">
@@ -393,7 +393,7 @@
     {{-- our branch --}}
     <div class="relative my-10 max-w-7xl mx-auto flex flex-col items-center justify-center px-4" id="branch">
 
-        <h1 class="text-center text-[16px] md:text-[30px] text-gradient font-[700]">Our Branches</h1>
+        <h1 class="text-center text-[25px] md:text-[30px] text-gradient font-[700]">Our Branches</h1>
 
         <img src="{{ asset('assets/images/map.png') }}" alt="" class="w-full md:w-2/3 h-full">
 
@@ -442,7 +442,7 @@
     <div class="bg-[#F8F8F8]" id="parent">
 
         <div class="pt-10">
-            <h1 class="text-[16px] md:text-[30px] text-gradient font-[700] text-center">
+            <h1 class="text-[25px] md:text-[30px] text-gradient font-[700] text-center">
                 Parents’ Testimonials
             </h1>
 
@@ -522,7 +522,7 @@
 
     {{-- faqs --}}
     <section class="mt-20 px-4 md:px-0" id="faq">
-        <h1 class="text-[16px] md:text-[30px] text-gradient font-[700] text-center">
+        <h1 class="text-[25px] md:text-[30px] text-gradient font-[700] text-center">
             Frequently Asked Questions
         </h1>
 
@@ -682,7 +682,7 @@
 
     {{-- contact form --}}
     <div class="mt-10" id="contact">
-        <h1 class="text-[#5796FF] text-[25px] font-light text-center">Contact Form</h1>
+        <h1 class="text-gradient text-[25px] md:text-[30px] font-[700] text-center">Contact Form</h1>
         <div class="mt-10 bg-[#CBDBF4] w-full max-w-7xl mx-auto rounded-2xl">
 
             <div class="p-5 md:p-10">
@@ -753,8 +753,6 @@
         </div>
 
     </div>
-
-
 
     <script>
         function toggleFaq(box) {
