@@ -10,10 +10,12 @@
 
         <!-- Contact Info -->
         <div class="flex gap-3 lg:gap-6 text-[#FFFFFF] text-[10px] lg:text-[15px] font-light xl:ms-[90px] relative z-10">
-            <p  class="flex items-center gap-1">
+            <p class="flex items-center gap-1">
                 <span class="text-[#5796FF] ">
                     <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 16C1.45 16 0.979333 15.8043 0.588 15.413C0.196667 15.0217 0.000666667 14.5507 0 14V2C0 1.45 0.196 0.979333 0.588 0.588C0.98 0.196666 1.45067 0.000666667 2 0H18C18.55 0 19.021 0.196 19.413 0.588C19.805 0.98 20.0007 1.45067 20 2V14C20 14.55 19.8043 15.021 19.413 15.413C19.0217 15.805 18.5507 16.0007 18 16H2ZM10 9L2 4V14H18V4L10 9ZM10 7L18 2H2L10 7ZM2 4V2V14V4Z" fill="white"/>
+                        <path
+                            d="M2 16C1.45 16 0.979333 15.8043 0.588 15.413C0.196667 15.0217 0.000666667 14.5507 0 14V2C0 1.45 0.196 0.979333 0.588 0.588C0.98 0.196666 1.45067 0.000666667 2 0H18C18.55 0 19.021 0.196 19.413 0.588C19.805 0.98 20.0007 1.45067 20 2V14C20 14.55 19.8043 15.021 19.413 15.413C19.0217 15.805 18.5507 16.0007 18 16H2ZM10 9L2 4V14H18V4L10 9ZM10 7L18 2H2L10 7ZM2 4V2V14V4Z"
+                            fill="white" />
                     </svg>
                 </span>
                 info@hopekidsschool.com
@@ -184,22 +186,23 @@
             <li class="relative group">
                 <a href="{{ route('home') }}"
                     class="px-5 xl:px-7 py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('home') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : 'py-8' }}">Home</a>
-                <ul class="absolute left-1/2 transform -translate-x-1/2 hidden mt-6 py-4 w-44 bg-[#FFFFFF] shadow-lg rounded-lg {{ Route::is('home') ? '' : 'group-hover:block' }} z-50">
-                    <li class="hover:bg-[#5897FF]"><a href="/home#welcome"
+                <ul
+                    class="absolute left-1/2 transform -translate-x-1/2 hidden mt-6 py-4 w-44 bg-[#FFFFFF] shadow-lg rounded-lg {{ Route::is('home') ? '' : 'group-hover:block' }} z-50">
+                    <li class="hover:bg-[#5897FF]"><a href="/#welcome"
                             class="block px-2 py-2 text-[14px] text-[#000]">Welcome to HopeKids</a></li>
-                    <li class="hover:bg-[#5897FF]"><a href="/home#program"
+                    <li class="hover:bg-[#5897FF]"><a href="/#program"
                             class="block px-2 py-2 text-[14px] text-[#000]">Our Program</a></li>
-                    <li class="hover:bg-[#5897FF]"><a href="/home#what_makes"
-                            class="block px-2 py-2 text-[14px] text-[#000]">What makes HopeKids</a></li>
-                    <li class="hover:bg-[#5897FF]"><a href="/home#school_facilities"
+                    {{-- <li class="hover:bg-[#5897FF]"><a href="/#what_makes"
+                            class="block px-2 py-2 text-[14px] text-[#000]">What makes HopeKids</a></li> --}}
+                    <li class="hover:bg-[#5897FF]"><a href="/#school_facilities"
                             class="block px-2 py-2 text-[14px] text-[#000]">School Facilities</a></li>
-                    <li class="hover:bg-[#5897FF]"><a href="/home#our_branch"
+                    <li class="hover:bg-[#5897FF]"><a href="/#our_branch"
                             class="block px-2 py-2 text-[14px] text-[#000]">Our Branch</a></li>
-                    <li class="hover:bg-[#5897FF]"><a href="/home#parent"
+                    <li class="hover:bg-[#5897FF]"><a href="/#parent"
                             class="block px-2 py-2 text-[14px] text-[#000]">Parents’ Testimonials</a></li>
-                    <li class="hover:bg-[#5897FF]"><a href="/home#faq"
+                    <li class="hover:bg-[#5897FF]"><a href="/#faq"
                             class="block px-2 py-2 text-[14px] text-[#000]">FAQ</a></li>
-                    <li class="hover:bg-[#5897FF]"><a href="/home#schedule"
+                    <li class="hover:bg-[#5897FF]"><a href="/#schedule"
                             class="block px-2 py-2 text-[14px] text-[#000]">Schedule a tour</a></li>
                 </ul>
             </li>
@@ -227,27 +230,38 @@
                     Programs</a>
                 <ul
                     class="absolute left-1/2 transform -translate-x-1/2 hidden mt-6 py-2 w-44 bg-[#FFFFFF] shadow-lg rounded-lg {{ Route::is('ourprogram') ? '' : 'group-hover:block' }} z-50">
-                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#mission"
+                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#1"
                             class="block px-2 py-2 text-[14px] text-[#000]">Structured Teaching</a></li>
-                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#vision"
+                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#2"
                             class="block px-2 py-2 text-[14px] text-[#000]">Special Education</a></li>
-                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#core_values"
+                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#3"
                             class="block px-2 py-2 text-[14px] text-[#000]">Applied Behavior Analysis</a></li>
-                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#our_goals"
+                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#4"
                             class="block px-2 py-2 text-[14px] text-[#000]">Occupational Therapy (OT)</a></li>
-                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#school_license"
+                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#5"
                             class="block px-2 py-2 text-[14px] text-[#000]">Sensory Integration Therapy</a></li>
-                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#school_license"
+                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#6"
                             class="block px-2 py-2 text-[14px] text-[#000]">Early Intervention Therapy</a></li>
-                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#school_license"
-                            class="block px-2 py-2 text-[14px] text-[#000]">Picture Exchange Communication System</a>
+                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#7"
+                            class="block px-2 py-2 text-[14px] text-[#000]">Play Therapy</a>
                     </li>
-                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#school_license"
-                            class="block px-2 py-2 text-[14px] text-[#000]">School Readiness program</a></li>
-                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#school_license"
-                            class="block px-2 py-2 text-[14px] text-[#000]">Activities of Dalily Living Training</a></li>
-                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#school_license"
-                            class="block px-2 py-2 text-[14px] text-[#000]">Parent Education and Countseling</a></li>
+                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#8"
+                            class="block px-2 py-2 text-[14px] text-[#000]">Speech Therapy</a></li>
+                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#9"
+                            class="block px-2 py-2 text-[14px] text-[#000]">Art Therapy</a>
+                    </li>
+                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#10"
+                            class="block px-2 py-2 text-[14px] text-[#000]">Picture Exchange Communication System (PECS)</a></li>
+
+                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#11"
+                            class="block px-2 py-2 text-[14px] text-[#000]">School Readiness Program</a></li>
+
+                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#12"
+                            class="block px-2 py-2 text-[14px] text-[#000]">Activities of Daily Living Training</a></li>
+                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#13"
+                            class="block px-2 py-2 text-[14px] text-[#000]">Parent Education and Counselling</a></li>
+                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#14"
+                            class="block px-2 py-2 text-[14px] text-[#000]">Cerebral Palsy Development Program</a></li>
                 </ul>
             </li>
             <li class="relative group">

@@ -2,7 +2,7 @@
 
 @section('content')
     {{-- banner --}}
-    <section class="w-full h-[60vh] md:h-screen">
+    <section id="welcome" class="w-full h-[60vh] md:h-screen">
         <img src="{{ asset('assets/hero1.jpg') }}" class="absolute -z-10 w-full h-[60vh] object-cover md:h-screen inset-0 "
             alt="">
         <div class="absolute h-[60vh] object-cover md:h-screen inset-0 z-10 bg-black/50"></div>
@@ -76,7 +76,7 @@
     </section>
 
     {{-- our program --}}
-    <section class="w-full px-2 max-w-7xl mx-auto py-5 md:py-10" id="program">
+    <section id="program" class="w-full px-2 max-w-7xl mx-auto py-5 md:py-10" id="program">
         <h1 class="text-center text-[25px] md:text-[30px] text-gradient font-[700] mb-5">
             Our Programs
         </h1>
@@ -357,7 +357,7 @@
     </section>
 
     {{-- school licen --}}
-    <div class="relative z-20 py-5 md:py-10" id="facilites">
+    <div id="school_facilities" class="relative z-20 py-5 md:py-10" id="facilites">
         <img src="{{ asset('assets/bg_image.png') }}"
             class="absolute inset-0 bg-no-repeat bg-cover md:bg-cover h-[300px] md:h-[380px] md:w-full -z-10"
             alt="">
@@ -391,7 +391,7 @@
     </div>
 
     {{-- our branch --}}
-    <div class="relative my-10 max-w-7xl mx-auto flex flex-col items-center justify-center px-4" id="branch">
+    <div id="our_branch" class="relative my-10 max-w-7xl mx-auto flex flex-col items-center justify-center px-4" id="branch">
 
         <h1 class="text-center text-[25px] md:text-[30px] text-gradient font-[700]">Our Branches</h1>
 
@@ -439,7 +439,7 @@
     </div>
 
     {{-- parent --}}
-    <div class="bg-[#F8F8F8]" id="parent">
+    <div id="parent" class="bg-[#F8F8F8]">
 
         <div class="pt-10">
             <h1 class="text-[25px] md:text-[30px] text-gradient font-[700] text-center">
@@ -521,7 +521,7 @@
     </div>
 
     {{-- faqs --}}
-    <section class="mt-20 px-4 md:px-0" id="faq">
+    <section id="faq" class="mt-20 px-4 md:px-0" id="faq">
         <h1 class="text-[25px] md:text-[30px] text-gradient font-[700] text-center">
             Frequently Asked Questions
         </h1>
@@ -681,7 +681,7 @@
     </section>
 
     {{-- contact form --}}
-    <div class="mt-10" id="contact">
+    <div id="schedule" class="mt-10" id="contact">
         <h1 class="text-gradient text-[25px] md:text-[30px] font-[700] text-center">Contact Form</h1>
         <div class="mt-10 bg-[#CBDBF4] w-full max-w-7xl mx-auto rounded-2xl">
 

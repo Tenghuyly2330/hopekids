@@ -18,7 +18,7 @@
 
             </div>
         </div>
-        <div class="relative md:-top-[100px] max-w-7xl mx-auto z-40 px-4 mt-5 md:mt-0">
+        <div id="mission" class="relative md:-top-[100px] max-w-7xl mx-auto z-40 px-4 mt-5 md:mt-0">
             <div class="grid grid-cols-1 grid-rows-1 lg:grid-cols-2 lg:grid-rows-3 gap-4 w-full">
                 <div class="bg-[#5796FF] rounded-md">
                     <div class="flex justify-center flex-col lg:flex-row items-center gap-10 p-10">
@@ -34,7 +34,7 @@
                     </div>
                 </div>
 
-                <div class="bg-[#C3D500] order-last lg:order-none row-span-1 lg:row-span-3 rounded-md">
+                <div id="core_values" class="bg-[#C3D500] order-last lg:order-none row-span-1 lg:row-span-3 rounded-md">
                     <div class="flex justify-center lg:justify-start flex-col items-center lg:items-start gap-2 p-10">
 
                         <img src="{{ asset('assets/value.png') }}" alt="" class="w-24 h-24 mt-4">
@@ -92,7 +92,7 @@
 
                 </div>
 
-                <div class="bg-[#FE5900] rounded-md">
+                <div id="vision" class="bg-[#FE5900] rounded-md">
                     <div class="flex justify-center flex-col lg:flex-row  items-center gap-10 p-10">
                         <img src="{{ asset('assets/vision.png') }}" alt="" class="w-24 h-24">
                         <div class="flex flex-col">
@@ -109,7 +109,7 @@
                 </div>
 
                 <!-- Row 3, col 1 -->
-                <div class="bg-[#E3264E] rounded-md">
+                <div id="our_goals" class="bg-[#E3264E] rounded-md">
                     <div class="flex justify-center flex-col lg:flex-row items-center gap-10 p-10">
                         <img src="{{ asset('assets/goal.png') }}" alt="" class="w-24 h-24" />
                         <div class="flex flex-col">
@@ -131,7 +131,7 @@
 
     </section>
 
-    <section class="" id="license">
+    <section class="" id="school_license">
         <h1 class="text-[16px] md:text-[30px] text-gradient font-[700] text-center">Our Institutes' Licenses</h1>
         <div class="mt-5">
             <div class='w-full flex gap-4 max-w-7xl mx-auto px-4 my-20 overflow-x-auto'>
