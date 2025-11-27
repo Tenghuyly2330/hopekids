@@ -3,8 +3,8 @@
 @section('content')
     {{-- banner --}}
     <section class="w-full h-[60vh] md:h-screen">
-        <img src="{{ asset('assets/hero1.jpg') }}"
-            class="absolute -z-10 w-full h-[60vh] object-cover md:h-screen inset-0 " alt="">
+        <img src="{{ asset('assets/hero1.jpg') }}" class="absolute -z-10 w-full h-[60vh] object-cover md:h-screen inset-0 "
+            alt="">
         <div class="absolute h-[60vh] object-cover md:h-screen inset-0 z-10 bg-black/50"></div>
 
         <div class="relative w-full flex flex-col items-center lg:items-end text-left pt-[10vh] md:pt-[30vh]">
@@ -13,7 +13,8 @@
             <div class="relative w-fit text-center lg:text-left">
 
                 <!-- BLUR ONLY ON RIGHT SIDE -->
-                <div class="absolute top-0 right-0 h-full w-full md:w-[500px]
+                <div
+                    class="absolute top-0 right-0 h-full w-full md:w-[500px]
                     bg-[radial-gradient(circle,_#FFFFFF_40%,_#D9D9D9_100%)]
                     blur-[60px] pointer-events-none">
                 </div>
@@ -35,7 +36,7 @@
             <div class="relative z-10 text-center lg:text-left mt-2 w-full md:w-[500px] px-3 md:px-0">
                 <p class="text-[#fff] text-[12px] lg:text-[16px] font-medium">
                     Hope kids Special Education School We offer Special Education and
-                    Holistic Speech Delay. Intellectual Disabilities . Leaning Difficulty 
+                    Holistic Speech Delay. Intellectual Disabilities . Leaning Difficulty
                     and Cerebral Palsy.
                 </p>
             </div>
@@ -63,7 +64,8 @@
         <h1 class="text-[16px] md:text-[30px] text-gradient font-[700]">About Us</h1>
         <p class="text-[16px] md:text-[20px] font-medium text-gradient">HOPE KIDS Special Education School</p>
         <p class="mt-3 text-[14px] md:text-[16px] text-center">
-            Hope Kids was founded in Cambodia to make quality special education accessible to every child regardless of financial or geographic limitations. We serve families from all backgrounds
+            Hope Kids was founded in Cambodia to make quality special education accessible to every child regardless of
+            financial or geographic limitations. We serve families from all backgrounds
             and provinces, ensuring every child has the opportunity to learn, grow, and thrive.
         </p>
         <a href="{{ URL('/about') }}"
@@ -399,44 +401,40 @@
 
     <div class="relative mt-30">
 
-        <div class="absolute inset-0 bg-center bg-cover bg-no-repeat z-0 grayscales"
+        <div class="absolute inset-0 bg-center bg-cover bg-no-repeat z-0"
             style="background-image: url('{{ asset('assets/ourj.png') }}');">
         </div>
 
         <div class="absolute inset-0 bg-black/60 z-0"></div>
 
-        <div
+        <div id="counter-section"
             class="relative z-10 flex flex-col md:flex-col lg:flex-row justify-center items-center gap-6 md:gap-10 py-10 lg:py-20">
-
             <div class="flex flex-col items-center text-white">
-                <h2 class="text-[50px] md:text-[70px] md:text-[40px] font-bold text-[#29A71A]">
+                <h2 class="text-[50px] md:text-[70px] font-bold text-[#29A71A]">
                     <span id="count-years">0</span>
                 </h2>
                 <p class="text-xl">Years</p>
             </div>
-
             <div class="flex flex-col items-center text-white">
-                <h2 class="text-[50px] md:text-[70px] md:text-[40px] font-bold text-[#00AFD7]">
+                <h2 class="text-[50px] md:text-[70px] font-bold text-[#00AFD7]">
                     <span id="count-branches">0</span>
                 </h2>
                 <p class="text-xl">Branches</p>
             </div>
-
             <div class="flex flex-col items-center text-white">
-                <h2 class="text-[50px] md:text-[70px] md:text-[40px] font-bold text-[#C3D500]">
+                <h2 class="text-[50px] md:text-[70px] font-bold text-[#C3D500]">
                     <span id="count-students">0</span>
                 </h2>
                 <p class="text-xl">Students</p>
             </div>
-
             <div class="flex flex-col items-center text-white">
-                <h2 class="text-[50px] md:text-[70px] md:text-[40px] font-bold text-[#FE5900]">
+                <h2 class="text-[50px] md:text-[70px] font-bold text-[#FE5900]">
                     <span id="count-staff">0</span>
                 </h2>
                 <p class="text-xl">Teachers & Staff</p>
             </div>
-
         </div>
+
 
     </div>
 
@@ -767,45 +765,42 @@
             arrow.classList.toggle("rotate-180");
         }
     </script>
-
-
     <script>
-        function animateValue(id, start, end, duration) {
-            let obj = document.getElementById(id);
-            let current = start;
-            let step = (end - start) / (duration / 10);
+        function animateCounter(id, target, duration = 2000) {
+            const el = document.getElementById(id);
+            let start = 0;
+            const stepTime = 16;
+            const increment = target / (duration / stepTime);
 
-            let timer = setInterval(() => {
-                current += step;
-                obj.innerHTML = Math.floor(current);
-
-                if (current >= end) {
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    el.textContent = target;
                     clearInterval(timer);
-                    obj.innerHTML = end;
+                } else {
+                    el.textContent = Math.floor(start);
                 }
-            }, 10);
+            }, stepTime);
         }
 
-        // Intersection Observer to trigger animation on scroll
-        let hasAnimated = false;
+        function initCounters() {
+            const section = document.getElementById('counter-section');
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !hasAnimated) {
-                    hasAnimated = true;
-
-                    // Start all counters
-                    animateValue("count-years", 0, 5, 800);
-                    animateValue("count-branches", 0, 7, 800);
-                    animateValue("count-students", 0, 264, 800);
-                    animateValue("count-staff", 0, 107, 800);
+            const observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    animateCounter("count-years", 5);
+                    animateCounter("count-branches", 7);
+                    animateCounter("count-students", 264);
+                    animateCounter("count-staff", 107);
+                    observer.disconnect(); // only run once
                 }
+            }, {
+                threshold: 0.5
             });
-        }, {
-            threshold: 0.5
-        });
 
-        // Observe the whole counter section
-        observer.observe(document.querySelector(".mt-30"));
+            observer.observe(section);
+        }
+
+        document.addEventListener("DOMContentLoaded", initCounters);
     </script>
 @endsection
