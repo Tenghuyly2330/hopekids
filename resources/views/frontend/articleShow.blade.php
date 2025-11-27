@@ -19,7 +19,7 @@
         </div>
     </section>
 
-    <div class="max-w-5xl mx-auto px-6 py-10">
+    <div class="max-w-5xl mx-auto px-6  py-10">
         <div class="w-full">
             <img src="{{ asset($article->image) }}" class="rounded-2xl shadow-lg w-full h-[400px] object-cover" alt="article">
         </div>

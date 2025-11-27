@@ -60,7 +60,7 @@
     </section>
 
     {{-- reading --}}
-    <section class="flex flex-col justify-center items-center text-center mt-10 px-4" id="hopekid">
+    <section class="flex flex-col justify-center items-center text-center my-5 md:my-10 px-4" id="hopekid">
         <h1 class="text-[16px] md:text-[30px] text-gradient font-[700]">About Us</h1>
         <p class="text-[16px] md:text-[20px] font-medium text-gradient">HOPE KIDS Special Education School</p>
         <p class="mt-3 text-[14px] md:text-[16px] text-center">

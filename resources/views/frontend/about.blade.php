@@ -18,7 +18,7 @@
 
             </div>
         </div>
-        <div class="relative md:-top-[100px] max-w-7xl mx-auto z-40 px-4 mt-10 md:mt-0">
+        <div class="relative md:-top-[100px] max-w-7xl mx-auto z-40 px-4 mt-5 md:mt-0">
             <div class="grid grid-cols-1 grid-rows-1 lg:grid-cols-2 lg:grid-rows-3 gap-4 w-full">
                 <div class="bg-[#5796FF] rounded-md">
                     <div class="flex justify-center flex-col lg:flex-row items-center gap-10 p-10">

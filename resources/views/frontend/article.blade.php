@@ -19,7 +19,7 @@
         </div>
     </section>
 
-    <section class="mt-10">
+    <section class="mt-5 md:mt-10">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-10 px-5 lg:px-10">
             @foreach ($article as $item)
                 <div class="flex flex-col items-start">

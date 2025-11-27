@@ -18,7 +18,7 @@
         </div>
     </section>
 
-    <div class="mt-10 md:mt-20 px-5">
+    <div class="mt-5 md:mt-10 px-5">
 
         <div class="grid grid-cols-1 lg:grid-cols-2 justify-center w-full max-w-7xl mx-auto px-4">
 

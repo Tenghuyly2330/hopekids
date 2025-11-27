@@ -19,7 +19,7 @@
         </div>
     </div>
 
-    <section class="w-full max-w-7xl mx-auto px-4 py-10">
+    <section class="w-full max-w-7xl mx-auto px-4 py-5 md:py-10">
         @php
             $event_image = json_decode($event->image, true) ?? [];
         @endphp

@@ -26,7 +26,7 @@
                 $isOdd = $item->id % 2 == 1;
             @endphp
 
-            <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-6 md:gap-20 mt-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-6 md:gap-20 mt-5 md:mt-10">
 
                 <div class="w-full {{ $isOdd ? 'md:order-1' : 'md:order-2' }}">
                     <img src="{{ asset($images[0]) }}" class="w-full h-[400px] rounded-xl object-cover" alt="">

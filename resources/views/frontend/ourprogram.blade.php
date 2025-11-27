@@ -19,7 +19,7 @@
     </section>
 
     <section class="">
-        <div class="flex flex-col items-center gap-4 md:gap-40 px-4 max-w-7xl mx-auto py-20">
+        <div class="flex flex-col items-center gap-4 md:gap-40 px-4 max-w-7xl mx-auto py-5 md:py-20">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-14 xl:gap-30" id="1">
                 <div class="relative w-full h-full">
                     <img src="{{ asset('assets/ourprogram/program-1.png') }}" alt=""

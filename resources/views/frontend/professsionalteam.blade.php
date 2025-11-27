@@ -20,7 +20,7 @@
         </div>
     </section>
 
-    <section class="mt-10">
+    <section class="mt-5 md:mt-10">
         <h1 class="text-[#5794FE] text-[40px] md:text-[50px] text-center">Message from Our founder</h1>
         <div class="mt-10">
             <div class="flex justify-center flex-wrap gap-4 md:gap-30">
