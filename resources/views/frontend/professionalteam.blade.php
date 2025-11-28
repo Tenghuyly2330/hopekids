@@ -7,8 +7,23 @@
             color: #1C0186;
         }
 
-        @media (max-width: 767px){
+        .content-text ul {
+            list-style-type: disc;
+            padding-left: 1.25rem;
             font-size: 16px;
+        }
+
+        @media (max-width: 767px) {
+            .content-text strong {
+                font-size: 16px;
+                color: #1C0186;
+            }
+
+            .content-text ul {
+                list-style-type: disc;
+                padding-left: 1.25rem;
+                font-size: 14px;
+            }
         }
     </style>
 
@@ -57,7 +72,8 @@
 
     <section class="mt-10 bg-[#F0F6FF] w-full">
         <div class="pt-10 pb-20 max-w-7xl mx-auto px-4">
-            <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700] pb-10">{{ app()->getLocale() === 'en' ? 'Our Professional Team' : 'Our Professional Team' }}</h1>
+            <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700] pb-10">
+                {{ app()->getLocale() === 'en' ? 'Our Professional Team' : 'Our Professional Team' }}</h1>
 
             @foreach ($teams as $item)
                 <div class="grid grid-cols-1 lg:grid-cols-3 items-start mt-10">
@@ -70,8 +86,10 @@
                     </div>
                     <div class="col-span-1 lg:col-span-2 pt-4 md:pt-0">
                         <div>
-                            <h1 class="text-[#1C0186] font-bold text-[16px] lg:text-[20px]">{{ app()->getLocale() === 'en' ? $messages->name_en : $messages->name_km }}</h1>
-                            <h1 class="text-[#5796FF] text-[14px] md:text-[16px] font-regular">{{ app()->getLocale() === 'en' ? $messages->position_en : $messages->position_km }}</h1>
+                            <h1 class="text-[#1C0186] font-bold text-[16px] lg:text-[20px]">
+                                {{ app()->getLocale() === 'en' ? $item->name_en : $messages->name_km }}</h1>
+                            <h1 class="text-[#5796FF] text-[14px] md:text-[16px] font-regular">
+                                {{ app()->getLocale() === 'en' ? $item->position_en : $item->position_km }}</h1>
                         </div>
                         <div class="mt-5 text-[14px] md:text-[16px] content-text">
                             {!! app()->getLocale() === 'en' ? $item->content_en : $item->content_km !!}
