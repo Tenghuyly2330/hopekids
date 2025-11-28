@@ -36,9 +36,9 @@
             <div class="relative z-10 pt-[15vh] md:pt-[30vh]">
 
                 <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">
-                    {{ app()->getLocale() === 'en' ? 'Professional Team' : 'Professional Team' }}</h1>>
+                    {{ app()->getLocale() === 'en' ? 'Professional Team' : 'ក្រុមអ្នកជំនាញ' }}</h1>>
                 <p class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px]">
-                    {{ app()->getLocale() === 'en' ? 'Hope Kids provides affordable, inclusive, and professional education for children with autism and special needs in Phnom Penh and across Cambodia.' : 'Hope Kids provides affordable, inclusive, and professional education for children with autism and special needs in Phnom Penh and across Cambodia.' }}
+                    {{ app()->getLocale() === 'en' ? 'Hope Kids provides affordable, inclusive, and professional education for children with autism and special needs in Phnom Penh and across Cambodia.' : 'ហូបឃីដ ផ្តល់ជូននូវការអប់រំដែលមានភាពសមរម្យ មានភាពរួមបញ្ចូល និងមានវិជ្ជាជីវៈ សម្រាប់កុមារដែលមានជំងឺអូទីសឹម និងតម្រូវការពិសេស នៅក្នុងរាជធានីភ្នំពេញ និងទូទាំងប្រទេសកម្ពុជា។' }}
                 </p>
             </div>
         </div>
@@ -46,7 +46,7 @@
 
     <section class="mt-5 md:mt-10">
         <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">
-            {{ app()->getLocale() === 'en' ? 'Message from Our Founder' : 'Message from Our Founder' }}</h1>
+            {{ app()->getLocale() === 'en' ? 'Message from Our Founder' : 'សារពីស្ថាបនិករបស់យើង' }}</h1>
         <div class="mt-10">
             <div class="flex justify-center flex-wrap gap-4 md:gap-30">
                 <div class="w-[230px] h-[230px] rounded-full overflow-hidden">
@@ -61,9 +61,9 @@
                         {!! app()->getLocale() === 'en' ? $messages->content_en : $messages->content_km !!}
                     </div>
 
-                    <h1 class="text-[#1C0186] font-bold text-[20px] mt-5">
+                    <h1 class="text-[#1C0186] font-bold text-[16px] lg:text-[20px] mt-5">
                         {{ app()->getLocale() === 'en' ? $messages->name_en : $messages->name_km }}</h1>
-                    <p class="text-[#5796FF] text-[15px]  font-regular">
+                    <p class="text-[#5796FF] text-[14px] md:text-[16px] font-[500] italic">
                         {{ app()->getLocale() === 'en' ? $messages->position_en : $messages->position_km }}</p>
                 </div>
             </div>
@@ -73,7 +73,7 @@
     <section class="mt-10 bg-[#F0F6FF] w-full">
         <div class="pt-10 pb-20 max-w-7xl mx-auto px-4">
             <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700] pb-10">
-                {{ app()->getLocale() === 'en' ? 'Our Professional Team' : 'Our Professional Team' }}</h1>
+                {{ app()->getLocale() === 'en' ? 'Our Professional Team' : 'ក្រុមអ្នកជំនាញរបស់យើង' }}</h1>
 
             @foreach ($teams as $item)
                 <div class="grid grid-cols-1 lg:grid-cols-3 items-start mt-10">
@@ -87,8 +87,8 @@
                     <div class="col-span-1 lg:col-span-2 pt-4 md:pt-0">
                         <div>
                             <h1 class="text-[#1C0186] font-bold text-[16px] lg:text-[20px]">
-                                {{ app()->getLocale() === 'en' ? $item->name_en : $messages->name_km }}</h1>
-                            <h1 class="text-[#5796FF] text-[14px] md:text-[16px] font-regular">
+                                {{ app()->getLocale() === 'en' ? $item->name_en : $item->name_km }}</h1>
+                            <h1 class="text-[#5796FF] text-[14px] md:text-[16px] font-[500] italic">
                                 {{ app()->getLocale() === 'en' ? $item->position_en : $item->position_km }}</h1>
                         </div>
                         <div class="mt-5 text-[14px] md:text-[16px] content-text">

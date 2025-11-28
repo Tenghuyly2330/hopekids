@@ -10,13 +10,12 @@
 
             <div class="relative z-10 pt-[15vh] md:pt-[30vh]">
 
-                <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">
-                    Career</h1>
+                <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">{{ app()->getLocale() === 'en' ? 'Career' : 'អាជីព' }}
+                    </h1>
 
                 <p class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px]">
-                    Hope Kids provides affordable, inclusive, and professional education for
-                    children with autism and special needs in Phnom Penh and across
-                    Cambodia.
+                    {{ app()->getLocale() === 'en' ? 'Hope Kids provides affordable, inclusive, and professional education for children with autism and special needs in Phnom Penh and across Cambodia.' : 'Hope Kids ផ្តល់អប់រំដែលមានតម្លៃសមរម្យ មានភាពរួមបញ្ចូល និងវិជ្ជាជីវៈ សម្រាប់កុមារដែលមានអូទីសំ និងតម្រូវការពិសេស នៅក្នុងភ្នំពេញ និងទូទាំងប្រទេសកម្ពុជា។' }}
+
                 </p>
             </div>
         </div>
@@ -36,17 +35,16 @@
             <!-- Right Box -->
             <div class="w-full text-white pb-2">
 
-                <p class="text-[22px] text-center md:text-[30px] lg:text-[45px] lg:pt-5 font-regular leading-tight">Start
-                    Your Journey</p>
-                <p class="text-[22px] text-center md:text-[30px] lg:text-[45px] font-regular">
-                    with Us!</p>
-
-                <p class="text-[12px] text-center md:text-[14px] mt-3 md:mt-5 px-10">
-                    We work with diverse international and local non-governmental organizations,
-                    microfinance institutions, corporate partners, and national authorities to build
-                    a better life through safe and affordable homes.
+                <p class="text-[22px] text-center md:text-[30px] lg:text-[45px] lg:pt-5 font-regular leading-tight">
+                    {{ app()->getLocale() === 'en' ? 'Start Your Journey' : 'ចាប់ផ្តើមដំណើររបស់អ្នក' }}
                 </p>
-                
+                <p class="text-[22px] text-center md:text-[30px] lg:text-[45px] font-regular">
+                    {{ app()->getLocale() === 'en' ? 'with Us!' : 'ជាមួយយើង' }}
+                </p>
+                <p class="text-[12px] text-center md:text-[14px] mt-3 md:mt-5 px-10">
+                    {{ app()->getLocale() === 'en' ? 'We work with diverse international and local non-governmental organizations, microfinance institutions, corporate partners, and national authorities to build a better life through safe and affordable homes.' : 'យើងសហការជាមួយអង្គការអន្តរជាតិ និងក្នុងស្រុកមិនមែនរដ្ឋាភិបាល ស្ថាប័នហិរញ្ញវត្ថុតូច មិត្តភាពសហគ្រាស និងអាជ្ញាធរជាតិនានា ដើម្បីបង្កើតជីវិតល្អប្រសើរឡើង តាមរយៈផ្ទះសុវត្ថិភាព និងមានតម្លៃសមរម្យ។' }}
+                </p>
+
                 @if (session('success'))
                     <div x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 3000)"
                         class="fixed top-5 right-5 bg-green-600 text-white px-5 py-3 rounded-lg shadow-lg z-50">
@@ -58,45 +56,41 @@
                     @csrf
 
                     <div>
-                        <label class="text-[12px]">First Name</label>
+                        <label class="text-[12px]">{{ app()->getLocale() === 'en' ? 'First Name' : 'ឈ្មោះដំបូង' }}</label>
                         <input type="text" name="fname" class="p-3 bg-white text-black rounded-full w-full mt-1">
                     </div>
 
                     <div>
-                        <label class="text-[12px]">Last Name</label>
+                        <label class="text-[12px]">{{ app()->getLocale() === 'en' ? 'Last Name' : 'នាមត្រកូល ' }}</label>
                         <input type="text" name="lname" class="p-3 bg-white text-black rounded-full w-full mt-1">
                     </div>
 
                     <div>
-                        <label class="text-[12px]">Email</label>
+                        <label class="text-[12px]">{{ app()->getLocale() === 'en' ? 'Email' : 'អ៊ីមែល'}}</label>
                         <input type="email" name="email" class="p-3 bg-white text-black rounded-full w-full mt-1">
                     </div>
 
                     <div>
-                        <label class="text-[12px]">Position</label>
+                        <label class="text-[12px]">{{ app()->getLocale() === 'en' ? 'Position' : 'តំណែង'}}</label>
                         <select class="p-3 bg-white text-black rounded-full w-full mt-1" name="position">
-                            <option value="" disabled selected>Select a position</option>
-                            <option value="teacher">Teacher</option>
-                            <option value="therapist">Therapist</option>
-                            <option value="administrator">Administrator</option>
-                            <option value="other">Other</option>
+                            <option value="" disabled selected>{{ app()->getLocale() === 'en' ? 'Select a position' : 'ជ្រើសរើសតំណែង'}}</option>
+                            <option value="teacher">{{ app()->getLocale() === 'en' ? 'Teacher' : 'Teacher'}}</option>
+                            <option value="therapist">{{ app()->getLocale() === 'en' ? 'Therapist' : 'Therapist'}}</option>
+                            <option value="administrator">{{ app()->getLocale() === 'en' ? 'Administrator' : 'Administrator'}}</option>
+                            <option value="other">{{ app()->getLocale() === 'en' ? 'Other' : 'Other'}}</option>
                         </select>
                     </div>
 
                     <div>
-                        <label class="text-[12px]">Message</label>
+                        <label class="text-[12px]">{{ app()->getLocale() === 'en' ? 'Message' : 'សារ ' }}</label>
                         <input type="text" name="message" class="p-3 bg-white text-black rounded-full w-full mt-1">
                     </div>
 
                     <button type="submit" class="mt-5 bg-[#C4D600] text-black py-4 rounded-full w-full text-[16px]">
-                        SUBMIT
+                        {{ app()->getLocale() === 'en' ? 'SUBMIT' : 'ដាក់ស្នើ ' }}
                     </button>
-
                 </form>
-
             </div>
-
         </div>
-
     </section>
 @endsection

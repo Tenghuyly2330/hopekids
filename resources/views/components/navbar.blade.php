@@ -155,18 +155,18 @@
             <li><a href="{{ URL('/about') }}"
                     class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'About Us' : 'អំពីយើងខ្ញុំ' }}</a></li>
             <li><a href="{{ URL('/ourprogram') }}"
-                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Our Program' : 'Our Program' }}</a></li>
+                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Our Program' : 'កម្មវិធីសិក្សា' }}</a></li>
             <li><a href="{{ URL('/professionalteam') }}"
-                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Professional Team' : 'Professional Team' }}</a>
+                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Professional Team' : 'អ្នកជំនាញ' }}</a>
             </li>
             <li><a href="{{ URL('/career') }}"
-                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Career' : 'Career' }}</a></li>
+                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Career' : 'ឱកាសការងារ' }}</a></li>
             <li><a href="{{ URL('/articles') }}"
-                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Articles' : 'Articles' }}</a></li>
+                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Articles' : 'អត្ថបទ' }}</a></li>
             <li><a href="{{ URL('/event') }}"
-                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Events' : 'Events' }}</a></li>
+                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Events' : 'ព្រឹត្តិការណ៍' }}</a></li>
             <li><a href="{{ URL('/contact') }}"
-                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Contact Us' : 'Contact Us' }}</a></li>
+                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Contact Us' : 'ការទំនាក់ទំនង' }}</a></li>
         </ul>
         <div class="w-full py-5 px-2">
             <div class="max-w-7xl mx-auto flex flex-col items-center justify-between gap-2">
@@ -216,10 +216,10 @@
                 <ul
                     class="absolute left-1/2 transform -translate-x-1/2 hidden mt-6 py-4 w-44 bg-[#FFFFFF] shadow-lg rounded-lg {{ Route::is('home') ? '' : 'group-hover:block' }} z-50">
                     <li class="hover:bg-[#5897FF]"><a href="/#welcome"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Welcome to HopeKids' : 'Welcome to HopeKids' }}</a>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Welcome to HopeKids' : 'សូមស្វាគមន៍មកកាន់ ហូបឃីដ' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/#program"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Program' : 'Our Program' }}</a>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Programs' : 'កម្មវិធីសិក្សា' }}</a>
                     </li>
 
                     <li class="hover:bg-[#5897FF]"><a href="/#school_facilities"
@@ -234,9 +234,9 @@
                     <li class="hover:bg-[#5897FF]"><a href="/#faq"
                             class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'FAQ' : 'FAQ' }}</a>
                     </li>
-                    <li class="hover:bg-[#5897FF]"><a href="/#schedule"
+                    {{-- <li class="hover:bg-[#5897FF]"><a href="/#schedule"
                             class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Schedule a tour' : 'Schedule a tour' }}</a>
-                    </li>
+                    </li> --}}
                 </ul>
             </li>
             <li class="relative group">
@@ -245,92 +245,92 @@
                 <ul
                     class="absolute left-1/2 transform -translate-x-1/2 hidden mt-6 py-2 w-44 bg-[#FFFFFF] shadow-lg rounded-lg {{ Route::is('about') ? '' : 'group-hover:block' }} z-50">
                     <li class="hover:bg-[#5897FF]"><a href="/about#mission"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Mission' : 'Mission' }}</a>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Mission' : 'បេសកកម្ម' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/about#vision"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Vision' : 'Vision' }}</a>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Vision' : 'ចក្ខុវិស័យ' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/about#core_values"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Core Values' : 'Core Values' }}</a>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Core Values' : 'ចក្ខុវិស័យ' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/about#our_goals"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Goals' : 'Our Goals' }}</a>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Goals' : 'គោលដៅរបស់យើង' }}</a>
                     </li>
-                    <li class="hover:bg-[#5897FF]"><a href="/about#school_license"
+                    {{-- <li class="hover:bg-[#5897FF]"><a href="/about#school_license"
                             class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'School License' : 'School License' }}</a>
-                    </li>
+                    </li> --}}
                 </ul>
             </li>
             <li class="relative group">
                 <a href="{{ route('ourprogram') }}"
-                    class="px-5 xl:px-7 py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('ourprogram') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : 'py-8' }}">{{ app()->getLocale() === 'en' ? 'Our Programs' : 'Our Programs' }}</a>
+                    class="px-5 xl:px-7 py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('ourprogram') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : 'py-8' }}">{{ app()->getLocale() === 'en' ? 'Our Programs' : 'កម្មវិធីសិក្សា' }}</a>
                 <ul
                     class="absolute left-1/2 transform -translate-x-1/2 hidden mt-6 py-2 w-64 bg-[#FFFFFF] shadow-lg rounded-lg {{ Route::is('ourprogram') ? '' : 'group-hover:block' }} z-50">
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#1"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Structured Teaching' : 'Structured Teaching' }}</a>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Structured Teaching' : 'ការបង្រៀនតាមបែបរចនាសម្ព័ន្ធ' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#2"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Special Education' : 'Special Education' }}</a>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Special Education' : 'ការអប់រំពិសេស' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#3"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Applied Behavior Analysis' : 'Applied Behavior Analysis' }}</a>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Applied Behavior Analysis' : 'ការវិភាគ និងការអនុវត្តន៍វិធីសាស្រ្តគ្រប់គ្រងវិបត្តិអាកប្បកិរិយា' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#4"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Occupational Therapy (OT)' : 'Occupational Therapy (OT)' }}</a>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Occupational Therapy (OT)' : 'ការព្យាបាលមុខងារប្រចាំថ្ងៃ' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#5"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Sensory Integration Therapy' : 'Sensory Integration Therapy' }}</a>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Sensory Integration Therapy' : 'ការព្យាបាលដោយការរួមបញ្ចូលញាណដឹង' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#6"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Early Intervention Therapy' : 'Early Intervention Therapy' }}</a>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Early Intervention Therapy' : 'ការជួយជម្រុញអោយទាន់ពេលវេលា' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#7"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Play Therapy' : 'Play Therapy' }}</a>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Play Therapy' : 'ការព្យាបាលតាមរយៈការលេង' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#8"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Speech Therapy' : 'Speech Therapy' }}</a>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Speech Therapy' : 'ការព្យាបាលភាសា' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#9"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Art Therapy' : 'Art Therapy' }}</a>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Art Therapy' : 'ការព្យាបាលតាមបែបសិល្បៈ' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#10"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Picture Exchange Communication System (PECS)' : 'Picture Exchange Communication System (PECS)' }}</a>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Picture Exchange Communication System (PECS)' : 'ការទំនាក់ទំនងតាមរយៈការផ្លាស់ប្តូររូបភាព' }}</a>
                     </li>
 
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#11"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'School Readiness Program' : 'School Readiness Program' }}</a>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'School Readiness Program' : 'កម្មវិធីរៀបចំសម្រាប់ចូលសាលា' }}</a>
                     </li>
 
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#12"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Activities of Daily Living Training' : 'Activities of Daily Living Training' }}</a>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Activities of Daily Living Training' : 'ការបណ្តុះបណ្តាលសកម្មភាពប្រចាំថ្ងៃ' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#13"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Parent Education and Counselling' : 'Parent Education and Counselling' }}</a>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Parent Education and Counselling' : 'ការអប់រំ និងប្រឹក្សាអាណាព្យាបាល' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#14"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Cerebral Palsy Development Program' : 'Cerebral Palsy Development Program' }}</a>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Cerebral Palsy Development Program' : 'កម្មវិធីអភិវឌ្ឍន៍សម្រាប់កុមារដែលមានពិការចលករខួរក្បាល' }}</a>
                     </li>
                 </ul>
             </li>
             <li class="relative group">
                 <a href="{{ route('professionalteam') }}"
-                    class="px-5 xl:px-7 py-4 xl:py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('professionalteam') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : '' }}">{{ app()->getLocale() === 'en' ? 'Professional Team' : 'Professional Team' }}</a>
+                    class="px-5 xl:px-7 py-4 xl:py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('professionalteam') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : '' }}">{{ app()->getLocale() === 'en' ? 'Professional Team' : 'អ្នកជំនាញ' }}</a>
             </li>
             <li class="relative group">
                 <a href="{{ route('career') }}"
-                    class="px-5 xl:px-7 py-4 xl:py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('career') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : '' }}">{{ app()->getLocale() === 'en' ? 'Career' : 'Career' }}</a>
+                    class="px-5 xl:px-7 py-4 xl:py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('career') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : '' }}">{{ app()->getLocale() === 'en' ? 'Career' : 'ឱកាសការងារ' }}</a>
             </li>
             <li class="relative group">
                 <a href="{{ route('articles') }}"
-                    class="px-5 xl:px-7 py-4 xl:py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('articles') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : '' }}">{{ app()->getLocale() === 'en' ? 'Articles' : 'Articles' }}</a>
+                    class="px-5 xl:px-7 py-4 xl:py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('articles') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : '' }}">{{ app()->getLocale() === 'en' ? 'Articles' : 'អត្ថបទ' }}</a>
             </li>
             <li class="relative group">
                 <a href="{{ route('event') }}"
-                    class="px-5 xl:px-7 py-4 xl:py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('event') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : '' }}">{{ app()->getLocale() === 'en' ? 'Events' : 'Events' }}</a>
+                    class="px-5 xl:px-7 py-4 xl:py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('event') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : '' }}">{{ app()->getLocale() === 'en' ? 'Events' : 'ព្រឹត្តិការណ៍' }}</a>
             </li>
             <li class="relative group">
                 <a href="{{ route('contact') }}"
-                    class="px-5 xl:px-7 py-4 xl:py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('contact') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : '' }}">{{ app()->getLocale() === 'en' ? 'Contact Us' : 'Contact Us' }}</a>
+                    class="px-5 xl:px-7 py-4 xl:py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('contact') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : '' }}">{{ app()->getLocale() === 'en' ? 'Contact Us' : 'ការទំនាក់ទំនង' }}</a>
             </li>
         </ul>
     </div>

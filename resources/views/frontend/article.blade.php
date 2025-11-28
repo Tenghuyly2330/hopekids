@@ -8,12 +8,11 @@
             <div class="absolute h-[60vh] object-cover md:h-screen inset-0 z-10 bg-black/50"></div>
 
             <div class="relative z-10 pt-[15vh] md:pt-[30vh]">
-                <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">
-                    Articles</h1>
+                <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">{{ app()->getLocale() === 'en' ? 'Articles' : 'អត្ថបទ' }}
+                    </h1>
                 <p class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px]">
-                    Hope Kids provides affordable, inclusive, and professional education for
-                    children with autism and special needs in Phnom Penh and across
-                    Cambodia.</p>
+                    {{ app()->getLocale() === 'en' ? 'Hope Kids provides affordable, inclusive, and professional education for children with autism and special needs in Phnom Penh and across Cambodia.' : 'យើងផ្ដល់ ការអប់រំពិសេស និងសេវាកម្មទូលំទូលាយ សម្រាប់កុមារដែលមាន អូទីសុីម, ជំងឺ Down’s Syndrome, ផ្ទុកភាសា និងពន្យាពេលនិយាយ ខ្វះខាតផ្នែកចំណេះដឹង  និងបញ្ហាសិក្សា ។' }}
+                </p>
 
             </div>
         </div>

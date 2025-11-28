@@ -71,9 +71,6 @@ class ProgramController extends Controller
 
         $data = $request->except('_token', 'image', '_method');
 
-        // 🔥 Auto-update slug
-        $data['slug'] = Str::slug($request->title_en);
-
         if ($request->hasFile('image')) {
             $data['image'] = $request->file('image')->store('programs', 'custom');
 

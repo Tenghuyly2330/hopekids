@@ -428,17 +428,13 @@
                             alt="Logo" />
                         <div>
                             <h2 class="text-2xl md:text-3xl font-bold leading-tight kantumruy">ក្តីសង្ឃឺមកុមារ</h2>
-                            <h2 class="text-xl md:text-2xl font-black leading-tight">HOPE KIDS</h2>
-                            <h3 class="text-sm md:text-lg font-semibold">Special Education School</h3>
+                            <h2 class="text-xl md:text-2xl font-black leading-tight">{{ app()->getLocale() === 'en' ? 'HOPE KIDS' : 'ហូបឃីដ' }}</h2>
+                            <h3 class="text-sm md:text-lg font-semibold">{{ app()->getLocale() === 'en' ? 'Special Education School' : 'សាលារៀនអប់រំពិសេស' }}</h3>
                         </div>
                     </div>
 
                     <p class="text-sm md:text-base font-light max-w-md">
-                        Hope Kids Special Education School is a leading autism and special needs education center in
-                        Phnom Penh and across Cambodia. We provide affordable programs for children with autism,
-                        ADHD,
-                        cerebral palsy, and other developmental challenges through compassionate teaching and
-                        therapy.
+                        {{ app()->getLocale() === 'en' ? 'Hope Kids Special Education School is a leading autism and special needs education center in Phnom Penh and across Cambodia. We provide affordable programs for children with autism, ADHD, cerebral palsy, and other developmental challenges through compassionate teaching and therapy.' : 'Hope Kids Special Education School is a leading autism and special needs education center in Phnom Penh and across Cambodia. We provide affordable programs for children with autism, ADHD, cerebral palsy, and other developmental challenges through compassionate teaching and therapy.' }}
                     </p>
 
                     <!-- Social Icons -->
@@ -468,22 +464,20 @@
                 <!-- Column 2: Navigation Links -->
                 <div class="flex justify-center lg:ms-10">
                     <div class="flex-1 lg:ms-10 mt-10 lg:mt-0">
-                        <h2 class="text-lg md:text-[25px] font-bold mb-4">Information</h2>
+                        <h2 class="text-lg md:text-[25px] font-bold mb-4">{{ app()->getLocale() === 'en' ? 'Information' : 'Information' }}</h2>
                         <ul class="space-y-3 text-sm md:text-base font-light">
-                            <li><a href="{{ URL('/') }}" class="hover:underline">Home</a></li>
-                            <li><a href="{{ URL('/about') }}" class="hover:underline">About Us</a></li>
-                            <li><a href="{{ URL('/ourprogram') }}" class="hover:underline">Our Programs</a></li>
-                            <li><a href="{{ URL('/professionalteam') }}" class="hover:underline">Professional
-                                    Team</a></li>
-                            <li><a href="{{ URL('/career') }}" class="hover:underline">Career</a></li>
-                            <li><a href="{{ URL('/articles') }}" class="hover:underline">Articles</a></li>
-                            <li><a href="{{ URL('/event') }}" class="hover:underline">Events</a></li>
-
-                            <li><a href="{{ URL('/contact') }}" class="hover:underline">Contact</a></li>
+                            <li><a href="{{ URL('/') }}" class="hover:underline">{{ app()->getLocale() === 'en' ? 'Home' : 'ទំព័រដើម' }}</a></li>
+                            <li><a href="{{ URL('/about') }}" class="hover:underline">{{ app()->getLocale() === 'en' ? 'About Us' : 'អំពីយើងខ្ញុំ' }}</a></li>
+                            <li><a href="{{ URL('/ourprogram') }}" class="hover:underline">{{ app()->getLocale() === 'en' ? 'Our Programs' : 'កម្មវិធីសិក្សា' }}</a></li>
+                            <li><a href="{{ URL('/professionalteam') }}" class="hover:underline">{{ app()->getLocale() === 'en' ? 'Professional Team' : 'អ្នកជំនាញ' }}</a></li>
+                            <li><a href="{{ URL('/career') }}" class="hover:underline">{{ app()->getLocale() === 'en' ? 'Career' : 'ឱកាសការងារ' }}</a></li>
+                            <li><a href="{{ URL('/articles') }}" class="hover:underline">{{ app()->getLocale() === 'en' ? 'Articles' : 'អត្ថបទ' }}</a></li>
+                            <li><a href="{{ URL('/event') }}" class="hover:underline">{{ app()->getLocale() === 'en' ? 'Events' : 'ព្រឹត្តិការណ៍ ' }}</a></li>
+                            <li><a href="{{ URL('/contact') }}" class="hover:underline">{{ app()->getLocale() === 'en' ? 'Contact' : 'ការទំនាក់ទំនង' }}</a></li>
                         </ul>
                     </div>
                     <div class="flex-1 mt-10 lg:mt-0 md:hidden">
-                        <h2 class="text-lg md:text-xl font-bold mb-4">Contact Us</h2>
+                        <h2 class="text-lg md:text-xl font-bold mb-4">{{ app()->getLocale() === 'en' ? 'Contact Us' : 'ការទំនាក់ទំនង' }}</h2>
                         <p class="text-sm md:text-base font-light mb-2">
                             #579, Street 35C, Phum Meanchey, Sangkat Steung Meanchey, Khan Meanchey, Phnom Penh,
                             Cambodia
@@ -499,7 +493,7 @@
 
                 <!-- Column 3: Contact Info -->
                 <div class="flex-1 lg:ms-[30px] mt-10 lg:mt-0 hidden md:block">
-                    <h2 class="text-lg md:text-[25px] font-bold mb-4">Contact Us</h2>
+                    <h2 class="text-lg md:text-[25px] font-bold mb-4">{{ app()->getLocale() === 'en' ? 'Contact Us' : 'ការទំនាក់ទំនង' }}</h2>
                     <p class="text-sm md:text-base font-light mb-2">
                         #579, Street 35C, Phum Meanchey, Sangkat Steung Meanchey, Khan Meanchey, Phnom Penh,
                         Cambodia

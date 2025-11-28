@@ -32,12 +32,8 @@
             <div class="absolute h-[60vh] object-cover md:h-screen inset-0 z-10 bg-black/50"></div>
 
             <div class="relative z-10 px-4 max-w-[700px] mx-auto pt-[10vh] md:pt-[30vh]">
-                <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">About Us</h1>
-                <p class="text-left text-white text-[14px] lg:text-[16px]">
-                    Hope Kids Special Education School stands committed to its vision of creating a world where every
-                    child—regardless of challenges, background, or ability—has the opportunity to reach their fullest
-                    potential. Through compassion, expertise, and innovation, we continue to build a future filled
-                    with hope, dignity, and possibilities for every child we serve.</p>
+                <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">{{ __('message.about_us') }}</h1>
+                <p class="text-left text-white text-[14px] lg:text-[16px]">{{ __('message.about_us_content') }}</p>
 
             </div>
         </div>
@@ -47,12 +43,8 @@
                     <div class="flex justify-center flex-col lg:flex-row items-center gap-10 p-10">
                         <img src="{{ asset('assets/mission.png') }}" alt="" class="w-24 h-24">
                         <div class="flex flex-col">
-                            <h1 class="text-[#F6F6F6] text-[15px] md:text-[25px] font-semibold">Mission</h1>
-                            <p class="text-[#F6F6F6] font-regular text-[13px] md:text-[15px]">We are highly committed in
-                                offering excellent, high quality,
-                                sustainable special education and holistic services to
-                                children with special needs and their families that improves
-                                their quality of life.</p>
+                            <h1 class="text-[#F6F6F6] text-[15px] md:text-[25px] font-semibold">{{ __('message.mission') }}</h1>
+                            <p class="text-[#F6F6F6] font-regular text-[13px] md:text-[15px]">{{ __('message.mission_content') }}</p>
                         </div>
                     </div>
                 </div>
@@ -61,54 +53,38 @@
                     <div class="flex justify-center lg:justify-start flex-col items-center lg:items-start gap-2 p-10">
 
                         <img src="{{ asset('assets/value.png') }}" alt="" class="w-24 h-24 mt-4">
-                        <h2 class="text-[#1C0186] text-[15px] md:text-[25px] font-semibold pt-2">Core
-                            Values</h2>
+                        <h2 class="text-[#1C0186] text-[15px] md:text-[25px] font-semibold pt-2">{{ __('message.core_values') }}</h2>
 
                         <!-- 1 -->
                         <div>
-                            <h1 class="text-[#1C0186] text-[15px] md:text-[20px] font-regular">1. Accessibility to all </h1>
+                            <h1 class="text-[#1C0186] text-[15px] md:text-[20px] font-regular">{{ __('message.core_values_title1') }} </h1>
                             <p class="md:text-[15px] text-[10px] text-[#1C0186] font-regular">
-                                We are committed to providing special education services that are affordable, inclusive, and
-                                available to families from diverse socio-economic backgrounds. Through partnerships,
-                                community outreach, and need-based support, we ensure that no child is left behind due to
-                                financial limitations.
+                                {{ __('message.core_values_des1') }}
                             </p>
                         </div>
 
                         <!-- 2 -->
                         <div>
-                            <h1 class="text-[#1C0186] text-[15px] md:text-[20px] font-regular">2. Highest standards of care
+                            <h1 class="text-[#1C0186] text-[15px] md:text-[20px] font-regular">{{ __('message.core_values_title2') }}
                             </h1>
                             <p class="md:text-[15px] text-[10px]  text-[#1C0186] font-regular">
-                                Hope Kids strives to maintain the highest quality of intervention and educational support.
-                                Our team consists of trained and dedicated professionals including special educators,
-                                occupational therapy, physiotherapy, sensory-integration therapy, psychology, speech and
-                                language therapy & other allied specialists who work collaboratively to create
-                                individualised learning pathways.
+                                {{ __('message.core_values_des2') }}
                             </p>
                         </div>
 
                         <!-- 3 -->
                         <div>
-                            <h1 class="text-[#1C0186] text-[15px] md:text-[20px] font-regular">3. Child centered and
-                                evidence based support</h1>
+                            <h1 class="text-[#1C0186] text-[15px] md:text-[20px] font-regular">{{ __('message.core_values_title3') }}</h1>
                             <p class="md:text-[15px] text-[10px] text-[#1C0186] font-regular">
-                                Our programs are built on globally recognised frameworks and evidence-based practices. We
-                                emphasise personalised planning, continuous assessment, and parent collaboration to support
-                                each child’s developmental, academic, social, and emotional growth.
-
-
+                                {{ __('message.core_values_des3') }}
                             </p>
                         </div>
 
                         <!-- 4 -->
                         <div>
-                            <h1 class="text-[#1C0186] text-[15px] md:text-[20px] font-regular">4. Building inclusion &
-                                awareness </h1>
+                            <h1 class="text-[#1C0186] text-[15px] md:text-[20px] font-regular">{{ __('message.core_values_title4') }}</h1>
                             <p class="md:text-[15px] text-[10px]  text-[#1C0186] font-regular">
-                                We aim to be a driving force in fostering acceptance and understanding of children with
-                                special needs. We work with parents, educators, and the community to promote inclusive
-                                mindsets and advocate for equal opportunities.
+                               {{ __('message.core_values_des4') }}
                             </p>
                         </div>
                     </div>
@@ -119,13 +95,9 @@
                     <div class="flex justify-center flex-col lg:flex-row  items-center gap-10 p-10">
                         <img src="{{ asset('assets/vision.png') }}" alt="" class="w-24 h-24">
                         <div class="flex flex-col">
-                            <h1 class="text-[#F6F6F6] text-[15px] md:text-[25px] font-semibold">Vision</h1>
-                            <p class="text-[#F6F6F6] font-regular text-[10px] md:text-[13px]">To be the most trusted,
-                                preferred and leading educational
-                                institution in the whole of Cambodia that provides excellent
-                                evidence based special education and holistic services for
-                                children with special needs, their families and their
-                                communities.</p>
+                            <h1 class="text-[#F6F6F6] text-[15px] md:text-[25px] font-semibold">{{ __('message.vision') }}</h1>
+                            <p class="text-[#F6F6F6] font-regular text-[10px] md:text-[13px]">
+                                {{ __('message.vision_content') }}</p>
                         </div>
                     </div>
 
@@ -136,14 +108,9 @@
                     <div class="flex justify-center flex-col lg:flex-row items-center gap-10 p-10">
                         <img src="{{ asset('assets/goal.png') }}" alt="" class="w-24 h-24" />
                         <div class="flex flex-col">
-                            <h1 class="text-[#F6F6F6] text-[15px] md:text-[25px] font-semibold">Our Goals & Roadmap</h1>
-                            <p class="text-[#F6F6F6] font-regular text-[8px] md:text-[13px]">At Hope Kids Special
-                                Education School, our mission is simple yet powerful:
-                                to make high-quality special education accessible to every child who needs it,
-                                regardless of their socio-economic background.
-                                We believe every child deserves the chance to learn, grow, communicate, explore, and
-                                thrive in a supportive and nurturing environment.
-
+                            <h1 class="text-[#F6F6F6] text-[15px] md:text-[25px] font-semibold">{{ __('message.our_goal') }}</h1>
+                            <p class="text-[#F6F6F6] font-regular text-[8px] md:text-[13px]">
+                                {{ __('message.our_goal_content') }}
                             </p>
                         </div>
                     </div>
