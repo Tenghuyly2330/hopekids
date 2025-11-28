@@ -117,7 +117,7 @@
                                 </div>
                                 <a href="{{ URL('/ourprogram/#1') }}"
                                     class="mt-4 py-1 px-5 text-[14px] font-[600] bg-white text-black self-start">
-                                    <span>Detail</span>
+                                    <span>{{ app()->getLocale() === 'en' ? 'Detail' : 'ព័ត៌មាបន្ថែម' }}</span>
                                 </a>
                             </div>
                         </div>

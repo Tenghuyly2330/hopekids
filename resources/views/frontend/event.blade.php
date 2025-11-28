@@ -51,7 +51,7 @@
                                     stroke-linecap="round" stroke-linejoin="round"></path>
                             </g>
                         </svg>
-                        <span>Detail</span>
+                        <span>{{ app()->getLocale() === 'en' ? 'Detail' : 'ព័ត៌មាបន្ថែម' }}</span>
                     </a>
                 </div>
             </div>
