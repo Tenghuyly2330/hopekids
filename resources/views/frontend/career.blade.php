@@ -13,7 +13,7 @@
                 <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">{{ app()->getLocale() === 'en' ? 'Career' : 'អាជីព' }}
                     </h1>
 
-                <p class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px]">
+                <p class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px]  px-4">
                     {{ app()->getLocale() === 'en' ? 'Hope Kids provides affordable, inclusive, and professional education for children with autism and special needs in Phnom Penh and across Cambodia.' : 'Hope Kids ផ្តល់អប់រំដែលមានតម្លៃសមរម្យ មានភាពរួមបញ្ចូល និងវិជ្ជាជីវៈ សម្រាប់កុមារដែលមានអូទីសំ និងតម្រូវការពិសេស នៅក្នុងភ្នំពេញ និងទូទាំងប្រទេសកម្ពុជា។' }}
 
                 </p>

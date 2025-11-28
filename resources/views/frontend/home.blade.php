@@ -24,7 +24,7 @@
                     <h1 class="text-[20px] md:text-[40px] font-regular text-white text-gradient">
                         {{ app()->getLocale() === 'en' ? 'Welcome To' : 'សូមស្វាគមន៍មកកាន់' }} <br>
                         <span
-                            class="text-[40px] md:text-[80px] font-[700] py-2 leading-none">{{ app()->getLocale() === 'en' ? 'HOPE KIDS' : 'ហូបឃីដ' }}</span>
+                            class="text-[40px] md:text-[80px] font-[700] py-2 leading-none px-4">{{ app()->getLocale() === 'en' ? 'HOPE KIDS' : 'ហូបឃីដ' }}</span>
                     </h1>
 
                     <p class="text-[#1C0186] font-bold text-[16px] md:text-[25px] pt-2">
@@ -490,7 +490,7 @@
                         <!-- Select 2 -->
                         <select name="location"
                             class="bg-white p-3 text-[#5796FF] rounded-full border-none focus:ring-2 focus:ring-blue-400">
-                            <option value="" disabled >Select Branch</option>
+                            <option value="">Select Branch</option>
                             <option class="bg-blue-500 text-white">Steng Meanchey</option>
                             <option class="bg-blue-500 text-white">Peng Hout Boeung Snor</option>
                             <option class="bg-blue-500 text-white">Banteay Meanchey</option>
@@ -517,7 +517,7 @@
                         <div class="flex items-start gap-1">
                             <i class="fa-solid fa-circle-check" style="color: #29A71A"></i>
                             <p class=" text-[#5796FF] font-regular text-[12px] md:text-[14px]">I consent to having this
-                                website store my submitted <br> information so they can respond to my enquiry.”</p>
+                                website store my submitted <br> information so they can respond to my enquiry.</p>
                         </div>
                     </div>
 
