@@ -234,7 +234,7 @@
                     <li class="hover:bg-[#5897FF]"><a href="/#faq"
                             class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'FAQ' : 'FAQ' }}</a>
                     </li>
-                    {{-- <li class="hover:bg-[#5897FF]"><a href="/#schedule"
+                    {{-- <li class="hover:bg-[#5897FF]"><a href="/#contact"
                             class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Schedule a tour' : 'Schedule a tour' }}</a>
                     </li> --}}
                 </ul>

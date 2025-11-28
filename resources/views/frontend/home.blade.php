@@ -24,7 +24,7 @@
                     <h1 class="text-[20px] md:text-[40px] font-regular text-white text-gradient">
                         {{ app()->getLocale() === 'en' ? 'Welcome To' : 'សូមស្វាគមន៍មកកាន់' }} <br>
                         <span
-                            class="text-[40px] md:text-[80px] font-[700] py-2 leading-none px-4">{{ app()->getLocale() === 'en' ? 'HOPE KIDS' : 'ហូបឃីដ' }}</span>
+                            class="text-[40px] md:text-[80px] font-[700] py-2 leading-none">{{ app()->getLocale() === 'en' ? 'HOPE KIDS' : 'ហូបឃីដ' }}</span>
                     </h1>
 
                     <p class="text-[#1C0186] font-bold text-[16px] md:text-[25px] pt-2">
@@ -139,11 +139,12 @@
         <!-- Content -->
         <div class="relative z-10 flex flex-col items-center justify-center h-[300px] md:h-[380px]">
             <h1 class="text-center text-[25px] md:text-[40px] font-light text-white">
-                {{ __("message.school_facilities") }}
+                {{ __('message.school_facilities') }}
             </h1>
-            <p class="text-center text-[15px] md:text-[20px] font-bold text-white">{{ __("message.school_facilities_title") }}</p>
+            <p class="text-center text-[15px] md:text-[20px] font-bold text-white">
+                {{ __('message.school_facilities_title') }}</p>
             <p class="max-w-[700px] mx-auto pz-4 text-[10px] md:text-[15px] font-light text-white text-center ">
-                {{ __("message.school_facilities_content") }}
+                {{ __('message.school_facilities_content') }}
             </p>
         </div>
     </div>
@@ -335,7 +336,8 @@
                     onclick="toggleFaq(this)">
                     <div class="flex justify-between items-start">
                         <p class="text-[15px] md:text-[16px]">
-                            {{ app()->getLocale() === 'en' ? 'Q: How can parents enroll their child at Hope Kids?' : 'សំណួរ៖ តើអាណាព្យាបាលអាចចុះឈ្មោះកូនរបស់ខ្លួននៅសាលារៀនអប់រំពិសេសហូបឃីដបានយ៉ាងដូចម្តេច?' }}</p>
+                            {{ app()->getLocale() === 'en' ? 'Q: How can parents enroll their child at Hope Kids?' : 'សំណួរ៖ តើអាណាព្យាបាលអាចចុះឈ្មោះកូនរបស់ខ្លួននៅសាលារៀនអប់រំពិសេសហូបឃីដបានយ៉ាងដូចម្តេច?' }}
+                        </p>
                         <div
                             class="arrow w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[15px] border-b-gray-400 mt-2">
                         </div>
@@ -351,7 +353,7 @@
                     <div class="flex justify-between items-start">
                         <p class="text-[15px] md:text-[16px]">
                             {{ app()->getLocale() === 'en' ? 'Q: Are services available outside Phnom Penh?' : 'សំណួរ៖ តើសេវាកម្មអប់រំនេះមាននៅខាងក្រៅរាជធានីភ្នំពេញដែរឬទេ?' }}
-                            </p>
+                        </p>
                         <div
                             class="arrow w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[15px] border-b-gray-400 mt-2">
                         </div>
@@ -372,7 +374,7 @@
                     <div class="flex justify-between items-start">
                         <p class="text-[15px] md:text-[16px]">
                             {{ app()->getLocale() === 'en' ? 'Q: Who can benefit from special education services?' : 'សំណួរ៖ តើនរណាអាចទទួលបានផលប្រយោជន៍ពីសេវាកម្មអប់រំពិសេសនៅសាលារៀនអប់រំពិសេសហូបឃីដ?' }}
-                            </p>
+                        </p>
                         <div
                             class="arrow w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[15px] border-b-gray-400 mt-2">
                         </div>
@@ -389,7 +391,7 @@
                     <div class="flex justify-between items-start">
                         <p class="text-[15px] md:text-[16px]">
                             {{ app()->getLocale() === 'en' ? 'Q: What kind of professionals work at Hope Kids?' : 'សំណួរ៖ តើមានអ្នកជំនាញប្រភេទណាខ្លះធ្វើការនៅសាលារៀនអប់រំពិសេសហូបឃីដ?' }}
-                            </p>
+                        </p>
                         <div
                             class="arrow w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[15px] border-b-gray-400 mt-2">
                         </div>
@@ -405,7 +407,7 @@
                     <div class="flex justify-between items-start">
                         <p class="text-[15px] md:text-[16px]">
                             {{ app()->getLocale() === 'en' ? 'Q: How are children’s progress monitored?' : 'សំណួរ៖ តើធ្វើដូចម្តេចដើម្បីតាមដានភាពប្រសើរនិងគោលដៅរបស់កូនៗ?' }}
-                            </p>
+                        </p>
                         <div
                             class="arrow w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[15px] border-b-gray-400 mt-2">
                         </div>
@@ -420,7 +422,8 @@
                     onclick="toggleFaq(this)">
                     <div class="flex justify-between items-start">
                         <p class="text-[15px] md:text-[16px]">
-                            {{ app()->getLocale() === 'en' ? 'Q: Does Hope Kids provide parent training?' : 'សំណួរ៖ តើសាលារៀនអប់រំពិសេសហូបឃីដផ្តល់ការបណ្តុះបណ្តាល ឬការគាំពារដល់អាណាព្យាបាលដែរឬទេ?' }} </p>
+                            {{ app()->getLocale() === 'en' ? 'Q: Does Hope Kids provide parent training?' : 'សំណួរ៖ តើសាលារៀនអប់រំពិសេសហូបឃីដផ្តល់ការបណ្តុះបណ្តាល ឬការគាំពារដល់អាណាព្យាបាលដែរឬទេ?' }}
+                        </p>
                         <div
                             class="arrow w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[15px] border-b-gray-400 mt-2">
                         </div>
@@ -455,7 +458,7 @@
     </section>
 
     {{-- contact form --}}
-    <div id="schedule" class="mt-10" id="contact">
+    <div class="mt-10" id="contact">
         @if (session('success'))
             <div x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 3000)"
                 class="fixed top-5 right-5 bg-green-600 text-white px-5 py-3 rounded-lg shadow-lg z-50">
@@ -514,11 +517,14 @@
                         <input type="text" placeholder="Telegram" name="telegram"
                             class="bg-white p-3 rounded-full border-none placeholder-[#5796FF]">
 
-                        <div class="flex items-start gap-1">
-                            <i class="fa-solid fa-circle-check" style="color: #29A71A"></i>
-                            <p class=" text-[#5796FF] font-regular text-[12px] md:text-[14px]">I consent to having this
-                                website store my submitted <br> information so they can respond to my enquiry.</p>
+                        <div class="flex items-start gap-2">
+                            <input id="consent" name="consent" type="checkbox" value="1"
+                                class="mt-1 h-4 w-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500" />
+                            <label for="consent" class="text-[#5796FF] text-[12px] md:text-[14px]">
+                                I consent to having this website store my submitted information so they can respond to my enquiry.</span>
+                            </label>
                         </div>
+
                     </div>
 
                     <div class="w-full md:col-span-2 flex justify-center items-center mt-3 ">

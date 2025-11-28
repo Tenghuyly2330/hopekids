@@ -226,26 +226,20 @@
 
     {{-- location --}}
     <div class="mt-10 px-4" id="find">
-        <h1 class="text-gradient text-[25px] md:text-[30px] font-[700] text-center">Find Us!</h1>
+        <h1 class="text-gradient text-[25px] md:text-[30px] font-[700] text-center">{{ app()->getLocale() === 'en' ? 'Find Us!' : 'ស្វែងរកសាខាដែលនៅជិតលោកអ្នក' }}</h1>
 
         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-10">
             <div class="flex flex-col gap-3">
 
                 <div class="w-full h-[180px]">
-                    <p class="text-[#1E1E1E] text-[15px] font-bold">Phnom Penh <br> (Stueng Mean chey)</p>
+                    <p class="text-[#1E1E1E] text-[15px] font-bold">{{ app()->getLocale() === 'en' ? 'Phnom Penh (Stueng Mean chey)' : 'ស្វែងរកសាខាដែលនៅជិតលោកអ្នក' }}</p>
 
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px] mt-2">#579, Street 35C, Phum
-                        Meanchey, Sangkat
-                        Steung
-                        Meanchey, Khan Meanchey, Phnom Penh, Cambodia</p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">085 253 388 / 086 253 388</p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">Email:
+                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px] mt-2">{{ app()->getLocale() === 'en' ? '#579, Street 35C, Phum Meanchey, Sangkat Steung Meanchey, Khan Meanchey, Phnom Penh, Cambodia' : 'ផ្ទះលេខ ៥៧៩ ផ្លូវលេខ ៣៥C ភូមិមានជ័យ សង្កាត់ស្ទឹងមានជ័យ ខណ្ឌមានជ័យ ទីក្រុងភ្នំពេញ ប្រទេសកម្ពុជា' }}</p>
+                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? '085 253 388 / 086 253 388' : '០៨៥ ២៥៣ ៣៨៨ / ០៨៦ ២៥៣ ៣៨៨' }}</p>
+                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖ ' }}
                         hopekids.info@gmail.com
                     </p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">Operating Hours: Monday –
-                        Friday
-                        | 8:00 AM –
-                        6:00 PM</p>
+                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? 'Operating Hours: Monday – Friday | 8:00 AM – 6:00 PM' : 'ម៉ោងធ្វើការ៖ ច័ន្ទ – សុក្រ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}</p>
                 </div>
                 <img src="{{ asset('assets/1.jpg') }}" alt=""
                     class="w-full h-[200px] md:h-[150px] object-cover">
@@ -257,26 +251,21 @@
                     </iframe>
 
                 </div>
-            </div>
+                </div>
 
             <div class="flex flex-col gap-3">
 
                 <div class="w-full h-[180px]">
-                    <p class="text-[#1E1E1E] text-[15px] font-bold">Phnom Penh <br> (Peng Huot Beng Snor)</p>
+                    <p class="text-[#1E1E1E] text-[15px] font-bold">{{ app()->getLocale() === 'en' ? 'Phnom Penh (Peng Huot Beng Snor)' : 'ទីក្រុងភ្នំពេញ (ប៉េងហួតបេងស្នោ)' }}</p>
 
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">#579, Street 35C, Phum
-                        Meanchey,
-                        Sangkat Steung
-                        Meanchey,
-                        Khan Meanchey, Phnom Penh, Cambodia</p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">010 727 416 / 085 727 416</p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">Email:
+                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
+                        {{ app()->getLocale() === 'en' ? '#579, Street 35C, Phum Meanchey, Sangkat Steung Meanchey, Khan Meanchey, Phnom Penh, Cambodia' : 'ផ្ទះលេខ ៥៧៩ ផ្លូវលេខ ៣៥C ភូមិមានជ័យ សង្កាត់ស្ទឹងមានជ័យ ខណ្ឌមានជ័យ ភ្នំពេញ កម្ពុជា' }}
+                        </p>
+                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? '010 727 416 / 085 727 416' : '០១០ ៧២៧ ៤១៦ / ០៨៥ ៧២៧ ៤១៦' }}</p>
+                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖ ' }}
                         hopekids.info@gmail.com
                     </p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">Operating Hours: Monday –
-                        Friday
-                        | 8:00 AM –
-                        6:00 PM
+                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? 'Operating Hours: Monday – Friday | 8:00 AM – 6:00 PM' : 'ម៉ោងធ្វើការ៖ ច័ន្ទ – សុក្រ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
                     </p>
                 </div>
 
@@ -294,21 +283,15 @@
 
             <div class="flex flex-col gap-3">
                 <div class="w-full h-[180px]">
-                    <p class="text-[#1E1E1E] text-[15px] font-bold">Kampot</p>
+                    <p class="text-[#1E1E1E] text-[15px] font-bold">{{ app()->getLocale() === 'en' ? 'Kampot' : 'ខេត្តកំពត' }}</p>
 
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">#579, Street 35C, Phum
-                        Meanchey,
-                        Sangkat Steung
-                        Meanchey,
-                        Khan Meanchey, Phnom Penh, Cambodia</p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">090 333 185 / 085 333 815</p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">Email:
+                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
+                        {{ app()->getLocale() === 'en' ? '#579, Street 35C, Phum Meanchey, Sangkat Steung Meanchey, Khan Meanchey, Phnom Penh, Cambodia' : 'ផ្ទះលេខ ៥៧៩ ផ្លូវលេខ ៣៥C ភូមិមានជ័យ សង្កាត់ស្ទឹងមានជ័យ ខណ្ឌមានជ័យ ភ្នំពេញ កម្ពុជា' }}</p>
+                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? '090 333 185 / 085 333 815' : '០៩០ ៣៣៣ ១៨៥ / ០៨៥ ៣៣៣ ៨១៥' }}</p>
+                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖ ' }}
                         hopekids.info@gmail.com
                     </p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">Operating Hours: Monday –
-                        Friday
-                        | 8:00 AM –
-                        6:00 PM
+                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? 'Operating Hours: Monday – Friday | 8:00 AM – 6:00 PM' : 'ម៉ោងធ្វើការ៖ ច័ន្ទ – សុក្រ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
                     </p>
                 </div>
 
@@ -327,20 +310,16 @@
             <div class="flex flex-col gap-3">
                 <div class="w-full h-[180px]">
 
-                    <p class="text-[#1E1E1E] text-[15px] font-bold">Battambang</p>
+                    <p class="text-[#1E1E1E] text-[15px] font-bold">{{ app()->getLocale() === 'en' ? 'Battambang' : 'ខេត្តបាត់ដំបុង' }}</p>
 
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">#579, Street 35C, Phum
-                        Meanchey,
-                        Sangkat Steung
-                        Meanchey, Khan Meanchey, Phnom Penh, Cambodia</p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">085 227 436 / 010 227 436</p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">Email:
+                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
+                        {{ app()->getLocale() === 'en' ? '#579, Street 35C, Phum Meanchey, Sangkat Steung Meanchey, Khan Meanchey, Phnom Penh, Cambodia' : 'ផ្ទះលេខ ៥៧៩ ផ្លូវលេខ ៣៥C ភូមិមានជ័យ សង្កាត់ស្ទឹងមានជ័យ ខណ្ឌមានជ័យ ភ្នំពេញ កម្ពុជា' }}</p>
+                    </p>
+                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? '085 227 436 / 010 227 436' : '០៨៥ ២២៧ ៤៣៦ / ០១០ ២២៧ ៤៣៦' }}</p>
+                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖ ' }}
                         hopekids.info@gmail.com
                     </p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">Operating Hours: Monday –
-                        Friday
-                        | 8:00 AM –
-                        6:00 PM
+                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? 'Operating Hours: Monday – Friday | 8:00 AM – 6:00 PM' : 'ម៉ោងធ្វើការ៖ ច័ន្ទ – សុក្រ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
                     </p>
                 </div>
 
@@ -358,20 +337,16 @@
 
             <div class="flex flex-col gap-3">
                 <div class="w-full h-[180px]">
-                    <p class="text-[#1E1E1E] text-[15px] font-bold">Banteay Mean Chey</p>
+                    <p class="text-[#1E1E1E] text-[15px] font-bold">{{ app()->getLocale() === 'en' ? 'Banteay Mean Chey' : 'បន្ទាយមានជ័យ' }}</p>
 
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">#579, Street 35C, Phum
-                        Meanchey,
-                        Sangkat Steung
-                        Meanchey, Khan Meanchey, Phnom Penh, Cambodia</p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">096 888 3165/090 888 316</p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">Email:
+                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
+                        {{ app()->getLocale() === 'en' ? '#579, Street 35C, Phum Meanchey, Sangkat Steung Meanchey, Khan Meanchey, Phnom Penh, Cambodia' : 'ផ្ទះលេខ ៥៧៩ ផ្លូវលេខ ៣៥C ភូមិមានជ័យ សង្កាត់ស្ទឹងមានជ័យ ខណ្ឌមានជ័យ ភ្នំពេញ កម្ពុជា' }}</p>
+                    </p>
+                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? '096 888 3165 / 090 888 316' : '០៩៦ ៨៨៨ ៣១៦៥ / ០៩០ ៨៨៨ ៣១៦' }}</p>
+                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖ ' }}
                         hopekids.info@gmail.com
                     </p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">Operating Hours: Monday –
-                        Friday
-                        | 8:00 AM –
-                        6:00 PM
+                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? 'Operating Hours: Monday – Friday | 8:00 AM – 6:00 PM' : 'ម៉ោងធ្វើការ៖ ច័ន្ទ – សុក្រ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
                     </p>
                 </div>
                 <img src="{{ asset('assets/banteaymeanchey.jpg') }}"
@@ -386,21 +361,18 @@
 
             <div class="flex flex-col gap-3">
                 <div class="w-full h-[180px]">
-                    <p class="text-[#1E1E1E] text-[15px] font-bold">Ratanakiri</p>
+                    <p class="text-[#1E1E1E] text-[15px] font-bold">{{ app()->getLocale() === 'en' ? 'Ratanakiri' : 'រតនគីរី' }}</p>
 
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">#579, Street 35C, Phum
-                        Meanchey,
-                        Sangkat Steung
-                        Meanchey, Khan Meanchey, Phnom Penh, Cambodia</p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">066 888 309 / 096 888 2037
+                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
+                        {{ app()->getLocale() === 'en' ? '#579, Street 35C, Phum Meanchey, Sangkat Steung Meanchey, Khan Meanchey, Phnom Penh, Cambodia' : 'ផ្ទះលេខ ៥៧៩ ផ្លូវលេខ ៣៥C ភូមិមានជ័យ សង្កាត់ស្ទឹងមានជ័យ ខណ្ឌមានជ័យ ភ្នំពេញ កម្ពុជា' }}</p>
                     </p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">Email:
+                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
+                        {{ app()->getLocale() === 'en' ? '066 888 309 / 096 888 2037' : '០៦៦ ៨៨៨ ៣០៩ / ០៩៦ ៨៨៨ ២០៣៧' }}
+                    </p>
+                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖ ' }}
                         hopekids.info@gmail.com
                     </p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">Operating Hours: Monday –
-                        Friday
-                        | 8:00 AM –
-                        6:00 PM
+                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? 'Operating Hours: Monday – Friday | 8:00 AM – 6:00 PM' : 'ម៉ោងធ្វើការ៖ ច័ន្ទ – សុក្រ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
                     </p>
                 </div>
                 <img src="{{ asset('assets/ratanakkiri.jpg') }}" class="w-full h-[200px] md:h-[150px] object-cover"
