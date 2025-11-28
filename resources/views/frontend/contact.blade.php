@@ -53,7 +53,7 @@
                 </ul>
 
                 <!-- QR -->
-                <img src="{{ asset('assets/qr_telagram.png') }}" class="w-48 md:w-64 mt-6 lg:ms-20" alt="">
+                <img src="{{ asset('assets/qr.png') }}" class="w-48 md:w-64 mt-6 lg:ms-20" alt="">
 
                 <h1 class="text-[#5796FF] text-2xl md:text-3xl font-light mt-3 lg:ms-28">
                     Hot Line

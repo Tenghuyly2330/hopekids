@@ -10,8 +10,9 @@
 
             <div class="relative z-10 pt-[15vh] md:pt-[30vh]">
 
-                <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">{{ app()->getLocale() === 'en' ? 'Career' : 'អាជីព' }}
-                    </h1>
+                <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">
+                    {{ app()->getLocale() === 'en' ? 'Career' : 'អាជីព' }}
+                </h1>
 
                 <p class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px]  px-4">
                     {{ app()->getLocale() === 'en' ? 'Hope Kids provides affordable, inclusive, and professional education for children with autism and special needs in Phnom Penh and across Cambodia.' : 'Hope Kids ផ្តល់អប់រំដែលមានតម្លៃសមរម្យ មានភាពរួមបញ្ចូល និងវិជ្ជាជីវៈ សម្រាប់កុមារដែលមានអូទីសំ និងតម្រូវការពិសេស នៅក្នុងភ្នំពេញ និងទូទាំងប្រទេសកម្ពុជា។' }}
@@ -28,7 +29,7 @@
 
             <!-- Left Box -->
             <div class="w-full h-full">
-                <img src="{{ asset('assets/career1.png') }}" class="w-full lg:w-full md:w-full rounded-xl object-cover"
+                <img src="{{ asset('assets/career1.png') }}" class="w-full h-full rounded-xl object-cover"
                     alt="">
             </div>
 
@@ -52,7 +53,7 @@
                     </div>
                 @endif
 
-                <form class="mt-8 flex flex-col md:ms-3 gap-4" action="{{ route('contact.submit') }}" method="POST">
+                <form class="mt-8 flex flex-col md:ms-3 gap-4" action="{{ route('contact.submit') }}" method="POST" enctype="multipart/form-data">
                     @csrf
 
                     <div>
@@ -66,20 +67,28 @@
                     </div>
 
                     <div>
-                        <label class="text-[12px]">{{ app()->getLocale() === 'en' ? 'Email' : 'អ៊ីមែល'}}</label>
+                        <label class="text-[12px]">{{ app()->getLocale() === 'en' ? 'Email' : 'អ៊ីមែល' }}</label>
                         <input type="email" name="email" class="p-3 bg-white text-black rounded-full w-full mt-1">
                     </div>
 
                     <div>
-                        <label class="text-[12px]">{{ app()->getLocale() === 'en' ? 'Position' : 'តំណែង'}}</label>
+                        <label class="text-[12px]">{{ app()->getLocale() === 'en' ? 'Position' : 'តំណែង' }}</label>
                         <select class="p-3 bg-white text-black rounded-full w-full mt-1" name="position">
-                            <option value="" disabled selected>{{ app()->getLocale() === 'en' ? 'Select a position' : 'ជ្រើសរើសតំណែង'}}</option>
-                            <option value="teacher">{{ app()->getLocale() === 'en' ? 'Teacher' : 'Teacher'}}</option>
-                            <option value="therapist">{{ app()->getLocale() === 'en' ? 'Therapist' : 'Therapist'}}</option>
-                            <option value="administrator">{{ app()->getLocale() === 'en' ? 'Administrator' : 'Administrator'}}</option>
-                            <option value="other">{{ app()->getLocale() === 'en' ? 'Other' : 'Other'}}</option>
+                            <option value="" disabled selected>
+                                {{ app()->getLocale() === 'en' ? 'Select a position' : 'ជ្រើសរើសតំណែង' }}</option>
+                            <option value="teacher">Teacher</option>
+                            <option value="therapist">Therapist</option>
+                            <option value="administrator">Administrator</option>
+                            <option value="other">Other</option>
                         </select>
                     </div>
+
+                    <div>
+                        <label
+                            class="text-[12px]">{{ app()->getLocale() === 'en' ? 'Upload File' : 'បញ្ចូលឯកសារ' }}</label>
+                        <input type="file" name="file" class="p-3 bg-white text-black rounded-full w-full mt-1">
+                    </div>
+
 
                     <div>
                         <label class="text-[12px]">{{ app()->getLocale() === 'en' ? 'Message' : 'សារ ' }}</label>
@@ -90,6 +99,7 @@
                         {{ app()->getLocale() === 'en' ? 'SUBMIT' : 'ដាក់ស្នើ ' }}
                     </button>
                 </form>
+
             </div>
         </div>
     </section>

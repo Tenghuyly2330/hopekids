@@ -232,9 +232,9 @@
             <div class="flex flex-col gap-3">
 
                 <div class="w-full h-[180px]">
-                    <p class="text-[#1E1E1E] text-[15px] font-bold">{{ app()->getLocale() === 'en' ? 'Phnom Penh (Stueng Mean chey)' : 'ស្វែងរកសាខាដែលនៅជិតលោកអ្នក' }}</p>
+                    <p class="text-[#1E1E1E] text-[15px] font-bold">{{ app()->getLocale() === 'en' ? 'Phnom Penh (Stueng Mean chey)' : 'ទីក្រុងភ្នំពេញ (ប៉េងហួតបេងស្នោ)' }}</p>
 
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px] mt-2">{{ app()->getLocale() === 'en' ? '#579, Street 35C, Phum Meanchey, Sangkat Steung Meanchey, Khan Meanchey, Phnom Penh, Cambodia' : 'ផ្ទះលេខ ៥៧៩ ផ្លូវលេខ ៣៥C ភូមិមានជ័យ សង្កាត់ស្ទឹងមានជ័យ ខណ្ឌមានជ័យ ទីក្រុងភ្នំពេញ ប្រទេសកម្ពុជា' }}</p>
+                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px] mt-2">{{ app()->getLocale() === 'en' ? 'Street 62, Sangkat Stoeung, Phnom Penh' : 'ផ្លូវលេខ៦២ សង្កាត់ស្ទឹងមានជ័យ រាជធានីភ្នំពេញ' }}</p>
                     <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? '085 253 388 / 086 253 388' : '០៨៥ ២៥៣ ៣៨៨ / ០៨៦ ២៥៣ ៣៨៨' }}</p>
                     <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖ ' }}
                         hopekids.info@gmail.com
@@ -259,7 +259,7 @@
                     <p class="text-[#1E1E1E] text-[15px] font-bold">{{ app()->getLocale() === 'en' ? 'Phnom Penh (Peng Huot Beng Snor)' : 'ទីក្រុងភ្នំពេញ (ប៉េងហួតបេងស្នោ)' }}</p>
 
                     <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? '#579, Street 35C, Phum Meanchey, Sangkat Steung Meanchey, Khan Meanchey, Phnom Penh, Cambodia' : 'ផ្ទះលេខ ៥៧៩ ផ្លូវលេខ ៣៥C ភូមិមានជ័យ សង្កាត់ស្ទឹងមានជ័យ ខណ្ឌមានជ័យ ភ្នំពេញ កម្ពុជា' }}
+                        {{ app()->getLocale() === 'en' ? 'in Borey Peng Huoth Grand Star Platinum (Boeung Snor, The Star Platinum Herminus, Phnom Penh 121201' : 'នៅបុរីប៉េងហួត ហ្គ្រេនស្តារ ផ្លាទីនីម (បឹងស្នោ, ឌឹស្តារ ផ្លាទីនីម ហឺមីណុស, ភ្នំពេញ 121201' }}
                         </p>
                     <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? '010 727 416 / 085 727 416' : '០១០ ៧២៧ ៤១៦ / ០៨៥ ៧២៧ ៤១៦' }}</p>
                     <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖ ' }}
@@ -286,7 +286,7 @@
                     <p class="text-[#1E1E1E] text-[15px] font-bold">{{ app()->getLocale() === 'en' ? 'Kampot' : 'ខេត្តកំពត' }}</p>
 
                     <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? '#579, Street 35C, Phum Meanchey, Sangkat Steung Meanchey, Khan Meanchey, Phnom Penh, Cambodia' : 'ផ្ទះលេខ ៥៧៩ ផ្លូវលេខ ៣៥C ភូមិមានជ័យ សង្កាត់ស្ទឹងមានជ័យ ខណ្ឌមានជ័យ ភ្នំពេញ កម្ពុជា' }}</p>
+                        {{ app()->getLocale() === 'en' ? 'Tropang Monterey Village, Street 31, Toukmeas 070303' : 'ភូមិត្រពាំងម៉ុនធើរី ផ្លូវលេខ ៣១ ទូកមាស 070303' }}</p>
                     <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? '090 333 185 / 085 333 815' : '០៩០ ៣៣៣ ១៨៥ / ០៨៥ ៣៣៣ ៨១៥' }}</p>
                     <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖ ' }}
                         hopekids.info@gmail.com
@@ -310,10 +310,10 @@
             <div class="flex flex-col gap-3">
                 <div class="w-full h-[180px]">
 
-                    <p class="text-[#1E1E1E] text-[15px] font-bold">{{ app()->getLocale() === 'en' ? 'Battambang' : 'ខេត្តបាត់ដំបុង' }}</p>
+                    <p class="text-[#1E1E1E] text-[15px] font-bold">{{ app()->getLocale() === 'en' ? 'Battambang' : 'ខេត្តបាត់ដំបង' }}</p>
 
                     <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? '#579, Street 35C, Phum Meanchey, Sangkat Steung Meanchey, Khan Meanchey, Phnom Penh, Cambodia' : 'ផ្ទះលេខ ៥៧៩ ផ្លូវលេខ ៣៥C ភូមិមានជ័យ សង្កាត់ស្ទឹងមានជ័យ ខណ្ឌមានជ័យ ភ្នំពេញ កម្ពុជា' }}</p>
+                        {{ app()->getLocale() === 'en' ? 'Battambang City 021401' : 'ក្រុងបាត់ដំបង 021401' }}</p>
                     </p>
                     <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? '085 227 436 / 010 227 436' : '០៨៥ ២២៧ ៤៣៦ / ០១០ ២២៧ ៤៣៦' }}</p>
                     <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖ ' }}
@@ -340,7 +340,7 @@
                     <p class="text-[#1E1E1E] text-[15px] font-bold">{{ app()->getLocale() === 'en' ? 'Banteay Mean Chey' : 'បន្ទាយមានជ័យ' }}</p>
 
                     <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? '#579, Street 35C, Phum Meanchey, Sangkat Steung Meanchey, Khan Meanchey, Phnom Penh, Cambodia' : 'ផ្ទះលេខ ៥៧៩ ផ្លូវលេខ ៣៥C ភូមិមានជ័យ សង្កាត់ស្ទឹងមានជ័យ ខណ្ឌមានជ័យ ភ្នំពេញ កម្ពុជា' }}</p>
+                        {{ app()->getLocale() === 'en' ? 'Phum, Sisophon 010801' : 'ភូមិ ស៊ីសុផុន 010801' }}</p>
                     </p>
                     <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? '096 888 3165 / 090 888 316' : '០៩៦ ៨៨៨ ៣១៦៥ / ០៩០ ៨៨៨ ៣១៦' }}</p>
                     <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">{{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖ ' }}
@@ -364,7 +364,7 @@
                     <p class="text-[#1E1E1E] text-[15px] font-bold">{{ app()->getLocale() === 'en' ? 'Ratanakiri' : 'រតនគីរី' }}</p>
 
                     <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? '#579, Street 35C, Phum Meanchey, Sangkat Steung Meanchey, Khan Meanchey, Phnom Penh, Cambodia' : 'ផ្ទះលេខ ៥៧៩ ផ្លូវលេខ ៣៥C ភូមិមានជ័យ សង្កាត់ស្ទឹងមានជ័យ ខណ្ឌមានជ័យ ភ្នំពេញ កម្ពុជា' }}</p>
+                        {{ app()->getLocale() === 'en' ? 'PXRJ+7W6, Krong Ban Lung' : 'PXRJ+7W6, ក្រុងបានលុង' }}</p>
                     </p>
                     <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
                         {{ app()->getLocale() === 'en' ? '066 888 309 / 096 888 2037' : '០៦៦ ៨៨៨ ៣០៩ / ០៩៦ ៨៨៨ ២០៣៧' }}
@@ -399,14 +399,14 @@
                         <img src="{{ asset('assets/logo.jpg') }}" class="w-20 h-20 md:w-24 md:h-24 rounded-full"
                             alt="Logo" />
                         <div>
-                            <h2 class="text-2xl md:text-3xl font-bold leading-tight kantumruy">ក្តីសង្ឃឺមកុមារ</h2>
+                            <h2 class="text-2xl md:text-3xl font-bold leading-tight kantumruy">ក្តីសង្ឃឹមកុមារ</h2>
                             <h2 class="text-xl md:text-2xl font-black leading-tight">{{ app()->getLocale() === 'en' ? 'HOPE KIDS' : 'ហូបឃីដ' }}</h2>
                             <h3 class="text-sm md:text-lg font-semibold">{{ app()->getLocale() === 'en' ? 'Special Education School' : 'សាលារៀនអប់រំពិសេស' }}</h3>
                         </div>
                     </div>
 
                     <p class="text-sm md:text-base font-light max-w-md">
-                        {{ app()->getLocale() === 'en' ? 'Hope Kids Special Education School is a leading autism and special needs education center in Phnom Penh and across Cambodia. We provide affordable programs for children with autism, ADHD, cerebral palsy, and other developmental challenges through compassionate teaching and therapy.' : 'Hope Kids Special Education School is a leading autism and special needs education center in Phnom Penh and across Cambodia. We provide affordable programs for children with autism, ADHD, cerebral palsy, and other developmental challenges through compassionate teaching and therapy.' }}
+                        {{ app()->getLocale() === 'en' ? 'Hope Kids Special Education School is a leading autism and special needs education center in Phnom Penh and across Cambodia. We provide affordable programs for children with autism, ADHD, cerebral palsy, and other developmental challenges through compassionate teaching and therapy.' : 'សាលារៀនអប់រំពិសេសហូបឃីដគឺជាសាលារៀនផ្តល់សេវាកម្មអប់រំសម្រាប់កុមារដែលមានជំងឺអូទីសឹម និងតម្រូវការពិសេសឈានមុខគេមួយនៅក្នុងទីក្រុងភ្នំពេញ និងទូទាំងប្រទេសកម្ពុជា។ យើងផ្តល់ជូននូវកម្មវិធីដែលមានតម្លៃសមរម្យសម្រាប់កុមារដែលមានជំងឺអូទីសឹម ជំងឺADHD ពិការចលករខួរក្បាល និងបញ្ហាប្រឈមនៃការអភិវឌ្ឍន៍ផ្សេងៗទៀត តាមរយៈការបង្រៀន និងការព្យាបាលដោយក្តីមេត្តាករុណា។' }}
                     </p>
 
                     <!-- Social Icons -->
@@ -451,11 +451,10 @@
                     <div class="flex-1 mt-10 lg:mt-0 md:hidden">
                         <h2 class="text-lg md:text-xl font-bold mb-4">{{ app()->getLocale() === 'en' ? 'Contact Us' : 'ការទំនាក់ទំនង' }}</h2>
                         <p class="text-sm md:text-base font-light mb-2">
-                            #579, Street 35C, Phum Meanchey, Sangkat Steung Meanchey, Khan Meanchey, Phnom Penh,
-                            Cambodia
+                            {{ app()->getLocale() === 'en' ? '#579, Street 35C, Phum Meanchey, Sangkat Steung Meanchey, Khan Meanchey, Phnom Penh, Cambodia' : 'ផ្ទះលេខ ៥៧៩ ផ្លូវលេខ ៣៥C ភូមិមានជ័យ សង្កាត់ស្ទឹងមានជ័យ ខណ្ឌមានជ័យ ភ្នំពេញ កម្ពុជា' }}</p>
                         </p>
                         <p class="text-sm md:text-base font-light mt-2">012 345 678 | 010 654 987</p>
-                        <p class="text-sm md:text-base font-light mt-2">Email: hopekids.info@gmail.com</p>
+                        <p class="text-sm md:text-base font-light mt-2">{{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖ ' }} hopekids.info@gmail.com</p>
                         <p class="text-sm md:text-base font-light mt-2">
                             Operating Hours: <br> Monday – Friday | 8:00 AM – 6:00 PM
                         </p>
@@ -467,13 +466,12 @@
                 <div class="flex-1 lg:ms-[30px] mt-10 lg:mt-0 hidden md:block">
                     <h2 class="text-lg md:text-[25px] font-bold mb-4">{{ app()->getLocale() === 'en' ? 'Contact Us' : 'ការទំនាក់ទំនង' }}</h2>
                     <p class="text-sm md:text-base font-light mb-2">
-                        #579, Street 35C, Phum Meanchey, Sangkat Steung Meanchey, Khan Meanchey, Phnom Penh,
-                        Cambodia
+                        {{ app()->getLocale() === 'en' ? '#579, Street 35C, Phum Meanchey, Sangkat Steung Meanchey, Khan Meanchey, Phnom Penh, Cambodia' : 'ផ្ទះលេខ ៥៧៩ ផ្លូវលេខ ៣៥C ភូមិមានជ័យ សង្កាត់ស្ទឹងមានជ័យ ខណ្ឌមានជ័យ ភ្នំពេញ កម្ពុជា' }}</p>
                     </p>
                     <p class="text-sm md:text-base font-light mt-2">085 253 388</p>
-                    <p class="text-sm md:text-base font-light mt-2">Email: hopekids.info@gmail.com</p>
+                    <p class="text-sm md:text-base font-light mt-2">{{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖ ' }} hopekids.info@gmail.com</p>
                     <p class="text-sm md:text-base font-light mt-2">
-                        Operating Hours: <br> 8:00-12:00 & 14:00-17:00
+                        {{ app()->getLocale() === 'en' ? 'Operating Hours: Monday – Friday | 8:00 AM – 6:00 PM' : 'ម៉ោងធ្វើការ៖ ច័ន្ទ – សុក្រ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
                     </p>
                 </div>
 
