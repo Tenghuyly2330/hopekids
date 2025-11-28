@@ -108,10 +108,29 @@
         <!-- Logo -->
         <img src="{{ asset('assets/logo.jpg') }}" class="rounded-full w-16 h-16 shadow-md" />
 
-        <!-- Mobile Menu Button -->
-        <button @click="open = true" class="lg:hidden md:ms-[200px] text-white p-2 font-bold text-3xl relative z-1">
-            <i class="fa-solid fa-bars"></i>
-        </button>
+        <div class="flex lg:hidden items-center gap-2">
+            <div class="flex items-center gap-1 text-[14px]" data-aos="fade-left" data-aos-duration="1000">
+                <!-- Clickable flag to switch language -->
+                <img src="{{ $locale === 'en' ? asset('assets/images/icons/usa-flag.png') : asset('assets/images/icons/kh-flag.png') }}"
+                    alt="Flag" class="w-6 h-6 rounded-full">
+
+                <a href="{{ route('lang.switch', 'en') }}"
+                    class="{{ $locale === 'en' ? 'text-[#FFFFFF] font-bold' : 'text-[#FFFFFF]' }}">
+                    {{ $locale === 'en' ? 'English' : 'ភាសាអង់គ្លេស' }}
+                </a>
+                <!-- Language links -->
+                <a href="{{ route('lang.switch', 'km') }}"
+                    class="{{ $locale === 'km' ? 'text-[#FFFFFF] font-bold' : 'text-[#FFFFFF]' }}">
+                    {{ $locale === 'en' ? 'Khmer' : 'ភាសាខ្មែរ' }}
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button @click="open = true" class="text-white p-2 font-bold text-3xl relative z-1">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
 
     </div>
 
@@ -132,14 +151,22 @@
 
         <ul class="flex flex-col gap-5 text-[17px] relative z-10">
             <li><a href="{{ URL('/') }}"
-                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Home' : 'ដសាដ' }}</a></li>
-            <li><a href="{{ URL('/about') }}" class="text-[#1C0186]">About Us</a></li>
-            <li><a href="{{ URL('/ourprogram') }}" class="text-[#1C0186]">Our Program</a></li>
-            <li><a href="{{ URL('/professsionalteam') }}" class="text-[#1C0186]">Professional Team</a></li>
-            <li><a href="{{ URL('/career') }}" class="text-[#1C0186]">Career</a></li>
-            <li><a href="{{ URL('/articles') }}" class="text-[#1C0186]">Articles</a></li>
-            <li><a href="{{ URL('/event') }}" class="text-[#1C0186]">Events</a></li>
-            <li><a href="{{ URL('/contact') }}" class="text-[#1C0186]">Contact Us</a></li>
+                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Home' : 'ទំព័រដើម​' }}</a></li>
+            <li><a href="{{ URL('/about') }}"
+                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'About Us' : 'អំពីយើងខ្ញុំ' }}</a></li>
+            <li><a href="{{ URL('/ourprogram') }}"
+                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Our Program' : 'Our Program' }}</a></li>
+            <li><a href="{{ URL('/professsionalteam') }}"
+                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Professional Team' : 'Professional Team' }}</a>
+            </li>
+            <li><a href="{{ URL('/career') }}"
+                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Career' : 'Career' }}</a></li>
+            <li><a href="{{ URL('/articles') }}"
+                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Articles' : 'Articles' }}</a></li>
+            <li><a href="{{ URL('/event') }}"
+                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Events' : 'Events' }}</a></li>
+            <li><a href="{{ URL('/contact') }}"
+                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Contact Us' : 'Contact Us' }}</a></li>
         </ul>
         <div class="w-full py-5 px-2">
             <div class="max-w-7xl mx-auto flex flex-col items-center justify-between gap-2">
@@ -185,106 +212,125 @@
         <ul class="flex items-center bg-[#ffffff] space-x-1 px-3 xl:px-10 py-4 rounded-full">
             <li class="relative group">
                 <a href="{{ route('home') }}"
-                    class="px-5 xl:px-7 py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('home') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : 'py-8' }}">Home</a>
+                    class="px-5 xl:px-7 py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('home') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : 'py-8' }}">{{ app()->getLocale() === 'en' ? 'Home' : 'ទំព័រដើម​' }}</a>
                 <ul
                     class="absolute left-1/2 transform -translate-x-1/2 hidden mt-6 py-4 w-44 bg-[#FFFFFF] shadow-lg rounded-lg {{ Route::is('home') ? '' : 'group-hover:block' }} z-50">
                     <li class="hover:bg-[#5897FF]"><a href="/#welcome"
-                            class="block px-2 py-2 text-[14px] text-[#000]">Welcome to HopeKids</a></li>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Welcome to HopeKids' : 'Welcome to HopeKids' }}</a>
+                    </li>
                     <li class="hover:bg-[#5897FF]"><a href="/#program"
-                            class="block px-2 py-2 text-[14px] text-[#000]">Our Program</a></li>
-                    {{-- <li class="hover:bg-[#5897FF]"><a href="/#what_makes"
-                            class="block px-2 py-2 text-[14px] text-[#000]">What makes HopeKids</a></li> --}}
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Program' : 'Our Program' }}</a>
+                    </li>
+
                     <li class="hover:bg-[#5897FF]"><a href="/#school_facilities"
-                            class="block px-2 py-2 text-[14px] text-[#000]">School Facilities</a></li>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'School Facilities' : 'School Facilities' }}</a>
+                    </li>
                     <li class="hover:bg-[#5897FF]"><a href="/#our_branch"
-                            class="block px-2 py-2 text-[14px] text-[#000]">Our Branch</a></li>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Branch' : 'Our Branch' }}</a>
+                    </li>
                     <li class="hover:bg-[#5897FF]"><a href="/#parent"
-                            class="block px-2 py-2 text-[14px] text-[#000]">Parents’ Testimonials</a></li>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Parents’ Testimonials' : 'Parents’ Testimonials' }}</a>
+                    </li>
                     <li class="hover:bg-[#5897FF]"><a href="/#faq"
-                            class="block px-2 py-2 text-[14px] text-[#000]">FAQ</a></li>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'FAQ' : 'FAQ' }}</a>
+                    </li>
                     <li class="hover:bg-[#5897FF]"><a href="/#schedule"
-                            class="block px-2 py-2 text-[14px] text-[#000]">Schedule a tour</a></li>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Schedule a tour' : 'Schedule a tour' }}</a>
+                    </li>
                 </ul>
             </li>
             <li class="relative group">
                 <a href="{{ route('about') }}"
-                    class="px-5 xl:px-7 py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('about') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : 'py-8' }}">About
-                    Us</a>
+                    class="px-5 xl:px-7 py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('about') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : 'py-8' }}">{{ app()->getLocale() === 'en' ? 'About Us' : 'អំពីយើងខ្ញុំ' }}</a>
                 <ul
                     class="absolute left-1/2 transform -translate-x-1/2 hidden mt-6 py-2 w-44 bg-[#FFFFFF] shadow-lg rounded-lg {{ Route::is('about') ? '' : 'group-hover:block' }} z-50">
                     <li class="hover:bg-[#5897FF]"><a href="/about#mission"
-                            class="block px-2 py-2 text-[14px] text-[#000]">Mission</a></li>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Mission' : 'Mission' }}</a>
+                    </li>
                     <li class="hover:bg-[#5897FF]"><a href="/about#vision"
-                            class="block px-2 py-2 text-[14px] text-[#000]">Vision</a></li>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Vision' : 'Vision' }}</a>
+                    </li>
                     <li class="hover:bg-[#5897FF]"><a href="/about#core_values"
-                            class="block px-2 py-2 text-[14px] text-[#000]">Core Values</a></li>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Core Values' : 'Core Values' }}</a>
+                    </li>
                     <li class="hover:bg-[#5897FF]"><a href="/about#our_goals"
-                            class="block px-2 py-2 text-[14px] text-[#000]">Our Goals</a></li>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Goals' : 'Our Goals' }}</a>
+                    </li>
                     <li class="hover:bg-[#5897FF]"><a href="/about#school_license"
-                            class="block px-2 py-2 text-[14px] text-[#000]">School License</a></li>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'School License' : 'School License' }}</a>
+                    </li>
                 </ul>
             </li>
             <li class="relative group">
                 <a href="{{ route('ourprogram') }}"
-                    class="px-5 xl:px-7 py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('ourprogram') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : 'py-8' }}">Our
-                    Programs</a>
+                    class="px-5 xl:px-7 py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('ourprogram') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : 'py-8' }}">{{ app()->getLocale() === 'en' ? 'Our Programs' : 'Our Programs' }}</a>
                 <ul
                     class="absolute left-1/2 transform -translate-x-1/2 hidden mt-6 py-2 w-64 bg-[#FFFFFF] shadow-lg rounded-lg {{ Route::is('ourprogram') ? '' : 'group-hover:block' }} z-50">
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#1"
-                            class="block px-2 py-2 text-[14px] text-[#000]">Structured Teaching</a></li>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Structured Teaching' : 'Structured Teaching' }}</a>
+                    </li>
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#2"
-                            class="block px-2 py-2 text-[14px] text-[#000]">Special Education</a></li>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Special Education' : 'Special Education' }}</a>
+                    </li>
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#3"
-                            class="block px-2 py-2 text-[14px] text-[#000]">Applied Behavior Analysis</a></li>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Applied Behavior Analysis' : 'Applied Behavior Analysis' }}</a>
+                    </li>
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#4"
-                            class="block px-2 py-2 text-[14px] text-[#000]">Occupational Therapy (OT)</a></li>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Occupational Therapy (OT)' : 'Occupational Therapy (OT)' }}</a>
+                    </li>
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#5"
-                            class="block px-2 py-2 text-[14px] text-[#000]">Sensory Integration Therapy</a></li>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Sensory Integration Therapy' : 'Sensory Integration Therapy' }}</a>
+                    </li>
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#6"
-                            class="block px-2 py-2 text-[14px] text-[#000]">Early Intervention Therapy</a></li>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Early Intervention Therapy' : 'Early Intervention Therapy' }}</a>
+                    </li>
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#7"
-                            class="block px-2 py-2 text-[14px] text-[#000]">Play Therapy</a>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Play Therapy' : 'Play Therapy' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#8"
-                            class="block px-2 py-2 text-[14px] text-[#000]">Speech Therapy</a></li>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Speech Therapy' : 'Speech Therapy' }}</a>
+                    </li>
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#9"
-                            class="block px-2 py-2 text-[14px] text-[#000]">Art Therapy</a>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Art Therapy' : 'Art Therapy' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#10"
-                            class="block px-2 py-2 text-[14px] text-[#000]">Picture Exchange Communication System (PECS)</a></li>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Picture Exchange Communication System (PECS)' : 'Picture Exchange Communication System (PECS)' }}</a>
+                    </li>
 
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#11"
-                            class="block px-2 py-2 text-[14px] text-[#000]">School Readiness Program</a></li>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'School Readiness Program' : 'School Readiness Program' }}</a>
+                    </li>
 
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#12"
-                            class="block px-2 py-2 text-[14px] text-[#000]">Activities of Daily Living Training</a></li>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Activities of Daily Living Training' : 'Activities of Daily Living Training' }}</a>
+                    </li>
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#13"
-                            class="block px-2 py-2 text-[14px] text-[#000]">Parent Education and Counselling</a></li>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Parent Education and Counselling' : 'Parent Education and Counselling' }}</a>
+                    </li>
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#14"
-                            class="block px-2 py-2 text-[14px] text-[#000]">Cerebral Palsy Development Program</a></li>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Cerebral Palsy Development Program' : 'Cerebral Palsy Development Program' }}</a>
+                    </li>
                 </ul>
             </li>
             <li class="relative group">
                 <a href="{{ route('professsionalteam') }}"
-                    class="px-5 xl:px-7 py-4 xl:py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('professsionalteam') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : '' }}">Professional
-                    Team</a>
+                    class="px-5 xl:px-7 py-4 xl:py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('professsionalteam') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : '' }}">{{ app()->getLocale() === 'en' ? 'Professional Team' : 'Professional Team' }}</a>
             </li>
             <li class="relative group">
                 <a href="{{ route('career') }}"
-                    class="px-5 xl:px-7 py-4 xl:py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('career') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : '' }}">Career</a>
+                    class="px-5 xl:px-7 py-4 xl:py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('career') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : '' }}">{{ app()->getLocale() === 'en' ? 'Career' : 'Career' }}</a>
             </li>
             <li class="relative group">
                 <a href="{{ route('articles') }}"
-                    class="px-5 xl:px-7 py-4 xl:py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('articles') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : '' }}">Articles</a>
+                    class="px-5 xl:px-7 py-4 xl:py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('articles') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : '' }}">{{ app()->getLocale() === 'en' ? 'Articles' : 'Articles' }}</a>
             </li>
             <li class="relative group">
                 <a href="{{ route('event') }}"
-                    class="px-5 xl:px-7 py-4 xl:py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('event') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : '' }}">Events</a>
+                    class="px-5 xl:px-7 py-4 xl:py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('event') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : '' }}">{{ app()->getLocale() === 'en' ? 'Events' : 'Events' }}</a>
             </li>
             <li class="relative group">
                 <a href="{{ route('contact') }}"
-                    class="px-5 xl:px-7 py-4 xl:py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('contact') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : '' }}">Contact
-                    Us</a>
+                    class="px-5 xl:px-7 py-4 xl:py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('contact') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : '' }}">{{ app()->getLocale() === 'en' ? 'Contact Us' : 'Contact Us' }}</a>
             </li>
         </ul>
     </div>

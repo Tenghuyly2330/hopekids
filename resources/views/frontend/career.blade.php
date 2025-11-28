@@ -13,7 +13,7 @@
                 <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">
                     Career</h1>
 
-                <p class="text-center max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px]">
+                <p class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px]">
                     Hope Kids provides affordable, inclusive, and professional education for
                     children with autism and special needs in Phnom Penh and across
                     Cambodia.
@@ -46,6 +46,13 @@
                     microfinance institutions, corporate partners, and national authorities to build
                     a better life through safe and affordable homes.
                 </p>
+                
+                @if (session('success'))
+                    <div x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 3000)"
+                        class="fixed top-5 right-5 bg-green-600 text-white px-5 py-3 rounded-lg shadow-lg z-50">
+                        {{ session('success') }}
+                    </div>
+                @endif
 
                 <form class="mt-8 flex flex-col md:ms-3 gap-4" action="{{ route('contact.submit') }}" method="POST">
                     @csrf

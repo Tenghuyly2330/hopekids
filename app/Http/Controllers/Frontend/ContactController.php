@@ -2,68 +2,78 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Service\TelegramService;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Http;
 
 class ContactController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         return view("frontend.contact");
     }
     public function submit(Request $request)
     {
+        // Validate inputs
         $data = $request->validate([
-            'fname' => 'required',
-            'lname' => 'required',
-            'email' => 'required|email',
-            'position' => 'required',
-            'message' => 'required'
+            'fname'    => 'required|string',
+            'lname'    => 'required|string',
+            'email'    => 'required|email',
+            'position' => 'required|string',
+            'message'  => 'required|string',
         ]);
 
-        // Save to DB if needed
-        // Contact::create($data);
+        // Build Telegram message
+        $text =
+            "📝 *New Job Application Contact Form*\n\n" .
+            "👤 *First Name:* {$data['fname']}\n" .
+            "👤 *Last Name:* {$data['lname']}\n" .
+            "📧 *Email:* {$data['email']}\n" .
+            "💼 *Position:* {$data['position']}\n" .
+            "💬 *Message:* {$data['message']}";
 
-        // Send Telegram alert
-        $text = "
-            <b>New career Form Submission</b>
-            👤 First_Name: {$data['fname']}
-            👤 Last_name: {$data['lname']}
-            📧 Email: {$data['email']}
-            💼 Position: {$data['position']}
-            💬 Message: {$data['message']}
-                    ";
-        TelegramService::sendMessage($text);
+        // Send message to Telegram
+        Http::get("https://api.telegram.org/bot" . config('services.telegram.bot_token') . "/sendMessage", [
+            'chat_id'    => config('services.telegram.chat_id'),
+            'text'       => $text,
+            'parse_mode' => 'Markdown',
+        ]);
 
-        return back()->with('success', 'Thank you! We received your message.');
+        return back()->with('success', 'Your message has been sent successfully!');
     }
 
     public function contact(Request $request)
     {
+        // Validate form
         $data = $request->validate([
-            'name' => 'required',
-            'phone_number' => 'required',
-            'enquiry' => 'required',
-            'location' => 'required',
-            "email" => 'required',
-            "message" => 'required'
+            'name'          => 'required|string',
+            'phone_number'  => 'required|string',
+            'enquiry'       => 'required|string',
+            'location'      => 'required|string',
+            'message'       => 'required|string',
+            'email'         => 'nullable|string',
+            'telegram'      => 'nullable|string',
         ]);
 
-        // Save to DB if needed
-        // Contact::create($data);
+        // Build Telegram message
+        $text =
+            "📩 *New Contact Form Submission*\n\n" .
+            "👤 *Name:* {$data['name']}\n" .
+            "📞 *Phone:* {$data['phone_number']}\n" .
+            "🏢 *Branch:* {$data['location']}\n" .
+            "❓ *Enquiry:* {$data['enquiry']}\n" .
+            "✉️ *Email:* " . ($data['email'] ?? 'N/A') . "\n" .
+            "💬 *Telegram:* " . ($data['telegram'] ?? 'N/A') . "\n" .
+            "📝 *Message:* {$data['message']}";
 
-        // Send Telegram alert
-        $text = "
-            <b>New career Form Submission</b>
-            👤 Parent_Name: {$data['name']}
-            📞 Parent_Number:{$data['phone_number']}
-            📧 Email: {$data['email']}
-            💼 enquiry: {$data['enquiry']}
-            📍location:{$data['location']}
-            💬 Message: {$data['message']}
-        ";
-        TelegramService::sendMessage($text);
+        // Send to Telegram
+        Http::get("https://api.telegram.org/bot" . config('services.telegram.bot_token') . "/sendMessage", [
+            'chat_id'    => config('services.telegram.chat_id'),
+            'text'       => $text,
+            'parse_mode' => 'Markdown'
+        ]);
 
-        return back()->with('success', 'Thank you! We received your message.');
+        return back()->with('success', 'Your message has been sent successfully!');
     }
 }

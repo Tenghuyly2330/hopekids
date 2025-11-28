@@ -33,11 +33,11 @@
 
             <div class="relative z-10 px-4 max-w-[700px] mx-auto pt-[10vh] md:pt-[30vh]">
                 <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">About Us</h1>
-                <p class="text-center text-white text-[14px] lg:text-[16px]">
+                <p class="text-left text-white text-[14px] lg:text-[16px]">
                     Hope Kids Special Education School stands committed to its vision of creating a world where every
                     child—regardless of challenges, background, or ability—has the opportunity to reach their fullest
                     potential. Through compassion, expertise, and innovation, we continue to build a future filled
-                    with hope, dignity, and possibilities for every child we serve </p>
+                    with hope, dignity, and possibilities for every child we serve.</p>
 
             </div>
         </div>
@@ -52,7 +52,7 @@
                                 offering excellent, high quality,
                                 sustainable special education and holistic services to
                                 children with special needs and their families that improves
-                                their quality of life..</p>
+                                their quality of life.</p>
                         </div>
                     </div>
                 </div>
@@ -156,116 +156,44 @@
 
     {{-- license destop --}}
     <section class="hidden md:block" id="school_license">
-        <h1 class="text-[16px] md:text-[30px] text-gradient font-[700] text-center pt-5 md:pt-10">Our Institutes' Licenses
+        <h1 class="text-[16px] md:text-[30px] text-gradient font-[700] text-center pt-5 md:pt-10">
+            {{ app()->getLocale() === 'en' ? "Our Institutes' Licenses" : "Our Institutes' Licenses" }}
         </h1>
         <div class="mt-5">
             <div class='w-full flex gap-4 max-w-7xl mx-auto px-4 my-20 overflow-x-auto'>
-                {{-- @foreach ($licenses as $index => $license)
+                @foreach ($certificates as $index => $certificate)
                     <div class="flex-shrink-0 my-5" data-aos='fade-up' data-aos-duration='1200'>
-                        <img src="{{ $license->image }}" alt="Certificate {{ $index + 1 }}"
+                        <img src="{{ $certificate->image }}" alt="Certificate {{ $index + 1 }}"
                             class="w-full h-[20rem] lg:h-[25rem] xl:h-[26rem] object-contain object-center" />
+                        <h1 class="text-center text-[12px] md:text-[14px] mt-2">
+                            {{ app()->getLocale() === 'en' ? $certificate->title_en : $certificate->title_km }}</h1>
                     </div>
-                @endforeach --}}
-                <div class="flex-shrink-0 my-5">
-                    <img src="assets/licen1.jpg" alt=""
-                        class="w-full h-[15rem] lg:h-[25rem] xl:h-[26rem] object-contain object-center" />
-                    <h1 class="text-center text-[12px] md:text-[14px] mt-2">Approval and Branches Licensing</h1>
-                </div>
-                <div class="flex-shrink-0 my-5">
-                    <img src="assets/licen2.jpg" alt=""
-                        class="w-full h-[15rem] lg:h-[25rem] xl:h-[26rem] object-contain object-center" />
-                    <h1 class="text-center text-[12px] md:text-[14px] mt-2">Approval and Branches Licensing</h1>
-
-                </div>
-
-                <div class="flex-shrink-0 my-5">
-                    <img src="assets/licen3.jpg" alt=""
-                        class="w-full h-[15rem] lg:h-[25rem] xl:h-[26rem] object-contain object-center" />
-                    <h1 class="text-center text-[12px] md:text-[14px] mt-2">Approval and Branches Licensing</h1>
-
-                </div>
-                <div class="flex-shrink-0 my-5">
-                    <img src="assets/licen4.jpg" alt=""
-                        class="w-full h-[15rem] lg:h-[25rem] xl:h-[26rem] object-contain object-center" />
-                    <h1 class="text-center text-[12px] md:text-[14px] mt-2">Approval and Branches Licensing</h1>
-
-                </div>
-                <div class="flex-shrink-0 my-5">
-                    <img src="assets/licen5.jpg" alt=""
-                        class="w-full h-[15rem] lg:h-[25rem] xl:h-[26rem] object-contain object-center" />
-                    <h1 class="text-center text-[12px] md:text-[14px] mt-2">Approval and Branches Licensing</h1>
-
-                </div>
-                <div class="flex-shrink-0 my-5">
-                    <img src="assets/licen6.jpg" alt=""
-                        class="w-full h-[15rem] lg:h-[25rem] xl:h-[26rem] object-contain object-center" />
-                    <h1 class="text-center text-[12px] md:text-[14px] mt-2">Approval and Branches Licensing</h1>
-
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
 
     {{-- license mobile --}}
     <div id='registration_docs' class='md:hidden swiper-certificate py-10'>
-        <h1 class="text-[16px] md:text-[30px] text-gradient font-[700] text-center pb-10">Our Institutes' Licenses</h1>
+        <h1 class="text-[16px] md:text-[30px] text-gradient font-[700] text-center pb-10">
+            {{ app()->getLocale() === 'en' ? "Our Institutes' Licenses" : "Our Institutes' Licenses" }}</h1>
         <div class="swiper certificateSwiper" style="width: 80%; height: 300px; margin: auto;">
             <div class="swiper-wrapper">
-                {{-- @foreach ($licenses as $index => $item)
+                @foreach ($certificates as $index => $certificate)
                     <div class="swiper-slide">
-                        <div class="flex justify-center items-center h-full">
-                            <img src={{ $item->image }} alt="" class="h-full object-contain" />
+                        <div class="flex flex-col justify-center items-center h-full">
+                            <img src="{{ $certificate->image }}" alt=""
+                                class="w-full h-[15rem] lg:h-[25rem] xl:h-[26rem] object-contain object-center" />
+                            <h1 class="text-center text-[12px] md:text-[14px] mt-2">{{ app()->getLocale() === 'en' ? $certificate->title_en : $certificate->title_km }}</h1>
                         </div>
                     </div>
-                @endforeach --}}
-                <div class="swiper-slide">
-                    <div class="flex flex-col justify-center items-center h-full">
-                        <img src="assets/licen1.jpg" alt=""
-                            class="w-full h-[15rem] lg:h-[25rem] xl:h-[26rem] object-contain object-center" />
-                        <h1 class="text-center text-[12px] md:text-[14px] mt-2">Approval and Branches Licensing</h1>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="flex flex-col justify-center items-center h-full">
-                        <img src="assets/licen2.jpg" alt=""
-                            class="w-full h-[15rem] lg:h-[25rem] xl:h-[26rem] object-contain object-center" />
-                        <h1 class="text-center text-[12px] md:text-[14px] mt-2">Approval and Branches Licensing</h1>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="flex flex-col justify-center items-center h-full">
-                        <img src="assets/licen3.jpg" alt=""
-                            class="w-full h-[15rem] lg:h-[25rem] xl:h-[26rem] object-contain object-center" />
-                        <h1 class="text-center text-[12px] md:text-[14px] mt-2">Approval and Branches Licensing</h1>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="flex flex-col justify-center items-center h-full">
-                        <img src="assets/licen4.jpg" alt=""
-                            class="w-full h-[15rem] lg:h-[25rem] xl:h-[26rem] object-contain object-center" />
-                        <h1 class="text-center text-[12px] md:text-[14px] mt-2">Approval and Branches Licensing</h1>
-
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="flex flex-col justify-center items-center h-full">
-                        <img src="assets/licen5.jpg" alt=""
-                            class="w-full h-[15rem] lg:h-[25rem] xl:h-[26rem] object-contain object-center" />
-                        <h1 class="text-center text-[12px] md:text-[14px] mt-2">Approval and Branches Licensing</h1>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="flex flex-col justify-center items-center h-full">
-                        <img src="assets/licen6.jpg" alt=""
-                            class="w-full h-[15rem] lg:h-[25rem] xl:h-[26rem] object-contain object-center" />
-                        <h1 class="text-center text-[12px] md:text-[14px] mt-2">Approval and Branches Licensing</h1>
-                    </div>
-                </div>
+                @endforeach
             </div>
             <div class="swiper-pagination"></div>
         </div>
     </div>
 
+    {{-- banner --}}
     <section class="relative z-20 py-20 w-full mt-10">
 
         <!-- Background image -->
@@ -278,10 +206,8 @@
 
         <!-- Content -->
         <div class="relative z-10">
-            <p class="text-[10px] md:text-[23px] font-medium text-white/90 text-center">
-                Hope kids Special Education School We offer Special <br>
-                Education and Holistic Speech Delay. Intellectual Disabilities . <br>
-                Leaning Difficulty and Cerebral Palsy.
+            <p class="w-full max-w-[700px] mx-auto px-2 text-[16px] md:text-[20px] font-medium text-white/90 text-center">
+                {{ __("message.banner_content") }}
             </p>
         </div>
     </section>

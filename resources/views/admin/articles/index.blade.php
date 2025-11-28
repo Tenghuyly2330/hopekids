@@ -16,7 +16,7 @@
     @endcomponent
 
     <div class="overflow-x-auto px-0 sm:px-2 md:px-4">
-        <div class="border border-[#fff] max-h-[80vh] overflow-y-auto">
+        <div class="border border-[#fff] max-h-[70vh] overflow-y-auto">
             <table class="min-w-full table-fixed">
                 <thead class="text-[#fff] sticky top-0 z-10 bg-[#4FC9EE] border border-[#4FC9EE]">
                     <tr>

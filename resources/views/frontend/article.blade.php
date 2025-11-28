@@ -10,7 +10,7 @@
             <div class="relative z-10 pt-[15vh] md:pt-[30vh]">
                 <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">
                     Articles</h1>
-                <p class="text-center max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px]">
+                <p class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px]">
                     Hope Kids provides affordable, inclusive, and professional education for
                     children with autism and special needs in Phnom Penh and across
                     Cambodia.</p>
@@ -54,6 +54,7 @@
         </div>
     </section>
 
+    {{-- banner --}}
     <section class="relative z-20 py-20 w-full mt-10">
 
         <!-- Background image -->
@@ -66,12 +67,9 @@
 
         <!-- Content -->
         <div class="relative z-10">
-            <p class="text-[10px] md:text-[23px] font-medium text-white/90 text-center">
-                Hope kids Special Education School We offer Special <br>
-                Education and Holistic Speech Delay. Intellectual Disabilities . <br>
-                Leaning Difficulty and Cerebral Palsy.
+            <p class="w-full max-w-[700px] mx-auto px-2 text-[16px] md:text-[20px] font-medium text-white/90 text-center">
+                {{ __("message.banner_content") }}
             </p>
         </div>
-
     </section>
 @endsection

@@ -172,13 +172,6 @@
         scroll-behavior: smooth;
     }
 
-    * {
-
-        font-family: "inter", sans-serif;
-
-
-    }
-
     .swiper-pagination .swiper-pagination-bullet {
         background-color: #000;
         width: 30px;
@@ -217,7 +210,7 @@
     }
 </style>
 
-<body class="inter" x-data="{ open: false, dropdown: null }">
+<body class="{{ app()->getLocale() === 'en' ? 'inter' : 'kantumruy' }}" x-data="{ open: false, dropdown: null }">
     @php
         $locale = app()->getLocale();
     @endphp
@@ -483,8 +476,8 @@
                             <li><a href="{{ URL('/professionalteam') }}" class="hover:underline">Professional
                                     Team</a></li>
                             <li><a href="{{ URL('/career') }}" class="hover:underline">Career</a></li>
-                            <li><a href="{{ URL('/articles') }}" class="hover:underline">Article</a></li>
-                            <li><a href="{{ URL('/event') }}" class="hover:underline">Event</a></li>
+                            <li><a href="{{ URL('/articles') }}" class="hover:underline">Articles</a></li>
+                            <li><a href="{{ URL('/event') }}" class="hover:underline">Events</a></li>
 
                             <li><a href="{{ URL('/contact') }}" class="hover:underline">Contact</a></li>
                         </ul>

@@ -9,35 +9,42 @@
             @endcomponent
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                    <label for="title_en" class="block text-sm font-medium text-[#000]">Title (English)</label>
-                    <input value="{{ old('title_en', $article->title_en) }}" name="title_en" id="title_en"
-                        class="mt-1 block w-full p-2 border rounded-md text-black text-[12px]"></input>
-                    <x-input-error class="mt-2" :messages="$errors->get('title_en')" />
-                </div>
-                <div>
-                    <label for="title_km" class="block text-sm font-medium text-[#000]">Title (Khmer)</label>
-                    <input value="{{ old('title_km', $article->title_km) }}" name="title_km" id="title_km"
-                        class="mt-1 block w-full p-2 border rounded-md text-black text-[12px]"></input>
-                    <x-input-error class="mt-2" :messages="$errors->get('title_km')" />
-                </div>
-            </div>
+                <div class="space-y-4">
+                    <h1 class="text-[20px] font-[600] text-[#4FC9EE] uppercase">English</h1>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                    <label for="content_km" class="block text-sm font-medium text-[#000]">Content (English)</label>
-                    <textarea name="content_en" id="content_en" rows="6"
-                        class="mt-1 block w-full p-2 border rounded-md text-black text-[12px]">{{ old('content_en', $article->content_en) }}</textarea>
-                    <x-input-error class="mt-2" :messages="$errors->get('content_en')" />
+                    <div>
+                        <label for="title_en" class="block text-sm font-medium text-[#000]">Title (English)</label>
+                        <input value="{{ old('title_en', $article->title_en) }}" name="title_en" id="title_en"
+                            class="mt-1 block w-full p-2 border rounded-md text-black text-[12px]"></input>
+                        <x-input-error class="mt-2" :messages="$errors->get('title_en')" />
+                    </div>
+                    <div>
+                        <label for="content_en" class="block text-sm font-medium text-[#000]">Content (English)</label>
+                        <textarea name="content_en" id="content_en" rows="6"
+                            class="mt-1 block w-full p-2 border rounded-md text-black text-[12px]">{{ old('content_en', $article->content_en) }}</textarea>
+                        <x-input-error class="mt-2" :messages="$errors->get('content_en')" />
+                    </div>
                 </div>
-                <div>
-                    <label for="content_km" class="block text-sm font-medium text-[#000]">Content (Khmer)</label>
-                    <textarea name="content_km" id="content_km" rows="6"
-                        class="mt-1 block w-full p-2 border rounded-md text-black text-[12px]">{{ old('content_km', $article->content_km) }}</textarea>
-                    <x-input-error class="mt-2" :messages="$errors->get('content_km')" />
-                </div>
-            </div>
 
+                <div class="space-y-4">
+                    <h1 class="text-[20px] font-[600] text-[#4FC9EE] uppercase">Khmer</h1>
+
+                    <div>
+                        <label for="title_km" class="block text-sm font-medium text-[#000]">Title (Khmer)</label>
+                        <input value="{{ old('title_km', $article->title_km) }}" name="title_km" id="title_km"
+                            class="mt-1 block w-full p-2 border rounded-md text-black text-[12px]"></input>
+                        <x-input-error class="mt-2" :messages="$errors->get('title_km')" />
+                    </div>
+                    <div>
+                        <label for="content_km" class="block text-sm font-medium text-[#000]">Content (Khmer)</label>
+                        <textarea name="content_km" id="content_km" rows="6"
+                            class="mt-1 block w-full p-2 border rounded-md text-black text-[12px]">{{ old('content_km', $article->content_km) }}</textarea>
+                        <x-input-error class="mt-2" :messages="$errors->get('content_km')" />
+                    </div>
+                </div>
+
+
+            </div>
             <div>
                 <h1 class="text-[#401457]">Image</h1>
                 <label for="dropzone-file{{ $article->id }}" id="drop-area"

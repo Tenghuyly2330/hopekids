@@ -78,6 +78,37 @@
                             </a>
                         </li>
 
+                        <li
+                            class="nav-link {{ Request::is('certificates') ? 'bg-[#000] rounded-md !text-[#ffffff]' : '' }}">
+                            <a href="{{ url('certificates') }}">
+                                <i class='bx bxl-vimeo icon'></i>
+                                <span class="text nav-text">Certificate</span>
+                            </a>
+                        </li>
+
+                        <li
+                            class="nav-link {{ Request::is('program') ? 'bg-[#000] rounded-md !text-[#ffffff]' : '' }}">
+                            <a href="{{ url('program') }}">
+                                <i class='bx bxl-vimeo icon'></i>
+                                <span class="text nav-text">Program</span>
+                            </a>
+                        </li>
+
+                        <li
+                            class="nav-link {{ Request::is('team') ? 'bg-[#000] rounded-md !text-[#ffffff]' : '' }}">
+                            <a href="{{ url('team') }}">
+                                <i class='bx bxl-vimeo icon'></i>
+                                <span class="text nav-text">Team</span>
+                            </a>
+                        </li>
+
+                        <li
+                            class="nav-link {{ Request::is('message') ? 'bg-[#000] rounded-md !text-[#ffffff]' : '' }}">
+                            <a href="{{ url('message') }}">
+                                <i class='bx bxl-vimeo icon'></i>
+                                <span class="text nav-text">Message</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
 

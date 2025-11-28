@@ -10,7 +10,7 @@
             <div class="relative z-10 pt-[15vh] md:pt-[30vh]">
                 <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">
                     Articles</h1>
-                <p class="text-center max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px]">
+                <p class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px]">
                     Hope Kids provides affordable, inclusive, and professional education for
                     children with autism and special needs in Phnom Penh and across
                     Cambodia.</p>

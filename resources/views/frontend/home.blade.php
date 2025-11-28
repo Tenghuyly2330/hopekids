@@ -3,7 +3,7 @@
 @section('content')
     {{-- banner --}}
     <section id="welcome" class="w-full h-[60vh] md:h-screen">
-        <img src="{{ asset('assets/hero1.jpg') }}" class="absolute -z-10 w-full h-[60vh] object-cover md:h-screen inset-0 "
+        <img src="{{ asset('assets/hero1.jpg') }}" class="absolute -z-10 w-full h-[60vh] object-cover md:h-screen inset-0"
             alt="">
         <div class="absolute h-[60vh] object-cover md:h-screen inset-0 z-10 bg-black/50"></div>
 
@@ -22,12 +22,13 @@
                 <!-- TEXT -->
                 <div class="relative z-10 text-center lg:text-left w-full md:w-[500px]">
                     <h1 class="text-[20px] md:text-[40px] font-regular text-white text-gradient">
-                        Welcome To <br>
-                        <span class="text-[40px] md:text-[80px] font-[700] py-2 leading-none">HOPE KIDS</span>
+                        {{ app()->getLocale() === 'en' ? 'Welcome To' : 'Welcome To' }} <br>
+                        <span
+                            class="text-[40px] md:text-[80px] font-[700] py-2 leading-none">{{ app()->getLocale() === 'en' ? 'HOPE KIDS' : 'HOPE KIDS' }}</span>
                     </h1>
 
                     <p class="text-[#1C0186] font-bold text-[16px] md:text-[25px] pt-2">
-                        Special Education School
+                        {{ app()->getLocale() === 'en' ? 'Special Education School' : 'Special Education School' }}
                     </p>
                 </div>
             </div>
@@ -35,9 +36,7 @@
             <!-- DESCRIPTION -->
             <div class="relative z-10 text-center lg:text-left mt-2 w-full md:w-[500px] px-3 md:px-0">
                 <p class="text-[#fff] text-[12px] lg:text-[16px] font-medium">
-                    Hope kids Special Education School We offer Special Education and
-                    Holistic Speech Delay. Intellectual Disabilities . Leaning Difficulty
-                    and Cerebral Palsy.
+                    {{ app()->getLocale() === 'en' ? 'Hope kids Special Education School We offer Special Education and Holistic Speech Delay, Intellectual Disabilities, Leaning Difficulty and Cerebral Palsy.' : 'Hope kids Special Education School We offer Special Education and Holistic Speech Delay, Intellectual Disabilities, Leaning Difficulty and Cerebral Palsy.' }}
                 </p>
             </div>
 
@@ -45,12 +44,13 @@
             <div class="flex ite justify-center lg:justify-start gap-2 relative z-10 mt-3 w-full md:w-[500px]">
                 <button
                     class="px-4 py-2 text-[14px] lg:text-[16px] rounded-full bg-gradient-to-r from-blue-300 to-blue-700 text-white">
-                    <a href="#contact">Enroll Now</a>
+                    <a href="#contact">{{ app()->getLocale() === 'en' ? 'Enroll Now' : 'Enroll Now' }}</a>
                 </button>
 
                 <button
                     class="px-4 py-2 text-[14px] lg:text-[16px] rounded-full bg-gradient-to-r from-blue-300 to-blue-700 text-white">
-                    <a href="#find">Find Our Nearest Branch</a>
+                    <a
+                        href="#find">{{ app()->getLocale() === 'en' ? 'Find Our Nearest Branch' : 'Find Our Nearest Branch' }}</a>
                 </button>
             </div>
 
@@ -61,16 +61,17 @@
 
     {{-- reading --}}
     <section class="flex flex-col justify-center items-center text-center py-5 md:py-10 px-4" id="hopekid">
-        <h1 class="text-[25px] md:text-[30px] text-gradient font-[700]">About Us</h1>
-        <p class="text-[16px] md:text-[20px] font-medium text-gradient">HOPE KIDS Special Education School</p>
-        <p class="mt-3 text-[14px] md:text-[16px] text-center w-full md:w-[700px]">
-            Hope Kids was founded in Cambodia to make quality special education accessible to every child regardless of
-            financial or geographic limitations. We serve families from all backgrounds
-            and provinces, ensuring every child has the opportunity to learn, grow, and thrive.
+        <h1 class="text-[25px] md:text-[30px] text-gradient font-[700]">
+            {{ app()->getLocale() === 'en' ? 'About Us' : 'About Us' }}</h1>
+        <p class="text-[16px] md:text-[20px] font-medium text-gradient">
+            {{ app()->getLocale() === 'en' ? 'HOPE KIDS Special Education School' : 'HOPE KIDS Special Education School' }}
+        </p>
+        <p class="mt-3 text-[14px] md:text-[16px] text-left w-full md:w-[700px]">
+            {{ app()->getLocale() === 'en' ? 'Hope Kids was founded in Cambodia to make quality special education accessible to every child regardless of financial or geographic limitations. We serve families from all backgrounds and provinces, ensuring every child has the opportunity to learn, grow, and thrive.' : 'Hope Kids was founded in Cambodia to make quality special education accessible to every child regardless of financial or geographic limitations. We serve families from all backgrounds and provinces, ensuring every child has the opportunity to learn, grow, and thrive.' }}
         </p>
         <a href="{{ URL('/about') }}"
             class="py-1 px-3 mt-4 text-[14px] lg:text-[16px] rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186] text-white">
-            Read More
+            {{ app()->getLocale() === 'en' ? 'Read More' : 'Read More' }}
         </a>
 
     </section>
@@ -78,279 +79,50 @@
     {{-- our program --}}
     <section id="program" class="w-full px-2 max-w-7xl mx-auto py-5 md:py-10" id="program">
         <h1 class="text-center text-[25px] md:text-[30px] text-gradient font-[700] mb-5">
-            Our Programs
+            {{ app()->getLocale() === 'en' ? 'Our Programs' : 'Our Programs' }}
         </h1>
 
         <div class="swiper mySwiper ">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="w-full">
-                        <img src="{{ asset('assets/ourprogram/program-1.png') }}" class="w-full h-[160px] object-cover" />
-                        <div class="text-white p-4 flex flex-col justify-between bg-[#00AFD7] py-4">
-                            <h1 class="text-[18px] font-semibold leading-tight mb-2 min-h-[70px]">
-                                Structured Teaching <br> (TEACCH Program)
-                            </h1>
-                            <p class="text-[14px] line-clamp-2">
-                                Hope Kids uses the TEACCH® Structured Teaching approach from the University of North
-                                Carolina, USA.
-                            </p>
-                            <a href="{{ URL('/ourprogram/#1') }}"
-                                class="mt-4 py-1 px-5 text-[14px] font-[600] bg-white text-black self-start">
-                                <span>Detail</span>
-                            </a>
+                @php
+                    $colors = [
+                        '#00AFD7',
+                        '#C3D500',
+                        '#FE5900',
+                        '#29A71A',
+                        '#1F088C',
+                        '#E3264E',
+                        '#5796FF',
+                        '#C3D500',
+                        '#1F088C',
+                        '#1F088C',
+                        '#C3D500',
+                        '#E3264E',
+                        '#E3264E',
+                        '#C3D500',
+                    ];
+                @endphp
+                @foreach ($programs as $index => $item)
+                    <div class="swiper-slide">
+                        <div class="w-full">
+                            <img src="{{ asset($item->image) }}" class="w-full h-[160px] object-cover" />
+                            <div class="text-white p-4 flex flex-col justify-between py-4"
+                                style="background-color: {{ $colors[$index % count($colors)] }}">
+                                <h1 class="text-[18px] font-semibold leading-tight mb-2 min-h-[70px]">
+                                    {{-- Structured Teaching (TEACCH Program) --}}
+                                    {{ app()->getLocale() === 'en' ? $item->title_en : $item->title_km }}
+                                </h1>
+                                <div class="text-[14px] line-clamp-2">
+                                    {!! app()->getLocale() === 'en' ? $item->content_en : $item->content_km !!}
+                                </div>
+                                <a href="{{ URL('/ourprogram/#1') }}"
+                                    class="mt-4 py-1 px-5 text-[14px] font-[600] bg-white text-black self-start">
+                                    <span>Detail</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="w-full">
-                        <img src="{{ asset('assets/ourprogram/program-2.jpg') }}" class="w-full h-[160px] object-cover" />
-                        <div class="text-white p-4 flex flex-col justify-between bg-[#C3D500] py-4">
-                            <h1 class="text-[18px] font-semibold leading-tight mb-2 min-h-[70px]">
-                                Special <br> Education
-                            </h1>
-                            <p class="text-[14px] line-clamp-2">
-                                Special education at Hope Kids is fully individualized to meet the needs of children with
-                                mental, physical, emotional, or behavioral challenges.
-                            </p>
-                            <a href="{{ URL('/ourprogram/#2') }}"
-                                class="mt-4 py-1 px-5 text-[14px] font-[600] bg-white text-black self-start">
-                                <span>Detail</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="w-full">
-                        <img src="{{ asset('assets/ourprogram/program-3.jpg') }}" class="w-full h-[160px] object-cover" />
-                        <div class="text-white p-4 flex flex-col justify-between bg-[#FE5900] py-4">
-                            <h1 class="text-[18px] font-semibold leading-tight mb-2 min-h-[70px]">
-                                Applied Behavior <br> Analysis (ABA)
-                            </h1>
-                            <p class="text-[14px] line-clamp-2">
-                                ABA is a proven, research based method for improving behavior, communication, social skills,
-                                and daily living abilities in children with autism.
-                            </p>
-                            <a href="{{ URL('/ourprogram/#3') }}"
-                                class="mt-4 py-1 px-5 text-[14px] font-[600] bg-white text-black self-start">
-                                <span>Detail</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="w-full">
-                        <img src="{{ asset('assets/ourprogram/program-4.jpg') }}" class="w-full h-[160px] object-cover" />
-                        <div class="text-white p-4 flex flex-col justify-between bg-[#29A71A] py-4">
-                            <h1 class="text-[18px] font-semibold leading-tight mb-2 min-h-[70px]">
-                                Occupational Therapy (OT)
-                            </h1>
-                            <p class="text-[14px] line-clamp-2">
-                                OT helps children develop essential skills for daily living, play, school readiness, fine
-                                and gross motor development, sensory processing,
-                            </p>
-                            <a href="{{ URL('/ourprogram/#4') }}"
-                                class="mt-4 py-1 px-5 text-[14px] font-[600] bg-white text-black self-start">
-                                <span>Detail</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="w-full">
-                        <img src="{{ asset('assets/ourprogram/program-5.jpg') }}" class="w-full h-[160px] object-cover" />
-                        <div class="text-white p-4 flex flex-col justify-between bg-[#1F088C] py-4">
-                            <h1 class="text-[18px] font-semibold leading-tight mb-2 min-h-[70px]">
-                                Sensory Integration <br> Therapy
-                            </h1>
-                            <p class="text-[14px] line-clamp-2">
-                                This therapy helps children with sensory processing difficulties respond more effectively to
-                                sensory input.
-                            </p>
-                            <a href="{{ URL('/ourprogram/#5') }}"
-                                class="mt-4 py-1 px-5 text-[14px] font-[600] bg-white text-black self-start">
-                                <span>Detail</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="w-full">
-                        <img src="{{ asset('assets/ourprogram/program-6.jpg') }}" class="w-full h-[160px] object-cover" />
-                        <div class="text-white p-4 flex flex-col justify-between bg-[#E3264E] py-4">
-                            <h1 class="text-[18px] font-semibold leading-tight mb-2 min-h-[70px]">
-                                Early Intervention <br> Therapy
-                            </h1>
-                            <p class="text-[14px] line-clamp-2">
-                                Designed for children from 18 months onward, early intervention targets speech, motor,
-                                cognitive, and social emotional development at the earliest
-                            </p>
-                            <a href="{{ URL('/ourprogram/#6') }}"
-                                class="mt-4 py-1 px-5 text-[14px] font-[600] bg-white text-black self-start">
-                                <span>Detail</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="w-full">
-                        <img src="{{ asset('assets/ourprogram/program-7.jpg') }}" class="w-full h-[160px] object-cover" />
-                        <div class="text-white p-4 flex flex-col justify-between bg-[#5796FF] py-4">
-                            <h1 class="text-[18px] font-semibold leading-tight mb-2 min-h-[70px]">
-                                Play Therapy
-                            </h1>
-                            <p class="text-[14px] line-clamp-2">
-                                Play therapy helps children express themselves, develop social and emotional skills, improve
-                                behavior,
-                            </p>
-                            <a href="{{ URL('/ourprogram/#7') }}"
-                                class="mt-4 py-1 px-5 text-[14px] font-[600] bg-white text-black self-start">
-                                <span>Detail</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="w-full">
-                        <img src="{{ asset('assets/ourprogram/program-8.jpg') }}" class="w-full h-[160px] object-cover" />
-                        <div class="text-white p-4 flex flex-col justify-between bg-[#C3D500] py-4">
-                            <h1 class="text-[18px] font-semibold leading-tight mb-2 min-h-[70px]">
-                                Speech Therapy
-                            </h1>
-                            <p class="text-[14px] line-clamp-2">
-                                Speech therapy improves communication, speech clarity, understanding, and language
-                                development. Led by a highly qualified Speech-Language
-                            </p>
-                            <a href="{{ URL('/ourprogram/#8') }}"
-                                class="mt-4 py-1 px-5 text-[14px] font-[600] bg-white text-black self-start">
-                                <span>Detail</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="w-full">
-                        <img src="{{ asset('assets/ourprogram/program-9.jpg') }}"
-                            class="w-full h-[160px] object-cover" />
-                        <div class="text-white p-4 flex flex-col justify-between bg-[#1F088C] py-4">
-                            <h1 class="text-[18px] font-semibold leading-tight mb-2 min-h-[70px]">
-                                Art Therapy
-                            </h1>
-                            <p class="text-[14px] line-clamp-2">
-                                Art therapy allows children to express feelings, improve self esteem, develop fine motor
-                                skills, and regulate emotions through creative activities.
-                            </p>
-                            <a href="{{ URL('/ourprogram/#9') }}"
-                                class="mt-4 py-1 px-5 text-[14px] font-[600] bg-white text-black self-start">
-                                <span>Detail</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="w-full">
-                        <img src="{{ asset('assets/ourprogram/program-10.jpg') }}"
-                            class="w-full h-[160px] object-cover" />
-                        <div class="text-white p-4 flex flex-col justify-between bg-[#1F088C] py-4">
-                            <h1 class="text-[18px] font-semibold leading-tight mb-2 min-h-[70px]">
-                                Picture Exchange <br>
-                                Communication System (PECS)
-                            </h1>
-                            <p class="text-[14px] line-clamp-2">
-                                PECS is an internationally recognized communication system that helps non verbal children
-                                communicate using pictures. Hope Kids core team has been
-                            </p>
-                            <a href="{{ URL('/ourprogram/#10') }}"
-                                class="mt-4 py-1 px-5 text-[14px] font-[600] bg-white text-black self-start">
-                                <span>Detail</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="w-full">
-                        <img src="{{ asset('assets/our2.png') }}" class="w-full h-[160px] object-cover" />
-                        <div class="text-white p-4 flex flex-col justify-between bg-[#C3D500] py-4">
-                            <h1 class="text-[18px] font-semibold leading-tight mb-2 min-h-[70px]">
-                                School Readiness program
-                            </h1>
-                            <p class="text-[14px] line-clamp-2">
-                                This program prepares children with autism for mainstream school by developing social
-                                skills, communication, academics,
-                            </p>
-                            <a href="{{ URL('/ourprogram/#11') }}"
-                                class="mt-4 py-1 px-5 text-[14px] font-[600] bg-white text-black self-start">
-                                <span>Detail</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="w-full">
-                        <img src="{{ asset('assets/ourprogram/program-12.jpg') }}"
-                            class="w-full h-[160px] object-cover" />
-                        <div class="text-white p-4 flex flex-col justify-between bg-[#E3264E] py-4">
-                            <h1 class="text-[18px] font-semibold leading-tight mb-2 min-h-[70px]">
-                                Activities of Daily Living <br> Training
-                            </h1>
-                            <p class="text-[14px] line-clamp-2">
-                                ADL training teaches essential self care skills such as hygiene, dressing, feeding,
-                                toileting, and basic health routines. The goal is to build independence,
-                            </p>
-                            <a href="{{ URL('/ourprogram/#12') }}"
-                                class="mt-4 py-1 px-5 text-[14px] font-[600] bg-white text-black self-start">
-                                <span>Detail</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="w-full">
-                        <img src="{{ asset('assets/ourprogram/program-13.jpg') }}"
-                            class="w-full h-[160px] object-cover" />
-                        <div class="text-white p-4 flex flex-col justify-between bg-[#E3264E] py-4">
-                            <h1 class="text-[18px] font-semibold leading-tight mb-2 min-h-[70px]">
-                                Parent Education and <br>
-                                Counselling
-                            </h1>
-                            <p class="text-[14px] line-clamp-2">
-                                Parents receive continuous training, emotional support, and guidance to better understand
-                                their childs needs and development.
-                            </p>
-                            <a href="{{ URL('/ourprogram/#13') }}"
-                                class="mt-4 py-1 px-5 text-[14px] font-[600] bg-white text-black self-start">
-                                <span>Detail</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="w-full">
-                        <img src="{{ asset('assets/our2.png') }}" class="w-full h-[160px] object-cover" />
-                        <div class="text-white p-4 flex flex-col justify-between bg-[#C3D500] py-4">
-                            <h1 class="text-[18px] font-semibold leading-tight mb-2 min-h-[70px]">
-                                Cerebral Palsy <br> Development Program
-                            </h1>
-                            <p class="text-[14px] line-clamp-2">
-                                We provide individualized support for children with cerebral palsy through personalized
-                                education plans, physiotherapy, occupational therapy, and
-                            </p>
-                            <a href="{{ URL('/ourprogram/#14') }}"
-                                class="mt-4 py-1 px-5 text-[14px] font-[600] bg-white text-black self-start">
-                                <span>Detail</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
             <div class="swiper-pagination mt-30"></div>
         </div>
@@ -391,11 +163,13 @@
     </div>
 
     {{-- our branch --}}
-    <div id="our_branch" class="relative my-10 max-w-7xl mx-auto flex flex-col items-center justify-center px-4" id="branch">
+    <div id="our_branch" class="relative my-10 max-w-7xl mx-auto flex flex-col items-center justify-center px-4"
+        id="branch">
 
-        <h1 class="text-center text-[25px] md:text-[30px] text-gradient font-[700]">Our Branches</h1>
+        <h1 class="text-center text-[25px] md:text-[30px] text-gradient font-[700]">
+            {{ app()->getLocale() === 'en' ? 'Our Branches' : 'Our Branches' }}</h1>
 
-        <img src="{{ asset('assets/images/map.png') }}" alt="" class="w-full md:w-2/3 h-full">
+        <img src="{{ asset('assets/images/map1.png') }}" alt="" class="w-full md:w-2/3 h-full">
 
     </div>
 
@@ -443,7 +217,7 @@
 
         <div class="pt-10">
             <h1 class="text-[25px] md:text-[30px] text-gradient font-[700] text-center">
-                Parents’ Testimonials
+                {{ app()->getLocale() === 'en' ? 'Parents’ Testimonials' : 'Parents’ Testimonials' }}
             </h1>
 
             <div class="mt-5 flex flex-wrap justify-center md:flex-col xl:flex-row items-center gap-10">
@@ -512,18 +286,13 @@
                 </div>
 
             </div>
-
-            <div>
-
-
-            </div>
         </div>
     </div>
 
     {{-- faqs --}}
     <section id="faq" class="mt-20 px-4 md:px-0" id="faq">
         <h1 class="text-[25px] md:text-[30px] text-gradient font-[700] text-center">
-            Frequently Asked Questions
+            {{ app()->getLocale() === 'en' ? 'Frequently Asked Questions' : 'Frequently Asked Questions' }}
         </h1>
 
         <div class="mt-5 flex flex-col md:flex-row flex-wrap justify-center items-start gap-5 md:gap-8">
@@ -672,16 +441,20 @@
 
         <!-- Content -->
         <div class="relative z-10">
-            <p class="text-[10px] md:text-[23px] font-medium text-white/90 text-center">
-                Hope kids Special Education School We offer Special <br>
-                Education and Holistic Speech Delay. Intellectual Disabilities . <br>
-                Leaning Difficulty and Cerebral Palsy.
+            <p class="w-full max-w-[700px] mx-auto px-2 text-[16px] md:text-[20px] font-medium text-white/90 text-center">
+                {{ __('message.banner_content') }}
             </p>
         </div>
     </section>
 
     {{-- contact form --}}
     <div id="schedule" class="mt-10" id="contact">
+        @if (session('success'))
+            <div x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 3000)"
+                class="fixed top-5 right-5 bg-green-600 text-white px-5 py-3 rounded-lg shadow-lg z-50">
+                {{ session('success') }}
+            </div>
+        @endif
         <h1 class="text-gradient text-[25px] md:text-[30px] font-[700] text-center">Contact Form</h1>
         <div class="mt-10 bg-[#CBDBF4] w-full max-w-7xl mx-auto rounded-2xl">
 
@@ -710,6 +483,7 @@
                         <!-- Select 2 -->
                         <select name="location"
                             class="bg-white p-3 text-[#5796FF] rounded-full border-none focus:ring-2 focus:ring-blue-400">
+                            <option value="" disabled >Select Branch</option>
                             <option class="bg-blue-500 text-white">Steng Meanchey</option>
                             <option class="bg-blue-500 text-white">Peng Hout Boeung Snor</option>
                             <option class="bg-blue-500 text-white">Banteay Meanchey</option>
@@ -747,7 +521,7 @@
                         </button>
                     </div>
                 </form>
-                <p class="text-[#5796FF] text-center font-regular text-[11px] md:text-[15px] mt-5">We ll respond within
+                <p class="text-[#5796FF] text-center font-regular text-[11px] md:text-[15px] mt-5">We’ll respond within
                     24-48 hours. If urgent, you may also call us at 085 253 388</p>
             </div>
         </div>
