@@ -1,6 +1,29 @@
 @extends('layouts.master')
 
 @section('content')
+    <style>
+        .swiper-certificate .swiper {
+            margin-inline: initial;
+            padding-top: 4rem;
+            padding-bottom: 6rem;
+        }
+
+        .swiper-certificate .swiper-pagination .swiper-pagination-bullet {
+            background-color: #2E4354;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+
+        .swiper-certificate .swiper-pagination .swiper-pagination-bullet-active {
+            width: 16px;
+            height: 6px;
+            border-radius: 10px;
+            background-color: #2E4354;
+        }
+    </style>
+
     <section class="">
 
         <div class="w-full h-[60vh] md:h-screen">
@@ -131,8 +154,10 @@
 
     </section>
 
-    <section class="" id="school_license">
-        <h1 class="text-[16px] md:text-[30px] text-gradient font-[700] text-center">Our Institutes' Licenses</h1>
+    {{-- license destop --}}
+    <section class="hidden md:block" id="school_license">
+        <h1 class="text-[16px] md:text-[30px] text-gradient font-[700] text-center pt-5 md:pt-10">Our Institutes' Licenses
+        </h1>
         <div class="mt-5">
             <div class='w-full flex gap-4 max-w-7xl mx-auto px-4 my-20 overflow-x-auto'>
                 {{-- @foreach ($licenses as $index => $license)
@@ -180,6 +205,66 @@
             </div>
         </div>
     </section>
+
+    {{-- license mobile --}}
+    <div id='registration_docs' class='md:hidden swiper-certificate py-10'>
+        <h1 class="text-[16px] md:text-[30px] text-gradient font-[700] text-center pb-10">Our Institutes' Licenses</h1>
+        <div class="swiper certificateSwiper" style="width: 80%; height: 300px; margin: auto;">
+            <div class="swiper-wrapper">
+                {{-- @foreach ($licenses as $index => $item)
+                    <div class="swiper-slide">
+                        <div class="flex justify-center items-center h-full">
+                            <img src={{ $item->image }} alt="" class="h-full object-contain" />
+                        </div>
+                    </div>
+                @endforeach --}}
+                <div class="swiper-slide">
+                    <div class="flex flex-col justify-center items-center h-full">
+                        <img src="assets/licen1.jpg" alt=""
+                            class="w-full h-[15rem] lg:h-[25rem] xl:h-[26rem] object-contain object-center" />
+                        <h1 class="text-center text-[12px] md:text-[14px] mt-2">Approval and Branches Licensing</h1>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="flex flex-col justify-center items-center h-full">
+                        <img src="assets/licen2.jpg" alt=""
+                            class="w-full h-[15rem] lg:h-[25rem] xl:h-[26rem] object-contain object-center" />
+                        <h1 class="text-center text-[12px] md:text-[14px] mt-2">Approval and Branches Licensing</h1>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="flex flex-col justify-center items-center h-full">
+                        <img src="assets/licen3.jpg" alt=""
+                            class="w-full h-[15rem] lg:h-[25rem] xl:h-[26rem] object-contain object-center" />
+                        <h1 class="text-center text-[12px] md:text-[14px] mt-2">Approval and Branches Licensing</h1>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="flex flex-col justify-center items-center h-full">
+                        <img src="assets/licen4.jpg" alt=""
+                            class="w-full h-[15rem] lg:h-[25rem] xl:h-[26rem] object-contain object-center" />
+                        <h1 class="text-center text-[12px] md:text-[14px] mt-2">Approval and Branches Licensing</h1>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="flex flex-col justify-center items-center h-full">
+                        <img src="assets/licen5.jpg" alt=""
+                            class="w-full h-[15rem] lg:h-[25rem] xl:h-[26rem] object-contain object-center" />
+                        <h1 class="text-center text-[12px] md:text-[14px] mt-2">Approval and Branches Licensing</h1>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="flex flex-col justify-center items-center h-full">
+                        <img src="assets/licen6.jpg" alt=""
+                            class="w-full h-[15rem] lg:h-[25rem] xl:h-[26rem] object-contain object-center" />
+                        <h1 class="text-center text-[12px] md:text-[14px] mt-2">Approval and Branches Licensing</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
 
     <section class="relative z-20 py-20 w-full mt-10">
 

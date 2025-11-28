@@ -534,7 +534,7 @@
 
 <!-- Initialize Swiper -->
 <script>
-    var swiper = new Swiper(".mySwiper", {
+    const swiper = new Swiper(".mySwiper", {
         slidesPerView: 4,
         spaceBetween: 20,
         slidesPerGroup: 4,
@@ -565,6 +565,24 @@
             type: "bullets",
         },
     });
+
+    const swiperCertificate = new Swiper(".certificateSwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            loop: true,
+        });
 </script>
 
 </html>
