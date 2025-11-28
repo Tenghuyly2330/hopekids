@@ -23,7 +23,7 @@ use App\Models\Message;
 Route::get('/', [HomeController::class, 'index'])->name("home");
 Route::get('/about', [AboutUsController::class, 'index'])->name("about");
 Route::get('/ourprogram', [OurProgramController::class, 'index'])->name("ourprogram");
-Route::get('/professsionalteam', [ProfessionalController::class, 'index'])->name("professsionalteam");
+Route::get('/professionalteam', [ProfessionalController::class, 'index'])->name("professionalteam");
 Route::get('/career', [CareerController::class, 'index'])->name("career");
 Route::get('/articles', [ArticleController::class, 'index'])->name("articles");
 Route::get('/articles/{slug}', [ArticleController::class, 'showArticle'])->name("articles.show");

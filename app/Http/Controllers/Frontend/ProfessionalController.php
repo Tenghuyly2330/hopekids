@@ -14,6 +14,6 @@ class ProfessionalController extends Controller
         $teams = Team::get();
         $messages = Message::first();
 
-        return view("frontend.professsionalteam", compact('teams', 'messages'));
+        return view("frontend.professionalteam", compact('teams', 'messages'));
     }
 }

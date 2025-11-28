@@ -156,7 +156,7 @@
                     class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'About Us' : 'អំពីយើងខ្ញុំ' }}</a></li>
             <li><a href="{{ URL('/ourprogram') }}"
                     class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Our Program' : 'Our Program' }}</a></li>
-            <li><a href="{{ URL('/professsionalteam') }}"
+            <li><a href="{{ URL('/professionalteam') }}"
                     class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Professional Team' : 'Professional Team' }}</a>
             </li>
             <li><a href="{{ URL('/career') }}"
@@ -313,8 +313,8 @@
                 </ul>
             </li>
             <li class="relative group">
-                <a href="{{ route('professsionalteam') }}"
-                    class="px-5 xl:px-7 py-4 xl:py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('professsionalteam') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : '' }}">{{ app()->getLocale() === 'en' ? 'Professional Team' : 'Professional Team' }}</a>
+                <a href="{{ route('professionalteam') }}"
+                    class="px-5 xl:px-7 py-4 xl:py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('professionalteam') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : '' }}">{{ app()->getLocale() === 'en' ? 'Professional Team' : 'Professional Team' }}</a>
             </li>
             <li class="relative group">
                 <a href="{{ route('career') }}"
