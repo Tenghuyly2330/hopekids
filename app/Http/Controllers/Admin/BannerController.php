@@ -23,7 +23,15 @@ class BannerController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'title' => 'nullable|string|max:255',
+            'title' => 'nullable|string|max:100',
+            'title1_en' => 'nullable|string|max:100',
+            'title1_km' => 'nullable|string|max:100',
+            'title2_en' => 'nullable|string|max:100',
+            'title2_km' => 'nullable|string|max:100',
+            'title3_en' => 'nullable|string|max:100',
+            'title3_km' => 'nullable|string|max:100',
+            'content_en' => 'nullable|string',
+            'content_km' => 'nullable|string',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif',
         ]);
 
@@ -52,7 +60,15 @@ class BannerController extends Controller
         $banner = Banner::findOrFail($id);
 
         $validated = $request->validate([
-            'title' => 'nullable|string|max:255',
+            'title' => 'nullable|string|max:100',
+            'title1_en' => 'nullable|string|max:100',
+            'title1_km' => 'nullable|string|max:100',
+            'title2_en' => 'nullable|string|max:100',
+            'title2_km' => 'nullable|string|max:100',
+            'title3_en' => 'nullable|string|max:100',
+            'title3_km' => 'nullable|string|max:100',
+            'content_en' => 'nullable|string',
+            'content_km' => 'nullable|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif',
         ]);
 

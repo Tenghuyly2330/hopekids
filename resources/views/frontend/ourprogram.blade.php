@@ -8,9 +8,9 @@
         <div>
             <div class="relative z-10 pt-[15vh] md:pt-[30vh]">
                 <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">
-                    {{ __("message.our_program") }}</h1>
+                    {{ app()->getLocale() === 'en' ? $banner_image->title1_en : $banner_image->title1_km }}</h1>
                 <p class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px]">
-                    {{ __("message.our_program_content") }}</p>
+                    {{ app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km }}</p>
 
             </div>
         </div>

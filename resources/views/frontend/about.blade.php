@@ -57,8 +57,8 @@
             <div class="absolute h-[60vh] object-cover md:h-screen inset-0 z-10 bg-black/50"></div>
 
             <div class="relative z-10 px-4 max-w-[700px] mx-auto pt-[10vh] md:pt-[30vh]">
-                <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">{{ __('message.about_us') }}</h1>
-                <p class="text-left text-white text-[14px] lg:text-[16px]">{{ __('message.about_us_content') }}</p>
+                <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">{{ app()->getLocale() === 'en' ? $banner_image->title1_en : $banner_image->title1_km }}</h1>
+                <p class="text-left text-white text-[14px] lg:text-[16px]">{{ app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km }}</p>
 
             </div>
         </div>

@@ -76,6 +76,20 @@
                             </a>
                         </li>
 
+                        <li class="nav-link {{ Request::is('branch') ? 'bg-[#000] rounded-md !text-[#ffffff]' : '' }}">
+                            <a href="{{ url('branch') }}">
+                                <i class='bx bxl-vimeo icon'></i>
+                                <span class="text nav-text">Branch</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link {{ Request::is('career_backend') ? 'bg-[#000] rounded-md !text-[#ffffff]' : '' }}">
+                            <a href="{{ url('career_backend') }}">
+                                <i class='bx bxl-vimeo icon'></i>
+                                <span class="text nav-text">Career Position</span>
+                            </a>
+                        </li>
+
                         <li class="nav-link {{ Request::is('about_backend') ? 'bg-[#000] rounded-md !text-[#ffffff]' : '' }}">
                             <a href="{{ url('about_backend') }}">
                                 <i class='bx bxl-vimeo icon'></i>
@@ -137,7 +151,20 @@
                             </a>
                         </li>
 
+                        <li
+                            class="nav-link {{ Request::is('experince') ? 'bg-[#000] rounded-md !text-[#ffffff]' : '' }}">
+                            <a href="{{ url('experince') }}">
+                                <i class='bx bxl-vimeo icon'></i>
+                                <span class="text nav-text">Experince</span>
+                            </a>
+                        </li>
 
+                        <li class="nav-link {{ Request::is('social') ? 'bg-[#000] rounded-md !text-[#ffffff]' : '' }}">
+                            <a href="{{ url('social') }}">
+                                <i class='bx bxl-vimeo icon'></i>
+                                <span class="text nav-text">Social</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
 

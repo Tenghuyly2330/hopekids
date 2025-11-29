@@ -11,6 +11,14 @@ class Banner extends Model
 
     protected $fillable = [
         'title',
+        'title1_en',
+        'title1_km',
+        'title2_en',
+        'title2_km',
+        'title3_en',
+        'title3_km',
+        'content_en',
+        'content_km',
         'image',
     ];
 }

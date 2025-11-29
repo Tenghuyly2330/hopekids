@@ -11,12 +11,11 @@
             <div class="relative z-10 pt-[15vh] md:pt-[30vh]">
 
                 <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">
-                    {{ app()->getLocale() === 'en' ? 'Career' : 'អាជីព' }}
+                    {{ app()->getLocale() === 'en' ? $banner_image->title1_en : $banner_image->title1_km }}
                 </h1>
 
                 <p class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px]  px-4">
-                    {{ app()->getLocale() === 'en' ? 'Hope Kids provides affordable, inclusive, and professional education for children with autism and special needs in Phnom Penh and across Cambodia.' : 'Hope Kids ផ្តល់អប់រំដែលមានតម្លៃសមរម្យ មានភាពរួមបញ្ចូល និងវិជ្ជាជីវៈ សម្រាប់កុមារដែលមានអូទីសំ និងតម្រូវការពិសេស នៅក្នុងភ្នំពេញ និងទូទាំងប្រទេសកម្ពុជា។' }}
-
+                    {{ app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km }}
                 </p>
             </div>
         </div>
@@ -76,10 +75,9 @@
                         <select class="p-3 bg-white text-black rounded-full w-full mt-1" name="position">
                             <option value="" disabled selected>
                                 {{ app()->getLocale() === 'en' ? 'Select a position' : 'ជ្រើសរើសតំណែង' }}</option>
-                            <option value="teacher">Teacher</option>
-                            <option value="therapist">Therapist</option>
-                            <option value="administrator">Administrator</option>
-                            <option value="other">Other</option>
+                            @foreach ($careers as $item)
+                                <option value="{{ $item->slug }}">{{ app()->getLocale() === 'en' ? $item->position_en : $item->position_km }}</option>
+                            @endforeach
                         </select>
                     </div>
 

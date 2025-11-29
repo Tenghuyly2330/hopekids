@@ -36,9 +36,9 @@
             <div class="relative z-10 pt-[15vh] md:pt-[30vh]">
 
                 <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">
-                    {{ app()->getLocale() === 'en' ? 'Professional Team' : 'ក្រុមអ្នកជំនាញ' }}</h1>>
+                    {{ app()->getLocale() === 'en' ? $banner_image->title1_en : $banner_image->title1_km }}</h1>>
                 <p class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px]">
-                    {{ app()->getLocale() === 'en' ? 'Hope Kids provides affordable, inclusive, and professional education for children with autism and special needs in Phnom Penh and across Cambodia.' : 'ហូបឃីដ ផ្តល់ជូននូវការអប់រំដែលមានភាពសមរម្យ មានភាពរួមបញ្ចូល និងមានវិជ្ជាជីវៈ សម្រាប់កុមារដែលមានជំងឺអូទីសឹម និងតម្រូវការពិសេស នៅក្នុងរាជធានីភ្នំពេញ និងទូទាំងប្រទេសកម្ពុជា។' }}
+                    {{ app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km }}
                 </p>
             </div>
         </div>

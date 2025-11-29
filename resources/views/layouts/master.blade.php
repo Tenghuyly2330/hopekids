@@ -214,7 +214,7 @@
     @php
         $locale = app()->getLocale();
     @endphp
-    @include('components.navbar', ['programs' => $programs])
+    @include('components.navbar', ['programs' => $programs, 'fb' => $fb, 'telegram' => $telegram, 'tiktok' => $tiktok, 'yt' => $yt])
 
     <main>
         @yield('content')
@@ -230,197 +230,31 @@
             {{ app()->getLocale() === 'en' ? 'Find Us!' : 'ស្វែងរកសាខាដែលនៅជិតលោកអ្នក' }}</h1>
 
         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-10">
-            <div class="flex flex-col gap-3">
 
-                <div class="w-full h-[180px]">
-                    <p class="text-[#1E1E1E] text-[15px] font-bold">
-                        {{ app()->getLocale() === 'en' ? 'Phnom Penh (Stueng Mean chey)' : 'ទីក្រុងភ្នំពេញ (ប៉េងហួតបេងស្នោ)' }}
-                    </p>
+            @foreach ($branches as $item)
+                <div class="flex flex-col gap-3">
 
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px] mt-2">
-                        {{ app()->getLocale() === 'en' ? 'Street 62, Sangkat Stoeung, Phnom Penh' : 'ផ្លូវលេខ៦២ សង្កាត់ស្ទឹងមានជ័យ រាជធានីភ្នំពេញ' }}
-                    </p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? '085 253 388 / 086 253 388' : '០៨៥ ២៥៣ ៣៨៨ / ០៨៦ ២៥៣ ៣៨៨' }}
-                    </p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖ ' }}
-                        hopekids.info@gmail.com
-                    </p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? 'Operating Hours: Monday – Friday | 8:00 AM – 6:00 PM' : 'ម៉ោងធ្វើការ៖ ច័ន្ទ – សុក្រ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
-                    </p>
+                    <div class="w-full h-[180px]">
+                        <p class="text-[#1E1E1E] text-[15px] font-bold">
+                            {{ app()->getLocale() === 'en' ? $item->title_en : $item->title_km }}
+                        </p>
+
+                        <div class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px] mt-2">
+                            {!! app()->getLocale() === 'en' ? $item->content_en : $item->content_km !!}
+                        </div>
+                    </div>
+                    <img src="{{ asset($item->image) }}" alt=""
+                        class="w-full h-[200px] md:h-[150px] object-cover">
+                    <div class="w-full h-[200px] md:h-[120px]">
+                        <iframe
+                            src="{{ $item->url_map }}"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+
+                    </div>
                 </div>
-                <img src="{{ asset('assets/1.jpg') }}" alt=""
-                    class="w-full h-[200px] md:h-[150px] object-cover">
-                <div class="w-full h-[200px] md:h-[120px]">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d59452.627223846284!2d104.8816533!3d11.5365121!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109510f5db80c37%3A0x98a09bf77e8ffbbe!2sHope%20Kids!5e1!3m2!1skm!2skh!4v1763456250580!5m2!1skm!2skh"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-
-                </div>
-            </div>
-
-            <div class="flex flex-col gap-3">
-
-                <div class="w-full h-[180px]">
-                    <p class="text-[#1E1E1E] text-[15px] font-bold">
-                        {{ app()->getLocale() === 'en' ? 'Phnom Penh (Peng Huot Beng Snor)' : 'ទីក្រុងភ្នំពេញ (ប៉េងហួតបេងស្នោ)' }}
-                    </p>
-
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? 'in Borey Peng Huoth Grand Star Platinum (Boeung Snor, The Star Platinum Herminus, Phnom Penh 121201' : 'នៅបុរីប៉េងហួត ហ្គ្រេនស្តារ ផ្លាទីនីម (បឹងស្នោ, ឌឹស្តារ ផ្លាទីនីម ហឺមីណុស, ភ្នំពេញ 121201' }}
-                    </p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? '010 727 416 / 085 727 416' : '០១០ ៧២៧ ៤១៦ / ០៨៥ ៧២៧ ៤១៦' }}
-                    </p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖ ' }}
-                        hopekids.info@gmail.com
-                    </p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? 'Operating Hours: Monday – Friday | 8:00 AM – 6:00 PM' : 'ម៉ោងធ្វើការ៖ ច័ន្ទ – សុក្រ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
-                    </p>
-                </div>
-
-                <img src="{{ asset('assets/2.jpg') }}" class="w-full h-[200px] md:h-[150px] object-cover"
-                    alt="">
-                <div class="w-full h-[200px] md:h-[120px]">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29725.908552752466!2d104.9090806!3d11.5403364!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31095741c53872d5%3A0x16dff306476054b!2sHope%20kids%20Special%20Education%20school%20Boeung%20Snor!5e1!3m2!1skm!2skh!4v1763538992182!5m2!1skm!2skh"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-
-                </div>
-            </div>
-
-            <div class="flex flex-col gap-3">
-                <div class="w-full h-[180px]">
-                    <p class="text-[#1E1E1E] text-[15px] font-bold">
-                        {{ app()->getLocale() === 'en' ? 'Kampot' : 'ខេត្តកំពត' }}</p>
-
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? 'Tropang Monterey Village, Street 31, Toukmeas 070303' : 'ភូមិត្រពាំងម៉ុនធើរី ផ្លូវលេខ ៣១ ទូកមាស 070303' }}
-                    </p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? '090 333 185 / 085 333 815' : '០៩០ ៣៣៣ ១៨៥ / ០៨៥ ៣៣៣ ៨១៥' }}
-                    </p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖ ' }}
-                        hopekids.info@gmail.com
-                    </p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? 'Operating Hours: Monday – Friday | 8:00 AM – 6:00 PM' : 'ម៉ោងធ្វើការ៖ ច័ន្ទ – សុក្រ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
-                    </p>
-                </div>
-
-
-                <img src="{{ asset('assets/kampot.jpg') }}" class="w-full h-[200px] md:h-[150px] object-cover"
-                    alt="">
-                <div class="w-full h-[200px] md:h-[120px]">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3726.5118856022223!2d104.5720087!3d10.696274499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109bfc52bb358cb%3A0x7dc9b45554d80dfa!2sHope%20Kids%20Special%20Education%20School%20Toukmeas%20Branch!5e1!3m2!1skm!2skh!4v1763539462498!5m2!1skm!2skh"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-            </div>
-
-            <div class="flex flex-col gap-3">
-                <div class="w-full h-[180px]">
-
-                    <p class="text-[#1E1E1E] text-[15px] font-bold">
-                        {{ app()->getLocale() === 'en' ? 'Battambang' : 'ខេត្តបាត់ដំបង' }}</p>
-
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? 'Battambang City 021401' : 'ក្រុងបាត់ដំបង 021401' }}</p>
-                    </p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? '085 227 436 / 010 227 436' : '០៨៥ ២២៧ ៤៣៦ / ០១០ ២២៧ ៤៣៦' }}
-                    </p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖ ' }}
-                        hopekids.info@gmail.com
-                    </p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? 'Operating Hours: Monday – Friday | 8:00 AM – 6:00 PM' : 'ម៉ោងធ្វើការ៖ ច័ន្ទ – សុក្រ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
-                    </p>
-                </div>
-
-                <img src="{{ asset('assets/battambang.jpg') }}" class="w-full h-[200px] md:h-[150px] object-cover"
-                    alt="">
-                <div class="w-full h-[200px] md:h-[120px]">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1897021.1982686522!2d102.7590864!3d12.316543!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31054b0eeb0ac569%3A0xf47e3e1959da725d!2sHope%20Kids%20Special%20Education%20School%20Battambang!5e1!3m2!1skm!2skh!4v1763538841595!5m2!1skm!2skh"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-
-                </div>
-            </div>
-
-            <div class="flex flex-col gap-3">
-                <div class="w-full h-[180px]">
-                    <p class="text-[#1E1E1E] text-[15px] font-bold">
-                        {{ app()->getLocale() === 'en' ? 'Banteay Mean Chey' : 'បន្ទាយមានជ័យ' }}</p>
-
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? 'Phum, Sisophon 010801' : 'ភូមិ ស៊ីសុផុន 010801' }}</p>
-                    </p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? '096 888 3165 / 090 888 316' : '០៩៦ ៨៨៨ ៣១៦៥ / ០៩០ ៨៨៨ ៣១៦' }}
-                    </p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖ ' }}
-                        hopekids.info@gmail.com
-                    </p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? 'Operating Hours: Monday – Friday | 8:00 AM – 6:00 PM' : 'ម៉ោងធ្វើការ៖ ច័ន្ទ – សុក្រ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
-                    </p>
-                </div>
-                <img src="{{ asset('assets/banteaymeanchey.jpg') }}"
-                    class="w-full h-[200px] md:h-[150px] object-cover" alt="">
-                <div class="w-full h-[200px] md:h-[120px]">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.2789026689784!2d102.95208819999999!3d13.586583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311ae78620f2b49d%3A0xff2eb4052b12ba18!2sHope%20Kids%20Special%20Education%20School%20-%20Banteymeanchey!5e1!3m2!1skm!2skh!4v1763539635032!5m2!1skm!2skh"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-
-            <div class="flex flex-col gap-3">
-                <div class="w-full h-[180px]">
-                    <p class="text-[#1E1E1E] text-[15px] font-bold">
-                        {{ app()->getLocale() === 'en' ? 'Ratanakiri' : 'រតនគីរី' }}</p>
-
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? 'PXRJ+7W6, Krong Ban Lung' : 'PXRJ+7W6, ក្រុងបានលុង' }}</p>
-                    </p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? '066 888 309 / 096 888 2037' : '០៦៦ ៨៨៨ ៣០៩ / ០៩៦ ៨៨៨ ២០៣៧' }}
-                    </p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖ ' }}
-                        hopekids.info@gmail.com
-                    </p>
-                    <p class="text-[#1E1E1E] font-regular text-[11px] xl:text-[12px]">
-                        {{ app()->getLocale() === 'en' ? 'Operating Hours: Monday – Friday | 8:00 AM – 6:00 PM' : 'ម៉ោងធ្វើការ៖ ច័ន្ទ – សុក្រ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
-                    </p>
-                </div>
-                <img src="{{ asset('assets/ratanakkiri.jpg') }}" class="w-full h-[200px] md:h-[150px] object-cover"
-                    alt="">
-                <div class="w-full h-[200px] md:h-[120px]">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.87248099572!2d106.97970407485575!3d13.740491786650187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x316ce10032547b37%3A0xef7f7b51dd358947!2sHope%20Kids%20Ratanakiri!5e1!3m2!1sen!2skh!4v1763539086933!5m2!1sen!2skh"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-            </div>
-
+            @endforeach
         </div>
     </div>
 
@@ -450,7 +284,7 @@
                     <!-- Social Icons -->
                     <ul class="flex gap-4 text-2xl md:text-2xl mt-3">
                         <li>
-                            <a href="https://www.facebook.com/hopekidspp" target="__blank">
+                            <a href="{{ $fb->url }}" target="__blank">
                                 <svg class="w-6 h-6" viewBox="0 0 21 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -460,7 +294,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://bio.link/hopekidsinfo" target="__blank">
+                            <a href="{{ $telegram->url }}" target="__blank">
                                 <svg class="w-6 h-6" viewBox="0 0 21 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -473,8 +307,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.tiktok.com/@hopekidsofficial?_t=ZS-8uAfAIUNOFe&_r=1"
-                                target="__blank">
+                            <a href="{{ $tiktok->url }}" target="__blank">
                                 <svg class="w-6 h-6" viewBox="0 0 21 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="10.5" cy="10.5" r="10.5" fill="black" />
@@ -486,7 +319,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.youtube.com/@HopeKids-cambodia" target="__black">
+                            <a href="{{ $yt->url }}" target="__black">
                                 <svg class="h-6" viewBox="0 0 20 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -502,7 +335,7 @@
                 <div class="flex justify-center lg:ms-10">
                     <div class="flex-1 lg:ms-10 mt-10 lg:mt-0">
                         <h2 class="text-lg md:text-[25px] font-bold mb-4">
-                            {{ app()->getLocale() === 'en' ? 'Information' : 'Information' }}</h2>
+                            {{ app()->getLocale() === 'en' ? 'Information' : 'ព័ត៌មាន' }}</h2>
                         <ul class="space-y-3 text-sm md:text-base font-light">
                             <li><a href="{{ URL('/') }}"
                                     class="hover:underline">{{ app()->getLocale() === 'en' ? 'Home' : 'ទំព័រដើម' }}</a>

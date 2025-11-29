@@ -27,5 +27,5 @@ return [
     "school_facilities" => "សម្ភារៈសិក្សា",
     "school_facilities_title" => "បរិយាកាសសិក្សាដែលមានសុវត្ថិភាព និងផ្តល់ការចិញ្ចឹមបីបាច់ថែរក្សា",
     "school_facilities_content" => "Hope Kids ត្រូវបានបំពាក់ដោយបន្ទប់ញ្ញាណ ទីកន្លែងព្យាបាល ថ្នាក់រៀន និងកន្លែងលេងដែលត្រូវបានរចនាឡើងដើម្បីគាំទ្រដល់ការអភិវឌ្ឍរបស់កុមារ។ សម្ភារៈនីមួយៗត្រូវបានបង្កើតឡើងសម្រាប់សុវត្ថិភាព ការចូលរួម និងផាសុកភាព។",
-    "banner_content" => "At Hope Kids Special Education School, we offer special education, holistocs speech delay, intellectual disabilities, learning difficulties and cerebral palsy.",
+    "banner_content" => "សាលារៀនអប់រំពិសេសគឺជាសាលារៀនដែលកុមារទទួលបានការថែទាំ ការគាំពារ និងការអភិវឌ្ឍជំនាញជីវិត។ ការអប់រំពិសេសនេះផ្តោតលើការជួយកុមារដែលមាន​ការពន្យារពេលនិយាយ ខ្សោយសតិបញ្ញា ការលំបាកក្នុងការរៀន និងជំងឺពិការចលករខួលក្បាលជាដើម។",
 ];

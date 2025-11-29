@@ -3,12 +3,16 @@
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\ArticleBackendController;
 use App\Http\Controllers\Admin\BannerController;
+use App\Http\Controllers\Admin\BranchController;
+use App\Http\Controllers\Admin\CareerBackendController;
 use App\Http\Controllers\Admin\CertificateController;
 use App\Http\Controllers\Admin\EventBackendController;
+use App\Http\Controllers\Admin\ExperinceController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\ParentController;
 use App\Http\Controllers\Admin\ProgramController;
+use App\Http\Controllers\Admin\SocialController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Frontend\AboutUsController;
 use App\Http\Controllers\Frontend\ArticleController;
@@ -22,6 +26,7 @@ use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\OurProgramController;
 use App\Http\Controllers\Frontend\ProfessionalController;
 use App\Models\Certificate;
+use App\Models\Experince;
 use App\Models\Message;
 
 Route::get('/', [HomeController::class, 'index'])->name("home");
@@ -76,6 +81,18 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('parent', ParentController::class)->except(['destroy', 'show']);
     Route::get('parent/delete/{id}', [ParentController::class, 'delete'])->name('parent.delete');
+
+    Route::resource('branch', BranchController::class)->except(['destroy', 'show']);
+    Route::get('branch/delete/{id}', [BranchController::class, 'delete'])->name('branch.delete');
+
+    Route::resource('career_backend', CareerBackendController::class)->except(['destroy', 'show']);
+    Route::get('career_backend/delete/{id}', [CareerBackendController::class, 'delete'])->name('career_backend.delete');
+
+    Route::resource('social', SocialController::class)->except(['destroy', 'show']);
+
+    Route::resource('experince', ExperinceController::class)->except(['destroy', 'show']);
+
 });
+
 
 require __DIR__ . '/auth.php';

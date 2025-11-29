@@ -1,7 +1,7 @@
 <x-app-layout>
     <div class="max-w-7xl mx-auto shadow-md rounded-lg p-6 my-2">
-        <h2 class="text-2xl font-bold text-[#401457]">Edit Cover</h2>
-        <form action="{{ route('banner.update', $banner->id) }}" method="POST" enctype="multipart/form-data"
+        <h2 class="text-2xl font-bold text-[#401457]">Edit Branch</h2>
+        <form action="{{ route('branch.update', $branch->id) }}" method="POST" enctype="multipart/form-data"
             class="space-y-4">
             @csrf
             @method('PATCH')
@@ -13,32 +13,15 @@
                     <h1 class="text-[20px] font-[600] text-[#4FC9EE] uppercase">English</h1>
 
                     <div>
-                        <label for="title1_en" class="block text-sm font-medium text-[#000]">Title1 (English)</label>
-                        <input value="{{ old('title1_en', $banner->title1_en) }}" name="title1_en" id="title1_en"
+                        <label for="title_en" class="block text-sm font-medium text-[#000]">Title (English)</label>
+                        <input value="{{ old('title_en', $branch->title_en) }}" name="title_en" id="title_en"
                             class="mt-1 block w-full p-2 border rounded-md text-black text-[12px]"></input>
-                        <x-input-error class="mt-2" :messages="$errors->get('title1_en')" />
+                        <x-input-error class="mt-2" :messages="$errors->get('title_en')" />
                     </div>
-
-                    @if ($banner->id == 1)
-                        <div>
-                            <label for="title2_en" class="block text-sm font-medium text-[#000]">Title2
-                                (English)</label>
-                            <input value="{{ old('title2_en', $banner->title2_en) }}" name="title2_en" id="title2_en"
-                                class="mt-1 block w-full p-2 border rounded-md text-black text-[12px]"></input>
-                            <x-input-error class="mt-2" :messages="$errors->get('title2_en')" />
-                        </div>
-                        <div>
-                            <label for="title3_en" class="block text-sm font-medium text-[#000]">Title3
-                                (English)</label>
-                            <input value="{{ old('title3_en', $banner->title3_en) }}" name="title3_en" id="title3_en"
-                                class="mt-1 block w-full p-2 border rounded-md text-black text-[12px]"></input>
-                            <x-input-error class="mt-2" :messages="$errors->get('title3_en')" />
-                        </div>
-                    @endif
                     <div>
                         <label for="content_en" class="block text-sm font-medium text-[#000]">Content (English)</label>
-                        <textarea name="content_en" id="content_en" rows="4"
-                            class="mt-1 block w-full p-2 border rounded-md text-black text-[12px]">{{ old('content_en', $banner->content_en) }}</textarea>
+                        <textarea name="content_en" id="content_en" rows="6"
+                            class="mt-1 block w-full p-2 border rounded-md text-black text-[12px]">{{ old('content_en', $branch->content_en) }}</textarea>
                         <x-input-error class="mt-2" :messages="$errors->get('content_en')" />
                     </div>
                 </div>
@@ -47,53 +30,46 @@
                     <h1 class="text-[20px] font-[600] text-[#4FC9EE] uppercase">Khmer</h1>
 
                     <div>
-                        <label for="title1_km" class="block text-sm font-medium text-[#000]">Title1 (Khmer)</label>
-                        <input value="{{ old('title1_km', $banner->title1_km) }}" name="title1_km" id="title1_km"
+                        <label for="title_km" class="block text-sm font-medium text-[#000]">Title (Khmer)</label>
+                        <input value="{{ old('title_km', $branch->title_km) }}" name="title_km" id="title_km"
                             class="mt-1 block w-full p-2 border rounded-md text-black text-[12px]"></input>
-                        <x-input-error class="mt-2" :messages="$errors->get('title1_km')" />
+                        <x-input-error class="mt-2" :messages="$errors->get('title_km')" />
                     </div>
-                    @if ($banner->id == 1)
-                        <div>
-                            <label for="title2_km" class="block text-sm font-medium text-[#000]">Title2 (Khmer)</label>
-                            <input value="{{ old('title2_km', $banner->title2_km) }}" name="title2_km" id="title2_km"
-                                class="mt-1 block w-full p-2 border rounded-md text-black text-[12px]"></input>
-                            <x-input-error class="mt-2" :messages="$errors->get('title2_km')" />
-                        </div>
-                        <div>
-                            <label for="title3_km" class="block text-sm font-medium text-[#000]">Title3 (Khmer)</label>
-                            <input value="{{ old('title3_km', $banner->title3_km) }}" name="title3_km" id="title3_km"
-                                class="mt-1 block w-full p-2 border rounded-md text-black text-[12px]"></input>
-                            <x-input-error class="mt-2" :messages="$errors->get('title3_km')" />
-                        </div>
-                    @endif
                     <div>
                         <label for="content_km" class="block text-sm font-medium text-[#000]">Content (Khmer)</label>
-                        <textarea name="content_km" id="content_km" rows="4"
-                            class="mt-1 block w-full p-2 border rounded-md text-black text-[12px]">{{ old('content_km', $banner->content_km) }}</textarea>
+                        <textarea name="content_km" id="content_km" rows="6"
+                            class="mt-1 block w-full p-2 border rounded-md text-black text-[12px]">{{ old('content_km', $branch->content_km) }}</textarea>
                         <x-input-error class="mt-2" :messages="$errors->get('content_km')" />
                     </div>
                 </div>
             </div>
 
             <div>
+                <label for="url_map" class="block text-sm font-medium text-[#000]">Maps Embed</label>
+                <textarea name="url_map" id="url_map" rows="4"
+                    class="mt-1 block w-full p-2 border rounded-md text-black text-[12px]">{{ old('url_map', $branch->url_map) }}</textarea>
+                <x-input-error class="mt-2" :messages="$errors->get('url_map')" />
+            </div>
+
+            <div>
                 <h1 class="text-[#401457]">Image</h1>
-                <label for="dropzone-file{{ $banner->id }}" id="drop-area"
+                <label for="dropzone-file{{ $branch->id }}" id="drop-area"
                     class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50">
                     <div class="flex flex-col items-center justify-center pt-5 pb-6 w-full h-full bg-contain bg-center bg-no-repeat rounded-md text-center"
-                        id="img-preview" style="background-image: url('{{ asset($banner->image) }}')">
+                        id="img-preview" style="background-image: url('{{ asset($branch->image) }}')">
                         <p class="mb-2 text-[12px] sm:text-[14px] text-[#000]"><span class="font-semibold">Click
                                 to
                                 upload</span> or drag and drop</p>
                         <p class="text-xs text-[#000]">SVG, PNG, JPG or GIF (MAX. 5MB)</p>
                     </div>
-                    <input id="dropzone-file{{ $banner->id }}" type="file" class="hidden" name="image"
+                    <input id="dropzone-file{{ $branch->id }}" type="file" class="hidden" name="image"
                         accept="image/*" onchange="uploadImage(event)" />
                 </label>
                 <x-input-error class="mt-2" :messages="$errors->get('image')" />
             </div>
 
             <div class="flex justify-between">
-                <a href="{{ route('banner.index') }}"
+                <a href="{{ route('branch.index') }}"
                     class="border border-[#4FC9EE] hover:!bg-[#4FC9EE] hover:!text-[#ffffff] px-4 py-1 md:px-6 rounded-[5px] text-[#4FC9EE]">
                     Back
                 </a>
@@ -104,10 +80,10 @@
     </div>
 
     <script>
-        // ClassicEditor
-        //     .create(document.querySelector('#content_en')).catch(console.error);
-        // ClassicEditor
-        //     .create(document.querySelector('#content_km')).catch(console.error);
+        ClassicEditor
+            .create(document.querySelector('#content_en')).catch(console.error);
+        ClassicEditor
+            .create(document.querySelector('#content_km')).catch(console.error);
 
         function uploadImage(event) {
             const file = event.target.files[0];

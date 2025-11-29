@@ -53,7 +53,7 @@
             <!-- Social Icons -->
             <ul class="flex items-center gap-4 relative z-10">
                 <li>
-                    <a href="https://www.facebook.com/hopekidspp" target="__blank">
+                    <a href="{{ $fb->url }}" target="__blank">
                         <svg class="w-6 h-6" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M10.3559 0C4.64566 0 0 4.64566 0 10.3559C0 16.0656 4.64566 20.7117 10.3559 20.7117C16.0656 20.7117 20.7117 16.0656 20.7117 10.3559C20.7117 4.64566 16.0665 0 10.3559 0ZM12.9313 10.7204H11.2465V16.7256H8.74988C8.74988 16.7256 8.74988 13.4443 8.74988 10.7204H7.56312V8.59804H8.74988V7.22524C8.74988 6.24205 9.21708 4.70573 11.2694 4.70573L13.1194 4.71282V6.77306C13.1194 6.77306 11.9952 6.77306 11.7766 6.77306C11.5581 6.77306 11.2473 6.88235 11.2473 7.35122V8.59846H13.1494L12.9313 10.7204Z"
@@ -63,7 +63,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://bio.link/hopekidsinfo" target="__blank">
+                    <a href="{{ $telegram->url }}" target="__blank">
                         <svg class="w-6 h-6" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M10.3559 20.7117C16.0752 20.7117 20.7117 16.0752 20.7117 10.3559C20.7117 4.63648 16.0752 0 10.3559 0C4.63648 0 0 4.63648 0 10.3559C0 16.0752 4.63648 20.7117 10.3559 20.7117Z"
@@ -75,7 +75,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.tiktok.com/@hopekidsofficial?_t=ZS-8uAfAIUNOFe&_r=1" target="__blank">
+                    <a href="{{ $tiktok->url }}" target="__blank">
                         <svg class="w-6 h-6" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="10.5" cy="10.5" r="10.5" fill="black" />
                             <path
@@ -86,7 +86,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.youtube.com/@HopeKids-cambodia" target="__black">
+                    <a href="{{ $fb->yt }}" target="__black">
                         <svg class="h-6" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M8 10L13.19 7L8 4V10ZM19.56 2.17C19.69 2.64 19.78 3.27 19.84 4.07C19.91 4.87 19.94 5.56 19.94 6.16L20 7C20 9.19 19.84 10.8 19.56 11.83C19.31 12.73 18.73 13.31 17.83 13.56C17.36 13.69 16.5 13.78 15.18 13.84C13.88 13.91 12.69 13.94 11.59 13.94L10 14C5.81 14 3.2 13.84 2.17 13.56C1.27 13.31 0.69 12.73 0.44 11.83C0.31 11.36 0.22 10.73 0.16 9.93C0.0900001 9.13 0.0599999 8.44 0.0599999 7.84L0 7C0 4.81 0.16 3.2 0.44 2.17C0.69 1.27 1.27 0.69 2.17 0.44C2.64 0.31 3.5 0.22 4.82 0.16C6.12 0.0899998 7.31 0.0599999 8.41 0.0599999L10 0C14.19 0 16.8 0.16 17.83 0.44C18.73 0.69 19.31 1.27 19.56 2.17Z"
@@ -188,7 +188,7 @@
                 <!-- Social Icons -->
                 <ul class="flex items-center gap-4 relative z-10 pt-2">
                     <li>
-                        <a href="https://www.facebook.com/hopekidspp" target="__blank">
+                        <a href="{{ $fb->url }}" target="__blank">
                             <svg class="w-4 h-4" viewBox="0 0 21 21" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -199,7 +199,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://bio.link/hopekidsinfo" target="__blank">
+                        <a href="{{ $telegram->url }} target="__blank">
                             <svg class="w-4 h-4" viewBox="0 0 21 21" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -212,7 +212,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.tiktok.com/@hopekidsofficial?_t=ZS-8uAfAIUNOFe&_r=1" target="__blank">
+                        <a href="{{ $tiktok->url }}" target="__blank">
                             <svg class="w-4 h-4" viewBox="0 0 21 21" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="10.5" cy="10.5" r="10.5" fill="black" />
@@ -224,7 +224,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.youtube.com/@HopeKids-cambodia" target="__black">
+                        <a href="{{ $yt->url }}" target="__black">
                             <svg class="h-4" viewBox="0 0 20 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path

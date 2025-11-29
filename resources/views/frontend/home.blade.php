@@ -22,13 +22,13 @@
                 <!-- TEXT -->
                 <div class="relative z-10 text-center lg:text-left w-full md:w-[500px]">
                     <h1 class="text-[20px] md:text-[40px] font-regular text-white text-gradient">
-                        {{ app()->getLocale() === 'en' ? 'Welcome To' : 'សូមស្វាគមន៍មកកាន់' }} <br>
+                        {{ app()->getLocale() === 'en' ? $banner_image->title1_en : $banner_image->title1_km }} <br>
                         <span
-                            class="text-[40px] md:text-[80px] font-[700] py-2 leading-none">{{ app()->getLocale() === 'en' ? 'HOPE KIDS' : 'ហូបឃីដ' }}</span>
+                            class="text-[40px] md:text-[80px] font-[700] py-2 leading-none">{{ app()->getLocale() === 'en' ? $banner_image->title2_en : $banner_image->title2_km }}</span>
                     </h1>
 
                     <p class="text-[#1C0186] font-bold text-[16px] md:text-[25px] pt-2">
-                        {{ app()->getLocale() === 'en' ? 'Special Education School' : 'សាលារៀនអប់រំពិសេស' }}
+                        {{ app()->getLocale() === 'en' ? $banner_image->title3_en : $banner_image->title3_km }}
                     </p>
                 </div>
             </div>
@@ -36,7 +36,7 @@
             <!-- DESCRIPTION -->
             <div class="relative z-10 text-center lg:text-left mt-2 w-full md:w-[500px] px-3 md:px-0">
                 <p class="text-[#fff] text-[12px] lg:text-[16px] font-medium">
-                    {{ app()->getLocale() === 'en' ? 'Hope kids Special Education School We offer Special Education and Holistic Speech Delay, Intellectual Disabilities, Leaning Difficulty and Cerebral Palsy.' : 'សាលារៀនអប់រំពិសេសគឺជាសាលារៀនដែលកុមារទទួលបានការថែទាំ ការគាំពារ និងការអភិវឌ្ឍជំនាញជីវិត។ ការអប់រំពិសេសនេះផ្តោតលើការជួយកុមារដែលមាន​ការពន្យារពេលនិយាយ ខ្សោយសតិបញ្ញា ការលំបាកក្នុងការរៀន និងជំងឺពិការចលករខួលក្បាលជាដើម។' }}
+                    {{ app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km }}
                 </p>
             </div>
 
@@ -237,70 +237,6 @@
                         </div>
                     </div>
                 @endforeach
-
-                {{-- <!-- Card 1 -->
-                <div
-                    class="bg-white rounded rounded-t-xl rounded-b-xl shadow-md w-[400px] h-[300px] p-5 border border-gray-300 flex flex-col">
-
-                    <!-- Video box with play icon -->
-                    <div class="aspect-w-16 aspect-h-9">
-                        <iframe src="https://www.youtube.com/embed/hxmWP5sCJJE" title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen class="w-full h-full">
-                        </iframe>
-                    </div>
-
-                    <!-- Text -->
-                    <p class="text-gray-700 text-[15px] leading-tight pt-1">
-                        "My son has improved so much in his communication and focus since joining Hope Kids.
-                        The teachers are caring and patient."
-                    </p>
-                    <p class="mt-4">Mrs. Sreyneang, <br>
-                        Phnom Penh</p>
-                </div>
-
-                <!-- Card 2 -->
-                <div
-                    class="bg-white rounded-t-xl rounded-b-xl shadow-md w-[400px] h-[300px] p-5 border border-gray-300 flex flex-col">
-                    <div class="aspect-w-16 aspect-h-9">
-                        <iframe src="https://www.youtube.com/embed/RLUiipvc4sY" title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen class="w-full h-full">
-                        </iframe>
-                    </div>
-
-                    <!-- Text -->
-                    <p class="text-gray-700 text-[15px] leading-tight pt-1">
-                        "My son has improved so much in his communication and focus since joining Hope Kids.
-                        The teachers are caring and patient."
-                    </p>
-                    <p class="mt-4">Mrs. Sreyneang, <br>
-                        Phnom Penh</p>
-                </div>
-
-                <!-- Card 3 -->
-                <div
-                    class="bg-white rounded-t-xl rounded-b-xl shadow-md w-[400px] h-[300px] p-5 border border-gray-300 flex flex-col">
-
-                    <!-- Video box with play icon -->
-                    <div class="aspect-w-16 aspect-h-9">
-                        <iframe src="https://www.youtube.com/embed/N1Cm9etBZdc" title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen class="w-full h-full">
-                        </iframe>
-                    </div>
-                    <!-- Text -->
-                    <p class="text-gray-700 text-[15px] leading-tight pt-1">
-                        "My son has improved so much in his communication and focus since joining Hope Kids.
-                        The teachers are caring and patient."
-                    </p>
-                    <p class="mt-4">Mrs. Sreyneang, <br>
-                        Phnom Penh</p>
-                </div> --}}
-
             </div>
         </div>
     </div>
@@ -476,10 +412,10 @@
 
             const observer = new IntersectionObserver((entries) => {
                 if (entries[0].isIntersecting) {
-                    animateCounter("count-years", 5);
-                    animateCounter("count-branches", 7);
-                    animateCounter("count-students", 264);
-                    animateCounter("count-staff", 107);
+                    animateCounter("count-years", {{ $experinces->year }});
+                    animateCounter("count-branches", {{ $experinces->branch }});
+                    animateCounter("count-students", {{ $experinces->student }});
+                    animateCounter("count-staff", {{ $experinces->staff }});
                     observer.disconnect(); // only run once
                 }
             }, {

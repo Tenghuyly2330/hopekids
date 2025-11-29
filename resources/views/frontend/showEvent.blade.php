@@ -9,11 +9,9 @@
 
             <div class="relative z-10 pt-[15vh] md:pt-[30vh]">
                 <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">
-                    {{ app()->getLocale() === 'en' ? 'Events' : 'ព្រឹត្តិការណ៍' }}</h1>
+                    {{ app()->getLocale() === 'en' ? $banner_image->title1_en : $banner_image->title1_km }}</h1>
                 <p class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px] px-4">
-                    We offer Special Education and Holistic Services for
-                    Children with Autism, Down’s Syndrome, Language and Speech Delay, Intellectual Disabilities and
-                    Learning Difficulty. </p>
+                    {{ app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km }}</p>
 
             </div>
         </div>
