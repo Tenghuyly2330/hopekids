@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <link rel="icon" type="image/png" href="{{ asset('assets/logo.jpg') }}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/logo_new.png') }}">
     <title>Hope Kids School</title>
 
     <!-- Link Swiper's CSS -->
@@ -431,7 +431,7 @@
                 <!-- Column 1: Logo & About -->
                 <div class="flex-1 flex flex-col gap-5">
                     <div class="flex items-center gap-5">
-                        <img src="{{ asset('assets/logo.jpg') }}" class="w-20 h-20 md:w-24 md:h-24 rounded-full"
+                        <img src="{{ asset('assets/images/logo_new.png') }}" class="w-20 h-20 md:w-24 md:h-24"
                             alt="Logo" />
                         <div>
                             <h2 class="text-2xl md:text-3xl font-bold leading-tight kantumruy">ក្តីសង្ឃឹមកុមារ</h2>

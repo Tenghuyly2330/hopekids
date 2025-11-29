@@ -54,19 +54,31 @@
             <div class="menu-bar">
                 <div class="menu max-h-[80vh] overflow-y-auto scrollbar-hidden">
                     <ul class="manu-links">
-                        <li
-                            class="nav-link {{ Route::is('dashboard') ? 'bg-[#000] rounded-md !text-[#ffffff]' : '' }}">
+                        <li class="nav-link {{ Route::is('dashboard') ? 'bg-[#000] rounded-md !text-[#ffffff]' : '' }}">
                             <a href="{{ route('dashboard') }}" class="{{ Route::is('dashboard') ? 'active' : '' }}">
                                 <i class='bx bxs-dashboard icon'></i>
                                 <span class="text nav-text">Dashboard</span>
                             </a>
                         </li>
 
-                        <li
-                            class="nav-link {{ Request::is('banner') ? 'bg-[#000] rounded-md !text-[#ffffff]' : '' }}">
+                        <li class="nav-link {{ Request::is('banner') ? 'bg-[#000] rounded-md !text-[#ffffff]' : '' }}">
                             <a href="{{ url('banner') }}">
                                 <i class='bx bxl-vimeo icon'></i>
                                 <span class="text nav-text">Cover</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link {{ Request::is('parent') ? 'bg-[#000] rounded-md !text-[#ffffff]' : '' }}">
+                            <a href="{{ url('parent') }}">
+                                <i class='bx bxl-vimeo icon'></i>
+                                <span class="text nav-text">Testimonials</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link {{ Request::is('about_backend') ? 'bg-[#000] rounded-md !text-[#ffffff]' : '' }}">
+                            <a href="{{ url('about_backend') }}">
+                                <i class='bx bxl-vimeo icon'></i>
+                                <span class="text nav-text">About Page</span>
                             </a>
                         </li>
 
@@ -94,6 +106,13 @@
                             </a>
                         </li>
 
+                        <li class="nav-link {{ Request::is('faq') ? 'bg-[#000] rounded-md !text-[#ffffff]' : '' }}">
+                            <a href="{{ url('faq') }}">
+                                <i class='bx bxl-vimeo icon'></i>
+                                <span class="text nav-text">Faq</span>
+                            </a>
+                        </li>
+
                         <li
                             class="nav-link {{ Request::is('program') ? 'bg-[#000] rounded-md !text-[#ffffff]' : '' }}">
                             <a href="{{ url('program') }}">
@@ -102,8 +121,7 @@
                             </a>
                         </li>
 
-                        <li
-                            class="nav-link {{ Request::is('team') ? 'bg-[#000] rounded-md !text-[#ffffff]' : '' }}">
+                        <li class="nav-link {{ Request::is('team') ? 'bg-[#000] rounded-md !text-[#ffffff]' : '' }}">
                             <a href="{{ url('team') }}">
                                 <i class='bx bxl-vimeo icon'></i>
                                 <span class="text nav-text">Team</span>

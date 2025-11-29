@@ -22,13 +22,38 @@
             border-radius: 10px;
             background-color: #2E4354;
         }
+
+        .core-text strong {
+            font-size: 20px;
+            font-weight: 400;
+            color: #1C0186;
+        }
+
+        .core-text ul {
+            list-style-type: disc;
+            padding-left: 1.25rem;
+            font-size: 16px;
+        }
+
+        @media (max-width: 767px) {
+            .core-text strong {
+                font-size: 16px;
+                color: #1C0186;
+            }
+
+            .core-text ul {
+                list-style-type: disc;
+                padding-left: 1.25rem;
+                font-size: 14px;
+            }
+        }
     </style>
 
     <section class="">
 
         <div class="w-full h-[60vh] md:h-screen">
-            <img src="{{ asset($banner_image->image) }}"
-                class="absolute z-1 w-full h-[60vh] md:h-screen inset-0 object-cover" alt="">
+            <img src="{{ asset($banner_image->image) }}" class="absolute z-1 w-full h-[60vh] md:h-screen inset-0 object-cover"
+                alt="">
             <div class="absolute h-[60vh] object-cover md:h-screen inset-0 z-10 bg-black/50"></div>
 
             <div class="relative z-10 px-4 max-w-[700px] mx-auto pt-[10vh] md:pt-[30vh]">
@@ -41,10 +66,12 @@
             <div class="grid grid-cols-1 grid-rows-1 lg:grid-cols-2 lg:grid-rows-3 gap-4 w-full">
                 <div class="bg-[#5796FF] rounded-md">
                     <div class="flex justify-center flex-col lg:flex-row items-center gap-10 p-10">
-                        <img src="{{ asset('assets/mission.png') }}" alt="" class="w-24 h-24">
+                        <img src="{{ asset($missions->image) }}" alt="" class="w-24 h-24">
                         <div class="flex flex-col">
-                            <h1 class="text-[#F6F6F6] text-[15px] md:text-[25px] font-semibold">{{ __('message.mission') }}</h1>
-                            <p class="text-[#F6F6F6] font-regular text-[13px] md:text-[15px]">{{ __('message.mission_content') }}</p>
+                            <h1 class="text-[#F6F6F6] text-[15px] md:text-[25px] font-semibold">
+                                {{ app()->getLocale() === 'en' ? $missions->title_en : $missions->title_km }}</h1>
+                            <div class="text-[#F6F6F6] font-regular text-[12px] md:text-[13px]">{!! app()->getLocale() === 'en' ? $missions->content_en : $missions->content_km !!}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -52,40 +79,12 @@
                 <div id="core_values" class="bg-[#C3D500] order-last lg:order-none row-span-1 lg:row-span-3 rounded-md">
                     <div class="flex justify-center lg:justify-start flex-col items-center lg:items-start gap-2 p-10">
 
-                        <img src="{{ asset('assets/value.png') }}" alt="" class="w-24 h-24 mt-4">
-                        <h2 class="text-[#1C0186] text-[15px] md:text-[25px] font-semibold pt-2">{{ __('message.core_values') }}</h2>
+                        <img src="{{ asset($core->image) }}" alt="" class="w-24 h-24 mt-4">
+                        <h2 class="text-[#1C0186] text-[15px] md:text-[25px] font-semibold pt-2">
+                            {{ app()->getLocale() === 'en' ? $core->title_en : $core->title_km }}</h2>
 
-                        <!-- 1 -->
-                        <div>
-                            <h1 class="text-[#1C0186] text-[15px] md:text-[20px] font-regular">{{ __('message.core_values_title1') }} </h1>
-                            <p class="md:text-[15px] text-[10px] text-[#1C0186] font-regular">
-                                {{ __('message.core_values_des1') }}
-                            </p>
-                        </div>
-
-                        <!-- 2 -->
-                        <div>
-                            <h1 class="text-[#1C0186] text-[15px] md:text-[20px] font-regular">{{ __('message.core_values_title2') }}
-                            </h1>
-                            <p class="md:text-[15px] text-[10px]  text-[#1C0186] font-regular">
-                                {{ __('message.core_values_des2') }}
-                            </p>
-                        </div>
-
-                        <!-- 3 -->
-                        <div>
-                            <h1 class="text-[#1C0186] text-[15px] md:text-[20px] font-regular">{{ __('message.core_values_title3') }}</h1>
-                            <p class="md:text-[15px] text-[10px] text-[#1C0186] font-regular">
-                                {{ __('message.core_values_des3') }}
-                            </p>
-                        </div>
-
-                        <!-- 4 -->
-                        <div>
-                            <h1 class="text-[#1C0186] text-[15px] md:text-[20px] font-regular">{{ __('message.core_values_title4') }}</h1>
-                            <p class="md:text-[15px] text-[10px]  text-[#1C0186] font-regular">
-                               {{ __('message.core_values_des4') }}
-                            </p>
+                        <div class="md:text-[15px] text-[14px] text-[#1C0186] font-regular core-text">
+                            {!! app()->getLocale() === 'en' ? $core->content_en : $core->content_km !!}
                         </div>
                     </div>
 
@@ -93,11 +92,12 @@
 
                 <div id="vision" class="bg-[#FE5900] rounded-md">
                     <div class="flex justify-center flex-col lg:flex-row  items-center gap-10 p-10">
-                        <img src="{{ asset('assets/vision.png') }}" alt="" class="w-24 h-24">
+                        <img src="{{ asset($visions->image) }}" alt="" class="w-24 h-24">
                         <div class="flex flex-col">
-                            <h1 class="text-[#F6F6F6] text-[15px] md:text-[25px] font-semibold">{{ __('message.vision') }}</h1>
-                            <p class="text-[#F6F6F6] font-regular text-[10px] md:text-[13px]">
-                                {{ __('message.vision_content') }}</p>
+                            <h1 class="text-[#F6F6F6] text-[15px] md:text-[25px] font-semibold">{{ app()->getLocale() === 'en' ? $visions->title_en : $visions->title_km }}
+                            </h1>
+                            <div class="text-[#F6F6F6] font-regular text-[12px] md:text-[13px]">
+                                {!! app()->getLocale() === 'en' ? $visions->content_en : $visions->content_km !!}</div>
                         </div>
                     </div>
 
@@ -106,12 +106,13 @@
                 <!-- Row 3, col 1 -->
                 <div id="our_goals" class="bg-[#E3264E] rounded-md">
                     <div class="flex justify-center flex-col lg:flex-row items-center gap-10 p-10">
-                        <img src="{{ asset('assets/goal.png') }}" alt="" class="w-24 h-24" />
+                        <img src="{{ asset($goals->image) }}" alt="" class="w-24 h-24" />
                         <div class="flex flex-col">
-                            <h1 class="text-[#F6F6F6] text-[15px] md:text-[25px] font-semibold">{{ __('message.our_goal') }}</h1>
-                            <p class="text-[#F6F6F6] font-regular text-[8px] md:text-[13px]">
-                                {{ __('message.our_goal_content') }}
-                            </p>
+                            <h1 class="text-[#F6F6F6] text-[15px] md:text-[25px] font-semibold">
+                                {{ app()->getLocale() === 'en' ? $goals->title_en : $goals->title_km }}</h1>
+                            <div class="text-[#F6F6F6] font-regular text-[12px] md:text-[13px]">
+                                {!! app()->getLocale() === 'en' ? $goals->content_en : $goals->content_km !!}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -151,7 +152,8 @@
                         <div class="flex flex-col justify-center items-center h-full">
                             <img src="{{ $certificate->image }}" alt=""
                                 class="w-full h-[15rem] lg:h-[25rem] xl:h-[26rem] object-contain object-center" />
-                            <h1 class="text-center text-[12px] md:text-[14px] mt-2">{{ app()->getLocale() === 'en' ? $certificate->title_en : $certificate->title_km }}</h1>
+                            <h1 class="text-center text-[12px] md:text-[14px] mt-2">
+                                {{ app()->getLocale() === 'en' ? $certificate->title_en : $certificate->title_km }}</h1>
                         </div>
                     </div>
                 @endforeach
@@ -174,7 +176,7 @@
         <!-- Content -->
         <div class="relative z-10">
             <p class="w-full max-w-[700px] mx-auto px-2 text-[16px] md:text-[20px] font-medium text-white/90 text-center">
-                {{ __("message.banner_content") }}
+                {{ __('message.banner_content') }}
             </p>
         </div>
     </section>

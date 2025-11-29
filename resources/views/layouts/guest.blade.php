@@ -6,7 +6,8 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>Hope Kids | Dashboard</title>
-        <link rel="icon" href="{{ asset('assets/logo.jpg') }}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/logo_new.png') }}">
+
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">

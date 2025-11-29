@@ -106,7 +106,7 @@
     <div class="w-full max-w-7xl mx-auto flex lg:hidden justify-between items-center md:gap-3 relative z-40">
 
         <!-- Logo -->
-        <img src="{{ asset('assets/logo.jpg') }}" class="rounded-full w-16 h-16 shadow-md" />
+        <img src="{{ asset('assets/images/logo_new.png') }}" class="rounded-full w-16 h-16 shadow-md" />
 
         <div class="flex lg:hidden items-center gap-2">
             <div class="flex items-center gap-1 text-[14px]" data-aos="fade-left" data-aos-duration="1000">
@@ -243,7 +243,7 @@
 
 <nav class="relative w-full bg-[#D9ECEE] hidden lg:flex">
     <div class="absolute left-1/2 -translate-x-1/2 z-50 w-max flex items-center gap-4 py-2">
-        <img src="{{ asset('assets/logo.jpg') }}" alt="" class="rounded-full w-16 h-16 shadow-md">
+        <img src="{{ asset('assets/images/logo_new.png') }}" alt="" class="w-16 h-16 object-cover">
         <ul class="flex items-center bg-[#ffffff] space-x-1 px-3 xl:px-10 py-4 rounded-full">
             <li class="relative group">
                 <a href="{{ route('home') }}"

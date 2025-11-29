@@ -130,8 +130,7 @@
 
     {{-- school facilities --}}
     <div id="school_facilities" class="relative z-20 py-16 md:py-20 mb-10 px-4" id="facilites">
-        <img src="{{ asset('assets/bg_image.png') }}"
-            class="absolute inset-0 bg-no-repeat bg-cover w-full h-full -z-10"
+        <img src="{{ asset('assets/bg_image.png') }}" class="absolute inset-0 bg-no-repeat bg-cover w-full h-full -z-10"
             alt="">
 
         <!-- Dark Overlay -->
@@ -218,9 +217,28 @@
                 {{ app()->getLocale() === 'en' ? 'Parents’ Testimonials' : 'Parents’ Testimonials' }}
             </h1>
 
-            <div class="mt-5 flex flex-wrap justify-center md:flex-col xl:flex-row items-center gap-10">
+            <div class="mt-5 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 items-center gap-10 px-4">
 
-                <!-- Card 1 -->
+                @foreach ($parents as $item)
+                    <div
+                        class="bg-white rounded rounded-t-xl rounded-b-xl shadow-md p-2 border border-gray-300 flex flex-col">
+
+                        <!-- Video box with play icon -->
+                        <div >
+                            <iframe src="{{ $item->url }}" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen class="w-full h-[200px]">
+                            </iframe>
+                        </div>
+
+                        <div class="text-[14px] md:text-[15px] test-gray-600 p-4">
+                            {!! app()->getLocale() === 'en' ? $item->content_en : $item->content_km !!}
+                        </div>
+                    </div>
+                @endforeach
+
+                {{-- <!-- Card 1 -->
                 <div
                     class="bg-white rounded rounded-t-xl rounded-b-xl shadow-md w-[400px] h-[300px] p-5 border border-gray-300 flex flex-col">
 
@@ -281,7 +299,7 @@
                     </p>
                     <p class="mt-4">Mrs. Sreyneang, <br>
                         Phnom Penh</p>
-                </div>
+                </div> --}}
 
             </div>
         </div>
@@ -293,17 +311,13 @@
             {{ app()->getLocale() === 'en' ? 'Frequently Asked Questions' : 'សំណួរញឹកញាប់ដែលអាណាព្យាបាលតែងតែសួរ' }}
         </h1>
 
-        <div class="mt-5 flex flex-col md:flex-row flex-wrap justify-center items-start gap-5 md:gap-8">
-
-            <!-- Column 1 -->
-            <div class="flex flex-col gap-5 md:w-[48%]">
-
-                <!-- Question 1 -->
+        <div class="mt-5 grid grid-cols-1 md:grid-cols-2 gap-5 px-4">
+            @foreach ($faqs as $item)
                 <div class="border border-[#DBDBDB] rounded-lg p-4 bg-white faq-item cursor-pointer"
                     onclick="toggleFaq(this)">
                     <div class="flex justify-between items-start">
                         <p class="text-[#1E1E1E] text-[15px] md:text-[16px] font-medium">
-                            {{ app()->getLocale() === 'en' ? 'Q: What is special education?' : 'សំណួរ៖ តើការអប់រំពិសេសគឺជាអ្វី?' }}
+                            {{ app()->getLocale() === 'en' ? $item->question_en : $item->question_km }}
                         </p>
                         <div
                             class="arrow w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[15px] border-b-gray-400 mt-2">
@@ -311,130 +325,10 @@
                     </div>
 
                     <p class="answer mt-3 text-[#1C0186] text-[14px] md:text-[15px] hidden">
-                        {{ app()->getLocale() === 'en' ? 'A: Special education is designed to support children with developmental, learning, or behavior challenges by providing individualized methods and therapies.' : 'ចម្លើយ: ការអប់រំពិសេសត្រូវបានរចនាឡើងដើម្បីគាំពារកុមារដែលមានបញ្ហាក្នុងការអភិវឌ្ឍ, រៀន, ឬអាកប្បកិរិយា ដោយផ្ដល់វិធីសាស្ត្របង្រៀនតាមតម្រួវការនិមួយៗ, ការព្យាបាល និងផ្តល់ជំនួយនានា ដែលជួយឱ្យពួកគេចេះរៀន និងរីកចម្រើនតាមសមត្ថភាព។' }}
+                        {{ app()->getLocale() === 'en' ? $item->answer_en : $item->answer_km }}
                     </p>
                 </div>
-
-                <!-- Question 2 -->
-                <div class="border border-[#DBDBDB] rounded-lg p-4 bg-white faq-item cursor-pointer"
-                    onclick="toggleFaq(this)">
-                    <div class="flex justify-between items-start">
-                        <p class="text-[15px] md:text-[16px] font-medium">
-                            {{ app()->getLocale() === 'en' ? 'Q: Why is special education important in Cambodia?' : 'សំណួរ៖ ហេតុអ្វីបានជាការអប់រំពិសេសសំខាន់នៅប្រទេសកម្ពុជា?' }}
-                        </p>
-                        <div
-                            class="arrow w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[15px] border-b-gray-400 mt-2">
-                        </div>
-                    </div>
-                    <p class="answer mt-3 text-[#1C0186] text-[14px] md:text-[15px] hidden">
-                        {{ app()->getLocale() === 'en' ? 'A: It ensures that children with special needs receive the support required for their development and independence.' : 'ចម្លើយ: ការអប់រំពិសេសធានាថាកុមារដែលមានតម្រូវការពិសេសទទួលបានការគាំពារដែលពាក់ព័ន្ធសម្រាប់ការអភិវឌ្ឍន៍ និងភាពឯករាជ្យរបស់ពួកគេ។' }}
-                    </p>
-                </div>
-
-                <!-- Question 3 -->
-                <div class="border border-[#DBDBDB] rounded-lg p-4 bg-white faq-item cursor-pointer"
-                    onclick="toggleFaq(this)">
-                    <div class="flex justify-between items-start">
-                        <p class="text-[15px] md:text-[16px]">
-                            {{ app()->getLocale() === 'en' ? 'Q: How can parents enroll their child at Hope Kids?' : 'សំណួរ៖ តើអាណាព្យាបាលអាចចុះឈ្មោះកូនរបស់ខ្លួននៅសាលារៀនអប់រំពិសេសហូបឃីដបានយ៉ាងដូចម្តេច?' }}
-                        </p>
-                        <div
-                            class="arrow w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[15px] border-b-gray-400 mt-2">
-                        </div>
-                    </div>
-                    <p class="answer mt-3 text-[#1C0186] text-[14px] md:text-[15px] hidden">
-                        {{ app()->getLocale() === 'en' ? 'A: Parents can enroll by contacting our office or visiting our center for an initial assessment.' : 'ចម្លើយ: អាណាព្យាបាលអាចចុះឈ្មោះកូនបានដោយទំនាក់ទំនងទៅកាន់ការិយាល័យរបស់យើងខ្ញុំសម្រាប់ការវាយតម្លៃដំបូង។' }}
-                    </p>
-                </div>
-
-                <!-- Question 4 -->
-                <div class="border border-[#DBDBDB] rounded-lg p-4 bg-white faq-item cursor-pointer"
-                    onclick="toggleFaq(this)">
-                    <div class="flex justify-between items-start">
-                        <p class="text-[15px] md:text-[16px]">
-                            {{ app()->getLocale() === 'en' ? 'Q: Are services available outside Phnom Penh?' : 'សំណួរ៖ តើសេវាកម្មអប់រំនេះមាននៅខាងក្រៅរាជធានីភ្នំពេញដែរឬទេ?' }}
-                        </p>
-                        <div
-                            class="arrow w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[15px] border-b-gray-400 mt-2">
-                        </div>
-                    </div>
-                    <p class="answer mt-3 text-[#1C0186] text-[14px] md:text-[15px] hidden">
-                        {{ app()->getLocale() === 'en' ? 'A: Yes, we offer outreach services and consultations outside Phnom Penh.' : 'ចម្លើយ: មាន យើងខ្ញុំផ្តល់សេវាកម្មនៅតាមបណ្តាខេត្ត និងការប្រឹក្សាពីចម្ងាយសម្រាប់អាណាព្យាបាលដែលរស់នៅក្រៅទីក្រុងភ្នំពេញ។' }}
-                    </p>
-                </div>
-
-            </div>
-
-            <!-- Column 2 -->
-            <div class="flex flex-col gap-5 md:w-[48%]">
-
-                <!-- Question 5 -->
-                <div class="border border-[#DBDBDB] rounded-lg p-4 bg-white faq-item cursor-pointer"
-                    onclick="toggleFaq(this)">
-                    <div class="flex justify-between items-start">
-                        <p class="text-[15px] md:text-[16px]">
-                            {{ app()->getLocale() === 'en' ? 'Q: Who can benefit from special education services?' : 'សំណួរ៖ តើនរណាអាចទទួលបានផលប្រយោជន៍ពីសេវាកម្មអប់រំពិសេសនៅសាលារៀនអប់រំពិសេសហូបឃីដ?' }}
-                        </p>
-                        <div
-                            class="arrow w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[15px] border-b-gray-400 mt-2">
-                        </div>
-                    </div>
-                    <p class="answer mt-3 text-[#1C0186] text-[14px] md:text-[15px] hidden">
-                        {{ app()->getLocale() === 'en' ? 'A: Children with autism, ADHD, Down syndrome, learning delays, and more.' : 'ចម្លើយ: កុមារដែលមានជំងឺអូទីសឹម , ADHD, ដោនសិនដ្រូម, ការពន្យារពេលក្នុងការរៀន និងបញ្ហាផ្សេងៗទៀត។' }}
-
-                    </p>
-                </div>
-
-                <!-- Question 6 -->
-                <div class="border border-[#DBDBDB] rounded-lg p-4 bg-white faq-item cursor-pointer"
-                    onclick="toggleFaq(this)">
-                    <div class="flex justify-between items-start">
-                        <p class="text-[15px] md:text-[16px]">
-                            {{ app()->getLocale() === 'en' ? 'Q: What kind of professionals work at Hope Kids?' : 'សំណួរ៖ តើមានអ្នកជំនាញប្រភេទណាខ្លះធ្វើការនៅសាលារៀនអប់រំពិសេសហូបឃីដ?' }}
-                        </p>
-                        <div
-                            class="arrow w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[15px] border-b-gray-400 mt-2">
-                        </div>
-                    </div>
-                    <p class="answer mt-3 text-[#1C0186] text-[14px] md:text-[15px] hidden">
-                        {{ app()->getLocale() === 'en' ? 'A: Therapists, special educators, psychologists, and trained caregivers.' : 'ចម្លើយ: អ្នកជំនាញលើការព្យាបាល, អ្នកជំនាញលើការអប់រំពិសេស, ចិត្តវិទូ, និងអ្នកជំនាញដែលបានការបណ្ដុះបណ្ដាលពាក់ព័ន្ធ។' }}
-                    </p>
-                </div>
-
-                <!-- Question 7 -->
-                <div class="border border-[#DBDBDB] rounded-lg p-4 bg-white faq-item cursor-pointer"
-                    onclick="toggleFaq(this)">
-                    <div class="flex justify-between items-start">
-                        <p class="text-[15px] md:text-[16px]">
-                            {{ app()->getLocale() === 'en' ? 'Q: How are children’s progress monitored?' : 'សំណួរ៖ តើធ្វើដូចម្តេចដើម្បីតាមដានភាពប្រសើរនិងគោលដៅរបស់កូនៗ?' }}
-                        </p>
-                        <div
-                            class="arrow w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[15px] border-b-gray-400 mt-2">
-                        </div>
-                    </div>
-                    <p class="answer mt-3 text-[#1C0186] text-[14px] md:text-[15px] hidden">
-                        {{ app()->getLocale() === 'en' ? 'A: Through regular assessments, progress reports, and parent meetings.' : 'ចម្លើយ: តាមរយៈការវាយតម្លៃប្រចាំថ្ងៃ របាយការណ៍កំណើត និងការជួបប្រជុំជាមួយអាណាព្យបាល។' }}
-                    </p>
-                </div>
-
-                <!-- Question 8 -->
-                <div class="border border-[#DBDBDB] rounded-lg p-4 bg-white faq-item cursor-pointer"
-                    onclick="toggleFaq(this)">
-                    <div class="flex justify-between items-start">
-                        <p class="text-[15px] md:text-[16px]">
-                            {{ app()->getLocale() === 'en' ? 'Q: Does Hope Kids provide parent training?' : 'សំណួរ៖ តើសាលារៀនអប់រំពិសេសហូបឃីដផ្តល់ការបណ្តុះបណ្តាល ឬការគាំពារដល់អាណាព្យាបាលដែរឬទេ?' }}
-                        </p>
-                        <div
-                            class="arrow w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[15px] border-b-gray-400 mt-2">
-                        </div>
-                    </div>
-                    <p class="answer mt-3 text-[#1C0186] text-[14px] md:text-[15px] hidden">
-                        {{ app()->getLocale() === 'en' ? 'A: Yes, parent workshops and home-training programs are available.' : 'ចម្លើយ: បាទ/ចាស, មានការផ្តល់ជូនជាសិក្ខាសាលាសម្រាប់អាណាព្យាបាល និងកម្មវិធីបណ្តុះបណ្តាលនៅគេហដ្ឋាន។' }}
-                    </p>
-                </div>
-
-            </div>
-
+            @endforeach
         </div>
     </section>
 
@@ -465,7 +359,8 @@
                 {{ session('success') }}
             </div>
         @endif
-        <h1 class="text-gradient text-[25px] md:text-[30px] font-[700] text-center">{{ app()->getLocale() === 'en' ? 'Contact Form' : 'ទម្រង់បែបបទបំពេញពត៌មាន ' }}</h1>
+        <h1 class="text-gradient text-[25px] md:text-[30px] font-[700] text-center">
+            {{ app()->getLocale() === 'en' ? 'Contact Form' : 'ទម្រង់បែបបទបំពេញពត៌មាន ' }}</h1>
         <div class="mt-10 bg-[#CBDBF4] w-full max-w-7xl mx-auto rounded-2xl">
 
             <div class="p-5 md:p-10">
@@ -474,17 +369,21 @@
                     @csrf
                     <div class="flex flex-col gap-3">
                         <!-- Input 1 -->
-                        <input type="text" placeholder="{{ app()->getLocale() === 'en' ? 'Parent Name' : 'ឈ្មោះអាណាព្យាបាល' }}" name="name"
-                            class="p-3 bg-white rounded-full border-none placeholder-[#5796FF]">
+                        <input type="text"
+                            placeholder="{{ app()->getLocale() === 'en' ? 'Parent Name' : 'ឈ្មោះអាណាព្យាបាល' }}"
+                            name="name" class="p-3 bg-white rounded-full border-none placeholder-[#5796FF]">
 
                         <!-- Input 2 -->
-                        <input type="number" placeholder="{{ app()->getLocale() === 'en' ? 'Phone Number' : 'លេខទូរសព្ទ ' }}" name="phone_number"
-                            class="p-3  bg-white rounded-full border-none placeholder-[#5796FF]">
+                        <input type="number"
+                            placeholder="{{ app()->getLocale() === 'en' ? 'Phone Number' : 'លេខទូរសព្ទ ' }}"
+                            name="phone_number" class="p-3  bg-white rounded-full border-none placeholder-[#5796FF]">
 
                         <!-- Select 1 -->
                         <select name="enquiry"
                             class="bg-white text-[#5796FF] p-3 rounded-full border-none focus:ring-2 focus:ring-blue-400">
-                            <option value="">{{ app()->getLocale() === 'en' ? 'Select Question Type' : 'ជ្រើសរើសប្រភេទសំណួរ ' }}</option>
+                            <option value="">
+                                {{ app()->getLocale() === 'en' ? 'Select Question Type' : 'ជ្រើសរើសប្រភេទសំណួរ ' }}
+                            </option>
                             <option class="bg-blue-500 text-white">• General enquiry</option>
                             <option class="bg-blue-500 text-white">• Enrolment / Admissions</option>
                             <option class="bg-blue-500 text-white">• Partnership / Collaboration</option>
@@ -494,7 +393,8 @@
                         <!-- Select 2 -->
                         <select name="location"
                             class="bg-white p-3 text-[#5796FF] rounded-full border-none focus:ring-2 focus:ring-blue-400">
-                            <option value="">{{ app()->getLocale() === 'en' ? 'Select Branch' : 'ជ្រើសរើសសាខា ' }}</option>
+                            <option value="">{{ app()->getLocale() === 'en' ? 'Select Branch' : 'ជ្រើសរើសសាខា ' }}
+                            </option>
                             <option class="bg-blue-500 text-white">Steng Meanchey</option>
                             <option class="bg-blue-500 text-white">Peng Hout Boeung Snor</option>
                             <option class="bg-blue-500 text-white">Banteay Meanchey</option>
@@ -511,11 +411,12 @@
                             class="bg-white p-3 rounded-2xl border-none placeholder-[#5796FF]"></textarea>
 
                         <!-- Input 3 -->
-                        <input type="text" placeholder="{{ app()->getLocale() === 'en' ? 'Email' : 'អ៉ីម៉ែល  ' }}" name="email"
-                            class="bg-white p-3 rounded-full border-none placeholder-[#5796FF]">
+                        <input type="text" placeholder="{{ app()->getLocale() === 'en' ? 'Email' : 'អ៉ីម៉ែល  ' }}"
+                            name="email" class="bg-white p-3 rounded-full border-none placeholder-[#5796FF]">
 
                         <!-- Input 4 -->
-                        <input type="text" placeholder="{{ app()->getLocale() === 'en' ? 'Telegram' : 'តេឡេក្រាម  ' }}" name="telegram"
+                        <input type="text"
+                            placeholder="{{ app()->getLocale() === 'en' ? 'Telegram' : 'តេឡេក្រាម  ' }}" name="telegram"
                             class="bg-white p-3 rounded-full border-none placeholder-[#5796FF]">
 
                         <div class="flex items-start gap-2">
