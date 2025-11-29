@@ -301,7 +301,13 @@
                     class="px-5 xl:px-7 py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('ourprogram') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : 'py-8' }}">{{ app()->getLocale() === 'en' ? 'Our Programs' : 'កម្មវិធីសិក្សា' }}</a>
                 <ul
                     class="absolute left-1/2 transform -translate-x-1/2 hidden mt-6 py-2 w-64 bg-[#FFFFFF] shadow-lg rounded-lg {{ Route::is('ourprogram') ? '' : 'group-hover:block' }} z-50">
-                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#1"
+                    @foreach ($programs as $item)
+                        <li class="hover:bg-[#5897FF]"><a href="{{ url('/ourprogram/#' . $item->number_en) }}"
+                                class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? $item->title_en : $item->title_km }}</a>
+                        </li>
+                    @endforeach
+
+                    {{-- <li class="hover:bg-[#5897FF]"><a href="/ourprogram#1"
                             class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Structured Teaching' : 'ការបង្រៀនតាមបែបរចនាសម្ព័ន្ធ' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#2"
@@ -344,7 +350,7 @@
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/ourprogram#14"
                             class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Cerebral Palsy Development Program' : 'កម្មវិធីអភិវឌ្ឍន៍សម្រាប់កុមារដែលមានពិការចលករខួរក្បាល' }}</a>
-                    </li>
+                    </li> --}}
                 </ul>
             </li>
             <li class="relative group">

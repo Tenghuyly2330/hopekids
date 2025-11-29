@@ -39,7 +39,7 @@
                     $isOdd = $item->id % 2 == 1;
                 @endphp
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-14 xl:gap-30" id="1">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-14 xl:gap-30" id="{{ $item->number_en }}">
                     <div class="relative w-full h-full {{ $isOdd ? 'md:order-1' : 'md:order-2' }}">
                         <img src="{{ asset($item->image) }}" alt=""
                             class="w-full h-[250px] md:h-[400px] rounded-[30px] object-cover ">

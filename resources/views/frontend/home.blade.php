@@ -115,7 +115,7 @@
                                 <div class="text-[14px] line-clamp-2">
                                     {!! app()->getLocale() === 'en' ? $item->content_en : $item->content_km !!}
                                 </div>
-                                <a href="{{ URL('/ourprogram/#1') }}"
+                                <a href="{{ url('/ourprogram/#' . $item->number_en) }}"
                                     class="mt-4 py-1 px-5 text-[14px] font-[600] bg-white text-black self-start">
                                     <span>{{ app()->getLocale() === 'en' ? 'Details' : 'ព័ត៌មាបន្ថែម' }}</span>
                                 </a>

@@ -214,7 +214,7 @@
     @php
         $locale = app()->getLocale();
     @endphp
-    @include('components.navbar')
+    @include('components.navbar', ['programs' => $programs])
 
     <main>
         @yield('content')
