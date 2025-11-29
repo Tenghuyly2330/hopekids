@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Models\Banner;
 use Illuminate\Http\Request;
 use App\Service\TelegramService;
 use App\Http\Controllers\Controller;
@@ -11,7 +12,8 @@ class ContactController extends Controller
 {
     public function index()
     {
-        return view("frontend.contact");
+        $banner_image = Banner::where("id", "=", 8)->first();
+        return view("frontend.contact", compact('banner_image'));
     }
     public function submit(Request $request)
     {

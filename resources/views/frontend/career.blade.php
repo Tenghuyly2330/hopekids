@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="w-full h-[60vh] md:h-screen">
-        <img src="{{ asset('assets/career.png') }}" class="absolute object-cover z-1 w-full h-[60vh] md:h-screen inset-0 "
+        <img src="{{ asset($banner_image->image) }}" class="absolute object-cover z-1 w-full h-[60vh] md:h-screen inset-0 "
             alt="">
         <div>
 

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\ArticleBackendController;
+use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\CertificateController;
 use App\Http\Controllers\Admin\EventBackendController;
 use App\Http\Controllers\Admin\MessageController;
@@ -62,6 +63,8 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('message', MessageController::class)->except(['destroy', 'show']);
     Route::get('message/delete/{id}', [MessageController::class, 'delete'])->name('message.delete');
+
+    Route::resource('banner', BannerController::class)->except(['destroy', 'show']);
 });
 
 require __DIR__ . '/auth.php';

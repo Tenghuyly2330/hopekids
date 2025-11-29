@@ -3,7 +3,7 @@
 @section('content')
     <section class="w-full h-[60vh] md:h-screen">
         <div class="absolute h-[60vh] object-cover md:h-screen inset-0 z-10 bg-black/50"></div>
-        <img src="{{ asset('assets/hero_ourprogram.png') }}"
+        <img src="{{ asset($banner_image->image) }}"
             class="absolute object-cover z-1 w-full h-[60vh] md:h-screen inset-0 " alt="">
         <div>
             <div class="relative z-10 pt-[15vh] md:pt-[30vh]">

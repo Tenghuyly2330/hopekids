@@ -3,7 +3,7 @@
 @section('content')
     {{-- banner --}}
     <section id="welcome" class="w-full h-[60vh] md:h-screen">
-        <img src="{{ asset('assets/hero1.jpg') }}" class="absolute -z-10 w-full h-[60vh] object-cover md:h-screen inset-0"
+        <img src="{{ asset($banner_image->image) }}" class="absolute -z-10 w-full h-[60vh] object-cover md:h-screen inset-0"
             alt="">
         <div class="absolute h-[60vh] object-cover md:h-screen inset-0 z-10 bg-black/50"></div>
 
@@ -128,16 +128,16 @@
         </div>
     </section>
 
-    {{-- school licen --}}
-    <div id="school_facilities" class="relative z-20 py-5 md:py-10" id="facilites">
+    {{-- school facilities --}}
+    <div id="school_facilities" class="relative z-20 py-16 md:py-20 mb-10 px-4" id="facilites">
         <img src="{{ asset('assets/bg_image.png') }}"
-            class="absolute inset-0 bg-no-repeat bg-cover md:bg-cover h-[300px] md:h-[380px] md:w-full -z-10"
+            class="absolute inset-0 bg-no-repeat bg-cover w-full h-full -z-10"
             alt="">
 
         <!-- Dark Overlay -->
-        <div class="absolute inset-0 bg-black/60 z-10 h-[300px] md:h-[380px]"></div>
+        <div class="absolute inset-0 bg-black/60 z-10 w-full h-full"></div>
         <!-- Content -->
-        <div class="relative z-10 flex flex-col items-center justify-center h-[300px] md:h-[380px]">
+        <div class="relative z-10 flex flex-col items-center justify-center">
             <h1 class="text-center text-[25px] md:text-[40px] font-light text-white">
                 {{ __('message.school_facilities') }}
             </h1>
@@ -151,13 +151,13 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 px-2">
         <img src="{{ asset('assets/school1.png') }}" alt="School Facilities"
-            class="w-full sm:w-[370px] h-[250px] sm:h-[325px]">
+            class="w-full h-[220px] sm:h-[250px] object-cover">
         <img src="{{ asset('assets/school2.png') }}" alt="School Facilities"
-            class="w-full sm:w-[370px] h-[250px] sm:h-[325px]">
+            class="w-full h-[220px] sm:h-[250px] object-cover">
         <img src="{{ asset('assets/school3.png') }}" alt="School Facilities"
-            class="w-full sm:w-[370px] h-[250px] sm:h-[325px]">
+            class="w-full h-[220px] sm:h-[250px] object-cover">
         <img src="{{ asset('assets/school4.png') }}" alt="School Facilities"
-            class="w-full sm:w-[370px] h-[250px] sm:h-[325px]">
+            class="w-full h-[220px] sm:h-[250px] object-cover">
     </div>
 
     {{-- our branch --}}
@@ -165,7 +165,7 @@
         id="branch">
 
         <h1 class="text-center text-[25px] md:text-[30px] text-gradient font-[700]">
-            {{ app()->getLocale() === 'en' ? 'Our Branches' : 'Our Branches' }}</h1>
+            {{ app()->getLocale() === 'en' ? 'Our Branches' : 'សាខាយើងខ្ញុំ' }}</h1>
 
         <img src="{{ asset('assets/images/map1.png') }}" alt="" class="w-full md:w-2/3 h-full">
 
@@ -185,25 +185,25 @@
                 <h2 class="text-[50px] md:text-[70px] font-bold text-[#29A71A]">
                     <span id="count-years">0</span>
                 </h2>
-                <p class="text-xl">{{ app()->getLocale() === 'en' ? 'Years' : 'Years' }}</p>
+                <p class="text-xl">{{ app()->getLocale() === 'en' ? 'Years' : 'ឆ្នាំ' }}</p>
             </div>
             <div class="flex flex-col items-center text-white">
                 <h2 class="text-[50px] md:text-[70px] font-bold text-[#00AFD7]">
                     <span id="count-branches">0</span>
                 </h2>
-                <p class="text-xl">{{ app()->getLocale() === 'en' ? 'Branches' : 'Branches' }}</p>
+                <p class="text-xl">{{ app()->getLocale() === 'en' ? 'Branches' : 'សាខា' }}</p>
             </div>
             <div class="flex flex-col items-center text-white">
                 <h2 class="text-[50px] md:text-[70px] font-bold text-[#C3D500]">
                     <span id="count-students">0</span>
                 </h2>
-                <p class="text-xl">{{ app()->getLocale() === 'en' ? 'Students' : 'Students' }}</p>
+                <p class="text-xl">{{ app()->getLocale() === 'en' ? 'Students' : 'សិស្ស' }}</p>
             </div>
             <div class="flex flex-col items-center text-white">
                 <h2 class="text-[50px] md:text-[70px] font-bold text-[#FE5900]">
                     <span id="count-staff">0</span>
                 </h2>
-                <p class="text-xl">{{ app()->getLocale() === 'en' ? 'Teachers & Staff' : 'Teachers & Staff' }}</p>
+                <p class="text-xl">{{ app()->getLocale() === 'en' ? 'Teachers & Staff' : 'គ្រូបង្រៀន និងបុគ្គលិក' }}</p>
             </div>
         </div>
 
@@ -465,7 +465,7 @@
                 {{ session('success') }}
             </div>
         @endif
-        <h1 class="text-gradient text-[25px] md:text-[30px] font-[700] text-center">Contact Form</h1>
+        <h1 class="text-gradient text-[25px] md:text-[30px] font-[700] text-center">{{ app()->getLocale() === 'en' ? 'Contact Form' : 'ទម្រង់បែបបទបំពេញពត៌មាន ' }}</h1>
         <div class="mt-10 bg-[#CBDBF4] w-full max-w-7xl mx-auto rounded-2xl">
 
             <div class="p-5 md:p-10">
@@ -474,16 +474,17 @@
                     @csrf
                     <div class="flex flex-col gap-3">
                         <!-- Input 1 -->
-                        <input type="text" placeholder="Parent Name" name="name"
+                        <input type="text" placeholder="{{ app()->getLocale() === 'en' ? 'Parent Name' : 'ឈ្មោះអាណាព្យាបាល' }}" name="name"
                             class="p-3 bg-white rounded-full border-none placeholder-[#5796FF]">
 
                         <!-- Input 2 -->
-                        <input type="number" placeholder="phone Number" name="phone_number"
+                        <input type="number" placeholder="{{ app()->getLocale() === 'en' ? 'Phone Number' : 'លេខទូរសព្ទ ' }}" name="phone_number"
                             class="p-3  bg-white rounded-full border-none placeholder-[#5796FF]">
 
                         <!-- Select 1 -->
                         <select name="enquiry"
                             class="bg-white text-[#5796FF] p-3 rounded-full border-none focus:ring-2 focus:ring-blue-400">
+                            <option value="">{{ app()->getLocale() === 'en' ? 'Select Question Type' : 'ជ្រើសរើសប្រភេទសំណួរ ' }}</option>
                             <option class="bg-blue-500 text-white">• General enquiry</option>
                             <option class="bg-blue-500 text-white">• Enrolment / Admissions</option>
                             <option class="bg-blue-500 text-white">• Partnership / Collaboration</option>
@@ -493,7 +494,7 @@
                         <!-- Select 2 -->
                         <select name="location"
                             class="bg-white p-3 text-[#5796FF] rounded-full border-none focus:ring-2 focus:ring-blue-400">
-                            <option value="">Select Branch</option>
+                            <option value="">{{ app()->getLocale() === 'en' ? 'Select Branch' : 'ជ្រើសរើសសាខា ' }}</option>
                             <option class="bg-blue-500 text-white">Steng Meanchey</option>
                             <option class="bg-blue-500 text-white">Peng Hout Boeung Snor</option>
                             <option class="bg-blue-500 text-white">Banteay Meanchey</option>
@@ -506,22 +507,22 @@
                     <div class="flex flex-col gap-3">
 
                         <!-- Textarea -->
-                        <textarea rows="4" placeholder="Your Message" name="message"
+                        <textarea rows="4" placeholder="{{ app()->getLocale() === 'en' ? 'Your Message' : 'សារ ' }}" name="message"
                             class="bg-white p-3 rounded-2xl border-none placeholder-[#5796FF]"></textarea>
 
                         <!-- Input 3 -->
-                        <input type="text" placeholder="Email" name="email"
+                        <input type="text" placeholder="{{ app()->getLocale() === 'en' ? 'Email' : 'អ៉ីម៉ែល  ' }}" name="email"
                             class="bg-white p-3 rounded-full border-none placeholder-[#5796FF]">
 
                         <!-- Input 4 -->
-                        <input type="text" placeholder="Telegram" name="telegram"
+                        <input type="text" placeholder="{{ app()->getLocale() === 'en' ? 'Telegram' : 'តេឡេក្រាម  ' }}" name="telegram"
                             class="bg-white p-3 rounded-full border-none placeholder-[#5796FF]">
 
                         <div class="flex items-start gap-2">
                             <input id="consent" name="consent" type="checkbox" value="1"
                                 class="mt-1 h-4 w-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500" />
                             <label for="consent" class="text-[#5796FF] text-[12px] md:text-[14px]">
-                                I consent to having this website store my submitted information so they can respond to my enquiry.</span>
+                                {{ app()->getLocale() === 'en' ? 'I consent to having this website store my submitted information so they can respond to my enquiry.' : 'ខ្ញុំយល់ព្រមឱ្យស្ថាប័ននេះរក្សាទុកព័ត៌មានដែលខ្ញុំបានដាក់ស្នើសួរដើម្បីអាចឆ្លើយតបទៅនឹងសំណួររបស់ខ្ញុំ។' }}</span>
                             </label>
                         </div>
 
@@ -530,12 +531,13 @@
                     <div class="w-full md:col-span-2 flex justify-center items-center mt-3 ">
                         <button class="rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186] text-white px-6 py-2"
                             type="submit">
-                            Submit
+                            {{ app()->getLocale() === 'en' ? 'Submit' : 'ដាក់ស្នើ' }}
                         </button>
                     </div>
                 </form>
-                <p class="text-[#5796FF] text-center font-regular text-[11px] md:text-[15px] mt-5">We’ll respond within
-                    24-48 hours. If urgent, you may also call us at 085 253 388</p>
+                <p class="text-[#5796FF] text-center font-regular text-[11px] md:text-[15px] mt-5">
+                    {{ app()->getLocale() === 'en' ? 'We’ll respond within 24-48 hours. If urgent, you may also call us at 085 253 388' : 'យើងខ្ញុំនឹងឆ្លើយតបក្នុងរយៈពេល 24-48 ម៉ោង។ ប្រសិនបើក្នុងករណីបន្ទាន់ លោកអ្នកក៏អាចទូរសព្ទមកយើងខ្ញុំតាមរយៈលេខ 085 253 388 ផងដែរ។' }}
+                </p>
             </div>
         </div>
 

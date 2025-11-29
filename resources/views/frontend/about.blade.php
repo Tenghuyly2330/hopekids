@@ -27,7 +27,7 @@
     <section class="">
 
         <div class="w-full h-[60vh] md:h-screen">
-            <img src="{{ asset('assets/about_hero.png') }}"
+            <img src="{{ asset($banner_image->image) }}"
                 class="absolute z-1 w-full h-[60vh] md:h-screen inset-0 object-cover" alt="">
             <div class="absolute h-[60vh] object-cover md:h-screen inset-0 z-10 bg-black/50"></div>
 
