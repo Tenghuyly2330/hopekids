@@ -258,17 +258,17 @@
                     </li>
 
                     <li class="hover:bg-[#5897FF]"><a href="/#school_facilities"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'School Facilities' : 'School Facilities' }}</a>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'School Facilities' : 'សម្ភារៈសិក្សា' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/#our_branch"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Branch' : 'Our Branch' }}</a>
+                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Branch' : 'សាខាយើងខ្ញុំ' }}</a>
                     </li>
-                    <li class="hover:bg-[#5897FF]"><a href="/#parent"
+                    {{-- <li class="hover:bg-[#5897FF]"><a href="/#parent"
                             class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Parents’ Testimonials' : 'Parents’ Testimonials' }}</a>
-                    </li>
-                    <li class="hover:bg-[#5897FF]"><a href="/#faq"
+                    </li> --}}
+                    {{-- <li class="hover:bg-[#5897FF]"><a href="/#faq"
                             class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'FAQ' : 'FAQ' }}</a>
-                    </li>
+                    </li> --}}
                     {{-- <li class="hover:bg-[#5897FF]"><a href="/#contact"
                             class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Schedule a tour' : 'Schedule a tour' }}</a>
                     </li> --}}

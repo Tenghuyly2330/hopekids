@@ -214,7 +214,7 @@
 
         <div class="pt-10">
             <h1 class="text-[25px] md:text-[30px] text-gradient font-[700] text-center">
-                {{ app()->getLocale() === 'en' ? 'Parents’ Testimonials' : 'Parents’ Testimonials' }}
+                {{ app()->getLocale() === 'en' ? 'Parents’ Testimonials' : 'សក្ខីកម្មរបស់ឪពុកម្តាយ' }}
             </h1>
 
             <div class="mt-5 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 items-center gap-10 px-4">

@@ -125,7 +125,7 @@
     {{-- license destop --}}
     <section class="hidden md:block" id="school_license">
         <h1 class="text-[16px] md:text-[30px] text-gradient font-[700] text-center pt-5 md:pt-10">
-            {{ app()->getLocale() === 'en' ? "Our Institutes' Licenses" : "Our Institutes' Licenses" }}
+            {{ app()->getLocale() === 'en' ? "Our Institutes' Licenses" : "អាជ្ញាប័ណ្ណរបស់ស្ថាប័នរបស់យើងខ្ញុំ" }}
         </h1>
         <div class="mt-5">
             <div class='w-full flex gap-4 max-w-7xl mx-auto px-4 my-20 overflow-x-auto'>
