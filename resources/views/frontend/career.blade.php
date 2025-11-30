@@ -41,9 +41,9 @@
                 <p class="text-[22px] text-center md:text-[30px] lg:text-[45px] font-regular">
                     {{ app()->getLocale() === 'en' ? 'with Us!' : 'ជាមួយយើង' }}
                 </p>
-                <p class="text-[12px] text-center md:text-[14px] mt-3 md:mt-5 px-10">
+                {{-- <p class="text-[12px] text-center md:text-[14px] mt-3 md:mt-5 px-10">
                     {{ app()->getLocale() === 'en' ? 'We work with diverse international and local non-governmental organizations, microfinance institutions, corporate partners, and national authorities to build a better life through safe and affordable homes.' : 'យើងសហការជាមួយអង្គការអន្តរជាតិ និងក្នុងស្រុកមិនមែនរដ្ឋាភិបាល ស្ថាប័នហិរញ្ញវត្ថុតូច មិត្តភាពសហគ្រាស និងអាជ្ញាធរជាតិនានា ដើម្បីបង្កើតជីវិតល្អប្រសើរឡើង តាមរយៈផ្ទះសុវត្ថិភាព និងមានតម្លៃសមរម្យ។' }}
-                </p>
+                </p> --}}
 
                 @if (session('success'))
                     <div x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 3000)"
@@ -56,12 +56,12 @@
                     @csrf
 
                     <div>
-                        <label class="text-[12px]">{{ app()->getLocale() === 'en' ? 'First Name' : 'ឈ្មោះដំបូង' }}</label>
+                        <label class="text-[12px]">{{ app()->getLocale() === 'en' ? 'First Name' : 'ឈ្មោះ' }}</label>
                         <input type="text" name="fname" class="p-3 bg-white text-black rounded-full w-full mt-1">
                     </div>
 
                     <div>
-                        <label class="text-[12px]">{{ app()->getLocale() === 'en' ? 'Last Name' : 'នាមត្រកូល ' }}</label>
+                        <label class="text-[12px]">{{ app()->getLocale() === 'en' ? 'Last Name' : 'ត្រកូល ' }}</label>
                         <input type="text" name="lname" class="p-3 bg-white text-black rounded-full w-full mt-1">
                     </div>
 
@@ -71,10 +71,10 @@
                     </div>
 
                     <div>
-                        <label class="text-[12px]">{{ app()->getLocale() === 'en' ? 'Position' : 'តំណែង' }}</label>
+                        <label class="text-[12px]">{{ app()->getLocale() === 'en' ? 'Position' : 'តំណែងកំពុងរើស' }}</label>
                         <select class="p-3 bg-white text-black rounded-full w-full mt-1" name="position">
                             <option value="" disabled selected>
-                                {{ app()->getLocale() === 'en' ? 'Select a position' : 'ជ្រើសរើសតំណែង' }}</option>
+                                {{ app()->getLocale() === 'en' ? 'Select a position' : 'ជ្រើសរើសមុខតំណែង' }}</option>
                             @foreach ($careers as $item)
                                 <option value="{{ $item->slug }}">{{ app()->getLocale() === 'en' ? $item->position_en : $item->position_km }}</option>
                             @endforeach
@@ -83,7 +83,7 @@
 
                     <div>
                         <label
-                            class="text-[12px]">{{ app()->getLocale() === 'en' ? 'Upload File' : 'បញ្ចូលឯកសារ' }}</label>
+                            class="text-[12px]">{{ app()->getLocale() === 'en' ? 'Upload CV' : 'ដាក់ CV' }}</label>
                         <input type="file" name="file" class="p-3 bg-white text-black rounded-full w-full mt-1">
                     </div>
 

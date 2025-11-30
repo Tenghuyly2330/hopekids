@@ -64,10 +64,10 @@
         <h1 class="text-[25px] md:text-[30px] text-gradient font-[700]">
             {{ app()->getLocale() === 'en' ? 'About Us' : 'អំពីយើងខ្ញុំ' }}</h1>
         <p class="text-[16px] md:text-[20px] font-medium text-gradient">
-            {{ app()->getLocale() === 'en' ? 'HOPE KIDS Special Education School' : 'សាលារៀនអប់រំពិសេសហូបឃីដ' }}
+            {{ app()->getLocale() === 'en' ? 'HOPE KIDS Special Education School' : 'សាលាអប់រំពិសេសក្តីសង្ឃឹមកុមារ' }}
         </p>
         <p class="mt-3 text-[14px] md:text-[16px] text-left w-full md:w-[700px]">
-            {{ app()->getLocale() === 'en' ? 'Hope Kids was founded in Cambodia to make quality special education accessible to every child regardless of financial or geographic limitations. We serve families from all backgrounds and provinces, ensuring every child has the opportunity to learn, grow, and thrive.' : 'សាលារៀនអប់រំពិសេសហូបឃីដ ត្រូវបានបង្កើតឡើងនៅប្រទេសកម្ពុជាដើម្បីផ្តល់ឱកាសឱ្យកុមារគ្រប់រូប ទទួលបានការអប់រំពិសេសប្រកបដោយគុណភាព មិនថាកុមារមកពីក្រុមគ្រួសារមានកម្រិតហិរញ្ញវត្ថុទាប ឬទីតាំងភូមិសាស្ត្រឆ្ងាយយ៉ាងណាក៏ដោយ។ យើងខ្ញុំបម្រើសេវាកម្មជូនដល់ក្រុមគ្រួសារពីគ្រប់ជាន់ថ្នាក់ និងគ្រប់ខេត្ត/រាជធានី ដើម្បីធានាថា កុមារគ្រប់រូបទទួលបានឱកាសរៀនសូត្រ អភិវឌ្ឍ និងរីកចម្រើន។' }}
+            {{ app()->getLocale() === 'en' ? 'Hope Kids was founded in Cambodia to make quality special education accessible to every child regardless of financial or geographic limitations. We serve families from all backgrounds and provinces, ensuring every child has the opportunity to learn, grow, and thrive.' : 'សាលាអប់រំពិសេសក្តីសង្ឃឹមកុមារ ត្រូវបានបង្កើតឡើងនៅប្រទេសកម្ពុជាដើម្បីផ្តល់ឱកាសឱ្យកុមារគ្រប់រូប ទទួលបានការអប់រំពិសេសប្រកបដោយគុណភាព មិនថាកុមារមកពីក្រុមគ្រួសារមានកម្រិតហិរញ្ញវត្ថុទាប ឬទីតាំងភូមិសាស្ត្រឆ្ងាយយ៉ាងណាក៏ដោយ។ យើងខ្ញុំបម្រើសេវាកម្មជូនដល់ក្រុមគ្រួសារពីគ្រប់ជាន់ថ្នាក់ និងគ្រប់ខេត្ត/រាជធានី ដើម្បីធានាថា កុមារគ្រប់រូបទទួលបានឱកាសរៀនសូត្រ អភិវឌ្ឍ និងរីកចម្រើន។' }}
         </p>
         <a href="{{ URL('/about') }}"
             class="py-1 px-3 mt-4 text-[14px] lg:text-[16px] rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186] text-white">
@@ -117,7 +117,7 @@
                                 </div>
                                 <a href="{{ url('/ourprogram/#' . $item->number_en) }}"
                                     class="mt-4 py-1 px-5 text-[14px] font-[600] bg-white text-black self-start">
-                                    <span>{{ app()->getLocale() === 'en' ? 'Details' : 'ព័ត៌មាបន្ថែម' }}</span>
+                                    <span>{{ app()->getLocale() === 'en' ? 'Details' : 'ពត៌មាន' }}</span>
                                 </a>
                             </div>
                         </div>
@@ -214,7 +214,7 @@
 
         <div class="pt-10">
             <h1 class="text-[25px] md:text-[30px] text-gradient font-[700] text-center">
-                {{ app()->getLocale() === 'en' ? 'Parents’ Testimonials' : 'សក្ខីកម្មរបស់ឪពុកម្តាយ' }}
+                {{ app()->getLocale() === 'en' ? 'Parents’ Testimonials' : 'សក្ខីកម្មរបស់អាណាព្យាបាល' }}
             </h1>
 
             <div class="mt-5 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 items-center gap-10 px-4">
