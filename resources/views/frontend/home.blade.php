@@ -7,7 +7,7 @@
             alt="">
         <div class="absolute h-[60vh] object-cover md:h-screen inset-0 z-10 bg-black/50"></div>
 
-        <div class="relative w-full flex flex-col items-center lg:items-end text-left pt-[10vh] md:pt-[30vh]">
+        <div class="relative w-full flex flex-col items-center lg:items-end text-left pt-[5vh] md:pt-[30vh]">
 
             <!-- Text container with blur background on the RIGHT -->
             <div class="relative w-fit text-center lg:text-left">
@@ -24,7 +24,7 @@
                     <h1 class="text-[20px] md:text-[40px] font-regular text-white text-gradient">
                         {{ app()->getLocale() === 'en' ? $banner_image->title1_en : $banner_image->title1_km }} <br>
                         <span
-                            class="text-[40px] md:text-[80px] font-[700] py-2 leading-none">{{ app()->getLocale() === 'en' ? $banner_image->title2_en : $banner_image->title2_km }}</span>
+                            class="text-[40px] md:text-[80px] font-[700] leading-none">{{ app()->getLocale() === 'en' ? $banner_image->title2_en : $banner_image->title2_km }}</span>
                     </h1>
 
                     <p class="text-[#1C0186] font-bold text-[16px] md:text-[25px] pt-2">
@@ -166,7 +166,10 @@
         <h1 class="text-center text-[25px] md:text-[30px] text-gradient font-[700]">
             {{ app()->getLocale() === 'en' ? 'Our Branches' : 'សាខាយើងខ្ញុំ' }}</h1>
 
-        <img src="{{ asset('assets/images/map1.png') }}" alt="" class="w-full md:w-2/3 h-full">
+
+        {!! app()->getLocale() === 'en'
+            ? '<img src="' . asset('assets/images/map1.png') . '" class="w-full md:w-2/3 h-full" alt="">'
+            : '<img src="' . asset('assets/images/map.png') . '" class="w-full md:w-2/3 h-full" alt="">' !!}
 
     </div>
 
@@ -224,9 +227,8 @@
                         class="bg-white rounded rounded-t-xl rounded-b-xl shadow-md p-2 border border-gray-300 flex flex-col">
 
                         <!-- Video box with play icon -->
-                        <div >
-                            <iframe src="{{ $item->url }}" title="YouTube video player"
-                                frameborder="0"
+                        <div>
+                            <iframe src="{{ $item->url }}" title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen class="w-full h-[200px]">
                             </iframe>
