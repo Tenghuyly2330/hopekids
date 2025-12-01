@@ -56,15 +56,15 @@
                 alt="">
             <div class="absolute h-[60vh] object-cover md:h-screen inset-0 z-10 bg-black/50"></div>
 
-            <div class="relative z-10 px-4 max-w-[700px] mx-auto pt-[10vh] md:pt-[30vh]">
-                <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">{{ app()->getLocale() === 'en' ? $banner_image->title1_en : $banner_image->title1_km }}</h1>
-                <p class="text-left text-white text-[14px] lg:text-[16px]">{{ app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km }}</p>
+            <div class="relative z-10 px-4 max-w-[700px] mx-auto pt-[10vh] md:pt-[30vh] overflow-hidden">
+                <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]"  data-aos="fade-right" data-aos-duration="1000">{{ app()->getLocale() === 'en' ? $banner_image->title1_en : $banner_image->title1_km }}</h1>
+                <p class="text-left text-white text-[14px] lg:text-[16px]"  data-aos="fade-left" data-aos-duration="1000">{{ app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km }}</p>
 
             </div>
         </div>
         <div id="mission" class="relative md:-top-[100px] max-w-7xl mx-auto z-40 px-4 mt-5 md:mt-0">
-            <div class="grid grid-cols-1 grid-rows-1 lg:grid-cols-2 lg:grid-rows-3 gap-4 w-full">
-                <div class="bg-[#5796FF] rounded-md">
+            <div class="grid grid-cols-1 grid-rows-1 lg:grid-cols-2 lg:grid-rows-3 gap-4 w-full overflow-hidden">
+                <div class="bg-[#5796FF] rounded-md" data-aos="fade-right" data-aos-duration="1000">
                     <div class="flex justify-center flex-col lg:flex-row items-center gap-10 p-10">
                         <img src="{{ asset($missions->image) }}" alt="" class="w-24 h-24">
                         <div class="flex flex-col">
@@ -76,7 +76,7 @@
                     </div>
                 </div>
 
-                <div id="core_values" class="bg-[#C3D500] order-last lg:order-none row-span-1 lg:row-span-3 rounded-md">
+                <div id="core_values" data-aos="fade-left" data-aos-duration="1000" class="bg-[#C3D500] order-last lg:order-none row-span-1 lg:row-span-3 rounded-md">
                     <div class="flex justify-center lg:justify-start flex-col items-center lg:items-start gap-2 p-10">
 
                         <img src="{{ asset($core->image) }}" alt="" class="w-24 h-24 mt-4">
@@ -90,7 +90,7 @@
 
                 </div>
 
-                <div id="vision" class="bg-[#FE5900] rounded-md">
+                <div id="vision" class="bg-[#FE5900] rounded-md" data-aos="fade-right" data-aos-duration="1000">
                     <div class="flex justify-center flex-col lg:flex-row  items-center gap-10 p-10">
                         <img src="{{ asset($visions->image) }}" alt="" class="w-24 h-24">
                         <div class="flex flex-col">
@@ -104,7 +104,7 @@
                 </div>
 
                 <!-- Row 3, col 1 -->
-                <div id="our_goals" class="bg-[#E3264E] rounded-md">
+                <div id="our_goals" class="bg-[#E3264E] rounded-md" data-aos="fade-right" data-aos-duration="1000">
                     <div class="flex justify-center flex-col lg:flex-row items-center gap-10 p-10">
                         <img src="{{ asset($goals->image) }}" alt="" class="w-24 h-24" />
                         <div class="flex flex-col">
@@ -174,7 +174,7 @@
         <div class="absolute inset-0 bg-black/60 z-0"></div>
 
         <!-- Content -->
-        <div class="relative z-10">
+        <div class="relative z-10" data-aos="fade-right" data-aos-duration="1000">
             <p class="w-full max-w-[700px] mx-auto px-2 text-[16px] md:text-[20px] font-medium text-white/90 text-center">
                 {{ __('message.banner_content') }}
             </p>

@@ -7,10 +7,10 @@
         <div>
             <div class="absolute h-[60vh] object-cover md:h-screen inset-0 z-10 bg-black/50"></div>
 
-            <div class="relative z-10 pt-[15vh] md:pt-[30vh]">
-                <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">
+            <div class="relative z-10 pt-[15vh] md:pt-[30vh] overflow-hidden">
+                <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]" data-aos="fade-right" data-aos-duration="1000">
                     {{ app()->getLocale() === 'en' ? $banner_image->title1_en : $banner_image->title1_km }}</h1>
-                <p class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px] px-4">
+                <p class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px] px-4" data-aos="fade-left" data-aos-duration="1000">
                     {{ app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km }}</p>
 
             </div>
@@ -24,13 +24,13 @@
                 $isOdd = $item->id % 2 == 1;
             @endphp
 
-            <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-6 md:gap-20 mt-5 md:mt-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-6 md:gap-20 mt-5 md:mt-10 overflow-hidden">
 
-                <div class="w-full {{ $isOdd ? 'md:order-1' : 'md:order-2' }}">
+                <div class="w-full {{ $isOdd ? 'md:order-1' : 'md:order-2' }}" data-aos="fade-right" data-aos-duration="1000">
                     <img src="{{ asset($images[0]) }}" class="w-full h-[400px] rounded-xl object-cover" alt="">
                 </div>
 
-                <div class="{{ $isOdd ? 'md:order-2' : 'md:order-1' }}">
+                <div class="{{ $isOdd ? 'md:order-2' : 'md:order-1' }}" data-aos="fade-left" data-aos-duration="1000">
                     <h1 class="text-gradient text-xl font-semibold">
                         {{ app()->getLocale() === 'en' ? $item->title_en : $item->title_km }}
                     </h1>

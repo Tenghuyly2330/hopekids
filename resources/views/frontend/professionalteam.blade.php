@@ -33,11 +33,11 @@
         <div>
             <div class="absolute h-[60vh] object-cover md:h-screen inset-0 z-10 bg-black/50"></div>
 
-            <div class="relative z-10 pt-[15vh] md:pt-[30vh]">
+            <div class="relative z-10 pt-[15vh] md:pt-[30vh] overflow-hidden">
 
-                <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">
+                <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]" data-aos="fade-right" data-aos-duration="1000">
                     {{ app()->getLocale() === 'en' ? $banner_image->title1_en : $banner_image->title1_km }}</h1>>
-                <p class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px]">
+                <p class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px]" data-aos="fade-left" data-aos-duration="1000">
                     {{ app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km }}
                 </p>
             </div>
@@ -45,18 +45,18 @@
     </section>
 
     <section class="mt-5 md:mt-10">
-        <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">
-            {{ app()->getLocale() === 'en' ? 'Message from Our Founder' : 'សារពីស្ថាបនិករបស់យើង' }}</h1>
+        <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]" data-aos="fade-right" data-aos-duration="1000">
+            {{ app()->getLocale() === 'en' ? 'Message from Our Founder' : 'សារពីស្ថាបនិករបស់យើងខ្ញុំ' }}</h1>
         <div class="mt-10">
             @foreach ($messages as $message)
-                <div class="flex justify-center flex-wrap gap-4 md:gap-30 @if ($message->id == 2) mt-10 md:mt-20 @endif">
-                    <div class="w-[230px] h-[230px] rounded-full overflow-hidden">
+                <div class="flex justify-center flex-wrap gap-4 md:gap-30 overflow-hidden @if ($message->id !== 1) mt-10 md:mt-20 @endif">
+                    <div class="w-[230px] h-[230px] rounded-full overflow-hidden" data-aos="fade-right" data-aos-duration="1000">
                         <div class="w-[230px] h-[230px] rounded-full overflow-hidden">
                             <img src="{{ asset($message->image) }}" class="w-full h-full object-cover object-top"
                                 alt="">
                         </div>
                     </div>
-                    <div class="px-4">
+                    <div class="px-4" data-aos="fade-left" data-aos-duration="1000">
                         @if ($message->id == 1)
                             <img src="{{ asset('assets/double_qout.png') }}" alt="">
                         @endif
@@ -77,19 +77,19 @@
 
     <section class="mt-10 bg-[#F0F6FF] w-full">
         <div class="pt-10 pb-20 max-w-7xl mx-auto px-4">
-            <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700] pb-10">
+            <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700] pb-10" data-aos="fade-right" data-aos-duration="1000">
                 {{ app()->getLocale() === 'en' ? 'Our Professional Team' : 'ក្រុមអ្នកជំនាញរបស់យើង' }}</h1>
 
             @foreach ($teams as $item)
-                <div class="grid grid-cols-1 lg:grid-cols-3 items-start mt-10">
-                    <div class="w-[230px] h-[230px] rounded-full overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-3 items-start mt-10 overflow-hidden">
+                    <div class="w-[230px] h-[230px] rounded-full overflow-hidden" data-aos="fade-right" data-aos-duration="1000">
                         <div class="w-[230px] h-[230px] rounded-full border border-[#1C0186] overflow-hidden">
                             <img src="{{ asset($item->image) }}" class="w-full h-full object-cover object-top"
                                 alt="">
 
                         </div>
                     </div>
-                    <div class="col-span-1 lg:col-span-2 pt-4 md:pt-0">
+                    <div class="col-span-1 lg:col-span-2 pt-4 md:pt-0" data-aos="fade-left" data-aos-duration="1000">
                         <div>
                             <h1 class="text-[#1C0186] font-bold text-[16px] lg:text-[20px]">
                                 {{ app()->getLocale() === 'en' ? $item->name_en : $item->name_km }}</h1>
@@ -117,7 +117,7 @@
         <div class="absolute inset-0 bg-black/60 z-0"></div>
 
         <!-- Content -->
-        <div class="relative z-10">
+        <div class="relative z-10" data-aos="fade-right" data-aos-duration="1000">
             <p class="w-full max-w-[700px] mx-auto px-2 text-[16px] md:text-[20px] font-medium text-white/90 text-center">
                 {{ __('message.banner_content') }}
             </p>

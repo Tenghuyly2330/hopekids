@@ -22,6 +22,9 @@
     <!-- Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+
+    {{-- aos --}}
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <style>
     [x-cloak] {
@@ -225,11 +228,11 @@
 
 
     {{-- location --}}
-    <div class="mt-10 px-4" id="find">
-        <h1 class="text-gradient text-[25px] md:text-[30px] font-[700] text-center">
+    <div class="mt-10 px-4 overflow-hidden" id="find">
+        <h1 class="text-gradient text-[25px] md:text-[30px] font-[700] text-center" data-aos="fade-right" data-aos-duration="800">
             {{ app()->getLocale() === 'en' ? 'Find Us!' : 'ស្វែងរកសាខាដែលនៅជិតលោកអ្នក' }}</h1>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-10 overflow-hidden" data-aos="fade-up" data-aos-duration="800">
 
             @foreach ($branches as $item)
                 <div class="flex flex-col gap-3">
@@ -409,7 +412,8 @@
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+{{-- aos --}}
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <!-- Initialize Swiper -->
 <script>
     const swiper = new Swiper(".mySwiper", {
@@ -462,5 +466,7 @@
         loop: true,
     });
 </script>
-
+<script>
+  AOS.init();
+</script>
 </html>

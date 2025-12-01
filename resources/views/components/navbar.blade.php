@@ -6,10 +6,10 @@
     }
 </style>
 <div class="relative w-full hidden pt-4 lg:block z-40 bg-transparent">
-    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2 px-10 xl:px-0">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2 px-10 xl:px-0 overflow-hidden">
 
         <!-- Contact Info -->
-        <div class="flex gap-3 lg:gap-6 text-[#FFFFFF] text-[10px] lg:text-[15px] font-light xl:ms-[90px] relative z-10">
+        <div class="flex gap-3 lg:gap-6 text-[#FFFFFF] text-[10px] lg:text-[15px] font-light xl:ms-[90px] relative z-10" data-aos="fade-right" data-aos-duration="1000">
             <p class="flex items-center gap-1">
                 <span class="text-[#5796FF] ">
                     <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,8 +34,8 @@
             </p>
         </div>
 
-        <div class="flex items-center gap-4">
-            <div class="hidden lg:flex items-center gap-2 text-[14px]" data-aos="fade-left" data-aos-duration="1000">
+        <div class="flex items-center gap-4" data-aos="fade-left" data-aos-duration="1000">
+            <div class="hidden lg:flex items-center gap-2 text-[14px]">
                 <!-- Clickable flag to switch language -->
                 <img src="{{ $locale === 'en' ? asset('assets/images/icons/usa-flag.png') : asset('assets/images/icons/kh-flag.png') }}"
                     alt="Flag" class="w-6 h-6 rounded-full">
@@ -103,10 +103,10 @@
 
 <div class="w-full px-4 pt-3">
 
-    <div class="w-full max-w-7xl mx-auto flex lg:hidden justify-between items-center md:gap-3 relative z-40">
+    <div class="w-full max-w-7xl mx-auto flex lg:hidden justify-between items-center md:gap-3 relative z-40 overflow-hidden">
 
         <!-- Logo -->
-        <img src="{{ asset('assets/images/logo_new.png') }}" class="rounded-full w-16 h-16 shadow-md" />
+        <img src="{{ asset('assets/images/logo_new.png') }}" class="rounded-full w-16 h-16 shadow-md"  />
 
         <div class="flex lg:hidden items-center gap-2">
             <div class="flex items-center gap-1 text-[14px]" data-aos="fade-left" data-aos-duration="1000">
@@ -130,8 +130,6 @@
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
-
-
     </div>
 
     <!-- MOBILE BACKDROP -->
@@ -241,69 +239,69 @@
     </div>
 </div>
 
-<nav class="relative w-full bg-[#D9ECEE] hidden lg:flex">
+<nav class="relative w-full bg-[#D9ECEE] hidden lg:flex" >
     <div class="absolute left-1/2 -translate-x-1/2 z-50 w-max flex items-center gap-4 py-2">
         <img src="{{ asset('assets/images/logo_new.png') }}" alt="" class="w-16 h-16 object-cover">
         <ul class="flex items-center bg-[#ffffff] space-x-1 px-3 xl:px-10 py-4 rounded-full">
             <li class="relative group">
                 <a href="{{ route('home') }}"
-                    class="px-5 xl:px-7 py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('home') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : 'py-8' }}">{{ app()->getLocale() === 'en' ? 'Home' : 'ទំព័រដើម​' }}</a>
+                    class="px-5 xl:px-7 py-4 text-[16px] xl:text-[19px] nav_link {{ Route::is('home') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : 'py-8' }}">{{ app()->getLocale() === 'en' ? 'Home' : 'ទំព័រដើម​' }}</a>
                 <ul
                     class="absolute left-1/2 transform -translate-x-1/2 hidden mt-6 py-4 w-44 bg-[#FFFFFF] shadow-lg rounded-lg {{ Route::is('home') ? '' : 'group-hover:block' }} z-50">
                     <li class="hover:bg-[#5897FF]"><a href="/#welcome"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Welcome to HopeKids' : 'សូមស្វាគមន៍មកកាន់ ហូបឃីដ' }}</a>
+                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Welcome to HopeKids' : 'សូមស្វាគមន៍មកកាន់ ក្ដីសង្ឃឹមកុមារ' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/#program"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Programs' : 'កម្មវិធីសិក្សា' }}</a>
+                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Programs' : 'កម្មវិធីសិក្សា' }}</a>
                     </li>
 
                     <li class="hover:bg-[#5897FF]"><a href="/#school_facilities"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'School Facilities' : 'សម្ភារៈសិក្សា' }}</a>
+                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'School Facilities' : 'សម្ភារៈសិក្សា' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/#our_branch"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Branch' : 'សាខាយើងខ្ញុំ' }}</a>
+                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Branch' : 'សាខាយើងខ្ញុំ' }}</a>
                     </li>
                     {{-- <li class="hover:bg-[#5897FF]"><a href="/#parent"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Parents’ Testimonials' : 'Parents’ Testimonials' }}</a>
+                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Parents’ Testimonials' : 'Parents’ Testimonials' }}</a>
                     </li> --}}
                     {{-- <li class="hover:bg-[#5897FF]"><a href="/#faq"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'FAQ' : 'FAQ' }}</a>
+                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'FAQ' : 'FAQ' }}</a>
                     </li> --}}
                     {{-- <li class="hover:bg-[#5897FF]"><a href="/#contact"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Schedule a tour' : 'Schedule a tour' }}</a>
+                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Schedule a tour' : 'Schedule a tour' }}</a>
                     </li> --}}
                 </ul>
             </li>
             <li class="relative group">
                 <a href="{{ route('about') }}"
-                    class="px-5 xl:px-7 py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('about') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : 'py-8' }}">{{ app()->getLocale() === 'en' ? 'About Us' : 'អំពីយើងខ្ញុំ' }}</a>
+                    class="px-5 xl:px-7 py-4 text-[16px] xl:text-[19px] nav_link {{ Route::is('about') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : 'py-8' }}">{{ app()->getLocale() === 'en' ? 'About Us' : 'អំពីយើងខ្ញុំ' }}</a>
                 <ul
                     class="absolute left-1/2 transform -translate-x-1/2 hidden mt-6 py-2 w-44 bg-[#FFFFFF] shadow-lg rounded-lg {{ Route::is('about') ? '' : 'group-hover:block' }} z-50">
                     <li class="hover:bg-[#5897FF]"><a href="/about#mission"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Mission' : 'បេសកកម្ម' }}</a>
+                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Mission' : 'បេសកកម្ម' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/about#vision"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Vision' : 'ចក្ខុវិស័យ' }}</a>
+                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Vision' : 'ចក្ខុវិស័យ' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/about#core_values"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Core Values' : 'ចក្ខុវិស័យ' }}</a>
+                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Core Values' : 'ចក្ខុវិស័យ' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/about#our_goals"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Goals' : 'គោលដៅរបស់យើង' }}</a>
+                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Goals' : 'គោលដៅរបស់យើង' }}</a>
                     </li>
                     {{-- <li class="hover:bg-[#5897FF]"><a href="/about#school_license"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'School License' : 'School License' }}</a>
+                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'School License' : 'School License' }}</a>
                     </li> --}}
                 </ul>
             </li>
             <li class="relative group">
                 <a href="{{ route('ourprogram') }}"
-                    class="px-5 xl:px-7 py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('ourprogram') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : 'py-8' }}">{{ app()->getLocale() === 'en' ? 'Our Programs' : 'កម្មវិធីសិក្សា' }}</a>
+                    class="px-5 xl:px-7 py-4 text-[16px] xl:text-[19px] nav_link {{ Route::is('ourprogram') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : 'py-8' }}">{{ app()->getLocale() === 'en' ? 'Our Programs' : 'កម្មវិធីសិក្សា' }}</a>
                 <ul
                     class="absolute left-1/2 transform -translate-x-1/2 hidden mt-6 py-2 w-64 bg-[#FFFFFF] shadow-lg rounded-lg {{ Route::is('ourprogram') ? '' : 'group-hover:block' }} z-50">
                     @foreach ($programs as $item)
                         <li class="hover:bg-[#5897FF]"><a href="{{ url('/ourprogram/#' . $item->number_en) }}"
-                                class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? $item->title_en : $item->title_km }}</a>
+                                class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? $item->title_en : $item->title_km }}</a>
                         </li>
                     @endforeach
 

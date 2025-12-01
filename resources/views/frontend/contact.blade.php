@@ -6,10 +6,10 @@
         <img src="{{ asset($banner_image->image) }}" class="absolute object-cover z-1 w-full h-[60vh] md:h-screen inset-0 "
             alt="">
         <div>
-            <div class="relative z-10 pt-[15vh] md:pt-[30vh]">
-                <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">
+            <div class="relative z-10 pt-[15vh] md:pt-[30vh] overflow-hidden">
+                <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]" data-aos="fade-right" data-aos-duration="1000">
                     {{ app()->getLocale() === 'en' ? $banner_image->title1_en : $banner_image->title1_km }}</h1>
-                <p class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px] px-4">
+                <p class="text-left max-w-[700px] mx-auto text-white text-[15px] lg:text-[16px] px-4" data-aos="fade-left" data-aos-duration="1000">
                     {{ app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km }}</p>
             </div>
         </div>
@@ -17,10 +17,10 @@
 
     <div class="mt-5 md:mt-10 px-5">
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 justify-center w-full max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 justify-center w-full max-w-7xl mx-auto px-4 overflow-hidden">
 
             <!-- Left Column -->
-            <div class="flex flex-col place-items-center">
+            <div class="flex flex-col place-items-center" data-aos="fade-right" data-aos-duration="1000">
 
                 <!-- Social Icons -->
                 <ul class="flex items-center gap-6 w-full justify-center">
@@ -80,7 +80,7 @@
             </div>
 
             <!-- Right Column -->
-            <div class="text-start md:text-center lg:text-left w-full pt-10 lg:maw-w-md lg:pt-0">
+            <div class="text-start md:text-center lg:text-left w-full pt-10 lg:maw-w-md lg:pt-0" data-aos="fade-left" data-aos-duration="1000">
                 <h2 class="text-xl md:text-2xl font-bold mb-4">
                     {{ app()->getLocale() === 'en' ? 'Contact Us' : 'ការទំនាក់ទំនង' }}</h2>
 

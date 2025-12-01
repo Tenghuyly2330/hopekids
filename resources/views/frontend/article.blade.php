@@ -7,10 +7,10 @@
         <div>
             <div class="absolute h-[60vh] object-cover md:h-screen inset-0 z-10 bg-black/50"></div>
 
-            <div class="relative z-10 pt-[15vh] md:pt-[30vh]">
-                <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">{{ app()->getLocale() === 'en' ? $banner_image->title1_en : $banner_image->title1_km }}
+            <div class="relative z-10 pt-[15vh] md:pt-[30vh] overflow-hidden">
+                <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]" data-aos="fade-right" data-aos-duration="1000">{{ app()->getLocale() === 'en' ? $banner_image->title1_en : $banner_image->title1_km }}
                     </h1>
-                <p class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px]  px-4">
+                <p class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px] px-4" data-aos="fade-left" data-aos-duration="1000">
                     {{ app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km }}
                 </p>
 
@@ -19,7 +19,7 @@
     </section>
 
     <section class="mt-5 md:mt-10">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-10 px-5 lg:px-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-10 px-5 lg:px-10" data-aos="fade-up" data-aos-duration="1000">
             @foreach ($article as $item)
                 <div class="flex flex-col items-start">
                     <img src="{{ asset($item->image) }}" class="w-full h-[200px] md:h-[300px] object-cover rounded-[30px]" alt="">
@@ -44,7 +44,7 @@
                                             stroke-linecap="round" stroke-linejoin="round"></path>
                                     </g>
                                 </svg>
-                                <span>{{ app()->getLocale() === 'en' ? 'Detail' : 'ពត៌មាន' }}</span>
+                                <span>{{ app()->getLocale() === 'en' ? 'Detail' : 'អានបន្ថែម' }}</span>
                             </a>
                         </div>
                     </div>

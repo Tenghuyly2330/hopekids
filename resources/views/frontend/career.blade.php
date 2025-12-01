@@ -8,13 +8,13 @@
 
             <div class="absolute h-[60vh] object-cover md:h-screen inset-0 z-10 bg-black/50"></div>
 
-            <div class="relative z-10 pt-[15vh] md:pt-[30vh]">
+            <div class="relative z-10 pt-[15vh] md:pt-[30vh] overflow-hidden">
 
-                <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">
+                <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]" data-aos="fade-right" data-aos-duration="1000">
                     {{ app()->getLocale() === 'en' ? $banner_image->title1_en : $banner_image->title1_km }}
                 </h1>
 
-                <p class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px]  px-4">
+                <p class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px]  px-4" data-aos="fade-left" data-aos-duration="1000">
                     {{ app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km }}
                 </p>
             </div>
@@ -24,16 +24,16 @@
     <section class="relative z-20 p-5 md:pt-1 lg:-mt-40">
         <div
             class="relative max-w-7xl mx-auto rounded-xl bg-gradient-to-r from-[#5897FF] to-[#1C0186]
-            grid grid-cols-1 md:grid-cols-2 items-center gap-5 p-4">
+            grid grid-cols-1 md:grid-cols-2 items-center gap-5 p-4 overflow-hidden">
 
             <!-- Left Box -->
-            <div class="w-full h-full">
+            <div class="w-full h-full" data-aos="fade-right" data-aos-duration="1000">
                 <img src="{{ asset('assets/career1.png') }}" class="w-full h-full rounded-xl object-cover"
                     alt="">
             </div>
 
             <!-- Right Box -->
-            <div class="w-full text-white pb-2">
+            <div class="w-full text-white pb-2" data-aos="fade-left" data-aos-duration="1000">
 
                 <p class="text-[22px] text-center md:text-[30px] lg:text-[45px] lg:pt-5 font-regular leading-tight">
                     {{ app()->getLocale() === 'en' ? 'Start Your Journey' : 'ចាប់ផ្តើមដំណើររបស់អ្នក' }}
