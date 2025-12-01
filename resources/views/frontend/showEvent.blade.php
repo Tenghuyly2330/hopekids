@@ -32,7 +32,7 @@
             {{ app()->getLocale() === 'en' ? $event->title_en : $event->title_km }}
         </h1>
 
-        <div class="text-[13px] md:text-[14px] line-clamp-3 pt-4" data-aos="fade-right" data-aos-duration="1000">
+        <div class="text-[13px] md:text-[14px] pt-4" data-aos="fade-right" data-aos-duration="1000">
             {!! app()->getLocale() === 'en' ? $event->content_en : $event->content_km !!}
         </div>
 

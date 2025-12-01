@@ -83,15 +83,15 @@
 
                     <div>
                         <label
-                            class="text-[12px]">{{ app()->getLocale() === 'en' ? 'Upload CV' : 'ដាក់ CV' }}</label>
+                            class="text-[12px]">{{ app()->getLocale() === 'en' ? 'Upload Cover Letter' : 'ដាក់ CV' }}</label>
                         <input type="file" name="file" class="p-3 bg-white text-black rounded-full w-full mt-1">
                     </div>
 
 
-                    <div>
+                    {{-- <div>
                         <label class="text-[12px]">{{ app()->getLocale() === 'en' ? 'Message' : 'សារ ' }}</label>
                         <input type="text" name="message" class="p-3 bg-white text-black rounded-full w-full mt-1">
-                    </div>
+                    </div> --}}
 
                     <button type="submit" class="mt-5 bg-[#C4D600] text-black py-4 rounded-full w-full text-[16px]">
                         {{ app()->getLocale() === 'en' ? 'SUBMIT' : 'ដាក់ស្នើ ' }}

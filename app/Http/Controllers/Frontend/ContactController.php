@@ -32,7 +32,7 @@ class ContactController extends Controller
             'lname'    => 'required|string',
             'email'    => 'required|email',
             'position' => 'required|string',
-            'message'  => 'required|string',
+            // 'message'  => 'required|string',
             'file'     => 'nullable|file|max:20000', // 20MB
         ]);
 
@@ -47,8 +47,8 @@ class ContactController extends Controller
                 "👤 *First Name:* {$data['fname']}\n" .
                 "👤 *Last Name:* {$data['lname']}\n" .
                 "📧 *Email:* {$data['email']}\n" .
-                "💼 *Position:* {$data['position']}\n" .
-                "💬 *Message:* {$data['message']}",
+                "💼 *Position:* {$data['position']}\n",
+                // "💬 *Message:* {$data['message']}",
             'parse_mode' => 'Markdown',
         ]);
 
