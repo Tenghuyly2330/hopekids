@@ -184,28 +184,36 @@
         <div id="counter-section"
             class="relative z-10 flex flex-col md:flex-col lg:flex-row justify-center items-center gap-6 md:gap-10 py-10 lg:py-20">
             <div class="flex flex-col items-center text-white">
+                <p class="text-[14px]">{{ app()->getLocale() === 'en' ? '' : 'ដំណើរការ​​' }}</p>
+
                 <h2 class="text-[50px] md:text-[70px] font-bold text-[#29A71A]">
                     <span id="count-years">0</span>
                 </h2>
                 <p class="text-xl">{{ app()->getLocale() === 'en' ? 'Years' : 'ឆ្នាំ' }}</p>
             </div>
             <div class="flex flex-col items-center text-white">
+                <p class="text-[14px]">{{ app()->getLocale() === 'en' ? '' : 'មាន' }}</p>
+
                 <h2 class="text-[50px] md:text-[70px] font-bold text-[#00AFD7]">
                     <span id="count-branches">0</span>
                 </h2>
                 <p class="text-xl">{{ app()->getLocale() === 'en' ? 'Branches' : 'សាខា' }}</p>
             </div>
             <div class="flex flex-col items-center text-white">
+                <p class="text-[14px]">{{ app()->getLocale() === 'en' ? '' : 'សិស្សចំនួន​' }}</p>
+
                 <h2 class="text-[50px] md:text-[70px] font-bold text-[#C3D500]">
                     <span id="count-students">0</span>
                 </h2>
-                <p class="text-xl">{{ app()->getLocale() === 'en' ? 'Students' : 'សិស្ស' }}</p>
+                <p class="text-xl">{{ app()->getLocale() === 'en' ? 'Students' : 'អ្នក' }}</p>
             </div>
             <div class="flex flex-col items-center text-white">
+                <p class="text-[14px]">{{ app()->getLocale() === 'en' ? '' : 'គ្រូបង្រៀន និងបុគ្គលិក' }}</p>
+
                 <h2 class="text-[50px] md:text-[70px] font-bold text-[#FE5900]">
                     <span id="count-staff">0</span>
                 </h2>
-                <p class="text-xl">{{ app()->getLocale() === 'en' ? 'Teachers & Staff' : 'គ្រូបង្រៀន និងបុគ្គលិក' }}</p>
+                <p class="text-xl">{{ app()->getLocale() === 'en' ? 'Teachers & Staff' : 'អ្នក' }}</p>
             </div>
         </div>
 

@@ -82,9 +82,28 @@
 
     <script>
         ClassicEditor
-            .create(document.querySelector('#content_en')).catch(console.error);
+            .create(document.querySelector('#content_en'), {
+                toolbar: [
+                    'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList',
+                    'undo', 'redo', 'code', 'codeBlock'
+                ],
+                removePlugins: ['Heading']
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
         ClassicEditor
-            .create(document.querySelector('#content_km')).catch(console.error);
+            .create(document.querySelector('#content_km'), {
+                toolbar: [
+                    'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList',
+                    'undo', 'redo', 'code', 'codeBlock'
+                ],
+                removePlugins: ['Heading']
+            })
+            .catch(error => {
+                console.error(error);
+            });
 
         const dropArea = document.getElementById('drop-area');
         const imageFile = document.getElementById('dropzone-file');

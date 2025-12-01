@@ -86,10 +86,29 @@
     </div>
 
     <script>
+       ClassicEditor
+            .create(document.querySelector('#content_en'), {
+                toolbar: [
+                    'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList',
+                    'undo', 'redo', 'code', 'codeBlock'
+                ],
+                removePlugins: ['Heading']
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
         ClassicEditor
-            .create(document.querySelector('#content_en')).catch(console.error);
-        ClassicEditor
-            .create(document.querySelector('#content_km')).catch(console.error);
+            .create(document.querySelector('#content_km'), {
+                toolbar: [
+                    'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList',
+                    'undo', 'redo', 'code', 'codeBlock'
+                ],
+                removePlugins: ['Heading']
+            })
+            .catch(error => {
+                console.error(error);
+            });
 
         function uploadImage(event) {
             const file = event.target.files[0];

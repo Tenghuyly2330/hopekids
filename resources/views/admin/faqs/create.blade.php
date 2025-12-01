@@ -18,8 +18,10 @@
                     </div>
                     <div>
                         <label for="answer_en" class="block text-sm font-medium text-[#000]">Answer (English)</label>
-                        <input type="text" name="answer_en" id="answer_en"
-                            class="mt-1 block w-full p-2 border rounded-md text-[#000] text-sm">
+                        {{-- <input type="text" name="answer_en" id="answer_en"
+                            class="mt-1 block w-full p-2 border rounded-md text-[#000] text-sm"> --}}
+                        <textarea name="answer_en" id="answer_en" rows="4"
+                            class="mt-1 block w-full p-2 border rounded-md text-black text-[12px]"></textarea>
                         <x-input-error class="mt-2" :messages="$errors->get('answer_en')" />
                     </div>
                 </div>
@@ -34,8 +36,10 @@
                     </div>
                     <div>
                         <label for="answer_km" class="block text-sm font-medium text-[#000]">Answer (Khmer)</label>
-                        <input type="text" name="answer_km" id="answer_km"
-                            class="mt-1 block w-full p-2 border rounded-md text-[#000] text-sm">
+                        {{-- <input type="text" name="answer_km" id="answer_km"
+                            class="mt-1 block w-full p-2 border rounded-md text-[#000] text-sm"> --}}
+                        <textarea name="answer_km" id="answer_km" rows="4"
+                            class="mt-1 block w-full p-2 border rounded-md text-black text-[12px]"></textarea>
                         <x-input-error class="mt-2" :messages="$errors->get('answer_km')" />
                     </div>
                 </div>

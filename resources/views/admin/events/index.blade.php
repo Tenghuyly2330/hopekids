@@ -5,7 +5,7 @@
 @section('content')
     <div class="">
 
-        <div class="my-4 px-2 md:px-4 text-end">
+        <div class="my-4 px-2 md:px-4">
             <a href="{{ route('event_backend.create') }}"
                 class="hover:!bg-[#4FC9EE] hover:!text-[#ffffff] text-[#4FC9EE] px-4 py-2 my-3 rounded-[5px] border-2 border-[#4FC9EE] text-[12px] sm:text-[14px]">
                 <span class="">Add new</span>
