@@ -18,12 +18,12 @@ class ContactController extends Controller
         $banner_image = Banner::where("id", "=", 8)->first();
         $programs = Program::get();
         $branches = Branch::get();
-        $fb = Social::where("id", "=" , 1)->first();
-        $telegram = Social::where("id", "=" , 2)->first();
-        $tiktok = Social::where("id", "=" , 3)->first();
-        $yt = Social::where("id", "=" , 4)->first();
+        $fb = Social::where("id", "=", 1)->first();
+        $telegram = Social::where("id", "=", 2)->first();
+        $tiktok = Social::where("id", "=", 3)->first();
+        $yt = Social::where("id", "=", 4)->first();
 
-        return view("frontend.contact", compact('banner_image', 'programs', 'branches', 'fb','telegram','tiktok','yt'));
+        return view("frontend.contact", compact('banner_image', 'programs', 'branches', 'fb', 'telegram', 'tiktok', 'yt'));
     }
     public function submit(Request $request)
     {
@@ -32,30 +32,29 @@ class ContactController extends Controller
             'lname'    => 'required|string',
             'email'    => 'required|email',
             'position' => 'required|string',
-            // 'message'  => 'required|string',
-            'file'     => 'nullable|file|max:20000', // 20MB
+            'cv_file'      => 'nullable|file|max:20000',
+            'cover_file'   => 'nullable|file|max:20000',
         ]);
 
         $botToken = config('services.telegram.bot_token');
         $chatId   = config('services.telegram.chat_id');
 
-        // 1. Send text
+        // 1. Send text message
         Http::post("https://api.telegram.org/bot{$botToken}/sendMessage", [
             'chat_id' => $chatId,
             'text' =>
-            "📝 *New Contact Form*\n\n" .
+            "📝 *New Job Application*\n\n" .
                 "👤 *First Name:* {$data['fname']}\n" .
                 "👤 *Last Name:* {$data['lname']}\n" .
                 "📧 *Email:* {$data['email']}\n" .
                 "💼 *Position:* {$data['position']}\n",
-                // "💬 *Message:* {$data['message']}",
             'parse_mode' => 'Markdown',
         ]);
 
-        // 2. Send file
-        if ($request->hasFile('file')) {
+        // 2. Send CV file
+        if ($request->hasFile('cv_file')) {
 
-            $file = $request->file('file');
+            $file = $request->file('cv_file');
 
             Http::attach(
                 'document',
@@ -66,8 +65,23 @@ class ContactController extends Controller
             ]);
         }
 
-        return back()->with('success', 'Your message has been sent successfully!');
+        // 3. Send Cover Letter file
+        if ($request->hasFile('cover_file')) {
+
+            $file = $request->file('cover_file');
+
+            Http::attach(
+                'document',
+                file_get_contents($file->getRealPath()),
+                $file->getClientOriginalName()
+            )->post("https://api.telegram.org/bot{$botToken}/sendDocument", [
+                'chat_id' => $chatId,
+            ]);
+        }
+
+        return back()->with('success', 'Your application has been sent successfully!');
     }
+
 
 
 

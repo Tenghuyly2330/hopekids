@@ -71,7 +71,7 @@
                     </div>
 
                     <div>
-                        <label class="text-[12px]">{{ app()->getLocale() === 'en' ? 'Position' : 'តំណែងកំពុងរើស' }}</label>
+                        <label class="text-[12px]">{{ app()->getLocale() === 'en' ? 'Position Applied' : 'តំណែងកំពុងរើស' }}</label>
                         <select class="p-3 bg-white text-black rounded-full w-full mt-1" name="position">
                             <option value="" disabled selected>
                                 {{ app()->getLocale() === 'en' ? 'Select a position' : 'ជ្រើសរើសមុខតំណែង' }}</option>
@@ -83,8 +83,14 @@
 
                     <div>
                         <label
-                            class="text-[12px]">{{ app()->getLocale() === 'en' ? 'Upload Cover Letter' : 'ដាក់ CV' }}</label>
-                        <input type="file" name="file" class="p-3 bg-white text-black rounded-full w-full mt-1">
+                            class="text-[12px]">{{ app()->getLocale() === 'en' ? 'Upload CV' : 'ដាក់ CV' }}</label>
+                        <input type="file" name="cv_file" class="p-3 bg-white text-black rounded-full w-full mt-1">
+                    </div>
+
+                    <div>
+                        <label
+                            class="text-[12px]">{{ app()->getLocale() === 'en' ? 'Upload Cover Letter' : 'ដាក់ Cover Letter' }}</label>
+                        <input type="file" name="cover_file" class="p-3 bg-white text-black rounded-full w-full mt-1">
                     </div>
 
 
