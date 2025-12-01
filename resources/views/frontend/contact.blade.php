@@ -71,7 +71,8 @@
                 </ul>
 
                 <!-- QR -->
-                <img src="{{ asset('assets/qr.png') }}" class="w-48 md:w-64 mt-6" alt="">
+                {{-- <img src="{{ asset('assets/qr.png') }}" class="w-48 md:w-64 mt-6" alt=""> --}}
+                <img src="{{ asset('assets/qr_telegram.png') }}" class="w-48 md:w-64 mt-6" alt="">
 
                 <h1 class="text-[#5796FF] text-[20px] md:text-[25px] font-light mt-3">
                     Hot Line
