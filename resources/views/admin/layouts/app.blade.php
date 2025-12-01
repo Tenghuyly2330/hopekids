@@ -113,13 +113,13 @@
                             </a>
                         </li>
 
-                        <li
+                        {{-- <li
                             class="nav-link {{ Request::is('certificates') ? 'bg-[#000] rounded-md !text-[#ffffff]' : '' }}">
                             <a href="{{ url('certificates') }}">
                                 <i class='bx bxl-vimeo icon'></i>
                                 <span class="text nav-text">Certificate</span>
                             </a>
-                        </li>
+                        </li> --}}
 
                         <li class="nav-link {{ Request::is('faq') ? 'bg-[#000] rounded-md !text-[#ffffff]' : '' }}">
                             <a href="{{ url('faq') }}">

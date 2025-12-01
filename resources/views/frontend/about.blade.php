@@ -123,7 +123,7 @@
     </section>
 
     {{-- license destop --}}
-    <section class="hidden md:block" id="school_license">
+    {{-- <section class="hidden md:block" id="school_license">
         <h1 class="text-[16px] md:text-[30px] text-gradient font-[700] text-center pt-5 md:pt-10">
             {{ app()->getLocale() === 'en' ? "Our Institutes' Licenses" : "អាជ្ងាបណ្ណរបស់ស្ថាប័នរបស់យើងខ្ញុំ" }}
         </h1>
@@ -139,10 +139,10 @@
                 @endforeach
             </div>
         </div>
-    </section>
+    </section> --}}
 
     {{-- license mobile --}}
-    <div id='registration_docs' class='md:hidden swiper-certificate py-10'>
+    {{-- <div id='registration_docs' class='md:hidden swiper-certificate py-10'>
         <h1 class="text-[16px] md:text-[30px] text-gradient font-[700] text-center pb-10">
             {{ app()->getLocale() === 'en' ? "Our Institutes' Licenses" : "Our Institutes' Licenses" }}</h1>
         <div class="swiper certificateSwiper" style="width: 80%; height: 300px; margin: auto;">
@@ -160,7 +160,7 @@
             </div>
             <div class="swiper-pagination"></div>
         </div>
-    </div>
+    </div> --}}
 
     {{-- banner --}}
     <section class="relative z-20 py-20 w-full mt-10">
