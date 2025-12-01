@@ -16,7 +16,7 @@ class ProfessionalController extends Controller
     public function index(){
 
         $teams = Team::get();
-        $messages = Message::first();
+        $messages = Message::get();
         $banner_image = Banner::where("id", "=", 4)->first();
         $programs = Program::get();
         $branches = Branch::get();

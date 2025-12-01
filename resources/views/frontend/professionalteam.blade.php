@@ -28,8 +28,8 @@
     </style>
 
     <section class="w-full h-[60vh] md:h-screen">
-        <img src="{{ asset($banner_image->image) }}"
-            class="absolute object-cover z-1 w-full h-[60vh] md:h-screen inset-0 " alt="">
+        <img src="{{ asset($banner_image->image) }}" class="absolute object-cover z-1 w-full h-[60vh] md:h-screen inset-0 "
+            alt="">
         <div>
             <div class="absolute h-[60vh] object-cover md:h-screen inset-0 z-10 bg-black/50"></div>
 
@@ -48,25 +48,30 @@
         <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]">
             {{ app()->getLocale() === 'en' ? 'Message from Our Founder' : 'សារពីស្ថាបនិករបស់យើង' }}</h1>
         <div class="mt-10">
-            <div class="flex justify-center flex-wrap gap-4 md:gap-30">
-                <div class="w-[230px] h-[230px] rounded-full overflow-hidden">
+            @foreach ($messages as $message)
+                <div class="flex justify-center flex-wrap gap-4 md:gap-30 @if ($message->id == 2) mt-10 md:mt-20 @endif">
                     <div class="w-[230px] h-[230px] rounded-full overflow-hidden">
-                        <img src="{{ asset($messages->image) }}" class="w-full h-full object-cover object-top"
-                            alt="">
+                        <div class="w-[230px] h-[230px] rounded-full overflow-hidden">
+                            <img src="{{ asset($message->image) }}" class="w-full h-full object-cover object-top"
+                                alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="px-4">
-                    <img src="{{ asset('assets/double_qout.png') }}" alt="">
-                    <div class="w-full md:w-[700px] text-[14px] md:text-[16px] mt-5 md:mt-10">
-                        {!! app()->getLocale() === 'en' ? $messages->content_en : $messages->content_km !!}
-                    </div>
+                    <div class="px-4">
+                        @if ($message->id == 1)
+                            <img src="{{ asset('assets/double_qout.png') }}" alt="">
+                        @endif
+                        <div class="w-full md:w-[700px] text-[14px] md:text-[16px] mt-5 md:mt-10">
+                            {!! app()->getLocale() === 'en' ? $message->content_en : $message->content_km !!}
+                        </div>
 
-                    <h1 class="text-[#1C0186] font-bold text-[16px] lg:text-[20px] mt-5">
-                        {{ app()->getLocale() === 'en' ? $messages->name_en : $messages->name_km }}</h1>
-                    <p class="text-[#5796FF] text-[14px] md:text-[16px] font-[500] italic">
-                        {{ app()->getLocale() === 'en' ? $messages->position_en : $messages->position_km }}</p>
+                        <h1 class="text-[#1C0186] font-bold text-[16px] lg:text-[20px] mt-5">
+                            {{ app()->getLocale() === 'en' ? $message->name_en : $message->name_km }}</h1>
+                        <p class="text-[#5796FF] text-[14px] md:text-[16px] font-[500] italic">
+                            {{ app()->getLocale() === 'en' ? $message->position_en : $message->position_km }}</p>
+                    </div>
                 </div>
-            </div>
+            @endforeach
+
         </div>
     </section>
 

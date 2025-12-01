@@ -5,12 +5,12 @@
 @endsection
 
 @section('content')
-    {{-- <div class="my-2 px-2 md:px-4 flex items-center justify-between">
+    <div class="my-2 px-2 md:px-4 flex items-center justify-between">
         <a href="{{ route('message.create') }}"
             class="hover:!bg-[#4FC9EE] hover:!text-[#ffffff] text-[#4FC9EE] px-4 py-2 my-3 rounded-[5px] border-2 border-[#4FC9EE] text-[12px] sm:text-[14px]">
             <span class="">Add new</span>
         </a>
-    </div> --}}
+    </div>
 
     @component('admin.components.alert')
     @endcomponent
@@ -50,7 +50,7 @@
                                         </svg>
                                     </a>
 
-                                    {{-- <a href="#" title="Delete"
+                                    <a href="#" title="Delete"
                                         onclick="event.preventDefault(); deleteRecord('{{ route('message.delete', $message->id) }}')">
                                         <svg class="w-6 h-6 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none"
                                             viewBox="0 0 24 24">
@@ -58,7 +58,7 @@
                                                 stroke-width="1.5"
                                                 d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z" />
                                         </svg>
-                                    </a> --}}
+                                    </a>
                                 </div>
                             </td>
                         </tr>
