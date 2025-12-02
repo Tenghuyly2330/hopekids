@@ -284,7 +284,7 @@
                             class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Vision' : 'ចក្ខុវិស័យ' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/about#core_values"
-                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Core Values' : 'ចក្ខុវិស័យ' }}</a>
+                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Core Values' : 'គុណតម្លៃស្នូល' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/about#our_goals"
                             class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Goals' : 'គោលដៅរបស់យើងខ្ញុំ' }}</a>
