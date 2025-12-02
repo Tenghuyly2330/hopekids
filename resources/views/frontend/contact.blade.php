@@ -1,12 +1,12 @@
 @extends('layouts.master')
 
 @section('content')
-    <section class="w-full h-[60vh] md:h-screen">
-        <div class="absolute w-full h-[60vh] md:h-screen inset-0 z-10 bg-black/50"></div>
-        <img src="{{ asset($banner_image->image) }}" class="absolute object-cover z-1 w-full h-[60vh] md:h-screen inset-0 "
+    <section class="w-full h-[60vh] lg:h-screen">
+        <div class="absolute w-full h-[60vh] lg:h-screen inset-0 z-10 bg-black/50"></div>
+        <img src="{{ asset($banner_image->image) }}" class="absolute object-cover z-1 w-full h-[60vh] lg:h-screen inset-0 "
             alt="">
         <div>
-            <div class="relative z-10 pt-[15vh] md:pt-[30vh] overflow-hidden">
+            <div class="relative z-10 pt-[15vh] lg:pt-[30vh] overflow-hidden">
                 <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]" data-aos="fade-right" data-aos-duration="1000">
                     {{ app()->getLocale() === 'en' ? $banner_image->title1_en : $banner_image->title1_km }}</h1>
                 <p class="text-left max-w-[700px] mx-auto text-white text-[15px] lg:text-[16px] px-4" data-aos="fade-left" data-aos-duration="1000">
