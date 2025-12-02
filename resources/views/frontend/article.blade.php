@@ -31,7 +31,7 @@
                             <h1 class="text-gradient text-[16px] md:text-[20px] font-black mt-4">
                                 {{ app()->getLocale() === 'en' ? $item->title_en : $item->title_km }}
                             </h1>
-                            <div class="text-[13px] md:text-[14px] line-clamp-3">
+                            <div class="text-[14px] md:text-[16px] line-clamp-3">
                                 {!! app()->getLocale() === 'en' ? $item->content_en : $item->content_km !!}
                             </div>
                             <a href="{{ route('articles.show', $item->slug) }}"

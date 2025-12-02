@@ -249,17 +249,17 @@
                 <ul
                     class="absolute left-1/2 transform -translate-x-1/2 hidden mt-6 py-4 w-44 bg-[#FFFFFF] shadow-lg rounded-lg {{ Route::is('home') ? '' : 'group-hover:block' }} z-50">
                     <li class="hover:bg-[#5897FF]"><a href="/#welcome"
-                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Welcome to HopeKids' : 'សូមស្វាគមន៍មកកាន់ ក្ដីសង្ឃឹមកុមារ' }}</a>
+                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Welcome to HopeKids' : 'សូមស្វាគមន៍មកកាន់ សាលារៀនអប់រំពិសេសក្ដីសង្ឃឹមកុមារ' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/#program"
                             class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Programs' : 'កម្មវិធីសិក្សា' }}</a>
                     </li>
 
                     <li class="hover:bg-[#5897FF]"><a href="/#school_facilities"
-                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'School Facilities' : 'សម្ភារៈសិក្សា' }}</a>
+                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'School Facilities' : 'បរិវេណសាលា​' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/#our_branch"
-                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Branch' : 'សាខាយើងខ្ញុំ' }}</a>
+                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Branches' : 'សាខាយើងខ្ញុំ' }}</a>
                     </li>
                     {{-- <li class="hover:bg-[#5897FF]"><a href="/#parent"
                             class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Parents’ Testimonials' : 'Parents’ Testimonials' }}</a>
@@ -287,7 +287,7 @@
                             class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Core Values' : 'ចក្ខុវិស័យ' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/about#our_goals"
-                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Goals' : 'គោលដៅរបស់យើង' }}</a>
+                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Goals' : 'គោលដៅរបស់យើងខ្ញុំ' }}</a>
                     </li>
                     {{-- <li class="hover:bg-[#5897FF]"><a href="/about#school_license"
                             class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'School License' : 'School License' }}</a>

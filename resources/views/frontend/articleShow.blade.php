@@ -30,7 +30,7 @@
                 <h1 class="text-[#1C0186] text-[32px] lg:text-[38px] font-black leading-tight">
                     {{ app()->getLocale() === 'en' ? $article->title_en : $article->title_km }}
                 </h1>
-                <div class="text-[13px] md:text-[14px] prose">
+                <div class="text-[14px] md:text-[16px] prose">
                     {!! app()->getLocale() === 'en' ? $article->content_en : $article->content_km !!}
                 </div>
             </div>

@@ -9,7 +9,7 @@
             <div class="relative z-10 pt-[15vh] md:pt-[30vh] overflow-hidden">
                 <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]" data-aos="fade-right" data-aos-duration="1000">
                     {{ app()->getLocale() === 'en' ? $banner_image->title1_en : $banner_image->title1_km }}</h1>
-                <p class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px]" data-aos="fade-left" data-aos-duration="1000">
+                <p class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px] px-4" data-aos="fade-left" data-aos-duration="1000">
                     {{ app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km }}</p>
 
             </div>
@@ -53,7 +53,7 @@
                         <h2 style="color: {{ $colors[$index % count($colors)] }}" class="text-[20px] md:text-[30px]">
                             {{ app()->getLocale() === 'en' ? $item->title_en : $item->title_km }}
                         </h2>
-                        <div class="text-[12px] lg:text-[15px]">
+                        <div class="text-[15px] lg:text-[16px]">
                             {!! app()->getLocale() === 'en' ? $item->content_en : $item->content_km !!}
                         </div>
                     </div>

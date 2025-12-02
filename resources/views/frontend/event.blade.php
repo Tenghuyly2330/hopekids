@@ -31,11 +31,11 @@
                 </div>
 
                 <div class="{{ $isOdd ? 'md:order-2' : 'md:order-1' }}" data-aos="fade-left" data-aos-duration="1000">
-                    <h1 class="text-gradient text-xl font-semibold">
+                    <h1 class="text-gradient text-[16px] md:text-[20px] font-semibold">
                         {{ app()->getLocale() === 'en' ? $item->title_en : $item->title_km }}
                     </h1>
 
-                    <div class="text-[13px] md:text-[14px] line-clamp-3 pt-4">
+                    <div class="text-[14px] md:text-[16px] line-clamp-3 pt-4">
                         {!! app()->getLocale() === 'en' ? $item->content_en : $item->content_km !!}
                     </div>
 

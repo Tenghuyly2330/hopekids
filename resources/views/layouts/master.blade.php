@@ -272,8 +272,6 @@
                             alt="Logo" />
                         <div>
                             <h2 class="text-2xl md:text-3xl font-bold leading-tight kantumruy">ក្តីសង្ឃឹមកុមារ</h2>
-                            <h2 class="text-xl md:text-2xl font-black leading-tight">
-                                {{ app()->getLocale() === 'en' ? 'HOPE KIDS' : 'ហូបឃីដ' }}</h2>
                             <h3 class="text-sm md:text-lg font-semibold">
                                 {{ app()->getLocale() === 'en' ? 'Special Education School' : 'សាលារៀនអប់រំពិសេស' }}
                             </h3>

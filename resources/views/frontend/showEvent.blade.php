@@ -28,11 +28,11 @@
             @endforeach
         </div>
 
-        <h1 class="text-xl font-semibold pt-4" data-aos="fade-right" data-aos-duration="1000">
+        <h1 class="text-[16px] md:text-[20px] font-semibold pt-4" data-aos="fade-right" data-aos-duration="1000">
             {{ app()->getLocale() === 'en' ? $event->title_en : $event->title_km }}
         </h1>
 
-        <div class="text-[13px] md:text-[14px] pt-4" data-aos="fade-right" data-aos-duration="1000">
+        <div class="text-[14px] md:text-[16px] pt-4" data-aos="fade-right" data-aos-duration="1000">
             {!! app()->getLocale() === 'en' ? $event->content_en : $event->content_km !!}
         </div>
 
