@@ -98,9 +98,9 @@
 
                         </div>
                     </div>
-                    <div class="col-span-1 lg:col-span-2 pt-4 md:pt-0" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="col-span-1 lg:col-span-2 pt-6 lg:pt-0" data-aos="fade-left" data-aos-duration="1000">
                         <div>
-                            <h1 class="text-[#1C0186] font-bold text-[16px] lg:text-[20px]">
+                            <h1 class="text-[#1C0186] font-bold text-[18px] lg:text-[20px]">
                                 {{ app()->getLocale() === 'en' ? $item->name_en : $item->name_km }}</h1>
                             <h1 class="text-[#5796FF] text-[14px] md:text-[16px] font-[500] italic">
                                 {{ app()->getLocale() === 'en' ? $item->position_en : $item->position_km }}</h1>
