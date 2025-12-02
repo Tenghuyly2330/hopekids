@@ -28,5 +28,5 @@ return [
     "school_facilities_title" => "A Safe and Nurturing Learning Environment",
     "school_facilities_content" => "Hope Kids is equipped with sensory rooms, therapy spaces, learning classrooms, and play areas designed to support children’s development. Each facility is created for safety, engagement, and comfort.",
 
-    "banner_content" => "At Hope Kids Special Education School, we offer Holistic services for children with autism, Down syndrome, speech and language delay,intellectual disabilities, learning difficulties and cerebral palsy",
+    "banner_content" => "At Hope Kids Special Education School, we offer holistic services for children with autism, Down syndrome, speech and language delay,intellectual disabilities, learning difficulties and cerebral palsy",
 ];
