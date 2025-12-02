@@ -53,7 +53,7 @@
                         <h2 style="color: {{ $colors[$index % count($colors)] }}" class="text-[20px] md:text-[30px]">
                             {{ app()->getLocale() === 'en' ? $item->title_en : $item->title_km }}
                         </h2>
-                        <div class="text-[15px] lg:text-[16px]">
+                        <div class="text-[16px] lg:text-[18px]">
                             {!! app()->getLocale() === 'en' ? $item->content_en : $item->content_km !!}
                         </div>
                     </div>

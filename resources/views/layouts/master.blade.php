@@ -217,7 +217,13 @@
     @php
         $locale = app()->getLocale();
     @endphp
-    @include('components.navbar', ['programs' => $programs, 'fb' => $fb, 'telegram' => $telegram, 'tiktok' => $tiktok, 'yt' => $yt])
+    @include('components.navbar', [
+        'programs' => $programs,
+        'fb' => $fb,
+        'telegram' => $telegram,
+        'tiktok' => $tiktok,
+        'yt' => $yt,
+    ])
 
     <main>
         @yield('content')
@@ -229,10 +235,12 @@
 
     {{-- location --}}
     <div class="mt-10 px-4 overflow-hidden" id="find">
-        <h1 class="text-gradient text-[25px] md:text-[30px] font-[700] text-center" data-aos="fade-right" data-aos-duration="800">
+        <h1 class="text-gradient text-[25px] md:text-[30px] font-[700] text-center" data-aos="fade-right"
+            data-aos-duration="800">
             {{ app()->getLocale() === 'en' ? 'Find Us!' : 'ស្វែងរកសាខាដែលនៅជិតលោកអ្នក' }}</h1>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-10 overflow-hidden" data-aos="fade-up" data-aos-duration="800">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-10 overflow-hidden" data-aos="fade-up"
+            data-aos-duration="800">
 
             @foreach ($branches as $item)
                 <div class="flex flex-col gap-3">
@@ -249,10 +257,8 @@
                     <img src="{{ asset($item->image) }}" alt=""
                         class="w-full h-[200px] md:h-[150px] object-cover">
                     <div class="w-full h-[200px] md:h-[120px]">
-                        <iframe
-                            src="{{ $item->url_map }}"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
+                        <iframe src="{{ $item->url_map }}" width="100%" height="100%" style="border:0;"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
 
                     </div>
@@ -270,11 +276,26 @@
                     <div class="flex items-center gap-5">
                         <img src="{{ asset('assets/images/logo_new.png') }}" class="w-20 h-20 md:w-24 md:h-24"
                             alt="Logo" />
-                        <div>
-                            <h2 class="text-2xl md:text-3xl font-bold leading-tight kantumruy">ក្តីសង្ឃឹមកុមារ</h2>
+                        {{-- <div>
+                            <h2 class="text-2xl md:text-3xl font-bold leading-tight kantumruy">{{ app()->getLocale() === 'en' ? 'សាលារៀនអប់រំពិសេស' : 'Hope ' }}</h2>
                             <h3 class="text-sm md:text-lg font-semibold">
-                                {{ app()->getLocale() === 'en' ? 'Special Education School' : 'សាលារៀនអប់រំពិសេស' }}
+                                {{ app()->getLocale() === 'en' ? 'Special Education School' : 'ក្តីសង្ឃឹមកុមារ' }}
                             </h3>
+                        </div> --}}
+                        <div class="flex items-center justify-center" data-aos="fade-up" data-aos-duration="800">
+                            {!! app()->getLocale() === 'en'
+                                ? '<div class="flex flex-col">
+                                <h2 class="text-2xl md:text-3xl font-bold leading-tight">Hope Kids</h2>
+                                    <h3 class="text-sm md:text-lg font-semibold">
+                                        Special Education School
+                                    </h3>
+                                    </div>'
+                                : '<div class="flex flex-col">
+                                    <h3 class="text-sm md:text-lg font-semibold">
+                                        សាលារៀនអប់រំពិសេស
+                                    </h3>
+                                    <h2 class="text-2xl md:text-3xl font-bold leading-tight">ក្ដីសង្ឃឹមកុមារ</h2>
+                                </div>' !!}
                         </div>
                     </div>
 
@@ -465,6 +486,7 @@
     });
 </script>
 <script>
-  AOS.init();
+    AOS.init();
 </script>
+
 </html>

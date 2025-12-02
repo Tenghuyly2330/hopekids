@@ -49,7 +49,7 @@
     <section class="mt-5 md:mt-10">
         <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]" data-aos="fade-right"
             data-aos-duration="1000">
-            {{ app()->getLocale() === 'en' ? 'Message from Our Founder' : 'សារពីស្ថាបនិករបស់យើងខ្ញុំ' }}</h1>
+            {{ app()->getLocale() === 'en' ? 'Message from Our Founder' : 'សារពីស្ថាបនិក' }}</h1>
         <div class="mt-10">
             @foreach ($messages as $message)
                 <div class="flex justify-center flex-wrap gap-4 md:gap-30 overflow-hidden @if ($message->id !== 1) mt-10 md:mt-20 @endif">
@@ -86,7 +86,7 @@
         <div class="pt-10 pb-20 max-w-7xl mx-auto px-4">
             <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700] pb-10" data-aos="fade-right"
                 data-aos-duration="1000">
-                {{ app()->getLocale() === 'en' ? 'Our Professional Team' : 'ក្រុមអ្នកជំនាញរបស់យើង' }}</h1>
+                {{ app()->getLocale() === 'en' ? 'Our Professional Team' : 'ក្រុមអ្នកជំនាញ' }}</h1>
 
             @foreach ($teams as $item)
                 <div class="grid grid-cols-1 lg:grid-cols-3 items-start mt-10 overflow-hidden">
