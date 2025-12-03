@@ -27,7 +27,7 @@
 
         <div class="flex flex-col lg:flex-row gap-10" data-aos="fade-right" data-aos-duration="1000">
             <div class="w-full lg:w-full mt-10">
-                <h1 class="text-[#1C0186] text-[25px] lg:text-[30px] font-black leading-tight">
+                <h1 class="text-[#1C0186] text-[32px] lg:text-[38px] font-black leading-tight">
                     {{ app()->getLocale() === 'en' ? $article->title_en : $article->title_km }}
                 </h1>
                 <div class="text-[14px] md:text-[16px] prose">
