@@ -245,9 +245,9 @@
         <ul class="flex items-center bg-[#ffffff] space-x-1 px-3 xl:px-10 py-4 rounded-full">
             <li class="relative group">
                 <a href="{{ route('home') }}"
-                    class="px-5 xl:px-7 py-4 text-[16px] xl:text-[19px] nav_link {{ Route::is('home') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : 'py-8' }}">{{ app()->getLocale() === 'en' ? 'Home' : 'ទំព័រដើម​' }}</a>
+                    class="px-5 xl:px-7 py-4 text-[16px] xl:text-[19px] nav_link {{ Route::is('home') ? 'px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : 'py-8' }}">{{ app()->getLocale() === 'en' ? 'Home' : 'ទំព័រដើម​' }}</a>
                 <ul
-                    class="absolute left-1/2 transform -translate-x-1/2 hidden mt-6 py-4 w-44 bg-[#FFFFFF] shadow-lg rounded-lg {{ Route::is('home') ? '' : 'group-hover:block' }} z-50">
+                    class="absolute left-1/2 transform -translate-x-1/2 hidden mt-6 py-4 w-44 bg-[#FFFFFF] shadow-lg rounded-lg group-hover:block z-50">
                     <li class="hover:bg-[#5897FF]"><a href="/#welcome"
                             class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Welcome to HopeKids' : 'សូមស្វាគមន៍មកកាន់ សាលារៀនអប់រំពិសេសក្ដីសង្ឃឹមកុមារ' }}</a>
                     </li>
@@ -261,22 +261,22 @@
                     <li class="hover:bg-[#5897FF]"><a href="/#our_branch"
                             class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Branches' : 'សាខាយើងខ្ញុំ' }}</a>
                     </li>
-                    {{-- <li class="hover:bg-[#5897FF]"><a href="/#parent"
-                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Parents’ Testimonials' : 'Parents’ Testimonials' }}</a>
-                    </li> --}}
-                    {{-- <li class="hover:bg-[#5897FF]"><a href="/#faq"
-                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'FAQ' : 'FAQ' }}</a>
-                    </li> --}}
-                    {{-- <li class="hover:bg-[#5897FF]"><a href="/#contact"
-                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Schedule a tour' : 'Schedule a tour' }}</a>
-                    </li> --}}
+                    <li class="hover:bg-[#5897FF]"><a href="/#parent"
+                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Parents’ Testimonials' : 'សក្ខីកម្មរបស់អាណាព្យាបាល' }}</a>
+                    </li>
+                    <li class="hover:bg-[#5897FF]"><a href="/#faq"
+                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'FAQ' : 'សំណួរញឹកញាប់ដែលអាណាព្យាបាលតែងតែសួរ' }}</a>
+                    </li>
+                    <li class="hover:bg-[#5897FF]"><a href="/#contact"
+                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Contact Form' : 'ទម្រង់បែបបទបំពេញពត៌មាន' }}</a>
+                    </li>
                 </ul>
             </li>
             <li class="relative group">
                 <a href="{{ route('about') }}"
                     class="px-5 xl:px-7 py-4 text-[16px] xl:text-[19px] nav_link {{ Route::is('about') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : 'py-8' }}">{{ app()->getLocale() === 'en' ? 'About Us' : 'អំពីយើងខ្ញុំ' }}</a>
                 <ul
-                    class="absolute left-1/2 transform -translate-x-1/2 hidden mt-6 py-2 w-44 bg-[#FFFFFF] shadow-lg rounded-lg {{ Route::is('about') ? '' : 'group-hover:block' }} z-50">
+                    class="absolute left-1/2 transform -translate-x-1/2 hidden mt-6 py-2 w-44 bg-[#FFFFFF] shadow-lg rounded-lg group-hover:block z-50">
                     <li class="hover:bg-[#5897FF]"><a href="/about#mission"
                             class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Mission' : 'បេសកកម្ម' }}</a>
                     </li>
@@ -298,7 +298,7 @@
                 <a href="{{ route('ourprogram') }}"
                     class="px-5 xl:px-7 py-4 text-[16px] xl:text-[19px] nav_link {{ Route::is('ourprogram') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : 'py-8' }}">{{ app()->getLocale() === 'en' ? 'Our Programs' : 'កម្មវិធីសិក្សា' }}</a>
                 <ul
-                    class="absolute left-1/2 transform -translate-x-1/2 hidden mt-6 py-2 w-64 bg-[#FFFFFF] shadow-lg rounded-lg {{ Route::is('ourprogram') ? '' : 'group-hover:block' }} z-50">
+                    class="absolute left-1/2 transform -translate-x-1/2 hidden mt-6 py-2 w-64 bg-[#FFFFFF] shadow-lg rounded-lg group-hover:block z-50">
                     @foreach ($programs as $item)
                         <li class="hover:bg-[#5897FF]"><a href="{{ url('/ourprogram/#' . $item->number_en) }}"
                                 class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? $item->title_en : $item->title_km }}</a>

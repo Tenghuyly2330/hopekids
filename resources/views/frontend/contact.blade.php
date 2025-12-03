@@ -2,12 +2,12 @@
 
 @section('content')
     <section class="w-full h-[60vh] lg:h-screen">
-        <div class="absolute w-full h-[60vh] lg:h-screen inset-0 z-10 bg-black/50"></div>
+        <div class="absolute w-full h-[60vh] lg:h-screen inset-0 z-10 bg-black/70"></div>
         <img src="{{ asset($banner_image->image) }}" class="absolute object-cover z-1 w-full h-[60vh] lg:h-screen inset-0 "
             alt="">
         <div>
             <div class="relative z-10 pt-[15vh] lg:pt-[30vh] overflow-hidden">
-                <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]" data-aos="fade-right" data-aos-duration="1000">
+                <h1 class="text-[25px] md:text-[50px] text-center text-[#5897FF] font-[700]" data-aos="fade-right" data-aos-duration="1000">
                     {{ app()->getLocale() === 'en' ? $banner_image->title1_en : $banner_image->title1_km }}</h1>
                 <p class="text-left max-w-[700px] mx-auto text-white text-[15px] lg:text-[16px] px-4" data-aos="fade-left" data-aos-duration="1000">
                     {{ app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km }}</p>
@@ -96,7 +96,7 @@
                     hopekids.info@gmail.com</p>
 
                 <p class="text-sm md:text-base font-light mt-4">
-                    {{ app()->getLocale() === 'en' ? 'Operating Hours: Monday – Friday | 8:00 AM – 6:00 PM' : 'ម៉ោងធ្វើការ៖ ច័ន្ទ – សុក្រ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
+                    {{ app()->getLocale() === 'en' ? 'Operating Hours: Monday – Sunday | 8:00 AM – 6:00 PM' : 'ម៉ោងធ្វើការ៖ ច័ន្ទ – អាទិត្យ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
                 </p>
             </div>
 

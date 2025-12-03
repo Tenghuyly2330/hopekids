@@ -7,7 +7,8 @@
             alt="">
         <div class="absolute object-cover h-[60vh] lg:h-screen inset-0 z-10 bg-black/50"></div>
 
-        <div class="relative z-[40] w-full flex flex-col items-center lg:items-end text-left pt-[5vh] lg:pt-[30vh] overflow-hidden" >
+        <div
+            class="relative z-[40] w-full flex flex-col items-center lg:items-end text-left pt-[5vh] lg:pt-[30vh] overflow-hidden">
 
             <!-- Text container with blur background on the RIGHT -->
             <div class="relative w-fit text-center lg:text-left" data-aos="fade-left" data-aos-duration="800">
@@ -21,20 +22,34 @@
 
                 <!-- TEXT -->
                 <div class="relative z-10 text-center lg:text-left w-full md:w-[500px]">
-                    <h1 class="text-[20px] md:text-[40px] font-regular text-white text-gradient">
-                        {{ app()->getLocale() === 'en' ? $banner_image->title1_en : $banner_image->title1_km }} <br>
-                        <span
-                            class="text-[40px] md:text-[80px] font-[700] leading-none">{{ app()->getLocale() === 'en' ? $banner_image->title2_en : $banner_image->title2_km }}</span>
-                    </h1>
+                    @if (app()->getLocale() === 'en')
+                        <h1 class="text-[20px] md:text-[40px] font-regular text-white text-gradient">
+                            {{ $banner_image->title1_en }} <br>
+                            <span class="text-[40px] md:text-[80px] font-[700] leading-none">
+                                {{ $banner_image->title2_en }}
+                            </span>
+                        </h1>
 
-                    <p class="text-[#1C0186] font-bold text-[16px] md:text-[25px] pt-2">
-                        {{ app()->getLocale() === 'en' ? $banner_image->title3_en : $banner_image->title3_km }}
-                    </p>
+                        <p class="text-[#1C0186] font-bold text-[16px] md:text-[25px] pt-2">
+                            {{ $banner_image->title3_en }}
+                        </p>
+                    @else
+                        <h1 class="text-[20px] md:text-[40px] font-regular text-white ">
+                            <span class="text-gradient">{{ $banner_image->title1_km }}</span> <br>
+                            <p class="text-[#1C0186] font-bold text-[16px] md:text-[25px] pt-2">
+                                {{ $banner_image->title3_km }}
+                            </p>
+                            <span class="text-[40px] md:text-[80px] font-[700] leading-none text-gradient">
+                                {{ $banner_image->title2_km }}
+                            </span>
+                        </h1>
+                    @endif
                 </div>
             </div>
 
             <!-- DESCRIPTION -->
-            <div class="relative z-10 text-center lg:text-left mt-2 w-full md:w-[500px] px-3 md:px-0" data-aos="fade-left" data-aos-duration="300">
+            <div class="relative z-10 text-center lg:text-left mt-2 w-full md:w-[500px] px-3 md:px-0" data-aos="fade-left"
+                data-aos-duration="300">
                 <p class="text-[#fff] text-[12px] lg:text-[16px] font-medium">
                     {{ app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km }}
                 </p>
@@ -60,13 +75,15 @@
     </section>
 
     {{-- reading --}}
-    <section class="flex flex-col justify-center items-center text-center py-5 md:py-10 px-4 overflow-hidden" id="hopekid">
+    <section class="flex flex-col justify-center items-center text-center py-5 md:py-10 px-4 overflow-hidden"
+        id="hopekid">
         <h1 class="text-[25px] md:text-[30px] text-gradient font-[700]" data-aos="fade-left" data-aos-duration="800">
             {{ app()->getLocale() === 'en' ? 'About Us' : 'អំពីយើងខ្ញុំ' }}</h1>
         <p class="text-[16px] md:text-[20px] font-medium text-gradient" data-aos="fade-right" data-aos-duration="800">
             {{ app()->getLocale() === 'en' ? 'HOPE KIDS Special Education School' : 'សាលាអប់រំពិសេសក្តីសង្ឃឹមកុមារ' }}
         </p>
-        <p class="mt-3 text-[14px] md:text-[16px] text-left w-full md:w-[700px]" data-aos="fade-left" data-aos-duration="800">
+        <p class="mt-3 text-[14px] md:text-[16px] text-left w-full md:w-[700px]" data-aos="fade-left"
+            data-aos-duration="800">
             {{ app()->getLocale() === 'en' ? 'Hope Kids was founded in Cambodia to make quality special education accessible to every child regardless of financial or geographic limitations. We serve families from all backgrounds and provinces, ensuring every child has the opportunity to learn, grow, and thrive.' : 'សាលាអប់រំពិសេសក្តីសង្ឃឹមកុមារ ត្រូវបានបង្កើតឡើងនៅប្រទេសកម្ពុជាដើម្បីផ្តល់ឱកាសឱ្យកុមារគ្រប់រូប ទទួលបានការអប់រំពិសេសប្រកបដោយគុណភាព មិនថាកុមារមកពីក្រុមគ្រួសារមានកម្រិតហិរញ្ញវត្ថុទាប ឬទីតាំងភូមិសាស្ត្រឆ្ងាយយ៉ាងណាក៏ដោយ។ យើងខ្ញុំបម្រើសេវាកម្មជូនដល់ក្រុមគ្រួសារពីគ្រប់ជាន់ថ្នាក់ និងគ្រប់ខេត្ត/រាជធានី ដើម្បីធានាថា កុមារគ្រប់រូបទទួលបានឱកាសរៀនសូត្រ អភិវឌ្ឍ និងរីកចម្រើន។' }}
         </p>
         <a href="{{ URL('/about') }}" data-aos="fade-right" data-aos-duration="800"
@@ -78,7 +95,8 @@
 
     {{-- our program --}}
     <section id="program" class="w-full px-2 max-w-7xl mx-auto py-5 md:py-10" id="program">
-        <h1 class="text-center text-[25px] md:text-[30px] text-gradient font-[700] mb-5" data-aos="fade-right" data-aos-duration="800">
+        <h1 class="text-center text-[25px] md:text-[30px] text-gradient font-[700] mb-5" data-aos="fade-right"
+            data-aos-duration="800">
             {{ app()->getLocale() === 'en' ? 'Our Programs' : 'កម្មវិធីសិក្សា' }}
         </h1>
 
@@ -137,12 +155,15 @@
         <div class="absolute inset-0 bg-black/60 z-10 w-full h-full"></div>
         <!-- Content -->
         <div class="relative z-10 flex flex-col items-center justify-center overflow-hidden">
-            <h1 class="text-center text-[25px] md:text-[40px] font-light text-white" data-aos="fade-right" data-aos-duration="800">
+            <h1 class="text-center text-[25px] md:text-[40px] font-light text-white" data-aos="fade-right"
+                data-aos-duration="800">
                 {{ __('message.school_facilities') }}
             </h1>
-            <p class="text-center text-[15px] md:text-[20px] font-bold text-white" data-aos="fade-left" data-aos-duration="800">
+            <p class="text-center text-[15px] md:text-[20px] font-bold text-white" data-aos="fade-left"
+                data-aos-duration="800">
                 {{ __('message.school_facilities_title') }}</p>
-            <p class="max-w-[700px] mx-auto pz-4 text-[10px] md:text-[15px] font-light text-white text-center " data-aos="fade-right" data-aos-duration="800">
+            <p class="max-w-[700px] mx-auto pz-4 text-[10px] md:text-[15px] font-light text-white text-center "
+                data-aos="fade-right" data-aos-duration="800">
                 {{ __('message.school_facilities_content') }}
             </p>
         </div>
@@ -163,14 +184,15 @@
     <div id="our_branch" class="relative my-10 max-w-7xl mx-auto flex flex-col items-center justify-center px-4"
         id="branch">
 
-        <h1 data-aos="fade-right" data-aos-duration="800" class="text-center text-[25px] md:text-[30px] text-gradient font-[700]">
+        <h1 data-aos="fade-right" data-aos-duration="800"
+            class="text-center text-[25px] md:text-[30px] text-gradient font-[700]">
             {{ app()->getLocale() === 'en' ? 'Our Branches' : 'សាខាយើងខ្ញុំ' }}</h1>
 
 
         <div class="flex items-center justify-center" data-aos="fade-up" data-aos-duration="800">
             {!! app()->getLocale() === 'en'
-            ? '<img src="' . asset('assets/images/map1.png') . '" class="w-full md:w-2/3 h-full" alt="">'
-            : '<img src="' . asset('assets/images/map.png') . '" class="w-full md:w-2/3 h-full" alt="">' !!}
+                ? '<img src="' . asset('assets/images/map1.png') . '" class="w-full md:w-2/3 h-full" alt="">'
+                : '<img src="' . asset('assets/images/map.png') . '" class="w-full md:w-2/3 h-full" alt="">' !!}
         </div>
 
     </div>
@@ -226,11 +248,13 @@
     <div id="parent" class="bg-[#F8F8F8]">
 
         <div class="pt-10">
-            <h1 class="text-[25px] md:text-[30px] text-gradient font-[700] text-center" data-aos="fade-right" data-aos-duration="800">
+            <h1 class="text-[25px] md:text-[30px] text-gradient font-[700] text-center" data-aos="fade-right"
+                data-aos-duration="800">
                 {{ app()->getLocale() === 'en' ? 'Parents’ Testimonials' : 'សក្ខីកម្មរបស់អាណាព្យាបាល' }}
             </h1>
 
-            <div class="mt-5 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 items-center gap-10 px-4" data-aos="fade-up" data-aos-duration="800">
+            <div class="mt-5 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 items-center gap-10 px-4"
+                data-aos="fade-up" data-aos-duration="800">
 
                 @foreach ($parents as $item)
                     <div
@@ -244,7 +268,7 @@
                             </iframe>
                         </div>
 
-                        <div class="text-[14px] md:text-[15px] test-gray-600 p-4">
+                        <div class="text-[12px] xl:text-[14px] test-gray-600 p-4 min-h-[240px]">
                             {!! app()->getLocale() === 'en' ? $item->content_en : $item->content_km !!}
                         </div>
                     </div>
@@ -255,7 +279,8 @@
 
     {{-- faqs --}}
     <section id="faq" class="mt-20 px-4 md:px-0" id="faq">
-        <h1 class="text-[25px] md:text-[30px] text-gradient font-[700] text-center" data-aos="fade-right" data-aos-duration="800">
+        <h1 class="text-[25px] md:text-[30px] text-gradient font-[700] text-center" data-aos="fade-right"
+            data-aos-duration="800">
             {{ app()->getLocale() === 'en' ? 'Frequently Asked Questions' : 'សំណួរញឹកញាប់ដែលអាណាព្យាបាលតែងតែសួរ' }}
         </h1>
 
@@ -307,7 +332,8 @@
                 {{ session('success') }}
             </div>
         @endif
-        <h1 class="text-gradient text-[25px] md:text-[30px] font-[700] text-center" data-aos="fade-right" data-aos-duration="800">
+        <h1 class="text-gradient text-[25px] md:text-[30px] font-[700] text-center" data-aos="fade-right"
+            data-aos-duration="800">
             {{ app()->getLocale() === 'en' ? 'Contact Form' : 'ទម្រង់បែបបទបំពេញពត៌មាន ' }}</h1>
         <div class="mt-10 bg-[#CBDBF4] w-full max-w-7xl mx-auto rounded-2xl" data-aos="fade-up" data-aos-duration="800">
 

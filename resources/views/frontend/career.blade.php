@@ -6,11 +6,11 @@
             alt="">
         <div>
 
-            <div class="absolute h-[60vh] object-cover lg:h-screen inset-0 z-10 bg-black/50"></div>
+            <div class="absolute h-[60vh] object-cover lg:h-screen inset-0 z-10 bg-black/70"></div>
 
             <div class="relative z-10 pt-[15vh] lg:pt-[30vh] overflow-hidden">
 
-                <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]" data-aos="fade-right" data-aos-duration="1000">
+                <h1 class="text-[25px] md:text-[50px] text-center text-[#5897FF] font-[700]" data-aos="fade-right" data-aos-duration="1000">
                     {{ app()->getLocale() === 'en' ? $banner_image->title1_en : $banner_image->title1_km }}
                 </h1>
 

@@ -5,10 +5,10 @@
         <img src="{{ asset($banner_image->image) }}" class="absolute object-cover z-1 w-full h-[60vh] lg:h-screen inset-0 "
             alt="">
         <div>
-            <div class="absolute h-[60vh] object-cover lg:h-screen inset-0 z-10 bg-black/50"></div>
+            <div class="absolute h-[60vh] object-cover lg:h-screen inset-0 z-10 bg-black/70"></div>
 
             <div class="relative z-10 pt-[15vh] lg:pt-[30vh] overflow-hidden">
-                <h1 class="text-[25px] md:text-[50px] text-center text-gradient font-[700]" data-aos="fade-right" data-aos-duration="1000">
+                <h1 class="text-[25px] md:text-[50px] text-center text-[#5897FF] font-[700]" data-aos="fade-right" data-aos-duration="1000">
                     {{ app()->getLocale() === 'en' ? $banner_image->title1_en : $banner_image->title1_km }}</h1>
                 <p class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px] px-4" data-aos="fade-left" data-aos-duration="1000">
                     {{ app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km }}</p>
