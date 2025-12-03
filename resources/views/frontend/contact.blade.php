@@ -92,7 +92,7 @@
                     {{ app()->getLocale() === 'en' ? '#579, Street 35C, Phum Meanchey, Sangkat Steung Meanchey, Khan Meanchey, Phnom Penh, Cambodia' : 'ផ្ទះលេខ ៥៧៩ ផ្លូវលេខ ៣៥C ភូមិមានជ័យ សង្កាត់ស្ទឹងមានជ័យ ខណ្ឌមានជ័យ ភ្នំពេញ កម្ពុជា' }}
                 </p>
 
-                <p class="text-sm md:text-base font-light mt-4">+885 86 253 388</p>
+                <p class="text-sm md:text-base font-light mt-4">+855 86 253 388</p>
                 <p class="text-sm md:text-base font-light mt-4">+855 85 253 388</p>
                 <p class="text-sm md:text-base font-light mt-4">{{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖' }}
                     hopekids.info@gmail.com</p>
