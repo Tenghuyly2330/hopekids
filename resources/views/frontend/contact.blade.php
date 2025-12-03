@@ -93,7 +93,7 @@
                 </p>
 
                 <p class="text-sm md:text-base font-light mt-4">+885 86 253 388</p>
-                {{-- <p class="text-sm md:text-base font-light mt-4">+855 85 253 388</p> --}}
+                <p class="text-sm md:text-base font-light mt-4">+855 85 253 388</p>
                 <p class="text-sm md:text-base font-light mt-4">{{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖' }}
                     hopekids.info@gmail.com</p>
 

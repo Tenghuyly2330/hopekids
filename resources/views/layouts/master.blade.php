@@ -393,7 +393,7 @@
                         </p>
                         </p>
                         <p class="text-sm md:text-base font-light mt-2">+885 86 253 388</p>
-                        {{-- <p class="text-sm md:text-base font-light mt-2">+855 85 253 388</p> --}}
+                        <p class="text-sm md:text-base font-light mt-2">+855 85 253 388</p>
                         <p class="text-sm md:text-base font-light mt-2">
                             {{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖ ' }} hopekids.info@gmail.com</p>
                         {{-- <p class="text-sm md:text-base font-light mt-2">
@@ -423,7 +423,7 @@
                     </p>
                     </p>
                     <p class="text-sm md:text-base font-light mt-2">+885 86 253 388</p>
-                    {{-- <p class="text-sm md:text-base font-light mt-2">+855 85 253 388</p> --}}
+                    <p class="text-sm md:text-base font-light mt-2">+855 85 253 388</p>
                     <p class="text-sm md:text-base font-light mt-2">
                         {{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖ ' }} hopekids.info@gmail.com</p>
                     {{-- <p class="text-sm md:text-base font-light mt-2">

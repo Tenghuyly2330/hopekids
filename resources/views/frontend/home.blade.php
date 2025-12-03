@@ -2,10 +2,10 @@
 
 @section('content')
     {{-- banner --}}
-    <section id="welcome" class="w-full h-[60vh] lg:h-screen">
-        <img src="{{ asset($banner_image->image) }}" class="absolute -z-10 w-full h-[60vh] lg:h-screen object-cover  inset-0"
+    <section id="welcome" class="w-full h-[60vh] md:h-[70vh] lg:h-screen">
+        <img src="{{ asset($banner_image->image) }}" class="absolute -z-10 w-full h-[60vh] md:h-[70vh] lg:h-screen object-cover  inset-0"
             alt="">
-        <div class="absolute object-cover h-[60vh] lg:h-screen inset-0 z-10 bg-black/50"></div>
+        <div class="absolute object-cover h-[60vh] md:h-[70vh] lg:h-screen inset-0 z-10 bg-black/50"></div>
 
         <div
             class="relative z-[40] w-full flex flex-col items-center lg:items-end text-left pt-[5vh] lg:pt-[30vh] overflow-hidden">
