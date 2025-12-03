@@ -7,9 +7,11 @@
             alt="">
         <div>
             <div class="relative z-10 pt-[15vh] lg:pt-[30vh] overflow-hidden">
-                <h1 class="text-[25px] md:text-[50px] text-center text-[#5897FF] font-[700]" data-aos="fade-right" data-aos-duration="1000">
+                <h1 class="text-[25px] md:text-[50px] text-center text-[#5897FF] font-[700]" data-aos="fade-right"
+                    data-aos-duration="1000">
                     {{ app()->getLocale() === 'en' ? $banner_image->title1_en : $banner_image->title1_km }}</h1>
-                <p class="text-left max-w-[700px] mx-auto text-white text-[15px] lg:text-[16px] px-4" data-aos="fade-left" data-aos-duration="1000">
+                <p class="text-left max-w-[700px] mx-auto text-white text-[15px] lg:text-[16px] px-4" data-aos="fade-left"
+                    data-aos-duration="1000">
                     {{ app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km }}</p>
             </div>
         </div>
@@ -81,23 +83,31 @@
             </div>
 
             <!-- Right Column -->
-            <div class="text-start md:text-center lg:text-left w-full pt-10 lg:maw-w-md lg:pt-0" data-aos="fade-left" data-aos-duration="1000">
+            <div class="text-start md:text-center lg:text-left w-full pt-10 lg:maw-w-md lg:pt-0" data-aos="fade-left"
+                data-aos-duration="1000">
                 <h2 class="text-xl md:text-2xl font-bold mb-4">
                     {{ app()->getLocale() === 'en' ? 'Contact Us' : 'ការទំនាក់ទំនង' }}</h2>
 
                 <p class="text-sm md:text-base font-light mb-2">
                     {{ app()->getLocale() === 'en' ? '#579, Street 35C, Phum Meanchey, Sangkat Steung Meanchey, Khan Meanchey, Phnom Penh, Cambodia' : 'ផ្ទះលេខ ៥៧៩ ផ្លូវលេខ ៣៥C ភូមិមានជ័យ សង្កាត់ស្ទឹងមានជ័យ ខណ្ឌមានជ័យ ភ្នំពេញ កម្ពុជា' }}
                 </p>
-                </p>
 
                 <p class="text-sm md:text-base font-light mt-4">+885 86 253 388</p>
-                <p class="text-sm md:text-base font-light mt-4">+855 85 253 388</p>
-                <p class="text-sm md:text-base font-light mt-4">{{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖ ' }}
+                {{-- <p class="text-sm md:text-base font-light mt-4">+855 85 253 388</p> --}}
+                <p class="text-sm md:text-base font-light mt-4">{{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖' }}
                     hopekids.info@gmail.com</p>
 
-                <p class="text-sm md:text-base font-light mt-4">
+                {{-- <p class="text-sm md:text-base font-light mt-4">
                     {{ app()->getLocale() === 'en' ? 'Operating Hours: Monday – Sunday | 8:00 AM – 6:00 PM' : 'ម៉ោងធ្វើការ៖ ច័ន្ទ – អាទិត្យ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
-                </p>
+                </p> --}}
+                <div
+                    class="text-sm md:text-base font-light mt-4">
+                    <p class="">{{ app()->getLocale() === 'en' ? 'Operating Hours:' : 'ម៉ោងធ្វើការ៖' }}</p>
+                    <p class="mt-4">{{ app()->getLocale() === 'en' ? 'Monday – Friday | 8:00 AM – 6:00 PM' : 'ច័ន្ទ – សុក្រ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}</p>
+                    <p>{{ app()->getLocale() === 'en' ? 'Saturday | 8:00 AM – 6:00 PM' : 'សៅរ៍ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}</p>
+                    <p>{{ app()->getLocale() === 'en' ? 'Sunday | 8:00 AM – 6:00 PM' : 'អាទិត្យ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}</p>
+                </div>
+
             </div>
 
         </div>

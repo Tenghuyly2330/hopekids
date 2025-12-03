@@ -30,7 +30,7 @@
                     </svg>
 
                 </span>
-                085 253 388
+                086 253 388
             </p>
         </div>
 
@@ -179,7 +179,7 @@
                     </p>
                     <p class="flex items-center gap-1">
                         <span class="text-[#5796FF]"><i class="fa-solid fa-phone-flip"></i></span>
-                        090 / 092 / 098 639 168
+                        086 253 388
                     </p>
                 </div>
 

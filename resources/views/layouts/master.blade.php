@@ -285,11 +285,11 @@
                         <div class="flex items-center justify-center" data-aos="fade-up" data-aos-duration="800">
                             {!! app()->getLocale() === 'en'
                                 ? '<div class="flex flex-col">
-                                <h2 class="text-2xl md:text-3xl font-bold leading-tight">Hope Kids</h2>
-                                    <h3 class="text-sm md:text-lg font-semibold">
-                                        Special Education School
-                                    </h3>
-                                    </div>'
+                                    <h2 class="text-2xl md:text-3xl font-bold leading-tight">Hope Kids</h2>
+                                        <h3 class="text-sm md:text-lg font-semibold">
+                                            Special Education School
+                                        </h3>
+                                        </div>'
                                 : '<div class="flex flex-col">
                                     <h3 class="text-sm md:text-lg font-semibold">
                                         សាលារៀនអប់រំពិសេស
@@ -300,7 +300,7 @@
                     </div>
 
                     <p class="text-sm md:text-base font-light max-w-md">
-                        {{ app()->getLocale() === 'en' ? 'Hope Kids Special Education School is a leading autism and special needs education center in Phnom Penh and across Cambodia. We provide affordable programs for children with autism, ADHD, cerebral palsy, and other developmental challenges through compassionate teaching and therapy.' : 'សាលារៀនអប់រំពិសេសក្ដីសង្ឃឹមកុមារ គឺជាសាលារៀនផ្តល់សេវាកម្មអប់រំសម្រាប់កុមារដែលមានអូទីសឹម និងតម្រូវការពិសេសឈានមុខគេមួយនៅក្នុងទីក្រុងភ្នំពេញ និងទូទាំងប្រទេសកម្ពុជា។ យើងផ្តល់ជូននូវកម្មវិធីដែលមានតម្លៃសមរម្យសម្រាប់កុមារដែលមានអូទីសឹម ជំងឺADHD ពិការចលករខួរក្បាល និងបញ្ហាប្រឈមនៃការអភិវឌ្ឍន៍ផ្សេងៗទៀត តាមរយៈការបង្រៀន និងការព្យាបាលដោយក្តីមេត្តាករុណា។' }}
+                        {{ app()->getLocale() === 'en' ? 'Hope Kids Special Education School is a leading autism and special needs education center in Phnom Penh and across Cambodia. We provide affordable programs for children with autism, ADHD, cerebral palsy, and other developmental challenges through compassionate teaching and therapy.' : 'សាលារៀនអប់រំពិសេសក្ដីសង្ឃឹមកុមារ គឺជាសាលារៀនផ្តល់សេវាកម្មអប់រំសម្រាប់កុមារដែលមានអូទីស្សឹម និងតម្រូវការពិសេសឈានមុខគេមួយនៅក្នុងទីក្រុងភ្នំពេញ និងទូទាំងប្រទេសកម្ពុជា។ យើងផ្តល់ជូននូវកម្មវិធីដែលមានតម្លៃសមរម្យសម្រាប់កុមារដែលមានអូទីស្សឹម ជំងឺADHD ពិការចលករខួរក្បាល និងបញ្ហាប្រឈមនៃការអភិវឌ្ឍន៍ផ្សេងៗទៀត តាមរយៈការបង្រៀន និងការព្យាបាលដោយយកចិត្តទុកដាក់។' }}
                     </p>
 
                     <!-- Social Icons -->
@@ -393,12 +393,23 @@
                         </p>
                         </p>
                         <p class="text-sm md:text-base font-light mt-2">+885 86 253 388</p>
-                        <p class="text-sm md:text-base font-light mt-2">+855 85 253 388</p>
+                        {{-- <p class="text-sm md:text-base font-light mt-2">+855 85 253 388</p> --}}
                         <p class="text-sm md:text-base font-light mt-2">
                             {{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖ ' }} hopekids.info@gmail.com</p>
-                        <p class="text-sm md:text-base font-light mt-2">
+                        {{-- <p class="text-sm md:text-base font-light mt-2">
                             {{ app()->getLocale() === 'en' ? 'Operating Hours: Monday – Sunday | 8:00 AM – 6:00 PM' : 'ម៉ោងធ្វើការ៖ ច័ន្ទ – អាទិត្យ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
-                        </p>
+                        </p> --}}
+                        <div class="text-sm md:text-base font-light mt-4">
+                            <p class="">{{ app()->getLocale() === 'en' ? 'Operating Hours:' : 'ម៉ោងធ្វើការ៖' }}
+                            </p>
+                            <p class="mt-2">
+                                {{ app()->getLocale() === 'en' ? 'Monday – Friday | 8:00 AM – 6:00 PM' : 'ច័ន្ទ – សុក្រ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
+                            </p>
+                            <p>{{ app()->getLocale() === 'en' ? 'Saturday | 8:00 AM – 6:00 PM' : 'សៅរ៍ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
+                            </p>
+                            <p>{{ app()->getLocale() === 'en' ? 'Sunday | 8:00 AM – 6:00 PM' : 'អាទិត្យ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
+                            </p>
+                        </div>
                     </div>
                 </div>
 
@@ -412,12 +423,22 @@
                     </p>
                     </p>
                     <p class="text-sm md:text-base font-light mt-2">+885 86 253 388</p>
-                    <p class="text-sm md:text-base font-light mt-2">+855 85 253 388</p>
+                    {{-- <p class="text-sm md:text-base font-light mt-2">+855 85 253 388</p> --}}
                     <p class="text-sm md:text-base font-light mt-2">
                         {{ app()->getLocale() === 'en' ? 'Email:' : 'អ៊ីមែល៖ ' }} hopekids.info@gmail.com</p>
-                    <p class="text-sm md:text-base font-light mt-2">
+                    {{-- <p class="text-sm md:text-base font-light mt-2">
                         {{ app()->getLocale() === 'en' ? 'Operating Hours: Monday – Sunday | 8:00 AM – 6:00 PM' : 'ម៉ោងធ្វើការ៖ ច័ន្ទ – អាទិត្យ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
-                    </p>
+                    </p> --}}
+                    <div class="text-sm md:text-base font-light mt-4">
+                        <p class="">{{ app()->getLocale() === 'en' ? 'Operating Hours:' : 'ម៉ោងធ្វើការ៖' }}</p>
+                        <p class="mt-2">
+                            {{ app()->getLocale() === 'en' ? 'Monday – Friday | 8:00 AM – 6:00 PM' : 'ច័ន្ទ – សុក្រ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
+                        </p>
+                        <p>{{ app()->getLocale() === 'en' ? 'Saturday | 8:00 AM – 6:00 PM' : 'សៅរ៍ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
+                        </p>
+                        <p>{{ app()->getLocale() === 'en' ? 'Sunday | 8:00 AM – 6:00 PM' : 'អាទិត្យ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
+                        </p>
+                    </div>
                 </div>
 
             </div>
