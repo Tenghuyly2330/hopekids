@@ -59,7 +59,6 @@
             <div class="relative z-10 px-4 max-w-[700px] mx-auto pt-[10vh] lg:pt-[30vh] overflow-hidden">
                 <h1 class="text-[25px] md:text-[50px] text-center text-[#5897FF] font-[700]"  data-aos="fade-right" data-aos-duration="1000">{{ app()->getLocale() === 'en' ? $banner_image->title1_en : $banner_image->title1_km }}</h1>
                 <p class="text-left text-white text-[14px] lg:text-[16px]"  data-aos="fade-left" data-aos-duration="1000">{{ app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km }}</p>
-
             </div>
         </div>
         <div id="mission" class="relative md:-top-[100px] max-w-7xl mx-auto z-40 px-4 mt-5 md:mt-0">
