@@ -30,7 +30,7 @@
                     </svg>
 
                 </span>
-               +855 85 253 388 / +855 86 253 388
+               +855 85 253 388
             </p>
         </div>
 
@@ -179,7 +179,7 @@
                     </p>
                     <p class="flex items-center gap-1">
                         <span class="text-[#5796FF]"><i class="fa-solid fa-phone-flip"></i></span>
-                        085 / 086 253 388
+                        085 253 388
                     </p>
                 </div>
 
