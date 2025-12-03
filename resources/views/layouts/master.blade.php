@@ -306,7 +306,7 @@
                     <!-- Social Icons -->
                     <ul class="flex gap-4 text-2xl md:text-2xl mt-3">
                         <li>
-                            <a href="{{ $fb->url }}" target="__blank">
+                            <a href="{{ $fb->url }}" target="_blank">
                                 <svg class="w-6 h-6" viewBox="0 0 21 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -316,7 +316,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{ $telegram->url }}" target="__blank">
+                            <a href="{{ $telegram->url }}" target="_blank">
                                 <svg class="w-6 h-6" viewBox="0 0 21 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -329,7 +329,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{ $tiktok->url }}" target="__blank">
+                            <a href="{{ $tiktok->url }}" target="_blank" rel="noopener noreferrer">
                                 <svg class="w-6 h-6" viewBox="0 0 21 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="10.5" cy="10.5" r="10.5" fill="black" />
@@ -341,7 +341,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{ $yt->url }}" target="__black">
+                            <a href="{{ $yt->url }}" target="_blank">
                                 <svg class="h-6" viewBox="0 0 20 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
