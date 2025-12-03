@@ -278,7 +278,7 @@
     </div>
 
     {{-- faqs --}}
-    <section id="faq" class="mt-20 px-4 md:px-0" id="faq">
+    <section id="faq" class="mt-20 px-4 md:px-0">
         <h1 class="text-[25px] md:text-[30px] text-gradient font-[700] text-center" data-aos="fade-right"
             data-aos-duration="800">
             {{ app()->getLocale() === 'en' ? 'Frequently Asked Questions' : 'សំណួរញឹកញាប់ដែលអាណាព្យាបាលតែងតែសួរ' }}
@@ -325,7 +325,7 @@
     </section>
 
     {{-- contact form --}}
-    <div class="mt-10" id="contact">
+    <section class="mt-10" id="contact">
         @if (session('success'))
             <div x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 3000)"
                 class="fixed top-5 right-5 bg-green-600 text-white px-5 py-3 rounded-lg shadow-lg z-50">
@@ -335,7 +335,7 @@
         <h1 class="text-gradient text-[25px] md:text-[30px] font-[700] text-center" data-aos="fade-right"
             data-aos-duration="800">
             {{ app()->getLocale() === 'en' ? 'Contact Form' : 'ទម្រង់បែបបទបំពេញពត៌មាន ' }}</h1>
-        <div class="mt-10 bg-[#CBDBF4] w-full max-w-7xl mx-auto rounded-2xl" data-aos="fade-up" data-aos-duration="800">
+        <div class="mt-10 bg-[#CBDBF4] w-full max-w-7xl mx-auto rounded-2xl" data-aos="fade-up" data-aos-duration="800" >
 
             <div class="p-5 md:p-10">
                 <form action="{{ route('contact.contact') }}" method="POST"
@@ -416,7 +416,7 @@
             </div>
         </div>
 
-    </div>
+    </section>
 
     <script>
         function toggleFaq(box) {
