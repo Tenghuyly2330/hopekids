@@ -18,7 +18,7 @@
                             fill="white" />
                     </svg>
                 </span>
-                info@hopekidsschool.com
+                hopekids.info@gmail.com
             </p>
             <p class="flex items-center gap-1">
                 <span class="text-[#5796FF]">
@@ -175,7 +175,7 @@
                     class="flex flex-col gap-3 md:gap-6 text-[#1E078B] text-[10px] md:text-[15px] font-light relative z-10">
                     <p class="flex items-center gap-1">
                         <span class="text-[#5796FF] "><i class="fa-regular fa-envelope"></i></span>
-                        info@hopekidsschool.com
+                        hopekids.info@gmail.com
                     </p>
                     <p class="flex items-center gap-1">
                         <span class="text-[#5796FF]"><i class="fa-solid fa-phone-flip"></i></span>
