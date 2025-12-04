@@ -27,17 +27,17 @@ class ProfessionalController extends Controller
         $tiktok = Social::where("id", "=", 3)->first();
         $yt = Social::where("id", "=", 4)->first();
 
-        if (app()->getLocale() === 'en') {
-            SEOTools::setTitle('Proessoinal Team - Hope Kids Special Education School');
-        } elseif (app()->getLocale() === 'km') {
-            SEOTools::setTitle('អ្នកជំនាញ - សាលារៀនអប់រំពិសេស ក្ដីសង្ឃឹមកុមារ');
-        }
+        // if (app()->getLocale() === 'en') {
+        //     SEOTools::setTitle('Proessoinal Team - Hope Kids Special Education School');
+        // } elseif (app()->getLocale() === 'km') {
+        //     SEOTools::setTitle('អ្នកជំនាញ - សាលារៀនអប់រំពិសេស ក្ដីសង្ឃឹមកុមារ');
+        // }
 
-        SEOTools::setDescription('Explore all');
-        SEOTools::opengraph()->setUrl(route('professionalteam'));
-        SEOTools::setCanonical(route('professionalteam'));
-        SEOTools::opengraph()->addProperty('type', 'website');
-        SEOTools::twitter()->setSite('@HopeKidsSchool');
+        // SEOTools::setDescription('Explore all');
+        // SEOTools::opengraph()->setUrl(route('professionalteam'));
+        // SEOTools::setCanonical(route('professionalteam'));
+        // SEOTools::opengraph()->addProperty('type', 'website');
+        // SEOTools::twitter()->setSite('@HopeKidsSchool');
 
         return view("frontend.professionalteam", compact('teams', 'messages', 'banner_image', 'programs', 'branches', 'fb', 'telegram', 'tiktok', 'yt'));
     }

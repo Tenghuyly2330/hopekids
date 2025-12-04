@@ -25,17 +25,17 @@ class CareerController extends Controller
         $tiktok = Social::where("id", "=", 3)->first();
         $yt = Social::where("id", "=", 4)->first();
 
-        if (app()->getLocale() === 'en') {
-            SEOTools::setTitle('Career - Hope Kids Special Education School');
-        } elseif (app()->getLocale() === 'km') {
-            SEOTools::setTitle('ឱកាសការងារ - សាលារៀនអប់រំពិសេស ក្ដីសង្ឃឹមកុមារ');
-        }
+        // if (app()->getLocale() === 'en') {
+        //     SEOTools::setTitle('Career - Hope Kids Special Education School');
+        // } elseif (app()->getLocale() === 'km') {
+        //     SEOTools::setTitle('ឱកាសការងារ - សាលារៀនអប់រំពិសេស ក្ដីសង្ឃឹមកុមារ');
+        // }
 
-        SEOTools::setDescription('Explore all');
-        SEOTools::opengraph()->setUrl(route('career'));
-        SEOTools::setCanonical(route('career'));
-        SEOTools::opengraph()->addProperty('type', 'website');
-        SEOTools::twitter()->setSite('@HopeKidsSchool');
+        // SEOTools::setDescription('Explore all');
+        // SEOTools::opengraph()->setUrl(route('career'));
+        // SEOTools::setCanonical(route('career'));
+        // SEOTools::opengraph()->addProperty('type', 'website');
+        // SEOTools::twitter()->setSite('@HopeKidsSchool');
 
         return view("frontend.career", compact('banner_image', 'programs', 'branches', 'careers', 'fb', 'telegram', 'tiktok', 'yt'));
     }

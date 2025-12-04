@@ -22,17 +22,17 @@ class OurProgramController extends Controller
         $tiktok = Social::where("id", "=", 3)->first();
         $yt = Social::where("id", "=", 4)->first();
 
-        if (app()->getLocale() === 'en') {
-            SEOTools::setTitle('Our Program - Hope Kids Special Education School');
-        } elseif (app()->getLocale() === 'km') {
-            SEOTools::setTitle('កម្មវិធីសិក្សា - សាលារៀនអប់រំពិសេស ក្ដីសង្ឃឹមកុមារ');
-        }
+        // if (app()->getLocale() === 'en') {
+        //     SEOTools::setTitle('Our Program - Hope Kids Special Education School');
+        // } elseif (app()->getLocale() === 'km') {
+        //     SEOTools::setTitle('កម្មវិធីសិក្សា - សាលារៀនអប់រំពិសេស ក្ដីសង្ឃឹមកុមារ');
+        // }
 
-        SEOTools::setDescription('Explore all');
-        SEOTools::opengraph()->setUrl(route('ourprogram'));
-        SEOTools::setCanonical(route('ourprogram'));
-        SEOTools::opengraph()->addProperty('type', 'website');
-        SEOTools::twitter()->setSite('@HopeKidsSchool');
+        // SEOTools::setDescription('Explore all');
+        // SEOTools::opengraph()->setUrl(route('ourprogram'));
+        // SEOTools::setCanonical(route('ourprogram'));
+        // SEOTools::opengraph()->addProperty('type', 'website');
+        // SEOTools::twitter()->setSite('@HopeKidsSchool');
 
         return view("frontend.ourprogram", compact('programs', 'banner_image', 'branches', 'fb', 'telegram', 'tiktok', 'yt'));
     }

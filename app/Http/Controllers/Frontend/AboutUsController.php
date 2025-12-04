@@ -31,17 +31,17 @@ class AboutUsController extends Controller
         $tiktok = Social::where("id", "=", 3)->first();
         $yt = Social::where("id", "=", 4)->first();
 
-        if (app()->getLocale() === 'en') {
-            SEOTools::setTitle('About Us - Hope Kids Special Education School');
-        } elseif (app()->getLocale() === 'km') {
-            SEOTools::setTitle('អំពីយើងខ្ញុំ - សាលារៀនអប់រំពិសេស ក្ដីសង្ឃឹមកុមារ');
-        }
+        // if (app()->getLocale() === 'en') {
+        //     SEOTools::setTitle('About Us - Hope Kids Special Education School');
+        // } elseif (app()->getLocale() === 'km') {
+        //     SEOTools::setTitle('អំពីយើងខ្ញុំ - សាលារៀនអប់រំពិសេស ក្ដីសង្ឃឹមកុមារ');
+        // }
 
-        SEOTools::setDescription('Explore all');
-        SEOTools::opengraph()->setUrl(route('about'));
-        SEOTools::setCanonical(route('about'));
-        SEOTools::opengraph()->addProperty('type', 'website');
-        SEOTools::twitter()->setSite('@HopeKidsSchool');
+        // SEOTools::setDescription('Explore all');
+        // SEOTools::opengraph()->setUrl(route('about'));
+        // SEOTools::setCanonical(route('about'));
+        // SEOTools::opengraph()->addProperty('type', 'website');
+        // SEOTools::twitter()->setSite('@HopeKidsSchool');
 
 
         return view("frontend.about", compact('certificates', 'banner_image', 'programs', 'missions', 'visions', 'goals', 'core', 'branches', 'fb', 'telegram', 'tiktok', 'yt'));

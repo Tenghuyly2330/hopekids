@@ -29,17 +29,17 @@ class HomeController extends Controller
         $tiktok = Social::where("id", "=", 3)->first();
         $yt = Social::where("id", "=", 4)->first();
 
-        if (app()->getLocale() === 'en') {
-            SEOTools::setTitle('Home - Hope Kids Special Education School');
-        } elseif (app()->getLocale() === 'km') {
-            SEOTools::setTitle('ទំព័រដើម - សាលារៀនអប់រំពិសេស ក្ដីសង្ឃឹមកុមារ');
-        }
+        // if (app()->getLocale() === 'en') {
+        //     SEOTools::setTitle('Home - Hope Kids Special Education School');
+        // } elseif (app()->getLocale() === 'km') {
+        //     SEOTools::setTitle('ទំព័រដើម - សាលារៀនអប់រំពិសេស ក្ដីសង្ឃឹមកុមារ');
+        // }
 
-        SEOTools::setDescription('Explore all');
-        SEOTools::opengraph()->setUrl(route('home'));
-        SEOTools::setCanonical(route('home'));
-        SEOTools::opengraph()->addProperty('type', 'website');
-        SEOTools::twitter()->setSite('@HopeKidsSchool');
+        // SEOTools::setDescription('Explore all');
+        // SEOTools::opengraph()->setUrl(route('home'));
+        // SEOTools::setCanonical(route('home'));
+        // SEOTools::opengraph()->addProperty('type', 'website');
+        // SEOTools::twitter()->setSite('@HopeKidsSchool');
 
         return view("frontend.home", compact('programs', 'faqs', 'banner_image', 'parents', 'branches', 'fb', 'telegram', 'tiktok', 'yt', 'experinces'));
     }
