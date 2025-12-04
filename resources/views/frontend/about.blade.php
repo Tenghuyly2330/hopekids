@@ -25,8 +25,9 @@
 
         .core-text strong {
             font-size: 20px;
-            font-weight: 400;
+            font-weight: 600;
             color: #1C0186;
+            text-decoration: underline;
         }
 
         .core-text ul {
