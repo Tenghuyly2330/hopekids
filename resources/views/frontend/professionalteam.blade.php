@@ -1,5 +1,10 @@
 @extends('layouts.master')
-
+@php
+    use Artesaos\SEOTools\Facades\SEOTools;
+@endphp
+@section('meta_tag')
+    {!! SEOTools::generate() !!}
+@endsection
 @section('content')
     <style>
         .content-text strong {

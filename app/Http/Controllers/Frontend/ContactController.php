@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Service\TelegramService;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Http;
+use Artesaos\SEOTools\Facades\SEOTools;
 
 class ContactController extends Controller
 {
@@ -22,6 +23,18 @@ class ContactController extends Controller
         $telegram = Social::where("id", "=", 2)->first();
         $tiktok = Social::where("id", "=", 3)->first();
         $yt = Social::where("id", "=", 4)->first();
+
+        if (app()->getLocale() === 'en') {
+            SEOTools::setTitle('Contact - Hope Kids Special Education School');
+        } elseif (app()->getLocale() === 'km') {
+            SEOTools::setTitle('ការទំនាក់ទំនង - សាលារៀនអប់រំពិសេស ក្ដីសង្ឃឹមកុមារ');
+        }
+
+        SEOTools::setDescription('Explore all');
+        SEOTools::opengraph()->setUrl(route('contact'));
+        SEOTools::setCanonical(route('contact'));
+        SEOTools::opengraph()->addProperty('type', 'website');
+        SEOTools::twitter()->setSite('@HopeKidsSchool');
 
         return view("frontend.contact", compact('banner_image', 'programs', 'branches', 'fb', 'telegram', 'tiktok', 'yt'));
     }
@@ -81,10 +94,6 @@ class ContactController extends Controller
 
         return back()->with('success', 'Your application has been sent successfully!');
     }
-
-
-
-
 
     public function contact(Request $request)
     {

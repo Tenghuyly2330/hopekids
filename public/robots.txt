@@ -1,2 +1,3 @@
 User-agent: *
 Disallow:
+Sitemap: https://hopekids-edu.com/public/sitemap.xml

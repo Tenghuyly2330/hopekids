@@ -1,5 +1,10 @@
 @extends('layouts.master')
-
+@php
+    use Artesaos\SEOTools\Facades\SEOTools;
+@endphp
+@section('meta_tag')
+    {!! SEOTools::generate() !!}
+@endsection
 @section('content')
     {{-- banner --}}
     <section id="welcome" class="w-full h-[60vh] md:h-[70vh] lg:h-screen">
@@ -133,7 +138,7 @@
                                 <div class="text-[14px] line-clamp-2">
                                     {!! app()->getLocale() === 'en' ? $item->content_en : $item->content_km !!}
                                 </div>
-                                <a href="{{ url('/ourprogram/#' . $item->number_en) }}"
+                                <a href="{{ url('/ourprogram/#' . $item->slug) }}"
                                     class="mt-4 py-1 px-5 text-[14px] font-[600] bg-white text-black self-start">
                                     <span>{{ app()->getLocale() === 'en' ? 'Details' : 'ពត៌មាន' }}</span>
                                 </a>

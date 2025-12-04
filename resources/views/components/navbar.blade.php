@@ -304,7 +304,7 @@
                 <ul
                     class="absolute left-1/2 transform -translate-x-1/2 hidden mt-6 py-2 w-64 bg-[#FFFFFF] shadow-lg rounded-lg {{ Route::is('ourprogram') ? '' : 'group-hover:block' }}  z-50">
                     @foreach ($programs as $item)
-                        <li class="hover:bg-[#5897FF]"><a href="{{ url('/ourprogram/#' . $item->number_en) }}"
+                        <li class="hover:bg-[#5897FF]"><a href="{{ url('/ourprogram/#' . $item->slug) }}"
                                 class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? $item->title_en : $item->title_km }}</a>
                         </li>
                     @endforeach

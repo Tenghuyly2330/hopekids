@@ -1,5 +1,10 @@
 @extends('layouts.master')
-
+@php
+    use Artesaos\SEOTools\Facades\SEOTools;
+@endphp
+@section('meta_tag')
+    {!! SEOTools::generate() !!}
+@endsection
 @section('content')
     <section class="w-full h-[60vh] lg:h-screen">
         <div class="absolute h-[60vh] object-cover lg:h-screen inset-0 z-10 bg-black/70"></div>
@@ -39,7 +44,7 @@
                     $isOdd = $item->id % 2 == 1;
                 @endphp
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-14 xl:gap-30" id="{{ $item->number_en }}">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-14 xl:gap-30" id="{{ $item->slug }}">
                     <div class="relative w-full h-full {{ $isOdd ? 'md:order-1' : 'md:order-2' }}" data-aos="fade-right" data-aos-duration="1000">
                         <img src="{{ asset($item->image) }}" alt=""
                             class="w-full h-[250px] md:h-[400px] rounded-[30px] object-cover">
