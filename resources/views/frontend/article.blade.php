@@ -1,10 +1,10 @@
 @extends('layouts.master')
-@php
+{{-- @php
     use Artesaos\SEOTools\Facades\SEOTools;
 @endphp
 @section('meta_tag')
     {!! SEOTools::generate() !!}
-@endsection
+@endsection --}}
 @section('content')
     <section class="w-full h-[60vh] lg:h-screen">
         <img src="{{ asset($banner_image->image) }}"
