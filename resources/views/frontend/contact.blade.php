@@ -6,12 +6,12 @@
     {!! SEOTools::generate() !!}
 @endsection --}}
 @section('content')
-    <section class="w-full h-[60vh] lg:h-[85vh]">
-        <div class="absolute w-full h-[60vh] lg:h-[85vh] inset-0 z-10 bg-black/70"></div>
-        <img src="{{ asset($banner_image->image) }}" class="absolute object-center object-cover z-1 w-full h-[60vh] lg:h-[85vh] inset-0 "
+    <section class="w-full h-[60vh] lg:h-[70vh] xl:h-[85vh]">
+        <div class="absolute w-full h-[60vh] lg:h-[70vh] xl:h-[85vh] inset-0 z-10 bg-black/70"></div>
+        <img src="{{ asset($banner_image->image) }}" class="absolute object-center object-cover z-1 w-full h-[60vh] lg:h-[70vh] xl:h-[85vh] inset-0 "
             alt="">
         <div>
-            <div class="relative z-10 pt-[15vh] lg:pt-[30vh] overflow-hidden">
+            <div class="relative z-10 pt-[15vh] lg:pt-[25vh] xl:pt-[30vh] overflow-hidden">
                 <h1 class="text-[25px] md:text-[50px] text-center text-[#5897FF] font-[700]" data-aos="fade-right"
                     data-aos-duration="1000">
                     {{ app()->getLocale() === 'en' ? $banner_image->title1_en : $banner_image->title1_km }}</h1>
