@@ -6,9 +6,9 @@
     {!! SEOTools::generate() !!}
 @endsection --}}
 @section('content')
-    <section class="w-full h-[60vh] lg:h-screen">
-        <div class="absolute w-full h-[60vh] lg:h-screen inset-0 z-10 bg-black/70"></div>
-        <img src="{{ asset($banner_image->image) }}" class="absolute object-cover z-1 w-full h-[60vh] lg:h-screen inset-0 "
+    <section class="w-full h-[60vh] lg:h-[85vh]">
+        <div class="absolute w-full h-[60vh] lg:h-[85vh] inset-0 z-10 bg-black/70"></div>
+        <img src="{{ asset($banner_image->image) }}" class="absolute object-center object-cover z-1 w-full h-[60vh] lg:h-[85vh] inset-0 "
             alt="">
         <div>
             <div class="relative z-10 pt-[15vh] lg:pt-[30vh] overflow-hidden">
@@ -22,12 +22,12 @@
         </div>
     </section>
 
-    <div class="mt-5 md:mt-10 px-5">
+    <div class="px-5">
 
         <div class="grid grid-cols-1 lg:grid-cols-2 justify-center w-full max-w-7xl mx-auto px-4 overflow-hidden">
 
             <!-- Left Column -->
-            <div class="flex flex-col place-items-center" data-aos="fade-right" data-aos-duration="1000">
+            <div class="flex flex-col place-items-center">
 
                 <!-- Social Icons -->
                 <ul class="flex items-center gap-6 w-full justify-center">
@@ -56,7 +56,8 @@
 
                     <li>
                         <a href="{{ $tiktok->url }}" target="_blank">
-                            <svg class="w-10 h-10" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="w-10 h-10" viewBox="0 0 21 21" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="10.5" cy="10.5" r="10.5" fill="black" />
                                 <path
                                     d="M14.3138 5.35C13.7472 4.69961 13.4349 3.8645 13.4349 3H10.8731V13.3333C10.8537 13.8927 10.619 14.4226 10.2184 14.8112C9.81774 15.1999 9.28257 15.417 8.72576 15.4167C7.54847 15.4167 6.57015 14.45 6.57015 13.25C6.57015 11.8167 7.94643 10.7417 9.36416 11.1833V8.55C6.50383 8.16667 4 10.4 4 13.25C4 16.025 6.28827 18 8.71747 18C11.3208 18 13.4349 15.875 13.4349 13.25V8.00833C14.4738 8.75821 15.721 9.16054 17 9.15833V6.58333C17 6.58333 15.4413 6.65833 14.3138 5.35Z"
@@ -88,8 +89,7 @@
             </div>
 
             <!-- Right Column -->
-            <div class="text-start md:text-center lg:text-left w-full pt-10 lg:maw-w-md lg:pt-0" data-aos="fade-left"
-                data-aos-duration="1000">
+            <div class="text-start md:text-center lg:text-left w-full pt-10 lg:maw-w-md lg:pt-0">
                 <h2 class="text-xl md:text-2xl font-bold mb-4">
                     {{ app()->getLocale() === 'en' ? 'Contact Us' : 'ការទំនាក់ទំនង' }}</h2>
 
@@ -105,12 +105,15 @@
                 {{-- <p class="text-sm md:text-base font-light mt-4">
                     {{ app()->getLocale() === 'en' ? 'Operating Hours: Monday – Sunday | 8:00 AM – 6:00 PM' : 'ម៉ោងធ្វើការ៖ ច័ន្ទ – អាទិត្យ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
                 </p> --}}
-                <div
-                    class="text-sm md:text-base font-light mt-4">
+                <div class="text-sm md:text-base font-light mt-4">
                     <p class="">{{ app()->getLocale() === 'en' ? 'Operating Hours:' : 'ម៉ោងធ្វើការ៖' }}</p>
-                    <p class="mt-4">{{ app()->getLocale() === 'en' ? 'Monday – Friday | 8:00 AM – 6:00 PM' : 'ច័ន្ទ – សុក្រ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}</p>
-                    <p>{{ app()->getLocale() === 'en' ? 'Saturday | 8:00 AM – 6:00 PM' : 'សៅរ៍ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}</p>
-                    <p>{{ app()->getLocale() === 'en' ? 'Sunday | 8:00 AM – 6:00 PM' : 'អាទិត្យ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}</p>
+                    <p class="mt-4">
+                        {{ app()->getLocale() === 'en' ? 'Monday – Friday | 8:00 AM – 6:00 PM' : 'ច័ន្ទ – សុក្រ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
+                    </p>
+                    <p>{{ app()->getLocale() === 'en' ? 'Saturday | 8:00 AM – 6:00 PM' : 'សៅរ៍ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
+                    </p>
+                    <p>{{ app()->getLocale() === 'en' ? 'Sunday | 8:00 AM – 6:00 PM' : 'អាទិត្យ | ៨:០០ ព្រឹក – ៦:០០ ល្ងាច' }}
+                    </p>
                 </div>
 
             </div>
@@ -118,4 +121,98 @@
         </div>
 
     </div>
+
+    <section class="mt-10" id="contact">
+        @if (session('success'))
+            <div x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 3000)"
+                class="fixed top-5 right-5 bg-green-600 text-white px-5 py-3 rounded-lg shadow-lg z-50">
+                {{ session('success') }}
+            </div>
+        @endif
+        <h1 class="text-gradient text-[25px] md:text-[30px] font-[700] text-center" data-aos="fade-right"
+            data-aos-duration="800">
+            {{ app()->getLocale() === 'en' ? 'Contact Form' : 'ទម្រង់បែបបទបំពេញពត៌មាន ' }}</h1>
+        <div class="mt-10 bg-[#CBDBF4] w-full max-w-7xl mx-auto rounded-2xl" data-aos="fade-up" data-aos-duration="800">
+
+            <div class="p-5 md:p-10">
+                <form action="{{ route('contact.contact') }}" method="POST"
+                    class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 ">
+                    @csrf
+                    <div class="flex flex-col gap-3">
+                        <!-- Input 1 -->
+                        <input type="text"
+                            placeholder="{{ app()->getLocale() === 'en' ? 'Parent Name' : 'ឈ្មោះអាណាព្យាបាល' }}"
+                            name="name" class="p-3 bg-white rounded-full border-none placeholder-[#5796FF]">
+
+                        <!-- Input 2 -->
+                        <input type="number"
+                            placeholder="{{ app()->getLocale() === 'en' ? 'Phone Number' : 'លេខទូរសព្ទ ' }}"
+                            name="phone_number" class="p-3  bg-white rounded-full border-none placeholder-[#5796FF]">
+
+                        <!-- Select 1 -->
+                        <select name="enquiry"
+                            class="bg-white text-[#5796FF] p-3 rounded-full border-none focus:ring-2 focus:ring-blue-400">
+                            <option value="">
+                                {{ app()->getLocale() === 'en' ? 'Select Question Type' : 'ជ្រើសរើសប្រភេទសំណួរ ' }}
+                            </option>
+                            <option class="bg-blue-500 text-white">• General enquiry</option>
+                            <option class="bg-blue-500 text-white">• Enrolment / Admissions</option>
+                            <option class="bg-blue-500 text-white">• Partnership / Collaboration</option>
+                            <option class="bg-blue-500 text-white">• Volunteer / Internship</option>
+                        </select>
+
+                        <!-- Select 2 -->
+                        <select name="location"
+                            class="bg-white p-3 text-[#5796FF] rounded-full border-none focus:ring-2 focus:ring-blue-400">
+                            <option value="">{{ app()->getLocale() === 'en' ? 'Select Branch' : 'ជ្រើសរើសសាខា ' }}
+                            </option>
+                            <option class="bg-blue-500 text-white">Steng Meanchey</option>
+                            <option class="bg-blue-500 text-white">Peng Hout Boeung Snor</option>
+                            <option class="bg-blue-500 text-white">Banteay Meanchey</option>
+                            <option class="bg-blue-500 text-white">Battambang</option>
+                            <option class="bg-blue-500 text-white">Ratanakiri</option>
+                            <option class="bg-blue-500 text-white">Kampot</option>
+                        </select>
+
+                    </div>
+                    <div class="flex flex-col gap-3">
+
+                        <!-- Textarea -->
+                        <textarea rows="4" placeholder="{{ app()->getLocale() === 'en' ? 'Your Message' : 'សារ ' }}" name="message"
+                            class="bg-white p-3 rounded-2xl border-none placeholder-[#5796FF]"></textarea>
+
+                        <!-- Input 3 -->
+                        <input type="text" placeholder="{{ app()->getLocale() === 'en' ? 'Email' : 'អ៉ីម៉ែល  ' }}"
+                            name="email" class="bg-white p-3 rounded-full border-none placeholder-[#5796FF]">
+
+                        <!-- Input 4 -->
+                        <input type="text" placeholder="{{ app()->getLocale() === 'en' ? 'Telegram' : 'តេឡេក្រាម  ' }}"
+                            name="telegram" class="bg-white p-3 rounded-full border-none placeholder-[#5796FF]">
+
+                        <div class="flex items-start gap-2">
+                            <input id="consent" name="consent" type="checkbox" value="1"
+                                class="mt-1 h-4 w-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500" />
+                            <label for="consent" class="text-[#5796FF] text-[12px] md:text-[14px]">
+                                {{ app()->getLocale() === 'en' ? 'I consent to having this website store my submitted information so they can respond to my enquiry.' : 'ខ្ញុំយល់ព្រមឱ្យស្ថាប័ននេះរក្សាទុកព័ត៌មានដែលខ្ញុំបានដាក់ស្នើសួរដើម្បីអាចឆ្លើយតបទៅនឹងសំណួររបស់ខ្ញុំ។' }}</span>
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <div class="w-full md:col-span-2 flex justify-center items-center mt-3 ">
+                        <button class="rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186] text-white px-6 py-2"
+                            type="submit">
+                            {{ app()->getLocale() === 'en' ? 'Submit' : 'ដាក់ស្នើ' }}
+                        </button>
+                    </div>
+                </form>
+                <p class="text-[#5796FF] text-center font-regular text-[11px] md:text-[15px] mt-5">
+                    {{ app()->getLocale() === 'en' ? 'We’ll respond within 24-48 hours. If urgent, you may also call us at 085 253 388' : 'យើងខ្ញុំនឹងឆ្លើយតបក្នុងរយៈពេល 24-48 ម៉ោង។ ប្រសិនបើក្នុងករណីបន្ទាន់ លោកអ្នកក៏អាចទូរសព្ទមកយើងខ្ញុំតាមរយៈលេខ 085 253 388 ផងដែរ។' }}
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+
 @endsection

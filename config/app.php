@@ -117,6 +117,10 @@ return [
     | Supported drivers: "file", "cache"
     |
     */
+    // 'aliases' => [
+    //     'SEOTools' => Artesaos\SEOTools\Facades\SEOTools::class,
+    // ],
+
 
     'maintenance' => [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),

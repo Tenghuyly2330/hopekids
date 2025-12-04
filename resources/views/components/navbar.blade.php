@@ -308,51 +308,6 @@
                                 class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? $item->title_en : $item->title_km }}</a>
                         </li>
                     @endforeach
-
-                    {{-- <li class="hover:bg-[#5897FF]"><a href="/ourprogram#1"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Structured Teaching' : 'ការបង្រៀនតាមបែបរចនាសម្ព័ន្ធ' }}</a>
-                    </li>
-                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#2"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Special Education' : 'ការអប់រំពិសេស' }}</a>
-                    </li>
-                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#3"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Applied Behavior Analysis' : 'ការវិភាគ និងការអនុវត្តន៍វិធីសាស្រ្តគ្រប់គ្រងវិបត្តិអាកប្បកិរិយា' }}</a>
-                    </li>
-                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#4"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Occupational Therapy (OT)' : 'ការព្យាបាលមុខងារប្រចាំថ្ងៃ' }}</a>
-                    </li>
-                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#5"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Sensory Integration Therapy' : 'ការព្យាបាលដោយការរួមបញ្ចូលញាណដឹង' }}</a>
-                    </li>
-                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#6"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Early Intervention Therapy' : 'ការជួយជម្រុញអោយទាន់ពេលវេលា' }}</a>
-                    </li>
-                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#7"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Play Therapy' : 'ការព្យាបាលតាមរយៈការលេង' }}</a>
-                    </li>
-                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#8"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Speech Therapy' : 'ការព្យាបាលភាសា' }}</a>
-                    </li>
-                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#9"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Art Therapy' : 'ការព្យាបាលតាមបែបសិល្បៈ' }}</a>
-                    </li>
-                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#10"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Picture Exchange Communication System (PECS)' : 'ការទំនាក់ទំនងតាមរយៈការផ្លាស់ប្តូររូបភាព' }}</a>
-                    </li>
-
-                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#11"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'School Readiness Program' : 'កម្មវិធីរៀបចំសម្រាប់ចូលសាលា' }}</a>
-                    </li>
-
-                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#12"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Activities of Daily Living Training' : 'ការបណ្តុះបណ្តាលសកម្មភាពប្រចាំថ្ងៃ' }}</a>
-                    </li>
-                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#13"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Parent Education and Counselling' : 'ការអប់រំ និងប្រឹក្សាអាណាព្យាបាល' }}</a>
-                    </li>
-                    <li class="hover:bg-[#5897FF]"><a href="/ourprogram#14"
-                            class="block px-2 py-2 text-[14px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Cerebral Palsy Development Program' : 'កម្មវិធីអភិវឌ្ឍន៍សម្រាប់កុមារដែលមានពិការចលករខួរក្បាល' }}</a>
-                    </li> --}}
                 </ul>
             </li>
             <li class="relative group">
