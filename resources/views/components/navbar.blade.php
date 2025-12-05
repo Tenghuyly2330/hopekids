@@ -35,7 +35,7 @@
         </div>
 
         <div class="flex items-center gap-4" data-aos="fade-left" data-aos-duration="1000">
-            <div class="hidden lg:flex items-center gap-2 text-[14px]">
+            {{-- <div class="hidden lg:flex items-center gap-2 text-[14px]">
                 <!-- Clickable flag to switch language -->
                 <img src="{{ $locale === 'en' ? asset('assets/images/icons/usa-flag.png') : asset('assets/images/icons/kh-flag.png') }}"
                     alt="Flag" class="w-6 h-6 rounded-full">
@@ -49,7 +49,7 @@
                     class="{{ $locale === 'km' ? 'text-[#FFFFFF] font-bold' : 'text-[#FFFFFF]' }}">
                     {{ $locale === 'en' ? 'Khmer' : 'ភាសាខ្មែរ' }}
                 </a>
-            </div>
+            </div> --}}
             <!-- Social Icons -->
             <ul class="flex items-center gap-4 relative z-10">
                 <li>
@@ -109,7 +109,7 @@
         <img src="{{ asset('assets/images/logo_new.png') }}" class="rounded-full w-16 h-16 shadow-md"  />
 
         <div class="flex lg:hidden items-center gap-2">
-            <div class="flex items-center gap-1 text-[14px]" data-aos="fade-left" data-aos-duration="1000">
+            {{-- <div class="flex items-center gap-1 text-[14px]" data-aos="fade-left" data-aos-duration="1000">
                 <!-- Clickable flag to switch language -->
                 <img src="{{ $locale === 'en' ? asset('assets/images/icons/usa-flag.png') : asset('assets/images/icons/kh-flag.png') }}"
                     alt="Flag" class="w-6 h-6 rounded-full">
@@ -123,7 +123,7 @@
                     class="{{ $locale === 'km' ? 'text-[#FFFFFF] font-bold' : 'text-[#FFFFFF]' }}">
                     {{ $locale === 'en' ? 'Khmer' : 'ភាសាខ្មែរ' }}
                 </a>
-            </div>
+            </div> --}}
 
             <!-- Mobile Menu Button -->
             <button @click="open = true" class="text-white p-2 font-bold text-3xl relative z-1">
