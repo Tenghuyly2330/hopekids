@@ -356,7 +356,7 @@
 
                 <!-- Column 2: Navigation Links -->
                 <div class="flex justify-center lg:ms-10">
-                    <div class="flex-1 lg:ms-10 mt-10 lg:mt-0">
+                    <div class="flex-1 lg:ms-10 mt-10 lg:mt-0 mr-10">
                         <h2 class="text-lg md:text-[25px] font-bold mb-4">
                             {{ app()->getLocale() === 'en' ? 'Information' : 'ព័ត៌មាន' }}</h2>
                         <ul class="space-y-3 text-sm md:text-base font-light">
