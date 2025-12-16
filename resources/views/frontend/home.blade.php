@@ -55,9 +55,9 @@
             <!-- DESCRIPTION -->
             <div class="relative z-10 text-center lg:text-left mt-2 w-full md:w-[500px] px-3 md:px-0" data-aos="fade-left"
                 data-aos-duration="300">
-                <p class="text-[#fff] text-[12px] lg:text-[16px] font-medium">
-                    {{ app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km }}
-                </p>
+                <div class="text-[#fff] text-[12px] lg:text-[16px] font-medium">
+                    {!! app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km !!}
+                </div>
             </div>
 
             <!-- BUTTONS -->
@@ -70,7 +70,7 @@
                 <button data-aos="fade-left" data-aos-duration="1000"
                     class="px-4 py-2 text-[14px] lg:text-[16px] rounded-full bg-gradient-to-r from-blue-300 to-blue-700 text-white">
                     <a
-                        href="#find">{{ app()->getLocale() === 'en' ? 'Find Our Nearest Branch' : 'ស្វែងរកសាខាដែលនៅជិតលោកអ្នក' }}</a>
+                        href="#find">{{ app()->getLocale() === 'en' ? 'Find Our Nearest Branch' : 'សូមស្វែងរកសាខាដែលនៅជិតលោកអ្នកបំផុត' }}</a>
                 </button>
             </div>
 
@@ -89,7 +89,7 @@
         </p>
         <p class="mt-3 text-[14px] md:text-[16px] text-left w-full md:w-[700px]" data-aos="fade-left"
             data-aos-duration="800">
-            {{ app()->getLocale() === 'en' ? 'Hope Kids was founded in Cambodia to make quality special education accessible to every child regardless of financial or geographic limitations. We serve families from all backgrounds and provinces, ensuring every child has the opportunity to learn, grow, and thrive.' : 'សាលាអប់រំពិសេសក្តីសង្ឃឹមកុមារ ត្រូវបានបង្កើតឡើងនៅប្រទេសកម្ពុជាដើម្បីផ្តល់ឱកាសឱ្យកុមារគ្រប់រូប ទទួលបានការអប់រំពិសេសប្រកបដោយគុណភាព មិនថាកុមារមកពីក្រុមគ្រួសារមានកម្រិតហិរញ្ញវត្ថុទាប ឬទីតាំងភូមិសាស្ត្រឆ្ងាយយ៉ាងណាក៏ដោយ។ យើងខ្ញុំបម្រើសេវាកម្មជូនដល់ក្រុមគ្រួសារពីគ្រប់ជាន់ថ្នាក់ និងគ្រប់ខេត្ត/រាជធានី ដើម្បីធានាថា កុមារគ្រប់រូបទទួលបានឱកាសរៀនសូត្រ អភិវឌ្ឍ និងរីកចម្រើន។' }}
+            {{ app()->getLocale() === 'en' ? 'Hope Kids was founded in Cambodia to make quality special education accessible to every child regardless of financial or geographic limitations. We serve families from all backgrounds and provinces, ensuring every child has the opportunity to learn, grow, and thrive.' : 'សាលាអប់រំពិសេសក្ដីសង្ឃឹមកុមារ ត្រូវបានបង្កើតឡើងក្នុងប្រទេសកម្ពុជាដើម្បីធ្វើឲ្យ ការអប់រំពិសេសប្រកបគុណភាពសម្រាប់កុមារគ្រប់ៗរូប មិនថាកុមារមកពីក្រុមគ្រួសារមានកម្រិតហិរញ្ញវត្ថុទាប ឬទីតាំងភូមិសាស្ត្រឆ្ងាយយ៉ាងណាក៏ដោយ។ យើងខ្ញុំបម្រើសេវាកម្មជូនដល់ក្រុមគ្រួសារទាំងអស់ មិនថាតាមបណ្តាខេត្រ និងរាជធានីនុះឡើយ អ្វីដែលយើងធ្វើគឺដើម្បីធានាថា កុមារគ្រប់រូបទទួលបានឱកាសរៀនសូត្រ ការអភិវឌ្ឍ និងភាពរីកចម្រើនគ្រប់គ្នា។' }}
         </p>
         <a href="{{ URL('/about') }}" data-aos="fade-right" data-aos-duration="800"
             class="py-1 px-3 mt-4 text-[14px] lg:text-[16px] rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186] text-white">
@@ -102,7 +102,7 @@
     <section id="program" class="w-full px-2 max-w-7xl mx-auto py-5 md:py-10" id="program">
         <h1 class="text-center text-[25px] md:text-[30px] text-gradient font-[700] mb-5" data-aos="fade-right"
             data-aos-duration="800">
-            {{ app()->getLocale() === 'en' ? 'Our Programs' : 'កម្មវិធីសិក្សា' }}
+            {{ app()->getLocale() === 'en' ? 'Our Programs' : 'កម្មវិធីរបស់យើង' }}
         </h1>
 
         <div class="swiper mySwiper " data-aos="fade-up" data-aos-duration="800">

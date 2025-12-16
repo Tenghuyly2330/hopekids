@@ -19,9 +19,9 @@
                     {{ app()->getLocale() === 'en' ? $banner_image->title1_en : $banner_image->title1_km }}
                 </h1>
 
-                <p class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px]  px-4" data-aos="fade-left" data-aos-duration="1000">
-                    {{ app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km }}
-                </p>
+                <div class="text-left max-w-[700px] mx-auto md:text-[18px] text-white text-[15px] lg:text-[16px]  px-4" data-aos="fade-left" data-aos-duration="1000">
+                    {!! app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km !!}
+                </div>
             </div>
         </div>
     </section>
@@ -44,7 +44,7 @@
                     {{ app()->getLocale() === 'en' ? 'Start Your Journey' : 'ចាប់ផ្តើមដំណើររបស់អ្នក' }}
                 </p>
                 <p class="text-[22px] text-center md:text-[30px] lg:text-[45px] font-regular">
-                    {{ app()->getLocale() === 'en' ? 'with Us!' : 'ជាមួយយើង' }}
+                    {{ app()->getLocale() === 'en' ? 'with Us!' : 'ជាមួយយើងខ្ញុំ' }}
                 </p>
                 {{-- <p class="text-[12px] text-center md:text-[14px] mt-3 md:mt-5 px-10">
                     {{ app()->getLocale() === 'en' ? 'We work with diverse international and local non-governmental organizations, microfinance institutions, corporate partners, and national authorities to build a better life through safe and affordable homes.' : 'យើងសហការជាមួយអង្គការអន្តរជាតិ និងក្នុងស្រុកមិនមែនរដ្ឋាភិបាល ស្ថាប័នហិរញ្ញវត្ថុតូច មិត្តភាពសហគ្រាស និងអាជ្ញាធរជាតិនានា ដើម្បីបង្កើតជីវិតល្អប្រសើរឡើង តាមរយៈផ្ទះសុវត្ថិភាព និងមានតម្លៃសមរម្យ។' }}

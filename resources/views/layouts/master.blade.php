@@ -293,7 +293,7 @@
                                         </div>'
                                 : '<div class="flex flex-col">
                                     <h3 class="text-sm md:text-lg font-semibold">
-                                        សាលារៀនអប់រំពិសេស
+                                        សាលាអប់រំពិសេស
                                     </h3>
                                     <h2 class="text-2xl md:text-3xl font-bold leading-tight">ក្ដីសង្ឃឹមកុមារ</h2>
                                 </div>' !!}
@@ -367,13 +367,13 @@
                                     class="hover:underline">{{ app()->getLocale() === 'en' ? 'About Us' : 'អំពីយើងខ្ញុំ' }}</a>
                             </li>
                             <li><a href="{{ URL('/ourprogram') }}"
-                                    class="hover:underline">{{ app()->getLocale() === 'en' ? 'Our Programs' : 'កម្មវិធីសិក្សា' }}</a>
+                                    class="hover:underline">{{ app()->getLocale() === 'en' ? 'Our Programs' : 'កម្មវិធីរបស់យើង' }}</a>
                             </li>
                             <li><a href="{{ URL('/professionalteam') }}"
-                                    class="hover:underline">{{ app()->getLocale() === 'en' ? 'Professional Team' : 'អ្នកជំនាញ' }}</a>
+                                    class="hover:underline">{{ app()->getLocale() === 'en' ? 'Professional Team' : 'ក្រុមអ្នកជំនាញ' }}</a>
                             </li>
                             <li><a href="{{ URL('/career') }}"
-                                    class="hover:underline">{{ app()->getLocale() === 'en' ? 'Career' : 'ឱកាសការងារ' }}</a>
+                                    class="hover:underline">{{ app()->getLocale() === 'en' ? 'Career' : 'អាជីពការងារ' }}</a>
                             </li>
                             <li><a href="{{ URL('/articles') }}"
                                     class="hover:underline">{{ app()->getLocale() === 'en' ? 'Articles' : 'អត្ថបទ' }}</a>

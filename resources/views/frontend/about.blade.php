@@ -62,9 +62,9 @@
                 alt="">
             <div class="absolute h-[60vh] object-cover lg:h-screen inset-0 z-10 bg-black/70"></div>
 
-            <div class="relative z-10 px-4 max-w-[700px] mx-auto pt-[10vh] lg:pt-[30vh] overflow-hidden">
+            <div class="relative z-10 px-4 max-w-[700px] mx-auto pt-[5vh] lg:pt-[30vh] overflow-hidden">
                 <h1 class="text-[25px] md:text-[50px] text-center text-[#5897FF] font-[700]"  data-aos="fade-right" data-aos-duration="1000">{{ app()->getLocale() === 'en' ? $banner_image->title1_en : $banner_image->title1_km }}</h1>
-                <p class="text-left text-white text-[14px] lg:text-[16px]"  data-aos="fade-left" data-aos-duration="1000">{{ app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km }}</p>
+                <div class="text-left text-white text-[14px] lg:text-[16px]"  data-aos="fade-left" data-aos-duration="1000">{!! app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km !!}</div>
             </div>
         </div>
         <div id="mission" class="relative md:-top-[100px] max-w-7xl mx-auto z-40 px-4 mt-5 md:mt-0">
@@ -75,7 +75,7 @@
                         <div class="flex flex-col">
                             <h1 class="text-[#F6F6F6] text-[15px] md:text-[25px] font-semibold">
                                 {{ app()->getLocale() === 'en' ? $missions->title_en : $missions->title_km }}</h1>
-                            <div class="text-[#F6F6F6] font-regular text-[12px] md:text-[13px]">{!! app()->getLocale() === 'en' ? $missions->content_en : $missions->content_km !!}
+                            <div class="text-[#F6F6F6] font-regular text-[14px] md:text-[15px]">{!! app()->getLocale() === 'en' ? $missions->content_en : $missions->content_km !!}
                             </div>
                         </div>
                     </div>
@@ -101,7 +101,7 @@
                         <div class="flex flex-col">
                             <h1 class="text-[#F6F6F6] text-[15px] md:text-[25px] font-semibold">{{ app()->getLocale() === 'en' ? $visions->title_en : $visions->title_km }}
                             </h1>
-                            <div class="text-[#F6F6F6] font-regular text-[12px] md:text-[13px]">
+                            <div class="text-[#F6F6F6] font-regular text-[14px] md:text-[15px]">
                                 {!! app()->getLocale() === 'en' ? $visions->content_en : $visions->content_km !!}</div>
                         </div>
                     </div>
@@ -115,7 +115,7 @@
                         <div class="flex flex-col">
                             <h1 class="text-[#F6F6F6] text-[15px] md:text-[25px] font-semibold">
                                 {{ app()->getLocale() === 'en' ? $goals->title_en : $goals->title_km }}</h1>
-                            <div class="text-[#F6F6F6] font-regular text-[12px] md:text-[13px]">
+                            <div class="text-[#F6F6F6] font-regular text-[14px] md:text-[15px]">
                                 {!! app()->getLocale() === 'en' ? $goals->content_en : $goals->content_km !!}
                             </div>
                         </div>

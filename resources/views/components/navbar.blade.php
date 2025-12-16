@@ -35,7 +35,7 @@
         </div>
 
         <div class="flex items-center gap-4" data-aos="fade-left" data-aos-duration="1000">
-            {{-- <div class="hidden lg:flex items-center gap-2 text-[14px]">
+            <div class="hidden lg:flex items-center gap-2 text-[14px]">
                 <!-- Clickable flag to switch language -->
                 <img src="{{ $locale === 'en' ? asset('assets/images/icons/usa-flag.png') : asset('assets/images/icons/kh-flag.png') }}"
                     alt="Flag" class="w-6 h-6 rounded-full">
@@ -49,7 +49,7 @@
                     class="{{ $locale === 'km' ? 'text-[#FFFFFF] font-bold' : 'text-[#FFFFFF]' }}">
                     {{ $locale === 'en' ? 'Khmer' : 'ភាសាខ្មែរ' }}
                 </a>
-            </div> --}}
+            </div>
             <!-- Social Icons -->
             <ul class="flex items-center gap-4 relative z-10">
                 <li>
@@ -109,7 +109,7 @@
         <img src="{{ asset('assets/images/logo_new.png') }}" class="rounded-full w-16 h-16 shadow-md"  />
 
         <div class="flex lg:hidden items-center gap-2">
-            {{-- <div class="flex items-center gap-1 text-[14px]" data-aos="fade-left" data-aos-duration="1000">
+            <div class="flex items-center gap-1 text-[14px]" data-aos="fade-left" data-aos-duration="1000">
                 <!-- Clickable flag to switch language -->
                 <img src="{{ $locale === 'en' ? asset('assets/images/icons/usa-flag.png') : asset('assets/images/icons/kh-flag.png') }}"
                     alt="Flag" class="w-6 h-6 rounded-full">
@@ -123,7 +123,7 @@
                     class="{{ $locale === 'km' ? 'text-[#FFFFFF] font-bold' : 'text-[#FFFFFF]' }}">
                     {{ $locale === 'en' ? 'Khmer' : 'ភាសាខ្មែរ' }}
                 </a>
-            </div> --}}
+            </div>
 
             <!-- Mobile Menu Button -->
             <button @click="open = true" class="text-white p-2 font-bold text-3xl relative z-1">
@@ -153,13 +153,13 @@
             <li><a href="{{ URL('/about') }}"
                     class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'About Us' : 'អំពីយើងខ្ញុំ' }}</a></li>
             <li><a href="{{ URL('/ourprogram') }}"
-                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Our Program' : 'កម្មវិធីសិក្សា' }}</a>
+                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Our Program' : 'កម្មវិធីរបស់យើង' }}</a>
             </li>
             <li><a href="{{ URL('/professionalteam') }}"
-                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Professional Team' : 'អ្នកជំនាញ' }}</a>
+                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Professional Team' : 'ក្រុមអ្នកជំនាញ' }}</a>
             </li>
             <li><a href="{{ URL('/career') }}"
-                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Career' : 'ឱកាសការងារ' }}</a></li>
+                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Career' : 'អាជីពការងារ' }}</a></li>
             <li><a href="{{ URL('/articles') }}"
                     class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Articles' : 'អត្ថបទ' }}</a></li>
             <li><a href="{{ URL('/event') }}"
@@ -256,11 +256,11 @@
                             class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Welcome to HopeKids' : 'សូមស្វាគមន៍មកកាន់ សាលារៀនអប់រំពិសេសក្ដីសង្ឃឹមកុមារ' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/#program"
-                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Programs' : 'កម្មវិធីសិក្សា' }}</a>
+                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Programs' : 'កម្មវិធីរបស់យើង' }}</a>
                     </li>
 
                     <li class="hover:bg-[#5897FF]"><a href="/#school_facilities"
-                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'School Facilities' : 'បរិវេណសាលា​' }}</a>
+                            class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'School Facilities' : 'សម្ភារៈសិក្សា' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/#our_branch"
                             class="block px-2 py-2 text-[15px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Branches' : 'សាខាយើងខ្ញុំ' }}</a>
@@ -300,7 +300,7 @@
             </li>
             <li class="relative group">
                 <a href="{{ route('ourprogram') }}"
-                    class="px-5 xl:px-7 py-4 text-[16px] xl:text-[19px] nav_link {{ Route::is('ourprogram') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : 'py-8' }}">{{ app()->getLocale() === 'en' ? 'Our Programs' : 'កម្មវិធីសិក្សា' }}</a>
+                    class="px-5 xl:px-7 py-4 text-[16px] xl:text-[19px] nav_link {{ Route::is('ourprogram') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : 'py-8' }}">{{ app()->getLocale() === 'en' ? 'Our Programs' : 'កម្មវិធីរបស់យើង' }}</a>
                 <ul
                     class="absolute left-1/2 transform -translate-x-1/2 hidden mt-6 py-2 w-64 bg-[#FFFFFF] shadow-lg rounded-lg {{ Route::is('ourprogram') ? '' : 'group-hover:block' }}  z-50">
                     @foreach ($programs as $item)
@@ -312,11 +312,11 @@
             </li>
             <li class="relative group">
                 <a href="{{ route('professionalteam') }}"
-                    class="px-5 xl:px-7 py-4 xl:py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('professionalteam') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : '' }}">{{ app()->getLocale() === 'en' ? 'Professional Team' : 'អ្នកជំនាញ' }}</a>
+                    class="px-5 xl:px-7 py-4 xl:py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('professionalteam') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : '' }}">{{ app()->getLocale() === 'en' ? 'Professional Team' : 'ក្រុមអ្នកជំនាញ' }}</a>
             </li>
             <li class="relative group">
                 <a href="{{ route('career') }}"
-                    class="px-5 xl:px-7 py-4 xl:py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('career') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : '' }}">{{ app()->getLocale() === 'en' ? 'Career' : 'ឱកាសការងារ' }}</a>
+                    class="px-5 xl:px-7 py-4 xl:py-4 text-[14px] xl:text-[19px] nav_link {{ Route::is('career') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : '' }}">{{ app()->getLocale() === 'en' ? 'Career' : 'អាជីពការងារ' }}</a>
             </li>
             <li class="relative group">
                 <a href="{{ route('articles') }}"
