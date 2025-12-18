@@ -6,10 +6,10 @@
     }
 </style>
 <div class="relative w-full hidden pt-4 lg:block z-40 bg-transparent">
-    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2 px-10 xl:px-0 overflow-hidden">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2 px-10 overflow-hidden">
 
         <!-- Contact Info -->
-        <div class="flex gap-3 lg:gap-6 text-[#FFFFFF] text-[10px] lg:text-[14px] xl:text-[15px] font-light xl:ms-[90px] relative z-10"
+        <div class="flex gap-3 lg:gap-6 text-[#FFFFFF] text-[10px] lg:text-[14px] xl:text-[15px] font-light relative z-10"
             data-aos="fade-right" data-aos-duration="1000">
             <p class="flex items-center gap-1">
                 <span class="text-[#5796FF] ">

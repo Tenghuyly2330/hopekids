@@ -53,7 +53,7 @@
             </div>
 
             <!-- DESCRIPTION -->
-            <div class="relative z-10 text-center lg:text-left mt-2 w-full md:w-[500px] px-3 md:px-0" data-aos="fade-left"
+            <div class="relative z-10 text-center lg:text-left mt-2 w-full md:w-[500px] px-3 md:pr-6 md:pl-0" data-aos="fade-left"
                 data-aos-duration="300">
                 <div class="text-[#fff] text-[12px] lg:text-[16px] font-medium">
                     {!! app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km !!}
