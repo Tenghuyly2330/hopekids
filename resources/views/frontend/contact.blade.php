@@ -68,6 +68,13 @@
                     </li>
 
                     <li>
+                        <a href="https://www.instagram.com/hopekidsspecialeducationschool?igsh=MTd5OTJtdWprcThjeg%3D%3D&utm_source=qr"
+                            target="_blank">
+                            <img src="{{ asset('assets/images/icons/ig.png') }}" alt="" class="w-10 h-10">
+                        </a>
+                    </li>
+
+                    <li>
                         <a href="{{ $yt->url }}" target="_blank">
                             <svg class="h-10" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
