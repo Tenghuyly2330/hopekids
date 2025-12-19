@@ -11,6 +11,7 @@
                 <span class="">Add new</span>
             </a>
         </div>
+        
         @component('admin.components.alert')
         @endcomponent
 

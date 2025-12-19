@@ -8,7 +8,7 @@
 @section('content')
     <section class="w-full h-[60vh] lg:h-screen">
         <img src="{{ asset($banner_image->image) }}" class="absolute object-cover z-1 w-full h-[60vh] lg:h-screen inset-0 "
-            alt="">
+            alt="{!! app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km !!}">
         <div>
 
             <div class="absolute h-[60vh] object-cover lg:h-screen inset-0 z-10 bg-black/70"></div>

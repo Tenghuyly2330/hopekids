@@ -59,7 +59,7 @@
 
         <div class="w-full h-[60vh] lg:h-screen">
             <img src="{{ asset($banner_image->image) }}" class="absolute z-1 w-full h-[60vh] lg:h-screen inset-0 object-cover"
-                alt="">
+                alt="{!! app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km !!}">
             <div class="absolute h-[60vh] object-cover lg:h-screen inset-0 z-10 bg-black/70"></div>
 
             <div class="relative z-10 px-4 max-w-[700px] mx-auto pt-[5vh] lg:pt-[30vh] overflow-hidden">

@@ -9,7 +9,7 @@
     <section class="w-full h-[60vh] lg:h-screen">
         <div class="absolute h-[60vh] object-cover lg:h-screen inset-0 z-10 bg-black/70"></div>
         <img src="{{ asset($banner_image->image) }}"
-            class="absolute object-cover z-1 w-full h-[60vh] lg:h-screen inset-0 " alt="">
+            class="absolute object-cover z-1 w-full h-[60vh] lg:h-screen inset-0 " alt="{!! app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km !!}">
         <div>
             <div class="relative z-10 pt-[15vh] lg:pt-[30vh] overflow-hidden">
                 <h1 class="text-[25px] md:text-[50px] text-center text-[#5897FF] font-[700]" data-aos="fade-right" data-aos-duration="1000">

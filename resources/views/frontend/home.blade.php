@@ -9,7 +9,7 @@
     {{-- banner --}}
     <section id="welcome" class="w-full h-[60vh] md:h-[70vh] lg:h-screen">
         <img src="{{ asset($banner_image->image) }}" class="absolute -z-10 w-full h-[60vh] md:h-[70vh] lg:h-screen object-cover  inset-0"
-            alt="">
+            alt="{!! app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km !!}">
         <div class="absolute object-cover h-[60vh] md:h-[70vh] lg:h-screen inset-0 z-10 bg-black/50"></div>
 
         <div
@@ -53,7 +53,7 @@
             </div>
 
             <!-- DESCRIPTION -->
-            <div class="relative z-10 text-center lg:text-left mt-2 w-full md:w-[500px] px-3 md:pr-6 md:pl-0" data-aos="fade-left"
+            <div class="relative z-10 text-center lg:text-left mt-2 w-full md:w-[500px] px-6 md:pr-6 md:pl-0" data-aos="fade-left"
                 data-aos-duration="300">
                 <div class="text-[#fff] text-[12px] lg:text-[16px] font-medium">
                     {!! app()->getLocale() === 'en' ? $banner_image->content_en : $banner_image->content_km !!}
