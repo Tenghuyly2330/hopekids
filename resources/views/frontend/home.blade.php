@@ -5,6 +5,10 @@
 @section('meta_tag')
     {!! SEOTools::generate() !!}
 @endsection --}}
+@section('meta_tag')
+    {!! app('seotools')->generate() !!}
+@endsection
+
 @section('content')
     {{-- banner --}}
     <section id="welcome" class="w-full h-[60vh] md:h-[70vh] lg:h-screen">
