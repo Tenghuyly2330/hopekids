@@ -161,7 +161,7 @@
             <li><a href="{{ URL('/about') }}"
                     class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'About Us' : 'អំពីយើងខ្ញុំ' }}</a></li>
             <li><a href="{{ URL('/ourprogram') }}"
-                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Our Program' : 'កម្មវិធីរបស់យើង' }}</a>
+                    class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Our Program' : 'កម្មវិធីសិក្សា' }}</a>
             </li>
             <li><a href="{{ URL('/professionalteam') }}"
                     class="text-[#1C0186]">{{ app()->getLocale() === 'en' ? 'Professional Team' : 'ក្រុមអ្នកជំនាញ' }}</a>
@@ -267,10 +267,10 @@
                 <ul
                     class="absolute left-1/2 transform -translate-x-1/2 hidden mt-6 py-4 w-44 bg-[#FFFFFF] shadow-lg rounded-lg {{ Route::is('home') ? '' : 'group-hover:block' }} z-50">
                     <li class="hover:bg-[#5897FF]"><a href="/#welcome"
-                            class="block px-2 py-2 text-[14px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Welcome to HopeKids' : 'សូមស្វាគមន៍មកកាន់ សាលារៀនអប់រំពិសេសក្ដីសង្ឃឹមកុមារ' }}</a>
+                            class="block px-2 py-2 text-[14px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Welcome to HopeKids' : 'សូមស្វាគមន៍មកកាន់ សាលាអប់រំពិសេសក្ដីសង្ឃឹមកុមារ' }}</a>
                     </li>
                     <li class="hover:bg-[#5897FF]"><a href="/#program"
-                            class="block px-2 py-2 text-[14px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Programs' : 'កម្មវិធីរបស់យើង' }}</a>
+                            class="block px-2 py-2 text-[14px] xl:text-[16px] text-[#000]">{{ app()->getLocale() === 'en' ? 'Our Programs' : 'កម្មវិធីសិក្សា' }}</a>
                     </li>
 
                     <li class="hover:bg-[#5897FF]"><a href="/#school_facilities"
@@ -314,7 +314,7 @@
             </li>
             <li class="relative group">
                 <a href="{{ route('ourprogram') }}"
-                    class="px-5 xl:px-7 py-4 text-[14px] 2xl:text-[19px] nav_link {{ Route::is('ourprogram') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : 'py-8' }}">{{ app()->getLocale() === 'en' ? 'Our Programs' : 'កម្មវិធីរបស់យើង' }}</a>
+                    class="px-5 xl:px-7 py-4 text-[14px] 2xl:text-[19px] nav_link {{ Route::is('ourprogram') ? 'py-2 px-5 rounded-full bg-gradient-to-r from-[#5897FF] to-[#1C0186]' : 'py-8' }}">{{ app()->getLocale() === 'en' ? 'Our Programs' : 'កម្មវិធីសិក្សា' }}</a>
                 <ul
                     class="absolute left-1/2 transform -translate-x-1/2 hidden mt-6 py-2 w-64 bg-[#FFFFFF] shadow-lg rounded-lg {{ Route::is('ourprogram') ? '' : 'group-hover:block' }}  z-50">
                     @foreach ($programs as $item)

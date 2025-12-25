@@ -1,10 +1,10 @@
 @extends('layouts.master')
-{{-- @php
+@php
     use Artesaos\SEOTools\Facades\SEOTools;
 @endphp
 @section('meta_tag')
     {!! SEOTools::generate() !!}
-@endsection --}}
+@endsection
 @section('content')
     {{-- banner --}}
     <section id="welcome" class="w-full h-[60vh] md:h-[70vh] lg:h-screen">
@@ -234,7 +234,7 @@
                 <h2 class="text-[50px] md:text-[70px] font-bold text-[#C3D500]">
                     <span id="count-students">0</span>
                 </h2>
-                <p class="text-xl">{{ app()->getLocale() === 'en' ? 'Students' : 'អ្នក' }}</p>
+                <p class="text-xl">{{ app()->getLocale() === 'en' ? 'Students' : 'នាក់' }}</p>
             </div>
             <div class="flex flex-col items-center text-white">
                 <p class="text-[14px]">{{ app()->getLocale() === 'en' ? '' : 'គ្រូបង្រៀន និងបុគ្គលិក' }}</p>
@@ -242,7 +242,7 @@
                 <h2 class="text-[50px] md:text-[70px] font-bold text-[#FE5900]">
                     <span id="count-staff">0</span>
                 </h2>
-                <p class="text-xl">{{ app()->getLocale() === 'en' ? 'Teachers & Staff' : 'អ្នក' }}</p>
+                <p class="text-xl">{{ app()->getLocale() === 'en' ? 'Teachers & Staff' : 'នាក់' }}</p>
             </div>
         </div>
 
