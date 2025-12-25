@@ -5,9 +5,9 @@
 @section('meta_tag')
     {!! SEOTools::generate() !!}
 @endsection --}}
-{{-- @section('meta_tag')
+@section('meta_tag')
     {!! app('seotools')->generate() !!}
-@endsection --}}
+@endsection
 
 @section('content')
     {{-- banner --}}
